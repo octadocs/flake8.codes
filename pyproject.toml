@@ -1,0 +1,48 @@
+[build-system]
+requires = ["poetry>=1.0"]
+build-backend = "poetry.masonry.api"
+
+
+[tool.poetry]
+name = "flake8_codes"
+version = "0.0.1"
+description = "A catalog of error codes for Flake8 static analysis tools & a few of its plugins."
+license = "MIT"
+
+authors = []
+
+readme = "README.md"
+
+repository = "https://github.com/octadocs/flake8-codes"
+
+keywords = []
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.9"
+mkdocs = "^1.1.2"
+octadocs = "^0.0.35"
+mkdocs-material = "^7.1.3"
+mkautodoc = "^0.1.0"
+
+
+
+[tool.poetry.dev-dependencies]
+wemake-python-styleguide = "^0.15.2"
+flakehell = "^0.9.0"
+mypy = "^0.812"
+[tool.flakehell]
+# Will replace by my own ignorelist later
+base = "https://raw.githubusercontent.com/Recall-Masters/standards/main/pyproject.toml"
+
+[tool.flakehell.exceptions."tests/**.py"]
+wemake-python-styleguide = [
+  # Found protected attribute usage
+  "-WPS437"
+]
