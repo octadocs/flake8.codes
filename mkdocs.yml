@@ -1,0 +1,32 @@
+site_name: flake8.codes
+repo_url: https://github.com/octadocs/flake8-codes
+repo_name: flake8-codes
+edit_uri: website/edit/master/flake8-codes/docs/
+copyright: Copyright &copy; 2021 flake8.codes
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - mkautodoc
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - octadocs
+  - macros:
+      modules:
+        - octadocs.macros
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - header.autohide
