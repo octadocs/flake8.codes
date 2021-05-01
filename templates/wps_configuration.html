@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+
+
+{% block content %}
+    {{ super() }}
+
+    <table>
+        <tr>
+            <th>Value</th>
+            <td>
+                <code>{{ page.meta.value }}</code>
+                {% if page.meta.reasoning %}
+                    <em>({{ page.meta.reasoning }})</em>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+{% endblock %}
