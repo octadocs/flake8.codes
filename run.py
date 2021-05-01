@@ -23,7 +23,13 @@ class Violation(BaseModel):
 
 def format_violation_description(description: str) -> str:
     """Format violation description properly."""
+    # The description is originally a docstring, need to remote indentation.
     description = textwrap.dedent(description)
+
+    # Sometimes `{{` is met in Python examples, which breaks Jinja2 templating.
+    description = description.replace(
+        '{{', "{{ '{{' }}",
+    )
 
     return pypandoc.convert_text(
         source=description,

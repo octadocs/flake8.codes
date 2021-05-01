@@ -30,3 +30,5 @@ theme:
   features:
     - navigation.tabs
     - header.autohide
+    - navigation.sections
+    - navigation.indexes
