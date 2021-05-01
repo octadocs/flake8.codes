@@ -5,10 +5,14 @@ from importlib import import_module
 from pathlib import Path
 
 import frontmatter
+import libcst
 import pypandoc
 from pydantic import BaseModel
 from wemake_python_styleguide import violations
+from wemake_python_styleguide.options import defaults
 from wemake_python_styleguide.version import pkg_version
+
+from libcst.tool import dump as libcst_dump
 
 
 class Violation(BaseModel):
@@ -71,7 +75,7 @@ def generate_violation_file(violation: Violation) -> None:
         frontmatter.dump(md, code_file)
 
 
-def generate_wps():
+def generate_wps_violations():
     """Generate docs for installed version of wemake-python-styleguide."""
     version_directory = Path(
         __file__,
@@ -107,8 +111,42 @@ def generate_wps():
                 )
 
 
+def generate_wps_configuration_defaults() -> None:
+    """Generate configuration defaults for current version of WPS."""
+    with open(defaults.__file__, 'r') as f:
+        module = libcst.parse_module(f.read())
+
+    for statement in module.body:
+        assignment = statement.body[0]
+
+        if not isinstance(assignment, libcst.AnnAssign):
+            continue
+
+        name = assignment.target
+        if not isinstance(name, libcst.Name):
+            continue
+
+        value = assignment.value
+        if not isinstance(value, libcst.Integer):
+            continue
+
+        last_leading_line = statement.leading_lines[-1]
+        description = last_leading_line.comment.value.lstrip(
+            '#: ',
+        ).strip('.').replace('``', '`')
+        reasoning = statement.trailing_whitespace.comment.value.lstrip('# ')
+
+        print(f'name = {name.value}')
+        print(f'value = {int(value.value)}')
+        print(f'description = {description}')
+        print(f'reasoning = {reasoning}')
+
+        print('---')
+
+
 def main():
-    generate_wps()
+    # generate_wps_violations()
+    generate_wps_configuration_defaults()
 
 
 if __name__ == '__main__':

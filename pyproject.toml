@@ -38,6 +38,7 @@ wemake-python-styleguide = "^0.15.2"
 flakehell = "^0.9.0"
 pydantic = "^1.8.1"
 pypandoc = "^1.5"
+libcst = "^0.3.18"
 
 
 [tool.poetry.dev-dependencies]
