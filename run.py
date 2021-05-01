@@ -1,15 +1,14 @@
 import concurrent.futures
+import re
 import textwrap
 from importlib import import_module
 from pathlib import Path
-from typing import Type
 
 import frontmatter
 import pypandoc
-from pydantic import Field, BaseModel, validator
+from pydantic import BaseModel
 from wemake_python_styleguide import violations
 from wemake_python_styleguide.version import pkg_version
-from wemake_python_styleguide.violations.base import BaseViolation
 
 
 class Violation(BaseModel):
@@ -27,10 +26,29 @@ def format_violation_description(description: str) -> str:
     description = textwrap.dedent(description)
 
     # Sometimes `{{` is met in Python examples, which breaks Jinja2 templating.
+    # FIXME: just wrap Python examples into {% raw %} instead.
     description = description.replace(
         '{{', "{{ '{{' }}",
     )
 
+    # Fix misprints. It seems a solitary ` is invalid in ReST: they should go
+    # in pairs.
+    #   TODO: file a PR for WPS461.
+    # description = re.sub(
+    #     ' `{1}',
+    #     ' ``',
+    #     description,
+    # )
+    # description = description.replace(' `', ' ``')
+
+    # Replace the added-value Sphinx plugin embeds with our Jinja2 macro calls.
+    description = re.sub(
+        ':str:`([^`]+)`',
+        r"``python://\g<1>``",
+        description,
+    )
+
+    # Convert to Markdown and be done
     return pypandoc.convert_text(
         source=description,
         to='commonmark',
@@ -54,6 +72,7 @@ def generate_violation_file(violation: Violation) -> None:
 
 
 def generate_wps():
+    """Generate docs for installed version of wemake-python-styleguide."""
     version_directory = Path(
         __file__,
     ).parent / 'docs/wemake-python-styleguide' / pkg_version
