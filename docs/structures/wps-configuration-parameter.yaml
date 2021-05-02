@@ -3,7 +3,7 @@ owl:equivalentClass:
   - $type: owl:Restriction
     owl:onProperty: octa:isChildOf
     owl:hasValue:
-      $id: local:wemake-python-styleguide/0.15.2/configuration/index.md
+      $id: local:wemake-python-styleguide/0.15.2/configuration
   - $type: owl:Restriction
     owl:onProperty: octa:template
     owl:hasValue: wps_configuration.html

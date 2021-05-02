@@ -1,3 +1,0 @@
-$id: octa:isChildOf
-owl:inverseOf:
-  $id: octa:isParentOf
