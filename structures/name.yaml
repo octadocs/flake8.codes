@@ -1,0 +1,4 @@
+$id: name
+label: Name of a configuration parameter.
+rdfs:subPropertyOf:
+  $id: octa:title
