@@ -37,9 +37,12 @@ def generate_wps_configuration_defaults() -> None:
 
         reasoning = format_reasoning(statement.trailing_whitespace.comment)
 
+        cli_name = '--' + name.lower().replace('_', '-')
+
         parameter = WPSConfigurationParameter(
             about=f'python://wemake_python_styleguide.options.defaults.{name}',
             name=name,
+            cli_name=cli_name,
             value=str(value),
             description=description,
             reasoning=reasoning,

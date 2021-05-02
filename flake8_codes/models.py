@@ -8,6 +8,7 @@ class WPSConfigurationParameter(BaseModel):
 
     about: str
     name: str
+    cli_name: str
     value: str
     description: str
     reasoning: Optional[str] = None

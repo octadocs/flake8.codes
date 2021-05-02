@@ -1,5 +1,6 @@
 ---
 about: python://wemake_python_styleguide.options.defaults.MAX_NAME_LENGTH
+cli_name: --max-name-length
 name: MAX_NAME_LENGTH
 reasoning: reasonable enough
 value: '45'
