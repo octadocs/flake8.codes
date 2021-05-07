@@ -42,9 +42,9 @@ def format_violation_description(description: str) -> str:
     #     ' ``',
     #     description,
     # )
-    # description = description.replace(' `', ' ``')
+    description = description.replace(' `', ' ``')
 
-    # Replace the added-value Sphinx plugin embeds with our Jinja2 macro calls.
+    # Replace the added-value Sphinx plugin embeds with a simpler form.
     description = re.sub(
         ':str:`([^`]+)`',
         r"``python://\g<1>``",
@@ -52,11 +52,24 @@ def format_violation_description(description: str) -> str:
     )
 
     # Convert to Markdown and be done
-    return pypandoc.convert_text(
+    description = pypandoc.convert_text(
         source=description,
         to='commonmark',
         format='rst',
     )
+
+    # Finally, replace python:// calls with Jinja macro calls.
+    description = re.sub(
+        '`python://([^`]+)`',
+        r"{{ macros.wps_config('python://\g<1>') }}",
+        description,
+    )
+
+    description = '{% import "macros.html" as macros with context %}\n\n' + (
+        description
+    )
+
+    return description
 
 
 def generate_violation_file(violation: Violation) -> None:

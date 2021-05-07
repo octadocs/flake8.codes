@@ -131,3 +131,4 @@ dmypy.json
 # JetBrains IDE
 .idea/
 
+/octadocs.nt

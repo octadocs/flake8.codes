@@ -1,2 +1,8 @@
 owl:onProperty:
   $type: $id
+
+owl:intersectionOf:
+  $container: $list
+
+owl:complementOf:
+  $type: $id
