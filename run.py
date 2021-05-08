@@ -10,8 +10,9 @@ from pydantic import BaseModel
 from wemake_python_styleguide import violations
 from wemake_python_styleguide.version import pkg_version
 
-from flake8_codes.wps_configuration_defaults import \
-    generate_wps_configuration_defaults
+from flake8_codes.wps_configuration_defaults import (
+    generate_wps_configuration_defaults,
+)
 
 
 class Violation(BaseModel):
@@ -42,7 +43,11 @@ def format_violation_description(description: str) -> str:
     #     ' ``',
     #     description,
     # )
-    description = description.replace(' `', ' ``')
+    description = re.sub(
+        ' `(^`)',
+        r' ``\g<1>',
+        description,
+    )
 
     # Replace the added-value Sphinx plugin embeds with a simpler form.
     description = re.sub(
