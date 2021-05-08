@@ -3,6 +3,7 @@ import re
 import textwrap
 from importlib import import_module
 from pathlib import Path
+from typing import List, Tuple
 
 import frontmatter
 import pypandoc
@@ -13,9 +14,10 @@ from flake8_codes.models import Violation
 from flake8_codes.wps_configuration_defaults import (
     generate_wps_configuration_defaults,
 )
+from flake8_codes.wps_violations import RelatedViolations
 
 
-def format_violation_description(description: str) -> str:
+def format_violation_description(description: str) -> Tuple[str, RelatedViolations]:
     """Format violation description properly."""
     # The description is originally a docstring, need to remote indentation.
     description = textwrap.dedent(description)
@@ -61,23 +63,24 @@ def format_violation_description(description: str) -> str:
         ':class:',
     )
 
-    description = re.sub(
-        r':class:`~\.*([^`]+)`',
-        r"{{ macros.wps_violation('\g<1>') }}",
-        description,
-    )
+    related_violations = RelatedViolations()
+    description = related_violations.process_description(description)
 
     description = '{% import "macros.html" as macros with context %}\n\n' + (
         description
     )
 
-    return description
+    return description, related_violations
 
 
 def generate_violation_file(violation: Violation) -> None:
     """Store violation description into a Markdown file with meta."""
     # Here is the heavy I/O operation with pandoc
-    description = format_violation_description(violation.description)
+    description, related_violations = format_violation_description(
+        violation.description,
+    )
+
+    violation.related_to = list(related_violations)
 
     md = frontmatter.Post(
         content=description,
@@ -99,6 +102,7 @@ def generate_wps_violations():
     ).parent / 'docs/wemake-python-styleguide' / pkg_version / 'violations'
     version_directory.mkdir(parents=True, exist_ok=True)
 
+    results = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         # This cycle is adapted from flakehell
         for path in Path(violations.__path__[0]).iterdir():
@@ -121,13 +125,16 @@ def generate_wps_violations():
                     title=checker.error_template,
                     description=checker.__doc__,
                     output_file=output_file,
+                    related_to=[],
                 )
 
-                executor.submit(
+                results.append(executor.submit(
                     generate_violation_file,
                     violation,
-                )
+                ))
 
+    for future in results:
+        future.result()
 
 def main():
     generate_wps_violations()
