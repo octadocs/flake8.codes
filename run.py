@@ -6,22 +6,13 @@ from pathlib import Path
 
 import frontmatter
 import pypandoc
-from pydantic import BaseModel
 from wemake_python_styleguide import violations
 from wemake_python_styleguide.version import pkg_version
 
+from flake8_codes.models import Violation
 from flake8_codes.wps_configuration_defaults import (
     generate_wps_configuration_defaults,
 )
-
-
-class Violation(BaseModel):
-    """Violation description."""
-
-    code: int
-    title: str
-    description: str
-    output_file: Path
 
 
 def format_violation_description(description: str) -> str:
@@ -38,11 +29,6 @@ def format_violation_description(description: str) -> str:
     # Fix misprints. It seems a solitary ` is invalid in ReST: they should go
     # in pairs.
     #   TODO: file a PR for WPS461.
-    # description = re.sub(
-    #     ' `{1}',
-    #     ' ``',
-    #     description,
-    # )
     description = re.sub(
         ' `(^`)',
         r' ``\g<1>',
@@ -56,11 +42,11 @@ def format_violation_description(description: str) -> str:
         description,
     )
 
-    # Convert to Markdown and be done
+    # Convert to Markdown
     description = pypandoc.convert_text(
         source=description,
-        to='commonmark',
         format='rst',
+        to='commonmark',
     )
 
     # Finally, replace python:// calls with Jinja macro calls.
@@ -85,7 +71,7 @@ def generate_violation_file(violation: Violation) -> None:
     md = frontmatter.Post(
         content=description,
         handler=frontmatter.YAMLHandler(),
-        **violation.dict(include={'code', 'title'}),
+        **violation.dict(exclude={'description', 'output_file'}),
     )
 
     with open(violation.output_file, 'wb+') as code_file:
@@ -117,6 +103,7 @@ def generate_wps_violations():
 
                 violation = Violation(
                     code=code,
+                    name=checker_name,
                     title=checker.error_template,
                     description=checker.__doc__,
                     output_file=output_file,

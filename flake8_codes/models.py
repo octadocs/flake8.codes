@@ -1,3 +1,4 @@
+from pathlib import Path
 from typing import Optional
 
 from pydantic import BaseModel
@@ -12,3 +13,13 @@ class WPSConfigurationParameter(BaseModel):
     value: str
     description: str
     reasoning: Optional[str] = None
+
+
+class Violation(BaseModel):
+    """Violation description."""
+
+    code: int
+    name: str
+    title: str
+    description: str
+    output_file: Path
