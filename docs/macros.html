@@ -12,7 +12,7 @@
 
 
 {%- macro wps_violation(internal_name) -%}
-    {% set description = query(
+    {%- set description = query(
         'SELECT * WHERE {
             ?violation
                 :internalName ?name ;
@@ -21,7 +21,7 @@
                 octa:url ?url .
         }',
         name=Literal(internal_name)
-    ).first %}
+    ).first -%}
 
     {%- if description -%}
         [**WPS{{ description.code }}** {{ description.title }}]({{ description.url }})

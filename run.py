@@ -42,23 +42,23 @@ def format_violation_description(description: str) -> str:
         description,
     )
 
-    description = re.sub(
-        ':class:`([^`]+)`',
-        r"{{ macros.wps_violation('\g<1>') }}",
-        description,
-    )
-
     # Convert to Markdown
     description = pypandoc.convert_text(
         source=description,
-        format='rst',
-        to='commonmark',
+        format='commonmark',
+        to='gfm',
     )
 
     # Finally, replace python:// calls with Jinja macro calls.
     description = re.sub(
         '`python://([^`]+)`',
         r"{{ macros.wps_config('python://\g<1>') }}",
+        description,
+    )
+
+    description = re.sub(
+        ':class:`~([^`]+)`',
+        r"{{ macros.wps_violation('\g<1>') }}",
         description,
     )
 
