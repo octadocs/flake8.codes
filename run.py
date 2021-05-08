@@ -9,11 +9,12 @@ import pypandoc
 from wemake_python_styleguide import violations
 from wemake_python_styleguide.version import pkg_version
 
+from flake8_codes.import_macros import ImportMacros
 from flake8_codes.models import Violation
+from flake8_codes.related_violations import RelatedViolations
 from flake8_codes.wps_configuration_defaults import (
     generate_wps_configuration_defaults,
 )
-from flake8_codes.wps_violations import RelatedViolations
 
 
 def format_violation_description(description: str) -> str:
@@ -62,28 +63,23 @@ def format_violation_description(description: str) -> str:
         ':class:',
     )
 
-    description = '{% import "macros.html" as macros with context %}\n\n' + (
-        description
-    )
-
     return description
 
 
 def generate_violation_file(violation: Violation) -> None:
     """Store violation description into a Markdown file with meta."""
-    # Here is the heavy I/O operation with pandoc
+    # Ugly transformations
     description = format_violation_description(
         violation.description,
     )
-
     violation.description = description
 
-    violation = RelatedViolations(
-        violation=violation,
-    ).process()
+    # Nice transformations
+    violation = RelatedViolations(violation=violation).process()
+    violation = ImportMacros(violation=violation).process()
 
     md = frontmatter.Post(
-        content=description,
+        content=violation.description,
         handler=frontmatter.YAMLHandler(),
         **violation.dict(
             exclude={'description', 'output_file'},
@@ -136,6 +132,7 @@ def generate_wps_violations():
 
     for future in results:
         future.result()
+
 
 def main():
     generate_wps_violations()
