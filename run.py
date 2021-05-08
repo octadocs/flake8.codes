@@ -71,7 +71,10 @@ def generate_violation_file(violation: Violation) -> None:
     md = frontmatter.Post(
         content=description,
         handler=frontmatter.YAMLHandler(),
-        **violation.dict(exclude={'description', 'output_file'}),
+        **violation.dict(
+            exclude={'description', 'output_file'},
+            by_alias=True,
+        ),
     )
 
     with open(violation.output_file, 'wb+') as code_file:
@@ -103,7 +106,7 @@ def generate_wps_violations():
 
                 violation = Violation(
                     code=code,
-                    name=checker_name,
+                    internal_name=checker_name,
                     title=checker.error_template,
                     description=checker.__doc__,
                     output_file=output_file,

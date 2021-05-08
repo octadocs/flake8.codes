@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class WPSConfigurationParameter(BaseModel):
@@ -19,7 +19,10 @@ class Violation(BaseModel):
     """Violation description."""
 
     code: int
-    name: str
+    internal_name: str = Field(alias='internalName')
     title: str
     description: str
     output_file: Path
+
+    class Config:
+        allow_population_by_field_name = True
