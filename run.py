@@ -42,6 +42,12 @@ def format_violation_description(description: str) -> str:
         description,
     )
 
+    description = re.sub(
+        ':class:`([^`]+)`',
+        r"{{ macros.wps_violation('\g<1>') }}",
+        description,
+    )
+
     # Convert to Markdown
     description = pypandoc.convert_text(
         source=description,
