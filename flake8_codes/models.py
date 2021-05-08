@@ -23,7 +23,11 @@ class Violation(BaseModel):
     title: str
     description: str
     output_file: Path
-    related_to: List[str] = Field(alias='relatedTo')
+
+    related_violations: Optional[List[str]] = Field(
+        None,
+        alias='relatedViolationName',
+    )
 
     class Config:
         allow_population_by_field_name = True
