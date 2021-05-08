@@ -56,8 +56,13 @@ def format_violation_description(description: str) -> str:
         description,
     )
 
+    description = description.replace(
+        ':py:class:',
+        ':class:',
+    )
+
     description = re.sub(
-        ':class:`~([^`]+)`',
+        r':class:`~\.*([^`]+)`',
         r"{{ macros.wps_violation('\g<1>') }}",
         description,
     )
