@@ -3,35 +3,6 @@
 {% block site_nav %}
     {{ super() }}
 
-    {% set related_violations = queries.related_violations(this=page.iri) %}
-
-    {% if related_violations %}
-        <div
-                class="md-sidebar md-sidebar--secondary"
-                data-md-component="sidebar"
-                data-md-type="toc"
-        >
-            <div class="md-sidebar__scrollwrap">
-                <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--secondary"
-                         aria-label="{{ lang.t('toc.title') }}">
-                        <label class="md-nav__title" for="__toc">
-                            Related Violations
-                        </label>
-                        <ul class="md-nav__list" data-md-component="toc"
-                            data-md-scrollfix>
-                            {% for violation in related_violations %}
-                                <li class="md-nav__item">
-                                    <a href="{{ violation.url }}"
-                                       class="md-nav__link">
-                                        <strong>WPS{{ violation.code }}</strong> {{ violation.title }}
-                                    </a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    {% endif %}
+    {% include "partials/related_violations.html" with context %}
+    {% include "partials/related_configuration_parameters.html" with context %}
 {% endblock %}

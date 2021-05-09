@@ -1,0 +1,11 @@
+# List of configuration parameters related to a violation.
+# Accepts: violation - IRI of the violation in question.
+SELECT * WHERE {
+    ?violation :relatedConfigurationParameter ?parameter .
+
+    ?page
+        :about ?parameter ;
+        :name ?name ;
+        :value ?value ;
+        octa:url ?url .
+}

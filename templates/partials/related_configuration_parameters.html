@@ -1,0 +1,32 @@
+{% set configuration_parameters = queries.related_configuration_parameters(
+    violation=page.iri
+) %}
+
+{% if configuration_parameters %}
+    <div
+            class="md-sidebar md-sidebar--secondary"
+            data-md-component="sidebar"
+            data-md-type="toc"
+    >
+        <div class="md-sidebar__scrollwrap">
+            <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--secondary">
+                    <label class="md-nav__title" for="__toc">
+                        Related Configuration Parameters
+                    </label>
+                    <ul class="md-nav__list" data-md-component="toc"
+                        data-md-scrollfix>
+                        {% for parameter in configuration_parameters %}
+                            <li class="md-nav__item">
+                                <a href="{{ parameter.url }}"
+                                   class="md-nav__link">
+                                    {{ parameter.name }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+{% endif %}

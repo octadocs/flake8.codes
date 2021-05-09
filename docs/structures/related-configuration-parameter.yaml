@@ -1,0 +1,3 @@
+$id: relatedConfigurationParameter
+owl:inverseOf:
+  $id: relatedViolation

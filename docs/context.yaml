@@ -1,2 +1,5 @@
 about:
   $type: $id
+
+relatedConfigurationParameter:
+  $type: $id
