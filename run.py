@@ -56,11 +56,13 @@ def generate_violation_file(violation: Violation) -> None:
     violation.description = description
 
     # Nice transformations
-    violation = RelatedViolations(violation=violation).process()
     violation = ImportMacros(violation=violation).process()
     violation = UnpairedQuote(violation=violation).process()
     violation = Pypandoc(violation=violation).process()
+
+    # Insert macro links
     violation = WPSConfig(violation=violation).process()
+    violation = RelatedViolations(violation=violation).process()
 
     md = frontmatter.Post(
         content=violation.description,

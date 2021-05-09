@@ -23,7 +23,7 @@ class RelatedViolations(BaseModel):
         self.related_violations = []
 
         description = re.sub(
-            r':class:`~\.*([^`]+)`',
+            r'`~\.*([^`]+Violation)`',
             self._replace_wps_violation,
             self.violation.description,
         )
