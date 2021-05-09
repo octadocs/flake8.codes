@@ -3,17 +3,7 @@
 {% block site_nav %}
     {{ super() }}
 
-    {% set related_violations = query(
-        'SELECT * WHERE {
-            ?this :relatedToViolation [
-                :internalName ?name ;
-                :code ?code ;
-                octa:title ?title ;
-                octa:url ?url
-            ] .
-        } ORDER BY ?code',
-        this=page.iri
-    ) %}
+    {% set related_violations = queries.related_violations(this=page.iri) %}
 
     {% if related_violations %}
         <div
