@@ -12,6 +12,7 @@ from wemake_python_styleguide.version import pkg_version
 from flake8_codes.import_macros import ImportMacros
 from flake8_codes.models import Violation
 from flake8_codes.related_violations import RelatedViolations
+from flake8_codes.rest_to_md import Pypandoc
 from flake8_codes.wps_configuration_defaults import (
     generate_wps_configuration_defaults,
 )
@@ -38,25 +39,18 @@ def format_violation_description(description: str) -> str:
     )
 
     # Replace the added-value Sphinx plugin embeds with a simpler form.
-    description = re.sub(
-        ':str:`([^`]+)`',
-        r"``python://\g<1>``",
-        description,
-    )
-
-    # Convert to Markdown
-    description = pypandoc.convert_text(
-        source=description,
-        format='commonmark',
-        to='gfm',
-    )
+    # description = re.sub(
+    #     ':str:`([^`]+)`',
+    #     r"``python://\g<1>``",
+    #     description,
+    # )
 
     # Finally, replace python:// calls with Jinja macro calls.
-    description = re.sub(
-        '`python://([^`]+)`',
-        r"{{ macros.wps_config('python://\g<1>') }}",
-        description,
-    )
+    # description = re.sub(
+    #     '`python://([^`]+)`',
+    #     r"{{ macros.wps_config('python://\g<1>') }}",
+    #     description,
+    # )
 
     description = description.replace(
         ':py:class:',
@@ -77,6 +71,7 @@ def generate_violation_file(violation: Violation) -> None:
     # Nice transformations
     violation = RelatedViolations(violation=violation).process()
     violation = ImportMacros(violation=violation).process()
+    # violation = Pypandoc(violation=violation).process()
 
     md = frontmatter.Post(
         content=violation.description,
