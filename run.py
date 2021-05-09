@@ -12,7 +12,9 @@ from wemake_python_styleguide.version import pkg_version
 from flake8_codes.import_macros import ImportMacros
 from flake8_codes.models import Violation
 from flake8_codes.related_violations import RelatedViolations
-from flake8_codes.rest_to_md import Pypandoc
+from flake8_codes.pypandoc_conversion import Pypandoc
+
+from flake8_codes.unpaired_quote import UnpairedQuote
 from flake8_codes.wps_configuration_defaults import (
     generate_wps_configuration_defaults,
 )
@@ -27,15 +29,6 @@ def format_violation_description(description: str) -> str:
     # FIXME: just wrap Python examples into {% raw %} instead.
     description = description.replace(
         '{{', "{{ '{{' }}",
-    )
-
-    # Fix misprints. It seems a solitary ` is invalid in ReST: they should go
-    # in pairs.
-    #   TODO: file a PR for WPS461.
-    description = re.sub(
-        ' `(^`)',
-        r' ``\g<1>',
-        description,
     )
 
     # Replace the added-value Sphinx plugin embeds with a simpler form.
@@ -71,7 +64,8 @@ def generate_violation_file(violation: Violation) -> None:
     # Nice transformations
     violation = RelatedViolations(violation=violation).process()
     violation = ImportMacros(violation=violation).process()
-    # violation = Pypandoc(violation=violation).process()
+    violation = UnpairedQuote(violation=violation).process()
+    violation = Pypandoc(violation=violation).process()
 
     md = frontmatter.Post(
         content=violation.description,
