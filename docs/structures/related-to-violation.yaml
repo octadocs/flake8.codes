@@ -1,0 +1,3 @@
+$id: relatedToViolation
+label: Relate one Violation to another. Parsed from violation description.
+$type: owl:SymmetricProperty

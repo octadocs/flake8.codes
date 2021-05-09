@@ -1,0 +1,4 @@
+$id: code
+label: Number of the violation.
+rdfs:domain:
+  $id: Violation
