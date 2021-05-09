@@ -16,8 +16,10 @@ def format_reasoning(comment: Optional[libcst.Comment]) -> Optional[str]:
     return comment.value.lstrip('# ')
 
 
-def generate_wps_options() -> None:
+def generate_wps_options(docs: Path) -> None:
     """Generate configuration defaults for current version of WPS."""
+    docs.mkdir(parents=True, exist_ok=True)
+
     with open(defaults.__file__, 'r') as f:
         module = libcst.parse_module(f.read())
 
@@ -57,12 +59,7 @@ def generate_wps_options() -> None:
             ),
         )
 
-        output_path = (
-            Path(__file__).parent.parent /
-            'docs/wemake-python-styleguide/0.15.2/configuration' /
-            f'{parameter.name}.md'
-        )
-        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path = docs / f'{parameter.name}.md'
 
         with output_path.open('wb+') as output_file:
             frontmatter.dump(

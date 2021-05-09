@@ -5,7 +5,6 @@ from pathlib import Path
 
 import frontmatter
 from wemake_python_styleguide import violations
-from wemake_python_styleguide.version import pkg_version
 
 from flake8_codes.models import Violation
 from flake8_codes.wemake_python_styleguide.violations.import_macros import \
@@ -77,12 +76,9 @@ def generate_violation_file(violation: Violation) -> None:
         frontmatter.dump(md, code_file)
 
 
-def generate_wps_violations():
+def generate_wps_violations(directory: Path):
     """Generate docs for installed version of wemake-python-styleguide."""
-    version_directory = Path(
-        __file__,
-    ).parent / 'docs/wemake-python-styleguide' / pkg_version / 'violations'
-    version_directory.mkdir(parents=True, exist_ok=True)
+    directory.mkdir(parents=True, exist_ok=True)
 
     results = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
@@ -99,7 +95,7 @@ def generate_wps_violations():
                     continue
 
                 code = checker.code
-                output_file = version_directory / f'WPS{code:03}.md'
+                output_file = directory / f'WPS{code:03}.md'
 
                 violation = Violation(
                     code=code,
