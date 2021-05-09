@@ -171,11 +171,25 @@
   
   
   
+    
+
+  
+  
+  
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../configuration/ALLOWED_DOMAIN_NAMES/" class="md-tabs__link md-tabs__link--active">
         Wemake python styleguide
       </a>
     </li>
+  
+
+  
+
   
 
       
@@ -187,6 +201,7 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
+    
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -267,18 +282,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -288,14 +291,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_2_1">
         0.15.2
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="0.15.2" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           0.15.2
         </label>
@@ -305,46 +308,22 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
       
-      <label class="md-nav__link" for="__nav_2_2_2">
+      <label class="md-nav__link" for="__nav_2_1_1">
         Configuration
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Configuration" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_2">
+        <label class="md-nav__title" for="__nav_2_1_1">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
           
             
   
@@ -782,14 +761,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" checked>
       
-      <label class="md-nav__link" for="__nav_2_2_3">
+      <label class="md-nav__link" for="__nav_2_1_2">
         Violations
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Violations" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_3">
+        <label class="md-nav__title" for="__nav_2_1_2">
           <span class="md-nav__icon md-icon"></span>
           Violations
         </label>
@@ -3613,6 +3592,11 @@
             
             
           
+
+    
+
+    
+
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
@@ -3631,23 +3615,13 @@
 <li>That <code>__slots__</code> do not have duplicates</li>
 <li>That <code>__slots__</code> do not have empty strings or invalid python names</li>
 </ul>
-<!-- end list -->
-
-<ul>
-<li>
-<p>Reasoning:<br />
-<code>__slots__</code> is a very special attribute. It completely changes your
-    class. So, we need to be careful with it. We should not allow
-    anything rather than tuples to define slots, we also need to check
-    that fields defined in <code>__slots__</code> are unique.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use tuples with unique elements to define <code>__slots__</code> attribute. Use
-    <code>snake_case</code> to define attributes in <code>__slots__</code>.</p>
-</li>
-</ul>
-<p>Example:</p>
+<p>Reasoning: <code>__slots__</code> is a very special attribute. It completely
+changes your class. So, we need to be careful with it. We should not
+allow anything rather than tuples to define slots, we also need to check
+that fields defined in <code>__slots__</code> are unique.</p>
+<p>Solution: Use tuples with unique elements to define <code>__slots__</code>
+attribute. Use <code>snake_case</code> to define attributes in <code>__slots__</code>.</p>
+<p>Example::</p>
 <div class="highlight"><pre><span></span><code># Correct:
 class Test(object):
     __slots__ = (&#39;field1&#39;, &#39;field2&#39;)
@@ -3661,23 +3635,8 @@ class Test(object):
 </code></pre></div>
 <p>Note, that we do ignore all complex expressions for this field. So, we
 only check raw literals.</p>
-<div class="versionadded">
-
-0.7.0
-
-</div>
-
-<div class="versionchanged">
-
-0.11.0
-
-</div>
-
-<div class="versionchanged">
-
-0.12.0
-
-</div>
+<p>.. versionadded:: 0.7.0 .. versionchanged:: 0.11.0 .. versionchanged::
+0.12.0</p>
                 
                   
                 

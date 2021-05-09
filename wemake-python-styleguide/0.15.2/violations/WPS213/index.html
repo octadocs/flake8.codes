@@ -171,11 +171,25 @@
   
   
   
+    
+
+  
+  
+  
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../configuration/ALLOWED_DOMAIN_NAMES/" class="md-tabs__link md-tabs__link--active">
         Wemake python styleguide
       </a>
     </li>
+  
+
+  
+
   
 
       
@@ -187,6 +201,7 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
+    
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -267,18 +282,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -288,14 +291,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_2_1">
         0.15.2
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="0.15.2" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           0.15.2
         </label>
@@ -305,46 +308,22 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
       
-      <label class="md-nav__link" for="__nav_2_2_2">
+      <label class="md-nav__link" for="__nav_2_1_1">
         Configuration
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Configuration" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_2">
+        <label class="md-nav__title" for="__nav_2_1_1">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
           
             
   
@@ -782,14 +761,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" checked>
       
-      <label class="md-nav__link" for="__nav_2_2_3">
+      <label class="md-nav__link" for="__nav_2_1_2">
         Violations
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Violations" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_3">
+        <label class="md-nav__title" for="__nav_2_1_2">
           <span class="md-nav__icon md-icon"></span>
           Violations
         </label>
@@ -3613,6 +3592,39 @@
             
             
           
+
+    
+
+    
+        <div
+                class="md-sidebar md-sidebar--secondary"
+                data-md-component="sidebar"
+                data-md-type="toc"
+        >
+            <div class="md-sidebar__scrollwrap">
+                <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--secondary"
+                         aria-label="Table of contents">
+                        <label class="md-nav__title" for="__toc">
+                            Related Violations
+                        </label>
+                        <ul class="md-nav__list" data-md-component="toc"
+                            data-md-scrollfix>
+                            
+                                <li class="md-nav__item">
+                                    <a href="/wemake-python-styleguide/0.15.2/violations/WPS204/"
+                                       class="md-nav__link">
+                                        <strong>WPS204</strong> Found overused expression: {0}
+                                    </a>
+                                </li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    
+
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
@@ -3629,33 +3641,15 @@
 nicer because we don't count lines, we count real code entities. This
 way adding just several extra empty lines for readability will never
 trigger this violation.</p>
-<p>Related to <code>~OverusedExpressionViolation</code>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When there are too many expressions it means that this function does
-    too many things at once. It has too much logic.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Split function into several functions, refactor your API.</p>
-</li>
-<li>
-<p>Configuration:<br />
-    This rule is configurable with <code>--max-expressions</code>. Default:
-    <code>python://wemake_python_styleguide.options.defaults.MAX_EXPRESSIONS</code></p>
-</li>
-</ul>
-<div class="versionadded">
-
-0.1.0
-
-</div>
-
-<ul>
-<li>See also:<br />
-<a href="https://en.wikipedia.org/wiki/Expression_(computer_science)">https://en.wikipedia.org/wiki/Expression_(computer_science)</a></li>
-</ul>
+<p>Related to <a href="/wemake-python-styleguide/0.15.2/violations/WPS204/"><strong>WPS204</strong> Found overused expression: {0}</a>.</p>
+<p>Reasoning: When there are too many expressions it means that this
+function does too many things at once. It has too much logic.</p>
+<p>Solution: Split function into several functions, refactor your API.</p>
+<p>Configuration: This rule is configurable with <code>--max-expressions</code>.
+Default:
+<a href="/wemake-python-styleguide/0.15.2/configuration/MAX_EXPRESSIONS/">MAX_EXPRESSIONS</a> = <code>9</code></p>
+<p>.. versionadded:: 0.1.0</p>
+<p>See also: https://en.wikipedia.org/wiki/Expression_(computer_science)</p>
                 
                   
                 

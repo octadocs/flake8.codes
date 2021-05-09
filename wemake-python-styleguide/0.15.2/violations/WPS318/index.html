@@ -171,11 +171,25 @@
   
   
   
+    
+
+  
+  
+  
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../configuration/ALLOWED_DOMAIN_NAMES/" class="md-tabs__link md-tabs__link--active">
         Wemake python styleguide
       </a>
     </li>
+  
+
+  
+
   
 
       
@@ -187,6 +201,7 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
+    
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -267,18 +282,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -288,14 +291,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_2_1">
         0.15.2
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="0.15.2" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           0.15.2
         </label>
@@ -305,46 +308,22 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
       
-      <label class="md-nav__link" for="__nav_2_2_2">
+      <label class="md-nav__link" for="__nav_2_1_1">
         Configuration
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Configuration" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_2">
+        <label class="md-nav__title" for="__nav_2_1_1">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
           
             
   
@@ -782,14 +761,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" checked>
       
-      <label class="md-nav__link" for="__nav_2_2_3">
+      <label class="md-nav__link" for="__nav_2_1_2">
         Violations
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Violations" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_3">
+        <label class="md-nav__title" for="__nav_2_1_2">
           <span class="md-nav__icon md-icon"></span>
           Violations
         </label>
@@ -3613,6 +3592,11 @@
             
             
           
+
+    
+
+    
+
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
@@ -3625,20 +3609,12 @@
                   <h1>Found extra indentation</h1>
                 
                 <p>Forbid extra indentation.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    You can use extra indentation for lines of code. Python allows you
-    to do that in case you want to keep the indentation level equal for
-    this specific node, but that's insane!</p>
-</li>
-<li>
-<p>Solution:<br />
-    We should stick to 4 spaces for an indentation block. Each next
-    block level should be indented by just 4 extra spaces.</p>
-</li>
-</ul>
-<p>Example:</p>
+<p>Reasoning: You can use extra indentation for lines of code. Python
+allows you to do that in case you want to keep the indentation level
+equal for this specific node, but that's insane!</p>
+<p>Solution: We should stick to 4 spaces for an indentation block. Each
+next block level should be indented by just 4 extra spaces.</p>
+<p>Example::</p>
 <div class="highlight"><pre><span></span><code># Correct:
 def test():
     print(&#39;test&#39;)
@@ -3650,16 +3626,10 @@ def test():
 <p>This rule is consistent with the "Vertical Hanging Indent" option for
 <code>multi_line_output</code> setting of <code>isort</code>. To avoid conflicting rules, you
 should set <code>multi_line_output = 3</code> in the <code>isort</code> settings.</p>
-<ul>
-<li>See also:<br />
-<a href="https://github.com/timothycrosley/isort#multi-line-output-modes">https://github.com/timothycrosley/isort#multi-line-output-modes</a>
-    <a href="https://github.com/wemake-services/wemake-python-styleguide/blob/master/styles/isort.toml">https://github.com/wemake-services/wemake-python-styleguide/blob/master/styles/isort.toml</a></li>
-</ul>
-<div class="versionadded">
-
-0.6.0
-
-</div>
+<p>See also:
+https://github.com/timothycrosley/isort#multi-line-output-modes
+https://github.com/wemake-services/wemake-python-styleguide/blob/master/styles/isort.toml</p>
+<p>.. versionadded:: 0.6.0</p>
                 
                   
                 

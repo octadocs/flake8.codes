@@ -58,6 +58,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#macro-rendering-error" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -171,11 +176,25 @@
   
   
   
+    
+
+  
+  
+  
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../configuration/ALLOWED_DOMAIN_NAMES/" class="md-tabs__link md-tabs__link--active">
         Wemake python styleguide
       </a>
     </li>
+  
+
+  
+
   
 
       
@@ -187,6 +206,7 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
+    
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -267,18 +287,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -288,14 +296,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_2_1">
         0.15.2
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="0.15.2" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           0.15.2
         </label>
@@ -305,46 +313,22 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
       
-      <label class="md-nav__link" for="__nav_2_2_2">
+      <label class="md-nav__link" for="__nav_2_1_1">
         Configuration
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Configuration" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_2">
+        <label class="md-nav__title" for="__nav_2_1_1">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
           
             
   
@@ -782,14 +766,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" checked>
       
-      <label class="md-nav__link" for="__nav_2_2_3">
+      <label class="md-nav__link" for="__nav_2_1_2">
         Violations
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Violations" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_3">
+        <label class="md-nav__title" for="__nav_2_1_2">
           <span class="md-nav__icon md-icon"></span>
           Violations
         </label>
@@ -805,6 +789,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -3612,7 +3598,29 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
+
+    
+
+    
+
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
@@ -3622,34 +3630,22 @@
                   </a>
                 
                 
-                  <h1>Forbidden inline ignore: {0}</h1>
-                
-                <p>Forbids to use specific inline ignore violations.</p>
-<p>There can be forbidden a specific violation or whole class of
-violations.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    There are violations important for specific project that must not be
-    ignored, e.g. complexity or best practices violations.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove inline ignore for forbidden violations.</p>
-</li>
-<li>
-<p>Configuration:<br />
-    This rule is configurable with
-    <span class="title-ref">--forbidden-inline-ignore</span><span class="title-ref">.
-    Default:
-    </span><span class="title-ref">python://wemake_python_styleguide.options.defaults.FORBIDDEN_INLINE_IGNORE</span>`</p>
-</li>
-</ul>
-<div class="versionadded">
-
-0.15.0
-
-</div>
+                <h1 id="macro-rendering-error"><em>Macro Rendering Error</em></h1>
+<p><strong>TemplateSyntaxError</strong>: unexpected char "'" at 479</p>
+<div class="highlight"><pre><span></span><code>Traceback (most recent call last):
+  File &quot;/home/anatoly/.pyenv/versions/3.8.6/envs/flake8-codes/lib/python3.8/site-packages/mkdocs_macros/plugin.py&quot;, line 441, in render
+    md_template = self.env.from_string(markdown)
+  File &quot;/home/anatoly/.pyenv/versions/3.8.6/envs/flake8-codes/lib/python3.8/site-packages/jinja2/environment.py&quot;, line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File &quot;/home/anatoly/.pyenv/versions/3.8.6/envs/flake8-codes/lib/python3.8/site-packages/jinja2/environment.py&quot;, line 638, in compile
+    self.handle_exception(source=source_hint)
+  File &quot;/home/anatoly/.pyenv/versions/3.8.6/envs/flake8-codes/lib/python3.8/site-packages/jinja2/environment.py&quot;, line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File &quot;/home/anatoly/.pyenv/versions/3.8.6/envs/flake8-codes/lib/python3.8/site-packages/jinja2/_compat.py&quot;, line 28, in reraise
+    raise value.with_traceback(tb)
+  File &quot;&lt;unknown&gt;&quot;, line 15, in template
+jinja2.exceptions.TemplateSyntaxError: unexpected char &quot;&#39;&quot; at 479
+</code></pre></div>
                 
                   
                 

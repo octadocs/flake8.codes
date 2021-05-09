@@ -171,11 +171,25 @@
   
   
   
+    
+
+  
+  
+  
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../configuration/ALLOWED_DOMAIN_NAMES/" class="md-tabs__link md-tabs__link--active">
         Wemake python styleguide
       </a>
     </li>
+  
+
+  
+
   
 
       
@@ -187,6 +201,7 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
+    
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -267,18 +282,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -288,14 +291,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_2_1">
         0.15.2
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="0.15.2" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           0.15.2
         </label>
@@ -305,46 +308,22 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
       
-      <label class="md-nav__link" for="__nav_2_2_2">
+      <label class="md-nav__link" for="__nav_2_1_1">
         Configuration
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Configuration" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_2">
+        <label class="md-nav__title" for="__nav_2_1_1">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
           
             
   
@@ -782,14 +761,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" checked>
       
-      <label class="md-nav__link" for="__nav_2_2_3">
+      <label class="md-nav__link" for="__nav_2_1_2">
         Violations
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Violations" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_3">
+        <label class="md-nav__title" for="__nav_2_1_2">
           <span class="md-nav__icon md-icon"></span>
           Violations
         </label>
@@ -3613,6 +3592,11 @@
             
             
           
+
+    
+
+    
+
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
@@ -3627,19 +3611,11 @@
                 <p>Forbids to have functions starting with <code>get_</code> without returning a
 value.</p>
 <p>Applies to both methods and functions.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    A <code>get_</code> function is generally expected to return a value.
-    Otherwise, it is most likely either an error or bad naming.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Make sure getter functions <code>return</code> or <code>yield</code> a value on all
-    execution paths, or rename the function.</p>
-</li>
-</ul>
-<p>Example:</p>
+<p>Reasoning: A <code>get_</code> function is generally expected to return a value.
+Otherwise, it is most likely either an error or bad naming.</p>
+<p>Solution: Make sure getter functions <code>return</code> or <code>yield</code> a value on all
+execution paths, or rename the function.</p>
+<p>Example::</p>
 <div class="highlight"><pre><span></span><code># Correct:
 def get_random_number():
      return random.randint(1, 10)
@@ -3648,11 +3624,7 @@ def get_random_number():
 def get_random_number():
      print(&#39;I do not return a value!&#39;)
 </code></pre></div>
-<div class="versionadded">
-
-0.15.0
-
-</div>
+<p>.. versionadded:: 0.15.0</p>
                 
                   
                 

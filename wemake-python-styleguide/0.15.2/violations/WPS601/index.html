@@ -171,11 +171,25 @@
   
   
   
+    
+
+  
+  
+  
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../configuration/ALLOWED_DOMAIN_NAMES/" class="md-tabs__link md-tabs__link--active">
         Wemake python styleguide
       </a>
     </li>
+  
+
+  
+
   
 
       
@@ -187,6 +201,7 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
+    
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -267,18 +282,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -288,14 +291,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_2_1">
         0.15.2
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="0.15.2" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           0.15.2
         </label>
@@ -305,46 +308,22 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
       
-      <label class="md-nav__link" for="__nav_2_2_2">
+      <label class="md-nav__link" for="__nav_2_1_1">
         Configuration
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Configuration" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_2">
+        <label class="md-nav__title" for="__nav_2_1_1">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
           
             
   
@@ -782,14 +761,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" checked>
       
-      <label class="md-nav__link" for="__nav_2_2_3">
+      <label class="md-nav__link" for="__nav_2_1_2">
         Violations
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Violations" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_3">
+        <label class="md-nav__title" for="__nav_2_1_2">
           <span class="md-nav__icon md-icon"></span>
           Violations
         </label>
@@ -3613,6 +3592,11 @@
             
             
           
+
+    
+
+    
+
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
@@ -3625,26 +3609,18 @@
                   <h1>Found shadowed class attribute: {0}</h1>
                 
                 <p>Forbid shadowing class level attributes with instance level attributes.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    This way you will have two attributes inside your <code>__mro__</code> chain:
-    one from instance and one from class. It might cause errors.
-    Needless to say, that this is just pointless to do so.</p>
-<p>Also, if you ever want to optimise your code with a tool like
-<a href="https://github.com/python/mypy/tree/master/mypyc">mypyc</a>, this rule
-is a requirement.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use either class attributes or instance attributes. Use <code>ClassVar</code>
-    type on fields that are declared as class attributes.</p>
-</li>
-</ul>
+<p>Reasoning: This way you will have two attributes inside your <code>__mro__</code>
+chain: one from instance and one from class. It might cause errors.
+Needless to say, that this is just pointless to do so.</p>
+<div class="highlight"><pre><span></span><code>Also, if you ever want to optimise your code with a tool like `mypyc`_,
+this rule is a requirement.
+</code></pre></div>
+<p>Solution: Use either class attributes or instance attributes. Use
+<code>ClassVar</code> type on fields that are declared as class attributes.</p>
 <p>Note, that we cannot find shadowed attributes that are defined in parent
 classes. That's where <code>ClassVar</code> is required for <code>mypy</code> to check it for
 you.</p>
-<p>Example:</p>
+<p>Example::</p>
 <div class="highlight"><pre><span></span><code># Correct:
 from typing import ClassVar
 
@@ -3664,23 +3640,8 @@ class Some(object):
     def __init__(self) -&gt; None:
         self.field = 1
 </code></pre></div>
-<div class="versionadded">
-
-0.10.0
-
-</div>
-
-<div class="versionchanged">
-
-0.11.0
-
-</div>
-
-<div class="versionchanged">
-
-0.14.0
-
-</div>
+<p>.. versionadded:: 0.10.0 .. versionchanged:: 0.11.0 .. versionchanged::
+0.14.0 .. _mypyc: https://github.com/python/mypy/tree/master/mypyc</p>
                 
                   
                 

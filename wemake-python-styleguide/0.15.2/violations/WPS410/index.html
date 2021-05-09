@@ -171,11 +171,25 @@
   
   
   
+    
+
+  
+  
+  
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../configuration/ALLOWED_DOMAIN_NAMES/" class="md-tabs__link md-tabs__link--active">
         Wemake python styleguide
       </a>
     </li>
+  
+
+  
+
   
 
       
@@ -187,6 +201,7 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
+    
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -267,18 +282,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -288,14 +291,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_2_1">
         0.15.2
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="0.15.2" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           0.15.2
         </label>
@@ -305,46 +308,22 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
       
-      <label class="md-nav__link" for="__nav_2_2_2">
+      <label class="md-nav__link" for="__nav_2_1_1">
         Configuration
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Configuration" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_2">
+        <label class="md-nav__title" for="__nav_2_1_1">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
           
             
   
@@ -782,14 +761,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" checked>
       
-      <label class="md-nav__link" for="__nav_2_2_3">
+      <label class="md-nav__link" for="__nav_2_1_2">
         Violations
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Violations" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_3">
+        <label class="md-nav__title" for="__nav_2_1_2">
           <span class="md-nav__icon md-icon"></span>
           Violations
         </label>
@@ -3613,6 +3592,11 @@
             
             
           
+
+    
+
+    
+
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
@@ -3625,33 +3609,21 @@
                   <h1>Found wrong metadata variable: {0}</h1>
                 
                 <p>Forbid some module-level variables.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    We discourage using module variables like <code>__author__</code>, because code
-    should not contain any metadata.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Place all the metadata in <code>setup.py</code>, <code>setup.cfg</code>, or
-    <code>pyproject.toml</code>. Use proper docstrings and packaging classifiers.
-    Use <code>importlib.metadata</code> (or <code>importlib_metadata</code> on python \&lt; 3.8)
-    if you need to import this data into your app.</p>
-</li>
-</ul>
+<p>Reasoning: We discourage using module variables like <code>__author__</code>,
+because code should not contain any metadata.</p>
+<p>Solution: Place all the metadata in <code>setup.py</code>, <code>setup.cfg</code>, or
+<code>pyproject.toml</code>. Use proper docstrings and packaging classifiers. Use
+<code>importlib.metadata</code> (or <code>importlib_metadata</code> on python \&lt; 3.8) if you
+need to import this data into your app.</p>
 <p>See
-:py<code>~wemake_python_styleguide.constants.MODULE_METADATA_VARIABLES_BLACKLIST</code>
+<img alt="🇵🇾" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1f5-1f1fe.svg" title=":py:" />data:<code>~wemake_python_styleguide.constants.MODULE_METADATA_VARIABLES_BLACKLIST</code>
 for full list of bad names.</p>
-<p>Example:</p>
+<p>Example::</p>
 <div class="highlight"><pre><span></span><code># Wrong:
 __author__ = &#39;Nikita Sobolev&#39;
 __version__ = 0.1.2
 </code></pre></div>
-<div class="versionadded">
-
-0.1.0
-
-</div>
+<p>.. versionadded:: 0.1.0</p>
                 
                   
                 

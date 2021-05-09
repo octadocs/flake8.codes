@@ -1,0 +1,31 @@
+{%- macro wps_config(url) -%}
+    {%- set param = query('SELECT * WHERE {
+        ?page
+            :about ?parameter ;
+            :name ?name ;
+            :value ?value ;
+            octa:url ?url .
+    }', parameter=URIRef(url + '/')).first -%}
+
+    [{{ param.name }}]({{ param.url }}) = `{{ param.value }}`
+{%- endmacro -%}
+
+
+{%- macro wps_violation(internal_name) -%}
+    {%- set description = query(
+        'SELECT * WHERE {
+            ?violation
+                :internalName ?name ;
+                :code ?code ;
+                octa:title ?title ;
+                octa:url ?url .
+        }',
+        name=Literal(internal_name)
+    ).first -%}
+
+    {%- if description -%}
+        [**WPS{{ description.code }}** {{ description.title }}]({{ description.url }})
+    {%- else -%}
+        [DATA EXPUNGED]
+    {%- endif -%}
+{%- endmacro -%}

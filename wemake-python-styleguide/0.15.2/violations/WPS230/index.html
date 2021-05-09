@@ -171,11 +171,25 @@
   
   
   
+    
+
+  
+  
+  
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../configuration/ALLOWED_DOMAIN_NAMES/" class="md-tabs__link md-tabs__link--active">
         Wemake python styleguide
       </a>
     </li>
+  
+
+  
+
   
 
       
@@ -187,6 +201,7 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
+    
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -267,18 +282,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -288,14 +291,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_2_1">
         0.15.2
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="0.15.2" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           0.15.2
         </label>
@@ -305,46 +308,22 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
       
-      <label class="md-nav__link" for="__nav_2_2_2">
+      <label class="md-nav__link" for="__nav_2_1_1">
         Configuration
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Configuration" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_2">
+        <label class="md-nav__title" for="__nav_2_1_1">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
           
             
   
@@ -782,14 +761,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" checked>
       
-      <label class="md-nav__link" for="__nav_2_2_3">
+      <label class="md-nav__link" for="__nav_2_1_2">
         Violations
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Violations" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_3">
+        <label class="md-nav__title" for="__nav_2_1_2">
           <span class="md-nav__icon md-icon"></span>
           Violations
         </label>
@@ -3613,6 +3592,11 @@
             
             
           
+
+    
+
+    
+
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
@@ -3629,34 +3613,17 @@
 not count parent attributes. We do not count properties. We do not count
 annotations. We do not count class attributes. We do not count
 duplicates.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Having too many public instance attributes means that your class is
-    too complex in terms of coupling. Other classes and functions will
-    rely on these concrete fields instead of better abstraction layers.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Make some attributes protected. Split this class into several. If
-    the class is a Data Transfer Object, then use <code>@dataclass</code>
-    decorator.</p>
-</li>
-<li>
-<p>Configuration:<br />
-    This rule is configurable with <code>--max-attributes</code>. Default:
-    <code>python://wemake_python_styleguide.options.defaults.MAX_ATTRIBUTES</code></p>
-</li>
-<li>
-<p>See also:<br />
-<a href="https://en.wikipedia.org/wiki/Coupling_(computer_programming)">https://en.wikipedia.org/wiki/Coupling_(computer_programming)</a></p>
-</li>
-</ul>
-<div class="versionadded">
-
-0.12.0
-
-</div>
+<p>Reasoning: Having too many public instance attributes means that your
+class is too complex in terms of coupling. Other classes and functions
+will rely on these concrete fields instead of better abstraction layers.</p>
+<p>Solution: Make some attributes protected. Split this class into several.
+If the class is a Data Transfer Object, then use <code>@dataclass</code> decorator.</p>
+<p>Configuration: This rule is configurable with <code>--max-attributes</code>.
+Default:
+<a href="/wemake-python-styleguide/0.15.2/configuration/MAX_ATTRIBUTES/">MAX_ATTRIBUTES</a> = <code>6</code></p>
+<p>See also:
+https://en.wikipedia.org/wiki/Coupling_(computer_programming)</p>
+<p>.. versionadded:: 0.12.0</p>
                 
                   
                 

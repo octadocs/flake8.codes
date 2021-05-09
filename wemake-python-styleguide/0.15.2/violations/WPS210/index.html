@@ -171,11 +171,25 @@
   
   
   
+    
+
+  
+  
+  
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../configuration/ALLOWED_DOMAIN_NAMES/" class="md-tabs__link md-tabs__link--active">
         Wemake python styleguide
       </a>
     </li>
+  
+
+  
+
   
 
       
@@ -187,6 +201,7 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
+    
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -267,18 +282,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -288,14 +291,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_2_1">
         0.15.2
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="0.15.2" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           0.15.2
         </label>
@@ -305,46 +308,22 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
       
-      <label class="md-nav__link" for="__nav_2_2_2">
+      <label class="md-nav__link" for="__nav_2_1_1">
         Configuration
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Configuration" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_2">
+        <label class="md-nav__title" for="__nav_2_1_1">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
           
             
   
@@ -782,14 +761,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" checked>
       
-      <label class="md-nav__link" for="__nav_2_2_3">
+      <label class="md-nav__link" for="__nav_2_1_2">
         Violations
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Violations" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_3">
+        <label class="md-nav__title" for="__nav_2_1_2">
           <span class="md-nav__icon md-icon"></span>
           Violations
         </label>
@@ -3613,6 +3592,11 @@
             
             
           
+
+    
+
+    
+
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
@@ -3625,24 +3609,16 @@
                   <h1>Found too many local variables: {0}</h1>
                 
                 <p>Forbid too many local variables in the unit of code.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Having too many variables in a single function is a bad thing. Soon,
-    you will have trouble understanding what this variable means. It
-    will also become hard to name new variables.</p>
-</li>
-<li>
-<p>Solution:<br />
-    If you have too many variables in a function, you have to refactor
-    it.</p>
-</li>
-</ul>
+<p>Reasoning: Having too many variables in a single function is a bad
+thing. Soon, you will have trouble understanding what this variable
+means. It will also become hard to name new variables.</p>
+<p>Solution: If you have too many variables in a function, you have to
+refactor it.</p>
 <p>What counts as a local variable? We only count a variable as local in
 the following case: it is assigned inside the function body. We do not
 count variables defined inside comprehensions as local variables, since
 it is impossible to use them outside of the comprehension.</p>
-<p>Example:</p>
+<p>Example::</p>
 <div class="highlight"><pre><span></span><code>def first_function(param):
     first_var = 1
 
@@ -3660,16 +3636,10 @@ def second_function(argument):
 </ol>
 <p>Please, note that <code>_</code> is a special case. It is not counted as a local
 variable. Since by design it means: do not count me as a real variable.</p>
-<ul>
-<li>Configuration:<br />
-    This rule is configurable with <code>--max-local-variables</code>. Default:
-    <code>python://wemake_python_styleguide.options.defaults.MAX_LOCAL_VARIABLES</code></li>
-</ul>
-<div class="versionadded">
-
-0.1.0
-
-</div>
+<p>Configuration: This rule is configurable with <code>--max-local-variables</code>.
+Default:
+<a href="/wemake-python-styleguide/0.15.2/configuration/MAX_LOCAL_VARIABLES/">MAX_LOCAL_VARIABLES</a> = <code>5</code></p>
+<p>.. versionadded:: 0.1.0</p>
                 
                   
                 
