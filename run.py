@@ -1,5 +1,9 @@
 from pathlib import Path
 
+from wemake_python_styleguide import constants
+
+from flake8_codes.wemake_python_styleguide.constants.main import \
+    generate_constants
 from flake8_codes.wemake_python_styleguide.violations.main import (
     generate_wps_violations,
 )
@@ -13,6 +17,11 @@ from wemake_python_styleguide.version import pkg_version
 
 def main():
     docs = Path(__file__).parent / 'docs/wemake-python-styleguide' / pkg_version
+
+    generate_constants(
+        constants=constants,
+        destination=docs / 'constants',
+    )
     generate_wps_violations(docs / 'violations')
     generate_wps_options(docs / 'configuration')
 

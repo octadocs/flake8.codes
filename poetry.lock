@@ -52,6 +52,17 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
+name = "classes"
+version = "0.2.0"
+description = "Smart, pythonic, ad-hoc, typed polymorphism for Python"
+category = "main"
+optional = false
+python-versions = ">=3.6,<4.0"
+
+[package.dependencies]
+typing_extensions = ">=3.7,<4.0"
+
+[[package]]
 name = "click"
 version = "7.1.2"
 description = "Composable command line interface toolkit"
@@ -833,7 +844,7 @@ typing_extensions = ">=3.6,<4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.9"
-content-hash = "b31329bf7af6b6bc026a7f92b1abc53463fdc2dae41df9f919c4d47acf3e6c17"
+content-hash = "5fdff7c0a43f382a2f891122a35580c3ea32e5093ac796f8a1aa790b2d948053"
 
 [metadata.files]
 astor = [
@@ -855,6 +866,10 @@ certifi = [
 chardet = [
     {file = "chardet-4.0.0-py2.py3-none-any.whl", hash = "sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5"},
     {file = "chardet-4.0.0.tar.gz", hash = "sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"},
+]
+classes = [
+    {file = "classes-0.2.0-py3-none-any.whl", hash = "sha256:39fcc9378a83ecb038e98f6efa3a91dfd018be13365387af30037120e12bf94b"},
+    {file = "classes-0.2.0.tar.gz", hash = "sha256:a94278976870aa8d248a65b53f079e91a4ba1244e489aabd10f6027d2b1ffdd2"},
 ]
 click = [
     {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
