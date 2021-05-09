@@ -16,7 +16,7 @@ def format_reasoning(comment: Optional[libcst.Comment]) -> Optional[str]:
     return comment.value.lstrip('# ')
 
 
-def generate_wps_configuration_defaults() -> None:
+def generate_wps_options() -> None:
     """Generate configuration defaults for current version of WPS."""
     with open(defaults.__file__, 'r') as f:
         module = libcst.parse_module(f.read())
