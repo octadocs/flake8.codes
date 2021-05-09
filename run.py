@@ -1,22 +1,20 @@
 import concurrent.futures
-import re
 import textwrap
 from importlib import import_module
 from pathlib import Path
 
 import frontmatter
-import pypandoc
 from wemake_python_styleguide import violations
 from wemake_python_styleguide.version import pkg_version
 
-from flake8_codes.import_macros import ImportMacros
+from flake8_codes.wemake_python_styleguide.violations.import_macros import ImportMacros
 from flake8_codes.models import Violation
-from flake8_codes.related_violations import RelatedViolations
-from flake8_codes.pypandoc_conversion import Pypandoc
+from flake8_codes.wemake_python_styleguide.violations.related_violations import RelatedViolations
+from flake8_codes.wemake_python_styleguide.violations.pypandoc_conversion import Pypandoc
 
-from flake8_codes.unpaired_quote import UnpairedQuote
-from flake8_codes.wps_config import WPSConfig
-from flake8_codes.wps_configuration_defaults import (
+from flake8_codes.wemake_python_styleguide.violations.unpaired_quote import UnpairedQuote
+from flake8_codes.wemake_python_styleguide.violations.wps_config import WPSConfig
+from flake8_codes.wemake_python_styleguide.options import (
     generate_wps_configuration_defaults,
 )
 
