@@ -75,7 +75,7 @@ def persist_constant(
         handler=frontmatter.YAMLHandler(),
         **constant.dict(
             exclude={'description'},
-            exclude_defaults=True,
+            exclude_none=True,
             by_alias=True,
         ),
     )
@@ -91,7 +91,8 @@ def persist_constants(
     constants: Iterable[WPSConstant],
     directory: Path,
 ):
-    ThreadPoolExecutor(
+    directory.mkdir(parents=True, exist_ok=True)
+    list(ThreadPoolExecutor(
         max_workers=10,
     ).map(
         functools.partial(
@@ -99,7 +100,7 @@ def persist_constants(
             directory=directory,
         ),
         constants,
-    )
+    ))
 
 
 def generate_constants(
@@ -108,6 +109,6 @@ def generate_constants(
 ):
     generated_constants = construct_constants(constants)
     persist_constants(
-        constants,
+        generated_constants,
         directory=destination,
     )

@@ -19,12 +19,13 @@ semanticize.instance(float)(identity)
 semanticize.instance(str)(identity)
 semanticize.instance(bool)(identity)
 semanticize.instance(type(None))(identity)
+semanticize.instance(complex)(str)
 
 
 class OctagenSet(BaseModel):
     """Representation of a set."""
 
-    elements: Set[Any] = Field(alias='$value')
+    elements: List[Any] = Field(alias='$value')
     container: str = Field('$set', alias='$container')
 
     class Config:
@@ -42,7 +43,7 @@ class OctagenRePattern(BaseModel):
 
 @semanticize.instance(frozenset)
 def _semanticize_frozenset(instance: frozenset) -> OctagenSet:
-    return OctagenSet(elements=set(instance))
+    return OctagenSet(elements=list(map(semanticize, instance)))
 
 
 @semanticize.instance(Pattern)
