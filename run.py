@@ -15,6 +15,7 @@ from flake8_codes.related_violations import RelatedViolations
 from flake8_codes.pypandoc_conversion import Pypandoc
 
 from flake8_codes.unpaired_quote import UnpairedQuote
+from flake8_codes.wps_config import WPSConfig
 from flake8_codes.wps_configuration_defaults import (
     generate_wps_configuration_defaults,
 )
@@ -30,13 +31,6 @@ def format_violation_description(description: str) -> str:
     description = description.replace(
         '{{', "{{ '{{' }}",
     )
-
-    # Replace the added-value Sphinx plugin embeds with a simpler form.
-    # description = re.sub(
-    #     ':str:`([^`]+)`',
-    #     r"``python://\g<1>``",
-    #     description,
-    # )
 
     # Finally, replace python:// calls with Jinja macro calls.
     # description = re.sub(
@@ -66,6 +60,7 @@ def generate_violation_file(violation: Violation) -> None:
     violation = ImportMacros(violation=violation).process()
     violation = UnpairedQuote(violation=violation).process()
     violation = Pypandoc(violation=violation).process()
+    violation = WPSConfig(violation=violation).process()
 
     md = frontmatter.Post(
         content=violation.description,
