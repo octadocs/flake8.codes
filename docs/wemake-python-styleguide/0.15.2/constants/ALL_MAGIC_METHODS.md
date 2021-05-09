@@ -1,106 +1,104 @@
 ---
 name: ALL_MAGIC_METHODS
 value:
-  $container: $set
-  $value:
-  - __bool__
-  - __contains__
-  - __mul__
-  - __iand__
-  - __bytes__
-  - __neg__
-  - __missing__
-  - __set__
-  - __sub__
-  - __rtruediv__
-  - __subclasscheck__
-  - __ipow__
-  - __aexit__
-  - __rmod__
-  - __eq__
-  - __ifloordiv__
-  - __str__
-  - __length_hint__
-  - __rmatmul__
-  - __pos__
-  - __xor__
-  - __rpow__
-  - __isub__
-  - __rand__
-  - __del__
-  - __new__
-  - __exit__
-  - __hash__
-  - __getattribute__
-  - __int__
-  - __float__
-  - __mod__
-  - __await__
-  - __repr__
-  - __dir__
-  - __delattr__
-  - __call__
-  - __imatmul__
-  - __anext__
-  - __rfloordiv__
-  - __getattr__
-  - __imod__
-  - __delitem__
-  - __ge__
-  - __add__
-  - __iadd__
-  - __format__
-  - __ixor__
-  - __complex__
-  - __aenter__
-  - __gt__
-  - __class_getitem__
-  - __rsub__
-  - __truediv__
-  - __reversed__
-  - __ilshift__
-  - __invert__
-  - __ror__
-  - __rmul__
-  - __and__
-  - __delete__
-  - __le__
-  - __rrshift__
-  - __len__
-  - __floor__
-  - __index__
-  - __imul__
-  - __set_name__
-  - __divmod__
-  - __rlshift__
-  - __matmul__
-  - __rxor__
-  - __setattr__
-  - __ne__
-  - __itruediv__
-  - __radd__
-  - __lt__
-  - __ceil__
-  - __setitem__
-  - __getitem__
-  - __or__
-  - __round__
-  - __pow__
-  - __rshift__
-  - __init__
-  - __iter__
-  - __enter__
-  - __get__
-  - __ior__
-  - __rdivmod__
-  - __instancecheck__
-  - __floordiv__
-  - __init_subclass__
-  - __irshift__
-  - __trunc__
-  - __lshift__
-  - __abs__
-  - __aiter__
+- __floor__
+- __radd__
+- __imod__
+- __pos__
+- __delete__
+- __delattr__
+- __abs__
+- __format__
+- __or__
+- __class_getitem__
+- __isub__
+- __rmatmul__
+- __getattr__
+- __call__
+- __del__
+- __subclasscheck__
+- __rrshift__
+- __exit__
+- __delitem__
+- __pow__
+- __aenter__
+- __add__
+- __repr__
+- __getitem__
+- __setattr__
+- __len__
+- __rpow__
+- __set__
+- __rsub__
+- __length_hint__
+- __rdivmod__
+- __iadd__
+- __ifloordiv__
+- __aiter__
+- __rlshift__
+- __iter__
+- __matmul__
+- __ilshift__
+- __gt__
+- __str__
+- __enter__
+- __reversed__
+- __bool__
+- __rfloordiv__
+- __instancecheck__
+- __floordiv__
+- __le__
+- __aexit__
+- __index__
+- __itruediv__
+- __ne__
+- __float__
+- __lshift__
+- __getattribute__
+- __imul__
+- __init__
+- __ceil__
+- __setitem__
+- __int__
+- __complex__
+- __new__
+- __lt__
+- __imatmul__
+- __await__
+- __init_subclass__
+- __ior__
+- __ge__
+- __dir__
+- __truediv__
+- __anext__
+- __and__
+- __mod__
+- __ixor__
+- __irshift__
+- __ror__
+- __rmod__
+- __iand__
+- __rand__
+- __set_name__
+- __round__
+- __invert__
+- __hash__
+- __rmul__
+- __trunc__
+- __rshift__
+- __missing__
+- __sub__
+- __ipow__
+- __contains__
+- __eq__
+- __rtruediv__
+- __mul__
+- __xor__
+- __rxor__
+- __bytes__
+- __divmod__
+- __neg__
+- __get__
 ---
 
 List of all magic methods from the python docs.

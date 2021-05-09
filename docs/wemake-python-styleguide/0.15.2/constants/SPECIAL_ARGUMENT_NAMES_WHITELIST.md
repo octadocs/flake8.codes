@@ -1,11 +1,9 @@
 ---
 name: SPECIAL_ARGUMENT_NAMES_WHITELIST
 value:
-  $container: $set
-  $value:
-  - mcs
-  - cls
-  - self
+- mcs
+- cls
+- self
 ---
 
 List of special names that are used only as first argument in methods.

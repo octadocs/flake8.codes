@@ -1,12 +1,10 @@
 ---
 name: MODULE_NAMES_BLACKLIST
 value:
-  $container: $set
-  $value:
-  - util
-  - helpers
-  - utilities
-  - utils
+- util
+- utilities
+- helpers
+- utils
 ---
 
 List of blacklisted module names.

@@ -1,102 +1,100 @@
 ---
 name: ASYNC_MAGIC_METHODS_BLACKLIST
 value:
-  $container: $set
-  $value:
-  - __bool__
-  - __contains__
-  - __gt__
-  - __mul__
-  - __class_getitem__
-  - __rsub__
-  - __iand__
-  - __truediv__
-  - __reversed__
-  - __bytes__
-  - __neg__
-  - __missing__
-  - __ilshift__
-  - __invert__
-  - __set__
-  - __ror__
-  - __sub__
-  - __rmul__
-  - __and__
-  - __delete__
-  - __rtruediv__
-  - __subclasscheck__
-  - __le__
-  - __ipow__
-  - __rmod__
-  - __rrshift__
-  - __eq__
-  - __len__
-  - __ifloordiv__
-  - __str__
-  - __length_hint__
-  - __rmatmul__
-  - __pos__
-  - __floor__
-  - __index__
-  - __xor__
-  - __rpow__
-  - __imul__
-  - __set_name__
-  - __isub__
-  - __rand__
-  - __del__
-  - __new__
-  - __exit__
-  - __divmod__
-  - __rlshift__
-  - __hash__
-  - __getattribute__
-  - __int__
-  - __float__
-  - __matmul__
-  - __rxor__
-  - __setattr__
-  - __mod__
-  - __await__
-  - __ne__
-  - __itruediv__
-  - __radd__
-  - __repr__
-  - __lt__
-  - __ceil__
-  - __setitem__
-  - __getitem__
-  - __or__
-  - __round__
-  - __pow__
-  - __rshift__
-  - __init__
-  - __dir__
-  - __delattr__
-  - __iter__
-  - __enter__
-  - __get__
-  - __imatmul__
-  - __rfloordiv__
-  - __ior__
-  - __rdivmod__
-  - __instancecheck__
-  - __getattr__
-  - __floordiv__
-  - __imod__
-  - __delitem__
-  - __ge__
-  - __init_subclass__
-  - __add__
-  - __irshift__
-  - __iadd__
-  - __trunc__
-  - __lshift__
-  - __abs__
-  - __format__
-  - __ixor__
-  - __complex__
-  - __aiter__
+- __floordiv__
+- __le__
+- __floor__
+- __radd__
+- __index__
+- __itruediv__
+- __ne__
+- __float__
+- __lshift__
+- __getattribute__
+- __imod__
+- __pos__
+- __delete__
+- __imul__
+- __delattr__
+- __abs__
+- __init__
+- __ceil__
+- __format__
+- __or__
+- __setitem__
+- __class_getitem__
+- __int__
+- __complex__
+- __isub__
+- __new__
+- __rmatmul__
+- __lt__
+- __imatmul__
+- __await__
+- __getattr__
+- __init_subclass__
+- __del__
+- __ior__
+- __ge__
+- __subclasscheck__
+- __rrshift__
+- __exit__
+- __delitem__
+- __pow__
+- __add__
+- __dir__
+- __repr__
+- __getitem__
+- __truediv__
+- __setattr__
+- __len__
+- __and__
+- __mod__
+- __rpow__
+- __set__
+- __rsub__
+- __length_hint__
+- __rdivmod__
+- __iadd__
+- __ixor__
+- __ifloordiv__
+- __irshift__
+- __ror__
+- __rmod__
+- __iand__
+- __aiter__
+- __rand__
+- __rlshift__
+- __set_name__
+- __round__
+- __iter__
+- __invert__
+- __matmul__
+- __hash__
+- __rmul__
+- __ilshift__
+- __gt__
+- __trunc__
+- __str__
+- __rshift__
+- __enter__
+- __missing__
+- __reversed__
+- __sub__
+- __bool__
+- __ipow__
+- __contains__
+- __eq__
+- __rfloordiv__
+- __rtruediv__
+- __mul__
+- __xor__
+- __rxor__
+- __bytes__
+- __divmod__
+- __neg__
+- __get__
+- __instancecheck__
 ---
 
 List of magic methods that are not allowed to be async.

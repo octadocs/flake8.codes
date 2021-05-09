@@ -1,40 +1,38 @@
 ---
 name: VARIABLE_NAMES_BLACKLIST
 value:
-  $container: $set
-  $value:
-  - vals
-  - handle
-  - content
-  - value
-  - contents
-  - 'no'
-  - 'true'
-  - val
-  - do
-  - obj
-  - var
-  - variable
-  - data
-  - objects
-  - some
-  - bar
-  - results
-  - baz
-  - info
-  - handler
-  - file
-  - param
-  - values
-  - vars
-  - params
-  - items
-  - 'false'
-  - item
-  - result
-  - parameters
-  - objs
-  - foo
+- result
+- value
+- do
+- var
+- handle
+- 'true'
+- handler
+- parameters
+- items
+- vals
+- bar
+- values
+- variable
+- info
+- data
+- file
+- 'no'
+- baz
+- some
+- obj
+- val
+- results
+- foo
+- contents
+- objs
+- objects
+- param
+- 'false'
+- item
+- params
+- vars
+- content
 ---
 
 List of variable names we forbid to use.

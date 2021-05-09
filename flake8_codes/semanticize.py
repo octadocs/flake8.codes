@@ -22,18 +22,6 @@ semanticize.instance(type(None))(identity)
 semanticize.instance(complex)(str)
 
 
-class OctagenSet(BaseModel):
-    """Representation of a set."""
-
-    elements: List[Any] = Field(alias='$value')
-    container: str = Field('$set', alias='$container')
-
-    class Config:
-        """Use Python friendly field names."""
-
-        allow_population_by_field_name = True
-
-
 class OctagenRePattern(BaseModel):
     """Regex pattern."""
 
@@ -42,8 +30,8 @@ class OctagenRePattern(BaseModel):
 
 
 @semanticize.instance(frozenset)
-def _semanticize_frozenset(instance: frozenset) -> OctagenSet:
-    return OctagenSet(elements=list(map(semanticize, instance)))
+def _semanticize_frozenset(instance: frozenset) -> list:
+    return list(map(semanticize, instance))
 
 
 @semanticize.instance(Pattern)

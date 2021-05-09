@@ -1,9 +1,7 @@
 ---
 name: TUPLE_ARGUMENTS_METHODS
 value:
-  $container: $set
-  $value:
-  - frozenset
+- frozenset
 ---
 
 List of functions in which arguments must be tuples.
