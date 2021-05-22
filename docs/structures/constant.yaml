@@ -1,0 +1,9 @@
+$id: Constant
+owl:equivalentClass:
+  - $type: owl:Restriction
+    owl:onProperty: octa:template
+    owl:hasValue: constant.html
+  - $type: owl:Restriction
+    owl:onProperty: octa:isChildOf
+    owl:hasValue:
+      $id: local:wemake-python-styleguide/0.15.2/constants
