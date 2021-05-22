@@ -1,5 +1,16 @@
 {% extends "main.html" %}
 
-{% block site_nav %}
+{% block content %}
     {{ super() }}
+
+    <h2>Value</h2>
+    {% if page.meta.value is iterable and page.meta.value is not string %}
+        <ul>
+            {% for item in page.meta.value %}
+                <li><code>{{ item }}</code></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <strong>{{ page.meta.value }}</strong>
+    {% endif %}
 {% endblock %}
