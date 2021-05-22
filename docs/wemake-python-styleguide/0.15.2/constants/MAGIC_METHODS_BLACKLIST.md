@@ -1,13 +1,14 @@
 ---
+about: python:wemake_python_styleguide.constants.MAGIC_METHODS_BLACKLIST
 name: MAGIC_METHODS_BLACKLIST
 value:
-- __delattr__
-- __delitem__
-- __dir__
-- __reduce__
-- __del__
-- __reduce_ex__
 - __delete__
+- __reduce_ex__
+- __dir__
+- __delitem__
+- __reduce__
+- __delattr__
+- __del__
 ---
 
 List of magic methods that are forbidden to use.

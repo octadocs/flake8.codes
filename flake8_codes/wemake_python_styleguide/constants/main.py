@@ -43,7 +43,7 @@ def construct_constant(
 
     description = construct_description(statement)
 
-    about = f'python:{module}.{name}'
+    about = f'python:{module.__name__}.{name}'
 
     return WPSConstant(
         name=name,

@@ -1,4 +1,5 @@
 ---
+about: python:wemake_python_styleguide.constants.MATH_APPROXIMATE_CONSTANTS
 name: MATH_APPROXIMATE_CONSTANTS
 value:
 - 2.718281828459045

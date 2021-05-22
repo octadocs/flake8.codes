@@ -1,4 +1,5 @@
 ---
+about: python:wemake_python_styleguide.constants.MAX_NO_COVER_COMMENTS
 name: MAX_NO_COVER_COMMENTS
 value: 5
 ---

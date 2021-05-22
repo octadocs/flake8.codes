@@ -1,38 +1,39 @@
 ---
+about: python:wemake_python_styleguide.constants.VARIABLE_NAMES_BLACKLIST
 name: VARIABLE_NAMES_BLACKLIST
 value:
-- result
+- contents
+- params
+- values
+- item
+- some
+- content
 - value
 - do
-- var
-- handle
-- 'true'
-- handler
-- parameters
-- items
-- vals
-- bar
-- values
-- variable
-- info
-- data
-- file
-- 'no'
-- baz
-- some
-- obj
-- val
 - results
-- foo
-- contents
-- objs
-- objects
-- param
-- 'false'
-- item
-- params
+- info
 - vars
-- content
+- param
+- data
+- items
+- 'true'
+- baz
+- vals
+- handle
+- objects
+- var
+- 'no'
+- foo
+- objs
+- file
+- val
+- obj
+- bar
+- result
+- parameters
+- variable
+- 'false'
+- handler
 ---
 
 List of variable names we forbid to use.

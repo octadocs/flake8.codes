@@ -1,9 +1,10 @@
 ---
+about: python:wemake_python_styleguide.constants.UNREADABLE_CHARACTER_COMBINATIONS
 name: UNREADABLE_CHARACTER_COMBINATIONS
 value:
-- 0O
-- 1I
 - O0
+- 1I
+- 0O
 - 1l
 ---
 

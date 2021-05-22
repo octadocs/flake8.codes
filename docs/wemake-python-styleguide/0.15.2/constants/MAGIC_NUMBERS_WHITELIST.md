@@ -1,4 +1,5 @@
 ---
+about: python:wemake_python_styleguide.constants.MAGIC_NUMBERS_WHITELIST
 name: MAGIC_NUMBERS_WHITELIST
 value:
 - 0

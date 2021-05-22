@@ -1,4 +1,5 @@
 ---
+about: python:wemake_python_styleguide.constants.ALLOWED_NESTED_IMPORTS_CONDITIONS
 name: ALLOWED_NESTED_IMPORTS_CONDITIONS
 value:
 - TYPE_CHECKING

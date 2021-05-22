@@ -1,4 +1,5 @@
 ---
+about: python:wemake_python_styleguide.constants.MAX_CONDITIONS
 name: MAX_CONDITIONS
 value: 4
 ---
