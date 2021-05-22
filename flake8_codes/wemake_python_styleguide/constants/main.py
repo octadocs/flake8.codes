@@ -1,4 +1,3 @@
-import concurrent.futures
 import functools
 import logging
 from concurrent.futures import ThreadPoolExecutor
@@ -44,8 +43,11 @@ def construct_constant(
 
     description = construct_description(statement)
 
+    about = f'python:{module}.{name}'
+
     return WPSConstant(
         name=name,
+        about=about,
         description=description,
         value=semanticize(getattr(module, name)),
     )
