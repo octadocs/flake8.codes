@@ -3,3 +3,6 @@ about:
 
 relatedConfigurationParameter:
   $type: $id
+
+relatedConstant:
+  $type: $id

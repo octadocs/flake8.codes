@@ -1,0 +1,10 @@
+# List of constants related to a violation.
+# Accepts: violation - IRI of the violation in question.
+SELECT * WHERE {
+    ?violation_page :relatedConstant ?constant_iri .
+
+    ?constant_page
+        :about ?constant_iri ;
+        :name ?name ;
+        octa:url ?url .
+}
