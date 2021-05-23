@@ -1,7 +1,7 @@
 # Show violations marked as related to this one.
-# Accepts: ?this - IRI of the current violation page.
+# Accepts: ?this - IRI of the current page.
 SELECT * WHERE {
-    ?this :relatedToViolation [
+    ?this :related-to-violation [
         :internalName ?name ;
         :code ?code ;
         octa:title ?title ;

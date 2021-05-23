@@ -26,7 +26,7 @@ class Violation(BaseModel):
 
     related_violations: Optional[List[str]] = Field(
         None,
-        alias='relatedViolationName',
+        alias='related-violation-name',
     )
 
     related_configuration_parameters: Optional[List[str]] = Field(

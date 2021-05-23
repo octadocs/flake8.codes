@@ -4,8 +4,6 @@
 {% block site_nav %}
     {{ super() }}
 
-
-
     {{ macros.related_items(
         items=queries.related_violations(
             this=page.iri

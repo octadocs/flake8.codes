@@ -1,8 +1,8 @@
 INSERT {
     GRAPH <inference> {
-        ?parameter_page :relatedToViolation ?violation_page .
+        ?parameter_page :related-to-violation ?violation_page .
     }
 } WHERE {
     ?violation_page :relatedConfigurationParameter ?parameter_python_iri .
-    ?parameter_python_iri octa:subjectOf ?parameter_page .
+    ?parameter_page :about ?parameter_python_iri .
 }

@@ -1,8 +1,8 @@
 INSERT {
     GRAPH <inference> {
-        ?violation :relatedToViolation ?another_violation .
+        ?something :related-to-violation ?violation .
     }
 } WHERE {
-    ?violation :relatedViolationName ?another_violation_name .
-    ?another_violation :internalName ?another_violation_name .
+    ?something :related-violation-name ?violation_name .
+    ?violation :internalName ?violation_name .
 }

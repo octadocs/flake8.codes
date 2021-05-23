@@ -1,4 +1,19 @@
 {% extends "main.html" %}
+{% import "native_macros.html" as macros with context %}
+
+
+{% block site_nav %}
+    {{ super() }}
+
+    {{ macros.related_items(
+        items=queries.related_violations(
+            this=page.iri
+        ),
+        title='Related Violations',
+        item_template_path='partials/violation_link.html'
+    ) }}
+{% endblock %}
+
 
 {% block content %}
     {{ super() }}
