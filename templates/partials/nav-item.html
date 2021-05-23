@@ -19,7 +19,6 @@
 
 <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
 {% macro render(nav_item, path, level) %}
-
   <!-- Determine class according to state -->
   {% set class = "md-nav__item" %}
   {% if nav_item.active %}
@@ -62,6 +61,7 @@
 
       <!-- Expand active pages -->
       <label class="md-nav__link" for="{{ path }}">
+        {% if nav_item.meta and nav_item.meta.code %}<code>WPS{{ '%03d' % nav_item.meta.code }}</code>{% endif %}
         {{ nav_item.title }}
         <span class="md-nav__icon md-icon"></span>
       </label>
@@ -72,6 +72,7 @@
       >
         <label class="md-nav__title" for="{{ path }}">
           <span class="md-nav__icon md-icon"></span>
+          {% if nav_item.meta and nav_item.meta.code %}<code>WPS{{ '%03d' % nav_item.meta.code }}</code>{% endif %}
           {{ nav_item.title }}
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
@@ -106,6 +107,7 @@
       <!-- Render table of contents, if not empty -->
       {% if toc %}
         <label class="md-nav__link md-nav__link--active" for="__toc">
+          {% if nav_item.meta and nav_item.meta.code %}<code>WPS{{ '%03d' % nav_item.meta.code }}</code>{% endif %}
           {{ nav_item.title }}
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -114,6 +116,7 @@
         href="{{ nav_item.url | url }}"
         class="md-nav__link md-nav__link--active"
       >
+        {% if nav_item.meta and nav_item.meta.code %}<code>WPS{{ '%03d' % nav_item.meta.code }}</code>{% endif %}
         {{ nav_item.title }}
       </a>
 
@@ -127,6 +130,7 @@
   {% else %}
     <li class="{{ class }}">
       <a href="{{ nav_item.url | url }}" class="md-nav__link">
+        {% if nav_item.meta and nav_item.meta.code %}<code>WPS{{ '%03d' % nav_item.meta.code }}</code>{% endif %}
         {{ nav_item.title }}
       </a>
     </li>
