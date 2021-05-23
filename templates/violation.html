@@ -3,7 +3,7 @@
 
 {# I had to copy-paste the content of `content` block to remove the <h1> hack #}
 {% block content %}
-    <h1><strong><code>WPS{{ page.meta.code }}</code></strong> {{ page.meta.title }}</h1>
+    <h1><strong><code>WPS{{ '%03d' % page.meta.code }}</code></strong> {{ page.meta.title }}</h1>
 
     <!-- Markdown content -->
     {{ page.content }}

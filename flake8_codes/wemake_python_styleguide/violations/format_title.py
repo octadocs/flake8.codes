@@ -11,7 +11,7 @@ class FormatTitle(BaseModel):
     violation: Violation
 
     def format_title(self) -> str:
-        return self.violation.title.replace('{0}', '🄰')
+        return self.violation.title.replace('{0}', '_').replace('`', '')
 
     def process(self) -> Violation:
         """Remove special characters in page title."""

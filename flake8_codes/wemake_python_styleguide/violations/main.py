@@ -87,6 +87,9 @@ def generate_wps_violations(directory: Path):
             module = import_module(
                 'wemake_python_styleguide.violations.' + path.stem,
             )
+            module_directory = directory / path.stem
+            module_directory.mkdir(parents=True, exist_ok=True)
+
             for checker_name in dir(module):
                 if not checker_name.endswith('Violation'):
                     continue
@@ -95,7 +98,7 @@ def generate_wps_violations(directory: Path):
                     continue
 
                 code = checker.code
-                output_file = directory / f'WPS{code:03}.md'
+                output_file = module_directory / f'WPS{code:03}.md'
 
                 violation = Violation(
                     code=code,
