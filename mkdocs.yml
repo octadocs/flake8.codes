@@ -20,6 +20,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - flake8_codes
   - octadocs
   - macros:
       modules:

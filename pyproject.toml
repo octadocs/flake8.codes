@@ -55,3 +55,6 @@ wemake-python-styleguide = [
   # Found protected attribute usage
   "-WPS437"
 ]
+
+[tool.poetry.plugins."mkdocs.plugins"]
+flake8_codes = "flake8_codes.plugin:Flake8Codes"
