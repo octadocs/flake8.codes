@@ -1,6 +1,5 @@
-{% set related_violations = queries.related_violations(this=page.iri) %}
-
-{% if related_violations %}
+{% macro related_items(items, title, item_template_path) %}
+{% if items %}
     <div
             class="md-sidebar md-sidebar--secondary"
             data-md-component="sidebar"
@@ -8,19 +7,15 @@
     >
         <div class="md-sidebar__scrollwrap">
             <div class="md-sidebar__inner">
-                <nav class="md-nav md-nav--secondary"
-                     aria-label="{{ lang.t('toc.title') }}">
+                <nav class="md-nav md-nav--secondary">
                     <label class="md-nav__title" for="__toc">
-                        Related Violations
+                        {{ title }}
                     </label>
                     <ul class="md-nav__list" data-md-component="toc"
                         data-md-scrollfix>
-                        {% for violation in related_violations %}
+                        {% for item in items %}
                             <li class="md-nav__item">
-                                <a href="{{ violation.url }}"
-                                   class="md-nav__link">
-                                    <strong>WPS{{ violation.code }}</strong> {{ violation.title }}
-                                </a>
+                                {% include item_template_path with context %}
                             </li>
                         {% endfor %}
                     </ul>
@@ -29,3 +24,4 @@
         </div>
     </div>
 {% endif %}
+{% endmacro %}

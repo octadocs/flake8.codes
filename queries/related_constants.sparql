@@ -1,5 +1,5 @@
 # List of constants related to a violation.
-# Accepts: violation - IRI of the violation in question.
+# Accepts: violation_page - IRI of the violation in question.
 SELECT * WHERE {
     ?violation_page :relatedConstant ?constant_iri .
 

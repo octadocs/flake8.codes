@@ -1,9 +1,28 @@
 {% extends "main.html" %}
+{% import "native_macros.html" as macros with context %}
 
 {% block site_nav %}
     {{ super() }}
 
-    {% include "partials/related_violations.html" with context %}
-    {% include "partials/related_configuration_parameters.html" with context %}
-    {% include "partials/related_constants.html" with context %}
+    {{ macros.related_items(
+        items=queries.related_violations(this=page.iri),
+        title='Related Violations',
+        item_template_path='partials/violation_link.html'
+    ) }}
+
+    {{ macros.related_items(
+        items=queries.related_configuration_parameters(
+            violation=page.iri
+        ),
+        title='Related Configuration Parameters',
+        item_template_path='partials/link.html'
+    ) }}
+
+    {{ macros.related_items(
+        items=queries.related_constants(
+            violation_page=page.iri
+        ),
+        title='Related Constants',
+        item_template_path='partials/link.html'
+    ) }}
 {% endblock %}
