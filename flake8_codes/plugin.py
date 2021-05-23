@@ -1,5 +1,3 @@
-from copy import copy, deepcopy
-import json
 from pathlib import Path
 
 from mkdocs.plugins import BasePlugin
@@ -18,15 +16,12 @@ class Flake8Codes(BasePlugin):
 
         violation_file: File
         for violation_file in wps_violations:
-            new_file = deepcopy(violation_file)
-            destination_path = Path(new_file.dest_path)
+            destination_path = Path(violation_file.dest_path)
 
-            new_file.dest_path = str(destination_path.relative_to(
+            violation_file.dest_path = str(destination_path.relative_to(
                 destination_path.parent.parent,
             ))
-            new_file.abs_dest_path = str(
-                Path(config['site_dir']) / new_file.dest_path,
+            violation_file.abs_dest_path = str(
+                Path(config['site_dir']) / violation_file.dest_path,
             )
-            new_file.url = f'{violation_file.name}/'
-
-            files.append(new_file)
+            violation_file.url = f'{violation_file.name}/'
