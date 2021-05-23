@@ -6,3 +6,6 @@ relatedConfigurationParameter:
 
 relatedConstant:
   $type: $id
+
+see-also:
+  $type: $id

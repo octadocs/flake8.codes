@@ -1,0 +1,11 @@
+INSERT {
+    GRAPH <inference> {
+        ?choice a :Decision .
+    }
+} WHERE {
+    ?adr :choices ?choice .
+
+    FILTER NOT EXISTS {
+         ?adr :excludes ?choice
+    } .
+}
