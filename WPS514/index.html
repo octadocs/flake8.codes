@@ -14,7 +14,7 @@
     
     
       
-        <title>Found implicit `in` condition - flake8.codes</title>
+        <title>Found implicit in condition - flake8.codes</title>
       
     
     
@@ -84,7 +84,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found implicit `in` condition
+              Found implicit in condition
             
           </span>
         </div>
@@ -256,13 +256,39 @@
     
       
       
-      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
 
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
+        
         Home
       </a>
     </li>
@@ -271,34 +297,85 @@
     
       
       
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="__nav_2"
+          type="checkbox"
+          id="__nav_2"
+          
+        />
       
 
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
+      <!-- Expand active pages -->
       <label class="md-nav__link" for="__nav_2">
+        
         Decisions
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Decisions" data-md-level="1">
+      <nav
+        class="md-nav"
+        aria-label="Decisions"
+        data-md-level="1"
+      >
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
+          
           Decisions
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../decisions/serve-violations-from-root-directory/" class="md-nav__link">
+        
         Serve violations from root of the website
       </a>
     </li>
@@ -308,87 +385,190 @@
         </ul>
       </nav>
     </li>
+
+  <!-- Currently active page -->
   
 
     
       
       
-      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
 
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+  <!-- Determine class according to state -->
   
   
     
   
+
+  <!-- Main navigation item with nested items -->
   
+
+    <!-- Determine whether to render item as a section -->
     
+
+    <!-- Render item with nested items -->
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="__nav_3"
+          type="checkbox"
+          id="__nav_3"
+          checked
+        />
       
+
+      <!-- Expand active pages -->
       <label class="md-nav__link" for="__nav_3">
+        
         Wemake python styleguide
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Wemake python styleguide" data-md-level="1">
+      <nav
+        class="md-nav"
+        aria-label="Wemake python styleguide"
+        data-md-level="1"
+      >
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
+          
           Wemake python styleguide
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
           
             
+  <!-- Determine class according to state -->
   
   
     
   
+
+  <!-- Main navigation item with nested items -->
   
+
+    <!-- Determine whether to render item as a section -->
     
       
     
+
+    <!-- Render item with nested items -->
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="__nav_3_1"
+          type="checkbox"
+          id="__nav_3_1"
+          checked
+        />
       
+
+      <!-- Expand active pages -->
       <label class="md-nav__link" for="__nav_3_1">
+        
         0.15.2
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="0.15.2" data-md-level="2">
+      <nav
+        class="md-nav"
+        aria-label="0.15.2"
+        data-md-level="2"
+      >
         <label class="md-nav__title" for="__nav_3_1">
           <span class="md-nav__icon md-icon"></span>
+          
           0.15.2
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
+
+    <!-- Determine whether to render item as a section -->
     
+
+    <!-- Render item with nested items -->
     <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1" type="checkbox" id="__nav_3_1_1" >
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="__nav_3_1_1"
+          type="checkbox"
+          id="__nav_3_1_1"
+          
+        />
       
+
+      <!-- Expand active pages -->
       <label class="md-nav__link" for="__nav_3_1_1">
+        
         Configuration
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Configuration" data-md-level="3">
+      <nav
+        class="md-nav"
+        aria-label="Configuration"
+        data-md-level="3"
+      >
         <label class="md-nav__title" for="__nav_3_1_1">
           <span class="md-nav__icon md-icon"></span>
+          
           Configuration
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/ALLOWED_DOMAIN_NAMES/" class="md-nav__link">
+        
         ALLOWED_DOMAIN_NAMES
       </a>
     </li>
@@ -396,11 +576,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/FORBIDDEN_DOMAIN_NAMES/" class="md-nav__link">
+        
         FORBIDDEN_DOMAIN_NAMES
       </a>
     </li>
@@ -408,11 +592,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/FORBIDDEN_INLINE_IGNORE/" class="md-nav__link">
+        
         FORBIDDEN_INLINE_IGNORE
       </a>
     </li>
@@ -420,11 +608,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/I_CONTROL_CODE/" class="md-nav__link">
+        
         I_CONTROL_CODE
       </a>
     </li>
@@ -432,11 +624,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_ACCESS_LEVEL/" class="md-nav__link">
+        
         MAX_ACCESS_LEVEL
       </a>
     </li>
@@ -444,11 +640,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_ANN_COMPLEXITY/" class="md-nav__link">
+        
         MAX_ANN_COMPLEXITY
       </a>
     </li>
@@ -456,11 +656,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_ARGUMENTS/" class="md-nav__link">
+        
         MAX_ARGUMENTS
       </a>
     </li>
@@ -468,11 +672,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_ASSERTS/" class="md-nav__link">
+        
         MAX_ASSERTS
       </a>
     </li>
@@ -480,11 +688,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_ATTRIBUTES/" class="md-nav__link">
+        
         MAX_ATTRIBUTES
       </a>
     </li>
@@ -492,11 +704,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_AWAITS/" class="md-nav__link">
+        
         MAX_AWAITS
       </a>
     </li>
@@ -504,11 +720,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_BASE_CLASSES/" class="md-nav__link">
+        
         MAX_BASE_CLASSES
       </a>
     </li>
@@ -516,11 +736,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_CALL_LEVEL/" class="md-nav__link">
+        
         MAX_CALL_LEVEL
       </a>
     </li>
@@ -528,11 +752,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_COGNITIVE_AVERAGE/" class="md-nav__link">
+        
         MAX_COGNITIVE_AVERAGE
       </a>
     </li>
@@ -540,11 +768,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_COGNITIVE_SCORE/" class="md-nav__link">
+        
         MAX_COGNITIVE_SCORE
       </a>
     </li>
@@ -552,11 +784,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_DECORATORS/" class="md-nav__link">
+        
         MAX_DECORATORS
       </a>
     </li>
@@ -564,11 +800,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_EXPRESSIONS/" class="md-nav__link">
+        
         MAX_EXPRESSIONS
       </a>
     </li>
@@ -576,11 +816,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_FUNCTION_EXPRESSIONS/" class="md-nav__link">
+        
         MAX_FUNCTION_EXPRESSIONS
       </a>
     </li>
@@ -588,11 +832,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_IMPORTED_NAMES/" class="md-nav__link">
+        
         MAX_IMPORTED_NAMES
       </a>
     </li>
@@ -600,11 +848,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_IMPORTS/" class="md-nav__link">
+        
         MAX_IMPORTS
       </a>
     </li>
@@ -612,11 +864,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_IMPORT_FROM_MEMBERS/" class="md-nav__link">
+        
         MAX_IMPORT_FROM_MEMBERS
       </a>
     </li>
@@ -624,11 +880,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_JONES_SCORE/" class="md-nav__link">
+        
         MAX_JONES_SCORE
       </a>
     </li>
@@ -636,11 +896,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_LINE_COMPLEXITY/" class="md-nav__link">
+        
         MAX_LINE_COMPLEXITY
       </a>
     </li>
@@ -648,11 +912,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_LOCAL_VARIABLES/" class="md-nav__link">
+        
         MAX_LOCAL_VARIABLES
       </a>
     </li>
@@ -660,11 +928,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_METHODS/" class="md-nav__link">
+        
         MAX_METHODS
       </a>
     </li>
@@ -672,11 +944,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_MODULE_EXPRESSIONS/" class="md-nav__link">
+        
         MAX_MODULE_EXPRESSIONS
       </a>
     </li>
@@ -684,11 +960,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_MODULE_MEMBERS/" class="md-nav__link">
+        
         MAX_MODULE_MEMBERS
       </a>
     </li>
@@ -696,11 +976,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_NAME_LENGTH/" class="md-nav__link">
+        
         MAX_NAME_LENGTH
       </a>
     </li>
@@ -708,11 +992,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_NOQA_COMMENTS/" class="md-nav__link">
+        
         MAX_NOQA_COMMENTS
       </a>
     </li>
@@ -720,11 +1008,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_RAISES/" class="md-nav__link">
+        
         MAX_RAISES
       </a>
     </li>
@@ -732,11 +1024,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_RETURNS/" class="md-nav__link">
+        
         MAX_RETURNS
       </a>
     </li>
@@ -744,11 +1040,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_STRING_USAGES/" class="md-nav__link">
+        
         MAX_STRING_USAGES
       </a>
     </li>
@@ -756,11 +1056,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_TRY_BODY_LENGTH/" class="md-nav__link">
+        
         MAX_TRY_BODY_LENGTH
       </a>
     </li>
@@ -768,11 +1072,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MAX_TUPLE_UNPACK_LENGTH/" class="md-nav__link">
+        
         MAX_TUPLE_UNPACK_LENGTH
       </a>
     </li>
@@ -780,11 +1088,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/MIN_NAME_LENGTH/" class="md-nav__link">
+        
         MIN_NAME_LENGTH
       </a>
     </li>
@@ -792,11 +1104,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/configuration/NESTED_CLASSES_WHITELIST/" class="md-nav__link">
+        
         NESTED_CLASSES_WHITELIST
       </a>
     </li>
@@ -806,36 +1122,67 @@
         </ul>
       </nav>
     </li>
+
+  <!-- Currently active page -->
   
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
+
+    <!-- Determine whether to render item as a section -->
     
+
+    <!-- Render item with nested items -->
     <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="__nav_3_1_2"
+          type="checkbox"
+          id="__nav_3_1_2"
+          
+        />
       
+
+      <!-- Expand active pages -->
       <label class="md-nav__link" for="__nav_3_1_2">
+        
         Constants
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Constants" data-md-level="3">
+      <nav
+        class="md-nav"
+        aria-label="Constants"
+        data-md-level="3"
+      >
         <label class="md-nav__title" for="__nav_3_1_2">
           <span class="md-nav__icon md-icon"></span>
+          
           Constants
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/ALIAS_NAMES_WHITELIST/" class="md-nav__link">
+        
         ALIAS_NAMES_WHITELIST
       </a>
     </li>
@@ -843,11 +1190,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/ALLOWED_BUILTIN_CLASSES/" class="md-nav__link">
+        
         ALLOWED_BUILTIN_CLASSES
       </a>
     </li>
@@ -855,11 +1206,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/ALLOWED_NESTED_IMPORTS_CONDITIONS/" class="md-nav__link">
+        
         ALLOWED_NESTED_IMPORTS_CONDITIONS
       </a>
     </li>
@@ -867,11 +1222,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/ALL_MAGIC_METHODS/" class="md-nav__link">
+        
         ALL_MAGIC_METHODS
       </a>
     </li>
@@ -879,11 +1238,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/ASYNC_MAGIC_METHODS_BLACKLIST/" class="md-nav__link">
+        
         ASYNC_MAGIC_METHODS_BLACKLIST
       </a>
     </li>
@@ -891,11 +1254,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/BUILTINS_WHITELIST/" class="md-nav__link">
+        
         BUILTINS_WHITELIST
       </a>
     </li>
@@ -903,11 +1270,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/FUNCTIONS_BLACKLIST/" class="md-nav__link">
+        
         FUNCTIONS_BLACKLIST
       </a>
     </li>
@@ -915,11 +1286,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/FUTURE_IMPORTS_WHITELIST/" class="md-nav__link">
+        
         FUTURE_IMPORTS_WHITELIST
       </a>
     </li>
@@ -927,11 +1302,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/LITERALS_BLACKLIST/" class="md-nav__link">
+        
         LITERALS_BLACKLIST
       </a>
     </li>
@@ -939,11 +1318,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MAGIC_METHODS_BLACKLIST/" class="md-nav__link">
+        
         MAGIC_METHODS_BLACKLIST
       </a>
     </li>
@@ -951,11 +1334,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MAGIC_MODULE_NAMES_BLACKLIST/" class="md-nav__link">
+        
         MAGIC_MODULE_NAMES_BLACKLIST
       </a>
     </li>
@@ -963,11 +1350,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MAGIC_MODULE_NAMES_WHITELIST/" class="md-nav__link">
+        
         MAGIC_MODULE_NAMES_WHITELIST
       </a>
     </li>
@@ -975,11 +1366,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MAGIC_NUMBERS_WHITELIST/" class="md-nav__link">
+        
         MAGIC_NUMBERS_WHITELIST
       </a>
     </li>
@@ -987,11 +1382,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MATH_APPROXIMATE_CONSTANTS/" class="md-nav__link">
+        
         MATH_APPROXIMATE_CONSTANTS
       </a>
     </li>
@@ -999,11 +1398,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MAX_COMPARES/" class="md-nav__link">
+        
         MAX_COMPARES
       </a>
     </li>
@@ -1011,11 +1414,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MAX_CONDITIONS/" class="md-nav__link">
+        
         MAX_CONDITIONS
       </a>
     </li>
@@ -1023,11 +1430,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MAX_ELIFS/" class="md-nav__link">
+        
         MAX_ELIFS
       </a>
     </li>
@@ -1035,11 +1446,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MAX_EXCEPT_CASES/" class="md-nav__link">
+        
         MAX_EXCEPT_CASES
       </a>
     </li>
@@ -1047,11 +1462,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MAX_LEN_YIELD_TUPLE/" class="md-nav__link">
+        
         MAX_LEN_YIELD_TUPLE
       </a>
     </li>
@@ -1059,11 +1478,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MAX_NO_COVER_COMMENTS/" class="md-nav__link">
+        
         MAX_NO_COVER_COMMENTS
       </a>
     </li>
@@ -1071,11 +1494,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MODULE_METADATA_VARIABLES_BLACKLIST/" class="md-nav__link">
+        
         MODULE_METADATA_VARIABLES_BLACKLIST
       </a>
     </li>
@@ -1083,11 +1510,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MODULE_NAMES_BLACKLIST/" class="md-nav__link">
+        
         MODULE_NAMES_BLACKLIST
       </a>
     </li>
@@ -1095,11 +1526,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/MODULE_NAME_PATTERN/" class="md-nav__link">
+        
         MODULE_NAME_PATTERN
       </a>
     </li>
@@ -1107,11 +1542,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/NESTED_FUNCTIONS_WHITELIST/" class="md-nav__link">
+        
         NESTED_FUNCTIONS_WHITELIST
       </a>
     </li>
@@ -1119,11 +1558,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/SPECIAL_ARGUMENT_NAMES_WHITELIST/" class="md-nav__link">
+        
         SPECIAL_ARGUMENT_NAMES_WHITELIST
       </a>
     </li>
@@ -1131,11 +1574,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/TUPLE_ARGUMENTS_METHODS/" class="md-nav__link">
+        
         TUPLE_ARGUMENTS_METHODS
       </a>
     </li>
@@ -1143,11 +1590,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/UNREADABLE_CHARACTER_COMBINATIONS/" class="md-nav__link">
+        
         UNREADABLE_CHARACTER_COMBINATIONS
       </a>
     </li>
@@ -1155,11 +1606,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/VAGUE_IMPORTS_BLACKLIST/" class="md-nav__link">
+        
         VAGUE_IMPORTS_BLACKLIST
       </a>
     </li>
@@ -1167,11 +1622,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/VARIABLE_NAMES_BLACKLIST/" class="md-nav__link">
+        
         VARIABLE_NAMES_BLACKLIST
       </a>
     </li>
@@ -1179,11 +1638,15 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../wemake-python-styleguide/0.15.2/constants/YIELD_MAGIC_METHODS_BLACKLIST/" class="md-nav__link">
+        
         YIELD_MAGIC_METHODS_BLACKLIST
       </a>
     </li>
@@ -1193,2650 +1656,131 @@
         </ul>
       </nav>
     </li>
+
+  <!-- Currently active page -->
   
 
           
             
+  <!-- Determine class according to state -->
   
   
     
   
+
+  <!-- Main navigation item with nested items -->
   
+
+    <!-- Determine whether to render item as a section -->
     
+
+    <!-- Render item with nested items -->
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3" type="checkbox" id="__nav_3_1_3" checked>
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="__nav_3_1_3"
+          type="checkbox"
+          id="__nav_3_1_3"
+          checked
+        />
       
+
+      <!-- Expand active pages -->
       <label class="md-nav__link" for="__nav_3_1_3">
+        
         Violations
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Violations" data-md-level="3">
+      <nav
+        class="md-nav"
+        aria-label="Violations"
+        data-md-level="3"
+      >
         <label class="md-nav__title" for="__nav_3_1_3">
           <span class="md-nav__icon md-icon"></span>
+          
           Violations
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS461/" class="md-nav__link">
-        Forbidden inline ignore: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS456/" class="md-nav__link">
-        Found "NaN" as argument to float()
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS323/" class="md-nav__link">
-        Found `%` string formatting
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS438/" class="md-nav__link">
-        Found `StopIteration` raising inside generator
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS412/" class="md-nav__link">
-        Found `__init__.py` module with logic
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS452/" class="md-nav__link">
-        Found `break` or `continue` in `finally` block
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS500/" class="md-nav__link">
-        Found `else` in a loop without `break`
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS305/" class="md-nav__link">
-        Found `f` string
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS501/" class="md-nav__link">
-        Found `finally` in `try` block without `except`
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS510/" class="md-nav__link">
-        Found `in` used with a non-set container
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS512/" class="md-nav__link">
-        Found `isinstance` call with a single element tuple
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS426/" class="md-nav__link">
-        Found `lambda` in loop's body
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS402/" class="md-nav__link">
-        Found `noqa` comments overuse: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS403/" class="md-nav__link">
-        Found `noqa` comments overuse: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS515/" class="md-nav__link">
-        Found `open()` used without a context manager
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS419/" class="md-nav__link">
-        Found `try`/`else`/`finally` with multiple return paths
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS516/" class="md-nav__link">
-        Found `type()` used to compare types
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS416/" class="md-nav__link">
-        Found `yield` inside comprehension
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS357/" class="md-nav__link">
-        Found a ``\r`` (carriage return) line break
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS224/" class="md-nav__link">
-        Found a comprehension with too many `for` statements
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS222/" class="md-nav__link">
-        Found a condition with too much logic: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS358/" class="md-nav__link">
-        Found a float zero (0.0)
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS463/" class="md-nav__link">
-        Found a getter without a return value
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS348/" class="md-nav__link">
-        Found a line that starts with a dot
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS237/" class="md-nav__link">
-        Found a too complex `f` string
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS122/" class="md-nav__link">
-        Found all unused variables definition: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS447/" class="md-nav__link">
-        Found alphabet as strings: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS361/" class="md-nav__link">
-        Found an inconsistently structured comprehension
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS457/" class="md-nav__link">
-        Found an infinite while loop
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS359/" class="md-nav__link">
-        Found an iterable unpacking to list
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS355/" class="md-nav__link">
-        Found an unnecessary blank line before a bracket
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS356/" class="md-nav__link">
-        Found an unnecessary iterable unpacking
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS360/" class="md-nav__link">
-        Found an unnecessary use of a raw string: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS446/" class="md-nav__link">
-        Found approximate constant: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS362/" class="md-nav__link">
-        Found assignment to a subscript slice
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS413/" class="md-nav__link">
-        Found bad magic module function: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS310/" class="md-nav__link">
-        Found bad number suffix: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS440/" class="md-nav__link">
-        Found block variables overlap: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS425/" class="md-nav__link">
-        Found boolean non-keyword argument: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS319/" class="md-nav__link">
-        Found bracket in wrong position
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS125/" class="md-nav__link">
-        Found builtin shadowing: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS233/" class="md-nav__link">
-        Found call chain that is too long: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS306/" class="md-nav__link">
-        Found class without a base class: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS520/" class="md-nav__link">
-        Found compare with falsy constant
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS312/" class="md-nav__link">
-        Found comparison of a variable to itself
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS459/" class="md-nav__link">
-        Found comparison with float or complex number
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS404/" class="md-nav__link">
-        Found complex default value
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS314/" class="md-nav__link">
-        Found conditional that always evaluates the same
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS354/" class="md-nav__link">
-        Found consecutive `yield` expressions
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS116/" class="md-nav__link">
-        Found consecutive underscores name: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS308/" class="md-nav__link">
-        Found constant comparison
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS316/" class="md-nav__link">
-        Found context manager with too many assignments
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS441/" class="md-nav__link">
-        Found control variable used after block: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS614/" class="md-nav__link">
-        Found descriptor applied on a function
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS609/" class="md-nav__link">
-        Found direct magic attribute usage: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS301/" class="md-nav__link">
-        Found dotted raw import: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS415/" class="md-nav__link">
-        Found duplicate exception: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS408/" class="md-nav__link">
-        Found duplicate logical condition
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS464/" class="md-nav__link">
-        Found empty comment
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS411/" class="md-nav__link">
-        Found empty module
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS424/" class="md-nav__link">
-        Found except `BaseException`
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS418/" class="md-nav__link">
-        Found exception inherited from `BaseException`
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS453/" class="md-nav__link">
-        Found executable mismatch: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS336/" class="md-nav__link">
-        Found explicit string concatenation
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS344/" class="md-nav__link">
-        Found explicit zero division
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS340/" class="md-nav__link">
-        Found exponent number with positive exponent: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS315/" class="md-nav__link">
-        Found extra `object` in parent classes list
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS318/" class="md-nav__link">
-        Found extra indentation
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS449/" class="md-nav__link">
-        Found float used as a key
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS610/" class="md-nav__link">
-        Found forbidden `async` magic method usage: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS611/" class="md-nav__link">
-        Found forbidden `yield` magic method usage
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS231/" class="md-nav__link">
-        Found function with too much cognitive complexity: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS422/" class="md-nav__link">
-        Found future import: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS409/" class="md-nav__link">
-        Found heterogeneous compare
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS529/" class="md-nav__link">
-        Found implicit `.get()` dict usage
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS528/" class="md-nav__link">
-        Found implicit `.items()` usage
-      </a>
-    </li>
-  
 
+          <!-- Render nested item list -->
           
             
-  
-  
+  <!-- Determine class according to state -->
   
-    <li class="md-nav__item">
-      <a href="../WPS513/" class="md-nav__link">
-        Found implicit `elif` condition
-      </a>
-    </li>
   
 
-          
-            
-  
-  
+  <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item">
-      <a href="../WPS518/" class="md-nav__link">
-        Found implicit `enumerate()` call
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
+    <!-- Determine whether to render item as a section -->
     
-  
-  
-    <li class="md-nav__item md-nav__item--active">
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="__nav_3_1_3_1"
+          type="checkbox"
+          id="__nav_3_1_3_1"
+          
+        />
       
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Found implicit `in` condition
-      </a>
-      
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS519/" class="md-nav__link">
-        Found implicit `sum()` call
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS526/" class="md-nav__link">
-        Found implicit `yield from` usage
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS333/" class="md-nav__link">
-        Found implicit complex compare
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS530/" class="md-nav__link">
-        Found implicit negative index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS522/" class="md-nav__link">
-        Found implicit primitive in a form of `lambda`
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS342/" class="md-nav__link">
-        Found implicit raw string: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS326/" class="md-nav__link">
-        Found implicit string concatenation
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS458/" class="md-nav__link">
-        Found imports collision: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS324/" class="md-nav__link">
-        Found inconsistent `return` statement
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS325/" class="md-nav__link">
-        Found inconsistent `yield` statement
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS607/" class="md-nav__link">
-        Found incorrect `__slots__` syntax
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS335/" class="md-nav__link">
-        Found incorrect `for` loop iter type
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS508/" class="md-nav__link">
-        Found incorrect `not` with compare usage
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS613/" class="md-nav__link">
-        Found incorrect `super()` call context: incorrect name access
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS608/" class="md-nav__link">
-        Found incorrect `super()` call: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS353/" class="md-nav__link">
-        Found incorrect `yield from` target
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS606/" class="md-nav__link">
-        Found incorrect base class
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS448/" class="md-nav__link">
-        Found incorrect exception order
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS444/" class="md-nav__link">
-        Found incorrect keyword condition
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS102/" class="md-nav__link">
-        Found incorrect module name pattern
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS317/" class="md-nav__link">
-        Found incorrect multi-line parameters
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS322/" class="md-nav__link">
-        Found incorrect multi-line string
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS604/" class="md-nav__link">
-        Found incorrect node inside `class` body
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS338/" class="md-nav__link">
-        Found incorrect order of methods in a class
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS414/" class="md-nav__link">
-        Found incorrect unpacking target
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS445/" class="md-nav__link">
-        Found incorrectly named keyword in the starred dict
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS509/" class="md-nav__link">
-        Found incorrectly nested ternary
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS523/" class="md-nav__link">
-        Found incorrectly swapped variables
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS465/" class="md-nav__link">
-        Found likely bitwise and boolean operation mixup
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS221/" class="md-nav__link">
-        Found line with high Jones Complexity: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS307/" class="md-nav__link">
-        Found list comprehension with multiple `if`s
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS435/" class="md-nav__link">
-        Found list multiply
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS300/" class="md-nav__link">
-        Found local folder import
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS432/" class="md-nav__link">
-        Found magic number: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS345/" class="md-nav__link">
-        Found meaningless number operation
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS605/" class="md-nav__link">
-        Found method without arguments: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS232/" class="md-nav__link">
-        Found module cognitive complexity that is too high: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS200/" class="md-nav__link">
-        Found module with high Jones Complexity score: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS203/" class="md-nav__link">
-        Found module with too many imported names: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS201/" class="md-nav__link">
-        Found module with too many imports: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS320/" class="md-nav__link">
-        Found multi-line function type annotation
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS337/" class="md-nav__link">
-        Found multiline conditions
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS352/" class="md-nav__link">
-        Found multiline loop
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS311/" class="md-nav__link">
-        Found multiple `in` compares
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS429/" class="md-nav__link">
-        Found multiple assign targets
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS407/" class="md-nav__link">
-        Found mutable module constant
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS117/" class="md-nav__link">
-        Found name reserved for first argument: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS504/" class="md-nav__link">
-        Found negated condition
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS505/" class="md-nav__link">
-        Found nested `try` block
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS431/" class="md-nav__link">
-        Found nested class: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS430/" class="md-nav__link">
-        Found nested function: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS433/" class="md-nav__link">
-        Found nested import
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS466/" class="md-nav__link">
-        Found new-styled decorator
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS455/" class="md-nav__link">
-        Found non-trivial expression as an argument for "except"
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS417/" class="md-nav__link">
-        Found non-unique item in hash: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS527/" class="md-nav__link">
-        Found not a tuple used as an argument
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS339/" class="md-nav__link">
-        Found number with meaningless zeros: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS442/" class="md-nav__link">
-        Found outer scope names shadowing: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS234/" class="md-nav__link">
-        Found overly complex annotation: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS204/" class="md-nav__link">
-        Found overused expression: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS313/" class="md-nav__link">
-        Found parenthesis immediately after a keyword
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS304/" class="md-nav__link">
-        Found partial float: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS517/" class="md-nav__link">
-        Found pointless starred expression
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS451/" class="md-nav__link">
-        Found positional-only argument
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS112/" class="md-nav__link">
-        Found private name pattern: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS437/" class="md-nav__link">
-        Found protected attribute usage: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS436/" class="md-nav__link">
-        Found protected module import: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS450/" class="md-nav__link">
-        Found protected object import: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS423/" class="md-nav__link">
-        Found raise NotImplemented
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS434/" class="md-nav__link">
-        Found reassigning variable to itself: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS349/" class="md-nav__link">
-        Found redundant subscript slice
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS120/" class="md-nav__link">
-        Found regular name with trailing underscore: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS309/" class="md-nav__link">
-        Found reversed compare order
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS334/" class="md-nav__link">
-        Found reversed complex comparison
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS113/" class="md-nav__link">
-        Found same alias import: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS524/" class="md-nav__link">
-        Found self assignment  with refactored assignment
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS511/" class="md-nav__link">
-        Found separate `isinstance` calls that can be merged for: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS601/" class="md-nav__link">
-        Found shadowed class attribute: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS502/" class="md-nav__link">
-        Found simplifiable `if` condition
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS531/" class="md-nav__link">
-        Found simplifiable returning `if` condition in a function
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS460/" class="md-nav__link">
-        Found single element destructuring
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS428/" class="md-nav__link">
-        Found statement that has no effect
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS226/" class="md-nav__link">
-        Found string constant over-use: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS600/" class="md-nav__link">
-        Found subclassing a builtin: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS219/" class="md-nav__link">
-        Found too deep access level: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS220/" class="md-nav__link">
-        Found too deep nesting: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS229/" class="md-nav__link">
-        Found too long ``try`` body length: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS228/" class="md-nav__link">
-        Found too long compare
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS118/" class="md-nav__link">
-        Found too long name: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS227/" class="md-nav__link">
-        Found too long yield tuple: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS218/" class="md-nav__link">
-        Found too many `assert` statements: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS223/" class="md-nav__link">
-        Found too many `elif` branches: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS225/" class="md-nav__link">
-        Found too many `except` cases: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS211/" class="md-nav__link">
-        Found too many arguments: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS217/" class="md-nav__link">
-        Found too many await expressions: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS213/" class="md-nav__link">
-        Found too many expressions: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS235/" class="md-nav__link">
-        Found too many imported names from a module: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS210/" class="md-nav__link">
-        Found too many local variables: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS214/" class="md-nav__link">
-        Found too many methods: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS202/" class="md-nav__link">
-        Found too many module members: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS230/" class="md-nav__link">
-        Found too many public instance attributes: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS238/" class="md-nav__link">
-        Found too many raises in a function: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS212/" class="md-nav__link">
-        Found too many return statements: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS236/" class="md-nav__link">
-        Found too many variables used to unpack a tuple: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS111/" class="md-nav__link">
-        Found too short name: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS114/" class="md-nav__link">
-        Found underscored number name pattern: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS303/" class="md-nav__link">
-        Found underscored number: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS443/" class="md-nav__link">
-        Found unhashable item
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS439/" class="md-nav__link">
-        Found unicode escape in a binary string: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS119/" class="md-nav__link">
-        Found unicode name: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS302/" class="md-nav__link">
-        Found unicode string prefix: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS351/" class="md-nav__link">
-        Found unnecessary literals
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS330/" class="md-nav__link">
-        Found unnecessary operator: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS615/" class="md-nav__link">
-        Found unpythonic getter or setter
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS427/" class="md-nav__link">
-        Found unreachable code
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS124/" class="md-nav__link">
-        Found unreadable characters combination: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS115/" class="md-nav__link">
-        Found upper-case constant in a class: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS321/" class="md-nav__link">
-        Found uppercase string modifier: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS350/" class="md-nav__link">
-        Found usable augmented assign pattern
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS121/" class="md-nav__link">
-        Found usage of a variable marked as unused: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS327/" class="md-nav__link">
-        Found useless `continue` at the end of the loop
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS329/" class="md-nav__link">
-        Found useless `except` case
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS507/" class="md-nav__link">
-        Found useless `len()` compare
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS506/" class="md-nav__link">
-        Found useless lambda declaration
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS328/" class="md-nav__link">
-        Found useless node: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS612/" class="md-nav__link">
-        Found useless overwritten method: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS503/" class="md-nav__link">
-        Found useless returning `else` statement
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS602/" class="md-nav__link">
-        Found using `@staticmethod`
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS603/" class="md-nav__link">
-        Found using restricted magic method: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS347/" class="md-nav__link">
-        Found vague import that may cause confusion: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS331/" class="md-nav__link">
-        Found variables that are only used for `return`: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS332/" class="md-nav__link">
-        Found walrus operator
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS405/" class="md-nav__link">
-        Found wrong `for` loop variable definition
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS525/" class="md-nav__link">
-        Found wrong `in` compare with single item container
-      </a>
-    </li>
-  
 
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="__nav_3_1_3_1">
+        
+        Best practices
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Best practices"
+        data-md-level="4"
+      >
+        <label class="md-nav__title" for="__nav_3_1_3_1">
+          <span class="md-nav__icon md-icon"></span>
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS521/" class="md-nav__link">
-        Found wrong `is` compare
-      </a>
-    </li>
-  
+          Best practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
 
+          <!-- Render nested item list -->
           
             
-  
+  <!-- Determine class according to state -->
   
   
-    <li class="md-nav__item">
-      <a href="../WPS454/" class="md-nav__link">
-        Found wrong `raise` exception type: {0}
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../WPS343/" class="md-nav__link">
-        Found wrong complex number suffix: {0}
+      <a href="../WPS400/" class="md-nav__link">
+        <code>WPS400</code>
+        Found wrong magic comment: _
       </a>
     </li>
   
 
           
             
+  <!-- Determine class according to state -->
   
   
-  
-    <li class="md-nav__item">
-      <a href="../WPS406/" class="md-nav__link">
-        Found wrong context manager variable definition
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../WPS401/" class="md-nav__link">
+        <code>WPS401</code>
         Found wrong doc comment
       </a>
     </li>
@@ -3844,95 +1788,2443 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../WPS421/" class="md-nav__link">
-        Found wrong function call: {0}
+      <a href="../WPS402/" class="md-nav__link">
+        <code>WPS402</code>
+        Found noqa comments overuse: _
       </a>
     </li>
   
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../WPS341/" class="md-nav__link">
-        Found wrong hex number case: {0}
+      <a href="../WPS403/" class="md-nav__link">
+        <code>WPS403</code>
+        Found noqa comments overuse: _
       </a>
     </li>
   
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../WPS420/" class="md-nav__link">
-        Found wrong keyword: {0}
+      <a href="../WPS404/" class="md-nav__link">
+        <code>WPS404</code>
+        Found complex default value
       </a>
     </li>
   
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../WPS400/" class="md-nav__link">
-        Found wrong magic comment: {0}
+      <a href="../WPS405/" class="md-nav__link">
+        <code>WPS405</code>
+        Found wrong for loop variable definition
       </a>
     </li>
   
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS406/" class="md-nav__link">
+        <code>WPS406</code>
+        Found wrong context manager variable definition
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS407/" class="md-nav__link">
+        <code>WPS407</code>
+        Found mutable module constant
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS408/" class="md-nav__link">
+        <code>WPS408</code>
+        Found duplicate logical condition
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS409/" class="md-nav__link">
+        <code>WPS409</code>
+        Found heterogeneous compare
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../WPS410/" class="md-nav__link">
-        Found wrong metadata variable: {0}
+        <code>WPS410</code>
+        Found wrong metadata variable: _
       </a>
     </li>
   
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../WPS101/" class="md-nav__link">
-        Found wrong module magic name
+      <a href="../WPS411/" class="md-nav__link">
+        <code>WPS411</code>
+        Found empty module
       </a>
     </li>
   
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../WPS100/" class="md-nav__link">
-        Found wrong module name
+      <a href="../WPS412/" class="md-nav__link">
+        <code>WPS412</code>
+        Found __init__.py module with logic
       </a>
     </li>
   
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS413/" class="md-nav__link">
+        <code>WPS413</code>
+        Found bad magic module function: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS414/" class="md-nav__link">
+        <code>WPS414</code>
+        Found incorrect unpacking target
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS415/" class="md-nav__link">
+        <code>WPS415</code>
+        Found duplicate exception: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS416/" class="md-nav__link">
+        <code>WPS416</code>
+        Found yield inside comprehension
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS417/" class="md-nav__link">
+        <code>WPS417</code>
+        Found non-unique item in hash: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS418/" class="md-nav__link">
+        <code>WPS418</code>
+        Found exception inherited from BaseException
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS419/" class="md-nav__link">
+        <code>WPS419</code>
+        Found try/else/finally with multiple return paths
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS420/" class="md-nav__link">
+        <code>WPS420</code>
+        Found wrong keyword: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS421/" class="md-nav__link">
+        <code>WPS421</code>
+        Found wrong function call: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS422/" class="md-nav__link">
+        <code>WPS422</code>
+        Found future import: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS423/" class="md-nav__link">
+        <code>WPS423</code>
+        Found raise NotImplemented
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS424/" class="md-nav__link">
+        <code>WPS424</code>
+        Found except BaseException
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS425/" class="md-nav__link">
+        <code>WPS425</code>
+        Found boolean non-keyword argument: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS426/" class="md-nav__link">
+        <code>WPS426</code>
+        Found lambda in loop's body
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS427/" class="md-nav__link">
+        <code>WPS427</code>
+        Found unreachable code
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS428/" class="md-nav__link">
+        <code>WPS428</code>
+        Found statement that has no effect
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS429/" class="md-nav__link">
+        <code>WPS429</code>
+        Found multiple assign targets
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS430/" class="md-nav__link">
+        <code>WPS430</code>
+        Found nested function: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS431/" class="md-nav__link">
+        <code>WPS431</code>
+        Found nested class: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS432/" class="md-nav__link">
+        <code>WPS432</code>
+        Found magic number: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS433/" class="md-nav__link">
+        <code>WPS433</code>
+        Found nested import
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS434/" class="md-nav__link">
+        <code>WPS434</code>
+        Found reassigning variable to itself: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS435/" class="md-nav__link">
+        <code>WPS435</code>
+        Found list multiply
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS436/" class="md-nav__link">
+        <code>WPS436</code>
+        Found protected module import: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS437/" class="md-nav__link">
+        <code>WPS437</code>
+        Found protected attribute usage: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS438/" class="md-nav__link">
+        <code>WPS438</code>
+        Found StopIteration raising inside generator
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS439/" class="md-nav__link">
+        <code>WPS439</code>
+        Found unicode escape in a binary string: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS440/" class="md-nav__link">
+        <code>WPS440</code>
+        Found block variables overlap: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS441/" class="md-nav__link">
+        <code>WPS441</code>
+        Found control variable used after block: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS442/" class="md-nav__link">
+        <code>WPS442</code>
+        Found outer scope names shadowing: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS443/" class="md-nav__link">
+        <code>WPS443</code>
+        Found unhashable item
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS444/" class="md-nav__link">
+        <code>WPS444</code>
+        Found incorrect keyword condition
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS445/" class="md-nav__link">
+        <code>WPS445</code>
+        Found incorrectly named keyword in the starred dict
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS446/" class="md-nav__link">
+        <code>WPS446</code>
+        Found approximate constant: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS447/" class="md-nav__link">
+        <code>WPS447</code>
+        Found alphabet as strings: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS448/" class="md-nav__link">
+        <code>WPS448</code>
+        Found incorrect exception order
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS449/" class="md-nav__link">
+        <code>WPS449</code>
+        Found float used as a key
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS450/" class="md-nav__link">
+        <code>WPS450</code>
+        Found protected object import: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS451/" class="md-nav__link">
+        <code>WPS451</code>
+        Found positional-only argument
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS452/" class="md-nav__link">
+        <code>WPS452</code>
+        Found break or continue in finally block
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS453/" class="md-nav__link">
+        <code>WPS453</code>
+        Found executable mismatch: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS454/" class="md-nav__link">
+        <code>WPS454</code>
+        Found wrong raise exception type: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS455/" class="md-nav__link">
+        <code>WPS455</code>
+        Found non-trivial expression as an argument for "except"
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS456/" class="md-nav__link">
+        <code>WPS456</code>
+        Found "NaN" as argument to float()
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS457/" class="md-nav__link">
+        <code>WPS457</code>
+        Found an infinite while loop
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS458/" class="md-nav__link">
+        <code>WPS458</code>
+        Found imports collision: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS459/" class="md-nav__link">
+        <code>WPS459</code>
+        Found comparison with float or complex number
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS460/" class="md-nav__link">
+        <code>WPS460</code>
+        Found single element destructuring
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS461/" class="md-nav__link">
+        <code>WPS461</code>
+        Forbidden inline ignore: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS462/" class="md-nav__link">
+        <code>WPS462</code>
+        Wrong multiline string usage
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS463/" class="md-nav__link">
+        <code>WPS463</code>
+        Found a getter without a return value
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS464/" class="md-nav__link">
+        <code>WPS464</code>
+        Found empty comment
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS465/" class="md-nav__link">
+        <code>WPS465</code>
+        Found likely bitwise and boolean operation mixup
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS466/" class="md-nav__link">
+        <code>WPS466</code>
+        Found new-styled decorator
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="__nav_3_1_3_2"
+          type="checkbox"
+          id="__nav_3_1_3_2"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="__nav_3_1_3_2">
+        
+        Complexity
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Complexity"
+        data-md-level="4"
+      >
+        <label class="md-nav__title" for="__nav_3_1_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          
+          Complexity
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS200/" class="md-nav__link">
+        <code>WPS200</code>
+        Found module with high Jones Complexity score: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS201/" class="md-nav__link">
+        <code>WPS201</code>
+        Found module with too many imports: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS202/" class="md-nav__link">
+        <code>WPS202</code>
+        Found too many module members: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS203/" class="md-nav__link">
+        <code>WPS203</code>
+        Found module with too many imported names: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS204/" class="md-nav__link">
+        <code>WPS204</code>
+        Found overused expression: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS210/" class="md-nav__link">
+        <code>WPS210</code>
+        Found too many local variables: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS211/" class="md-nav__link">
+        <code>WPS211</code>
+        Found too many arguments: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS212/" class="md-nav__link">
+        <code>WPS212</code>
+        Found too many return statements: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS213/" class="md-nav__link">
+        <code>WPS213</code>
+        Found too many expressions: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS214/" class="md-nav__link">
+        <code>WPS214</code>
+        Found too many methods: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS215/" class="md-nav__link">
+        <code>WPS215</code>
+        Too many base classes: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS216/" class="md-nav__link">
+        <code>WPS216</code>
+        Too many decorators: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS217/" class="md-nav__link">
+        <code>WPS217</code>
+        Found too many await expressions: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS218/" class="md-nav__link">
+        <code>WPS218</code>
+        Found too many assert statements: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS219/" class="md-nav__link">
+        <code>WPS219</code>
+        Found too deep access level: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS220/" class="md-nav__link">
+        <code>WPS220</code>
+        Found too deep nesting: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS221/" class="md-nav__link">
+        <code>WPS221</code>
+        Found line with high Jones Complexity: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS222/" class="md-nav__link">
+        <code>WPS222</code>
+        Found a condition with too much logic: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS223/" class="md-nav__link">
+        <code>WPS223</code>
+        Found too many elif branches: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS224/" class="md-nav__link">
+        <code>WPS224</code>
+        Found a comprehension with too many for statements
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS225/" class="md-nav__link">
+        <code>WPS225</code>
+        Found too many except cases: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS226/" class="md-nav__link">
+        <code>WPS226</code>
+        Found string constant over-use: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS227/" class="md-nav__link">
+        <code>WPS227</code>
+        Found too long yield tuple: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS228/" class="md-nav__link">
+        <code>WPS228</code>
+        Found too long compare
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS229/" class="md-nav__link">
+        <code>WPS229</code>
+        Found too long try body length: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS230/" class="md-nav__link">
+        <code>WPS230</code>
+        Found too many public instance attributes: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS231/" class="md-nav__link">
+        <code>WPS231</code>
+        Found function with too much cognitive complexity: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS232/" class="md-nav__link">
+        <code>WPS232</code>
+        Found module cognitive complexity that is too high: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS233/" class="md-nav__link">
+        <code>WPS233</code>
+        Found call chain that is too long: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS234/" class="md-nav__link">
+        <code>WPS234</code>
+        Found overly complex annotation: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS235/" class="md-nav__link">
+        <code>WPS235</code>
+        Found too many imported names from a module: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS236/" class="md-nav__link">
+        <code>WPS236</code>
+        Found too many variables used to unpack a tuple: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS237/" class="md-nav__link">
+        <code>WPS237</code>
+        Found a too complex f string
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS238/" class="md-nav__link">
+        <code>WPS238</code>
+        Found too many raises in a function: _
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="__nav_3_1_3_3"
+          type="checkbox"
+          id="__nav_3_1_3_3"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="__nav_3_1_3_3">
+        
+        Consistency
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Consistency"
+        data-md-level="4"
+      >
+        <label class="md-nav__title" for="__nav_3_1_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          
+          Consistency
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS300/" class="md-nav__link">
+        <code>WPS300</code>
+        Found local folder import
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS301/" class="md-nav__link">
+        <code>WPS301</code>
+        Found dotted raw import: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS302/" class="md-nav__link">
+        <code>WPS302</code>
+        Found unicode string prefix: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS303/" class="md-nav__link">
+        <code>WPS303</code>
+        Found underscored number: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS304/" class="md-nav__link">
+        <code>WPS304</code>
+        Found partial float: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS305/" class="md-nav__link">
+        <code>WPS305</code>
+        Found f string
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS306/" class="md-nav__link">
+        <code>WPS306</code>
+        Found class without a base class: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS307/" class="md-nav__link">
+        <code>WPS307</code>
+        Found list comprehension with multiple ifs
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS308/" class="md-nav__link">
+        <code>WPS308</code>
+        Found constant comparison
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS309/" class="md-nav__link">
+        <code>WPS309</code>
+        Found reversed compare order
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS310/" class="md-nav__link">
+        <code>WPS310</code>
+        Found bad number suffix: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS311/" class="md-nav__link">
+        <code>WPS311</code>
+        Found multiple in compares
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS312/" class="md-nav__link">
+        <code>WPS312</code>
+        Found comparison of a variable to itself
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS313/" class="md-nav__link">
+        <code>WPS313</code>
+        Found parenthesis immediately after a keyword
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS314/" class="md-nav__link">
+        <code>WPS314</code>
+        Found conditional that always evaluates the same
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS315/" class="md-nav__link">
+        <code>WPS315</code>
+        Found extra object in parent classes list
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS316/" class="md-nav__link">
+        <code>WPS316</code>
+        Found context manager with too many assignments
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS317/" class="md-nav__link">
+        <code>WPS317</code>
+        Found incorrect multi-line parameters
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS318/" class="md-nav__link">
+        <code>WPS318</code>
+        Found extra indentation
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS319/" class="md-nav__link">
+        <code>WPS319</code>
+        Found bracket in wrong position
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS320/" class="md-nav__link">
+        <code>WPS320</code>
+        Found multi-line function type annotation
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS321/" class="md-nav__link">
+        <code>WPS321</code>
+        Found uppercase string modifier: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS322/" class="md-nav__link">
+        <code>WPS322</code>
+        Found incorrect multi-line string
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS323/" class="md-nav__link">
+        <code>WPS323</code>
+        Found % string formatting
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS324/" class="md-nav__link">
+        <code>WPS324</code>
+        Found inconsistent return statement
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS325/" class="md-nav__link">
+        <code>WPS325</code>
+        Found inconsistent yield statement
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS326/" class="md-nav__link">
+        <code>WPS326</code>
+        Found implicit string concatenation
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS327/" class="md-nav__link">
+        <code>WPS327</code>
+        Found useless continue at the end of the loop
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS328/" class="md-nav__link">
+        <code>WPS328</code>
+        Found useless node: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS329/" class="md-nav__link">
+        <code>WPS329</code>
+        Found useless except case
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS330/" class="md-nav__link">
+        <code>WPS330</code>
+        Found unnecessary operator: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS331/" class="md-nav__link">
+        <code>WPS331</code>
+        Found variables that are only used for return: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS332/" class="md-nav__link">
+        <code>WPS332</code>
+        Found walrus operator
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS333/" class="md-nav__link">
+        <code>WPS333</code>
+        Found implicit complex compare
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS334/" class="md-nav__link">
+        <code>WPS334</code>
+        Found reversed complex comparison
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS335/" class="md-nav__link">
+        <code>WPS335</code>
+        Found incorrect for loop iter type
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS336/" class="md-nav__link">
+        <code>WPS336</code>
+        Found explicit string concatenation
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS337/" class="md-nav__link">
+        <code>WPS337</code>
+        Found multiline conditions
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS338/" class="md-nav__link">
+        <code>WPS338</code>
+        Found incorrect order of methods in a class
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS339/" class="md-nav__link">
+        <code>WPS339</code>
+        Found number with meaningless zeros: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS340/" class="md-nav__link">
+        <code>WPS340</code>
+        Found exponent number with positive exponent: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS341/" class="md-nav__link">
+        <code>WPS341</code>
+        Found wrong hex number case: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS342/" class="md-nav__link">
+        <code>WPS342</code>
+        Found implicit raw string: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS343/" class="md-nav__link">
+        <code>WPS343</code>
+        Found wrong complex number suffix: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS344/" class="md-nav__link">
+        <code>WPS344</code>
+        Found explicit zero division
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS345/" class="md-nav__link">
+        <code>WPS345</code>
+        Found meaningless number operation
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../WPS346/" class="md-nav__link">
+        <code>WPS346</code>
         Found wrong operation sign
       </a>
     </li>
@@ -3940,92 +4232,1622 @@
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../WPS123/" class="md-nav__link">
-        Found wrong unused variable name: {0}
+      <a href="../WPS347/" class="md-nav__link">
+        <code>WPS347</code>
+        Found vague import that may cause confusion: _
       </a>
     </li>
   
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS348/" class="md-nav__link">
+        <code>WPS348</code>
+        Found a line that starts with a dot
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS349/" class="md-nav__link">
+        <code>WPS349</code>
+        Found redundant subscript slice
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS350/" class="md-nav__link">
+        <code>WPS350</code>
+        Found usable augmented assign pattern
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS351/" class="md-nav__link">
+        <code>WPS351</code>
+        Found unnecessary literals
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS352/" class="md-nav__link">
+        <code>WPS352</code>
+        Found multiline loop
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS353/" class="md-nav__link">
+        <code>WPS353</code>
+        Found incorrect yield from target
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS354/" class="md-nav__link">
+        <code>WPS354</code>
+        Found consecutive yield expressions
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS355/" class="md-nav__link">
+        <code>WPS355</code>
+        Found an unnecessary blank line before a bracket
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS356/" class="md-nav__link">
+        <code>WPS356</code>
+        Found an unnecessary iterable unpacking
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS357/" class="md-nav__link">
+        <code>WPS357</code>
+        Found a \r (carriage return) line break
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS358/" class="md-nav__link">
+        <code>WPS358</code>
+        Found a float zero (0.0)
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS359/" class="md-nav__link">
+        <code>WPS359</code>
+        Found an iterable unpacking to list
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS360/" class="md-nav__link">
+        <code>WPS360</code>
+        Found an unnecessary use of a raw string: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS361/" class="md-nav__link">
+        <code>WPS361</code>
+        Found an inconsistently structured comprehension
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS362/" class="md-nav__link">
+        <code>WPS362</code>
+        Found assignment to a subscript slice
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="__nav_3_1_3_4"
+          type="checkbox"
+          id="__nav_3_1_3_4"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="__nav_3_1_3_4">
+        
+        Naming
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Naming"
+        data-md-level="4"
+      >
+        <label class="md-nav__title" for="__nav_3_1_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          
+          Naming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS100/" class="md-nav__link">
+        <code>WPS100</code>
+        Found wrong module name
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS101/" class="md-nav__link">
+        <code>WPS101</code>
+        Found wrong module magic name
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS102/" class="md-nav__link">
+        <code>WPS102</code>
+        Found incorrect module name pattern
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../WPS110/" class="md-nav__link">
-        Found wrong variable name: {0}
+        <code>WPS110</code>
+        Found wrong variable name: _
       </a>
     </li>
   
 
           
             
+  <!-- Determine class according to state -->
   
   
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS111/" class="md-nav__link">
+        <code>WPS111</code>
+        Found too short name: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS112/" class="md-nav__link">
+        <code>WPS112</code>
+        Found private name pattern: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS113/" class="md-nav__link">
+        <code>WPS113</code>
+        Found same alias import: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS114/" class="md-nav__link">
+        <code>WPS114</code>
+        Found underscored number name pattern: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS115/" class="md-nav__link">
+        <code>WPS115</code>
+        Found upper-case constant in a class: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS116/" class="md-nav__link">
+        <code>WPS116</code>
+        Found consecutive underscores name: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS117/" class="md-nav__link">
+        <code>WPS117</code>
+        Found name reserved for first argument: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS118/" class="md-nav__link">
+        <code>WPS118</code>
+        Found too long name: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS119/" class="md-nav__link">
+        <code>WPS119</code>
+        Found unicode name: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS120/" class="md-nav__link">
+        <code>WPS120</code>
+        Found regular name with trailing underscore: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS121/" class="md-nav__link">
+        <code>WPS121</code>
+        Found usage of a variable marked as unused: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS122/" class="md-nav__link">
+        <code>WPS122</code>
+        Found all unused variables definition: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS123/" class="md-nav__link">
+        <code>WPS123</code>
+        Found wrong unused variable name: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS124/" class="md-nav__link">
+        <code>WPS124</code>
+        Found unreadable characters combination: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS125/" class="md-nav__link">
+        <code>WPS125</code>
+        Found builtin shadowing: _
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="__nav_3_1_3_5"
+          type="checkbox"
+          id="__nav_3_1_3_5"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="__nav_3_1_3_5">
+        
+        Oop
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Oop"
+        data-md-level="4"
+      >
+        <label class="md-nav__title" for="__nav_3_1_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          
+          Oop
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS600/" class="md-nav__link">
+        <code>WPS600</code>
+        Found subclassing a builtin: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS601/" class="md-nav__link">
+        <code>WPS601</code>
+        Found shadowed class attribute: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS602/" class="md-nav__link">
+        <code>WPS602</code>
+        Found using @staticmethod
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS603/" class="md-nav__link">
+        <code>WPS603</code>
+        Found using restricted magic method: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS604/" class="md-nav__link">
+        <code>WPS604</code>
+        Found incorrect node inside class body
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS605/" class="md-nav__link">
+        <code>WPS605</code>
+        Found method without arguments: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS606/" class="md-nav__link">
+        <code>WPS606</code>
+        Found incorrect base class
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS607/" class="md-nav__link">
+        <code>WPS607</code>
+        Found incorrect __slots__ syntax
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS608/" class="md-nav__link">
+        <code>WPS608</code>
+        Found incorrect super() call: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS609/" class="md-nav__link">
+        <code>WPS609</code>
+        Found direct magic attribute usage: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS610/" class="md-nav__link">
+        <code>WPS610</code>
+        Found forbidden async magic method usage: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS611/" class="md-nav__link">
+        <code>WPS611</code>
+        Found forbidden yield magic method usage
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS612/" class="md-nav__link">
+        <code>WPS612</code>
+        Found useless overwritten method: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS613/" class="md-nav__link">
+        <code>WPS613</code>
+        Found incorrect super() call context: incorrect name access
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS614/" class="md-nav__link">
+        <code>WPS614</code>
+        Found descriptor applied on a function
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS615/" class="md-nav__link">
+        <code>WPS615</code>
+        Found unpythonic getter or setter
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="__nav_3_1_3_6"
+          type="checkbox"
+          id="__nav_3_1_3_6"
+          checked
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="__nav_3_1_3_6">
+        
+        Refactoring
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Refactoring"
+        data-md-level="4"
+      >
+        <label class="md-nav__title" for="__nav_3_1_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          
+          Refactoring
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS500/" class="md-nav__link">
+        <code>WPS500</code>
+        Found else in a loop without break
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS501/" class="md-nav__link">
+        <code>WPS501</code>
+        Found finally in try block without except
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS502/" class="md-nav__link">
+        <code>WPS502</code>
+        Found simplifiable if condition
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS503/" class="md-nav__link">
+        <code>WPS503</code>
+        Found useless returning else statement
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS504/" class="md-nav__link">
+        <code>WPS504</code>
+        Found negated condition
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS505/" class="md-nav__link">
+        <code>WPS505</code>
+        Found nested try block
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS506/" class="md-nav__link">
+        <code>WPS506</code>
+        Found useless lambda declaration
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS507/" class="md-nav__link">
+        <code>WPS507</code>
+        Found useless len() compare
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS508/" class="md-nav__link">
+        <code>WPS508</code>
+        Found incorrect not with compare usage
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS509/" class="md-nav__link">
+        <code>WPS509</code>
+        Found incorrectly nested ternary
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS510/" class="md-nav__link">
+        <code>WPS510</code>
+        Found in used with a non-set container
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS511/" class="md-nav__link">
+        <code>WPS511</code>
+        Found separate isinstance calls that can be merged for: _
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS512/" class="md-nav__link">
+        <code>WPS512</code>
+        Found isinstance call with a single element tuple
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS513/" class="md-nav__link">
+        <code>WPS513</code>
+        Found implicit elif condition
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        <code>WPS514</code>
+        Found implicit in condition
+      </a>
+
+      <!-- Show table of contents -->
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS515/" class="md-nav__link">
+        <code>WPS515</code>
+        Found open() used without a context manager
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS516/" class="md-nav__link">
+        <code>WPS516</code>
+        Found type() used to compare types
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS517/" class="md-nav__link">
+        <code>WPS517</code>
+        Found pointless starred expression
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS518/" class="md-nav__link">
+        <code>WPS518</code>
+        Found implicit enumerate() call
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS519/" class="md-nav__link">
+        <code>WPS519</code>
+        Found implicit sum() call
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS520/" class="md-nav__link">
+        <code>WPS520</code>
+        Found compare with falsy constant
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS521/" class="md-nav__link">
+        <code>WPS521</code>
+        Found wrong is compare
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS522/" class="md-nav__link">
+        <code>WPS522</code>
+        Found implicit primitive in a form of lambda
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS523/" class="md-nav__link">
+        <code>WPS523</code>
+        Found incorrectly swapped variables
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS524/" class="md-nav__link">
+        <code>WPS524</code>
+        Found self assignment  with refactored assignment
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS525/" class="md-nav__link">
+        <code>WPS525</code>
+        Found wrong in compare with single item container
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS526/" class="md-nav__link">
+        <code>WPS526</code>
+        Found implicit yield from usage
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS527/" class="md-nav__link">
+        <code>WPS527</code>
+        Found not a tuple used as an argument
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS528/" class="md-nav__link">
+        <code>WPS528</code>
+        Found implicit .items() usage
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS529/" class="md-nav__link">
+        <code>WPS529</code>
+        Found implicit .get() dict usage
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS530/" class="md-nav__link">
+        <code>WPS530</code>
+        Found implicit negative index
+      </a>
+    </li>
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../WPS531/" class="md-nav__link">
+        <code>WPS531</code>
+        Found simplifiable returning if condition in a function
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="__nav_3_1_3_7"
+          type="checkbox"
+          id="__nav_3_1_3_7"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="__nav_3_1_3_7">
+        
+        System
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="System"
+        data-md-level="4"
+      >
+        <label class="md-nav__title" for="__nav_3_1_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          
+          System
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../WPS000/" class="md-nav__link">
+        
         Internal error happened, see log. Please, take some time to report it
       </a>
     </li>
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS215/" class="md-nav__link">
-        Too many base classes: {0}
-      </a>
+        </ul>
+      </nav>
     </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS216/" class="md-nav__link">
-        Too many decorators: {0}
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WPS462/" class="md-nav__link">
-        Wrong multiline string usage
-      </a>
-    </li>
+  <!-- Currently active page -->
   
 
           
         </ul>
       </nav>
     </li>
+
+  <!-- Currently active page -->
   
 
           
         </ul>
       </nav>
     </li>
+
+  <!-- Currently active page -->
   
 
           
         </ul>
       </nav>
     </li>
+
+  <!-- Currently active page -->
   
 
     
@@ -4053,15 +5875,10 @@
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-                
-                  <a href="https://github.com/octadocs/flake8-codes/website/edit/master/flake8-codes/docs/wemake-python-styleguide/0.15.2/violations/WPS514.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
-                
-                  <h1>Found implicit `in` condition</h1>
-                
-                <p>Forbid multiple equality comparisons with the same variable.</p>
+    <h1><strong><code>WPS514</code></strong> Found implicit in condition</h1>
+
+    <!-- Markdown content -->
+    <p>Forbid multiple equality comparisons with the same variable.</p>
 <ul>
 <li>
 <p>Reasoning:<br />
@@ -4094,10 +5911,12 @@ print(some != &#39;first&#39; and some != &#39;second&#39;)
 0.12.0
 
 </div>
-                
-                  
-                
-              
+
+    <!-- Last update of source file -->
+    
+      
+    
+
               
                 
 
@@ -4114,7 +5933,7 @@ print(some != &#39;first&#39; and some != &#39;second&#39;)
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../WPS518/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../WPS513/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -4123,19 +5942,19 @@ print(some != &#39;first&#39; and some != &#39;second&#39;)
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found implicit `enumerate()` call
+              Found implicit elif condition
             </div>
           </div>
         </a>
       
       
-        <a href="../WPS519/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../WPS515/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found implicit `sum()` call
+              Found open() used without a context manager
             </div>
           </div>
           <div class="md-footer__button md-icon">
