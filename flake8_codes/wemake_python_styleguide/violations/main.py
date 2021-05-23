@@ -7,6 +7,8 @@ import frontmatter
 from wemake_python_styleguide import violations
 
 from flake8_codes.models import Violation
+from flake8_codes.wemake_python_styleguide.violations.format_title import \
+    FormatTitle
 from flake8_codes.wemake_python_styleguide.violations.import_macros import \
     ImportMacros
 from flake8_codes.wemake_python_styleguide.violations.pypandoc_conversion import \
@@ -15,8 +17,6 @@ from flake8_codes.wemake_python_styleguide.violations.related_violations import 
     RelatedViolations
 from flake8_codes.wemake_python_styleguide.violations.unpaired_quote import \
     UnpairedQuote
-from flake8_codes.wemake_python_styleguide.violations.violation_header import \
-    PrependHeader
 from flake8_codes.wemake_python_styleguide.violations.wps_config import \
     WPSConfig
 from flake8_codes.wemake_python_styleguide.violations.wps_constant import \
@@ -60,6 +60,7 @@ def generate_violation_file(violation: Violation) -> None:
     violation = RelatedViolations(violation=violation).process()
 
     violation = ImportMacros(violation=violation).process()
+    violation = FormatTitle(violation=violation).process()
 
     md = frontmatter.Post(
         content=violation.description,
