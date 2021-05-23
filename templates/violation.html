@@ -1,6 +1,23 @@
 {% extends "main.html" %}
 {% import "native_macros.html" as macros with context %}
 
+{# I had to copy-paste the content of `content` block to remove the <h1> hack #}
+{% block content %}
+    <h1><strong>WPS{{ page.meta.code }}</strong> {{ page.meta.title }}</h1>
+
+    <!-- Markdown content -->
+    {{ page.content }}
+
+    <!-- Last update of source file -->
+    {% if page and page.meta %}
+      {% if page.meta.git_revision_date_localized or
+            page.meta.revision_date
+      %}
+        {% include "partials/source-file.html" %}
+      {% endif %}
+    {% endif %}
+{% endblock %}
+
 {% block site_nav %}
     {{ super() }}
 

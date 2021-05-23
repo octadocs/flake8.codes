@@ -15,6 +15,8 @@ from flake8_codes.wemake_python_styleguide.violations.related_violations import 
     RelatedViolations
 from flake8_codes.wemake_python_styleguide.violations.unpaired_quote import \
     UnpairedQuote
+from flake8_codes.wemake_python_styleguide.violations.violation_header import \
+    PrependHeader
 from flake8_codes.wemake_python_styleguide.violations.wps_config import \
     WPSConfig
 from flake8_codes.wemake_python_styleguide.violations.wps_constant import \
@@ -49,7 +51,6 @@ def generate_violation_file(violation: Violation) -> None:
     violation.description = description
 
     # Nice transformations
-    violation = ImportMacros(violation=violation).process()
     violation = UnpairedQuote(violation=violation).process()
     violation = Pypandoc(violation=violation).process()
 
@@ -57,6 +58,8 @@ def generate_violation_file(violation: Violation) -> None:
     violation = WPSConfig(violation=violation).process()
     violation = WPSConstants(violation=violation).process()
     violation = RelatedViolations(violation=violation).process()
+
+    violation = ImportMacros(violation=violation).process()
 
     md = frontmatter.Post(
         content=violation.description,
