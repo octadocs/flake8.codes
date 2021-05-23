@@ -1,3 +1,22 @@
+{%- macro wps_constant(python_url) -%}
+    {%- set constant_page = query(
+        'SELECT * WHERE {
+            ?constant_iri
+                :about ?python_iri ;
+                :name ?name ;
+                octa:url ?url .
+
+            # ?violation_iri octa:isChildOf / octa:isChildOf ?wps_version .
+            # ?constant_iri octa:isChildOf / octa:isChildOf ?wps_version .
+        }',
+        python_iri=URIRef(python_url + '/'),
+        violation_iri=URIRef(page.iri + '/')
+    ).first -%}
+
+    [{{ constant_page.name }}]({{ constant_page.url }})
+{%- endmacro -%}
+
+
 {%- macro wps_config(url) -%}
     {%- set param = query('SELECT * WHERE {
         ?page

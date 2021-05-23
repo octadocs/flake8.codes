@@ -1,3 +1,3 @@
-$id: relatedToViolation
-label: Relate one Violation to another. Parsed from violation description.
+$id: related-to-violation
+label: Relate a page to a violation page. Parsed from violation description.
 $type: owl:SymmetricProperty

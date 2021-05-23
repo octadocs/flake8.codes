@@ -1,2 +1,11 @@
 about:
   $type: $id
+
+relatedConfigurationParameter:
+  $type: $id
+
+relatedConstant:
+  $type: $id
+
+see-also:
+  $type: $id
