@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.MODULE_METADATA_VARIABLES_BLACKLIST
+about: python://wemake_python_styleguide.constants.MODULE_METADATA_VARIABLES_BLACKLIST
 name: MODULE_METADATA_VARIABLES_BLACKLIST
 value:
 - __about__

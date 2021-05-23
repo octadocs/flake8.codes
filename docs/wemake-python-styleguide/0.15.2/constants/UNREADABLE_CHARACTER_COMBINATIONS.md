@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.UNREADABLE_CHARACTER_COMBINATIONS
+about: python://wemake_python_styleguide.constants.UNREADABLE_CHARACTER_COMBINATIONS
 name: UNREADABLE_CHARACTER_COMBINATIONS
 value:
 - 0O

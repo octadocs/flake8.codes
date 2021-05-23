@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.MAGIC_MODULE_NAMES_BLACKLIST
+about: python://wemake_python_styleguide.constants.MAGIC_MODULE_NAMES_BLACKLIST
 name: MAGIC_MODULE_NAMES_BLACKLIST
 value:
 - __dir__

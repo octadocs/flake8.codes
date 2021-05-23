@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.TUPLE_ARGUMENTS_METHODS
+about: python://wemake_python_styleguide.constants.TUPLE_ARGUMENTS_METHODS
 name: TUPLE_ARGUMENTS_METHODS
 value:
 - frozenset

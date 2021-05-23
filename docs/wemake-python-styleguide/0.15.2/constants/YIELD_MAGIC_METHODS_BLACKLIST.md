@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.YIELD_MAGIC_METHODS_BLACKLIST
+about: python://wemake_python_styleguide.constants.YIELD_MAGIC_METHODS_BLACKLIST
 name: YIELD_MAGIC_METHODS_BLACKLIST
 value:
 - __abs__

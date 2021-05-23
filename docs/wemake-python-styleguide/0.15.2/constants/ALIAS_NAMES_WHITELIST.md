@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.ALIAS_NAMES_WHITELIST
+about: python://wemake_python_styleguide.constants.ALIAS_NAMES_WHITELIST
 name: ALIAS_NAMES_WHITELIST
 value:
 - cv

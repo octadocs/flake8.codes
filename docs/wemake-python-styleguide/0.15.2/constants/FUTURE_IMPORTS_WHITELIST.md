@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.FUTURE_IMPORTS_WHITELIST
+about: python://wemake_python_styleguide.constants.FUTURE_IMPORTS_WHITELIST
 name: FUTURE_IMPORTS_WHITELIST
 value:
 - annotations

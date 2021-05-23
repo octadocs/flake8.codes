@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.ALL_MAGIC_METHODS
+about: python://wemake_python_styleguide.constants.ALL_MAGIC_METHODS
 name: ALL_MAGIC_METHODS
 value:
 - __abs__

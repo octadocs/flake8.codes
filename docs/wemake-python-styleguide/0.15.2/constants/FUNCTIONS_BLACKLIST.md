@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.FUNCTIONS_BLACKLIST
+about: python://wemake_python_styleguide.constants.FUNCTIONS_BLACKLIST
 name: FUNCTIONS_BLACKLIST
 value:
 - __import__

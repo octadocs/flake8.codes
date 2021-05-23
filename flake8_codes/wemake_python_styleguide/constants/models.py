@@ -2,13 +2,12 @@ from typing import Union, Any
 
 from documented import DocumentedError
 from libcst import SimpleStatementLine, BaseCompoundStatement
-from pydantic import BaseModel, stricturl, constr
-from urlpath import URL
+from pydantic import BaseModel, stricturl
 
 BodyStatement = Union[SimpleStatementLine, BaseCompoundStatement]
 
 
-PythonIRI = constr(regex=r'^python:[a-zA-Z0-9_\.]+')
+PythonIRI = stricturl(allowed_schemes={'python'}, tld_required=False)
 
 
 class WPSConstant(BaseModel):

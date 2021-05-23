@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.MAGIC_MODULE_NAMES_WHITELIST
+about: python://wemake_python_styleguide.constants.MAGIC_MODULE_NAMES_WHITELIST
 name: MAGIC_MODULE_NAMES_WHITELIST
 value:
 - __init__

@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.VARIABLE_NAMES_BLACKLIST
+about: python://wemake_python_styleguide.constants.VARIABLE_NAMES_BLACKLIST
 name: VARIABLE_NAMES_BLACKLIST
 value:
 - bar

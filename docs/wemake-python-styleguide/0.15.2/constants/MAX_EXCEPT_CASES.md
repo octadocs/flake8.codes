@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.MAX_EXCEPT_CASES
+about: python://wemake_python_styleguide.constants.MAX_EXCEPT_CASES
 name: MAX_EXCEPT_CASES
 value: 3
 ---

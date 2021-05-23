@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.SPECIAL_ARGUMENT_NAMES_WHITELIST
+about: python://wemake_python_styleguide.constants.SPECIAL_ARGUMENT_NAMES_WHITELIST
 name: SPECIAL_ARGUMENT_NAMES_WHITELIST
 value:
 - cls

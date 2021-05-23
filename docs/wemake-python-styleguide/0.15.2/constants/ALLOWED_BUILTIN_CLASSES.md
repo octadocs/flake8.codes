@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.ALLOWED_BUILTIN_CLASSES
+about: python://wemake_python_styleguide.constants.ALLOWED_BUILTIN_CLASSES
 name: ALLOWED_BUILTIN_CLASSES
 value:
 - object

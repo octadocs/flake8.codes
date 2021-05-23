@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.VAGUE_IMPORTS_BLACKLIST
+about: python://wemake_python_styleguide.constants.VAGUE_IMPORTS_BLACKLIST
 name: VAGUE_IMPORTS_BLACKLIST
 value:
 - dump

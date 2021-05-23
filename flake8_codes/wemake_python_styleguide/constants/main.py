@@ -43,7 +43,7 @@ def construct_constant(
 
     description = construct_description(statement)
 
-    about = f'python:{module.__name__}.{name}'
+    about = f'python://{module.__name__}.{name}'
 
     return WPSConstant(
         name=name,
@@ -75,8 +75,12 @@ def persist_constant(
     post = frontmatter.Post(
         content=constant.description,
         handler=frontmatter.YAMLHandler(),
+
+        # To avoid yaml.representer.RepresenterError
+        about=str(constant.about),
+
         **constant.dict(
-            exclude={'description'},
+            exclude={'description', 'about'},
             exclude_none=True,
             by_alias=True,
         ),

@@ -17,6 +17,8 @@ from flake8_codes.wemake_python_styleguide.violations.unpaired_quote import \
     UnpairedQuote
 from flake8_codes.wemake_python_styleguide.violations.wps_config import \
     WPSConfig
+from flake8_codes.wemake_python_styleguide.violations.wps_constant import \
+    WPSConstants
 
 
 def format_violation_description(description: str) -> str:
@@ -53,6 +55,7 @@ def generate_violation_file(violation: Violation) -> None:
 
     # Insert macro links
     violation = WPSConfig(violation=violation).process()
+    violation = WPSConstants(violation=violation).process()
     violation = RelatedViolations(violation=violation).process()
 
     md = frontmatter.Post(

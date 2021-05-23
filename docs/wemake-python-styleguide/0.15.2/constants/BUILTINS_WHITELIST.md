@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.BUILTINS_WHITELIST
+about: python://wemake_python_styleguide.constants.BUILTINS_WHITELIST
 name: BUILTINS_WHITELIST
 value:
 - _

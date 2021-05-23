@@ -1,5 +1,5 @@
 ---
-about: python:wemake_python_styleguide.constants.LITERALS_BLACKLIST
+about: python://wemake_python_styleguide.constants.LITERALS_BLACKLIST
 name: LITERALS_BLACKLIST
 value:
 - bool
