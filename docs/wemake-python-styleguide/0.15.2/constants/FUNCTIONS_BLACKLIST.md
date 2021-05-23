@@ -2,28 +2,28 @@
 about: python:wemake_python_styleguide.constants.FUNCTIONS_BLACKLIST
 name: FUNCTIONS_BLACKLIST
 value:
-- quit
-- staticmethod
-- copyright
-- locals
-- input
-- eval
-- breakpoint
-- credits
-- exec
-- print
-- vars
-- compile
-- exit
-- delattr
-- hasattr
-- pprint.pprint
 - __import__
+- breakpoint
+- compile
+- copyright
+- credits
+- delattr
 - dir
-- reveal_type
+- eval
+- exec
+- exit
 - globals
-- pprint
+- hasattr
 - help
+- input
+- locals
+- pprint
+- pprint.pprint
+- print
+- quit
+- reveal_type
+- staticmethod
+- vars
 ---
 
 List of functions we forbid to use.

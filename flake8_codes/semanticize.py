@@ -31,7 +31,15 @@ class OctagenRePattern(BaseModel):
 
 @semanticize.instance(frozenset)
 def _semanticize_frozenset(instance: frozenset) -> list:
-    return list(map(semanticize, instance))
+    return list(
+        sorted(  # To make the item order deterministic
+            map(
+                semanticize,
+                instance,
+            ),
+            key=str,
+        ),
+    )
 
 
 @semanticize.instance(Pattern)

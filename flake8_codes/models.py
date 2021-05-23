@@ -34,5 +34,10 @@ class Violation(BaseModel):
         alias='relatedConfigurationParameter',
     )
 
+    related_constants: Optional[List[str]] = Field(
+        None,
+        alias='relatedConstant',
+    )
+
     class Config:
         allow_population_by_field_name = True

@@ -30,13 +30,6 @@ def format_violation_description(description: str) -> str:
         '{{', "{{ '{{' }}",
     )
 
-    # Finally, replace python:// calls with Jinja macro calls.
-    # description = re.sub(
-    #     '`python://([^`]+)`',
-    #     r"{{ macros.wps_config('python://\g<1>') }}",
-    #     description,
-    # )
-
     description = description.replace(
         ':py:class:',
         ':class:',
