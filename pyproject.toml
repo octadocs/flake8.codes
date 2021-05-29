@@ -60,3 +60,6 @@ wemake-python-styleguide = [
 
 [tool.poetry.plugins."mkdocs.plugins"]
 flake8_codes = "flake8_codes.plugin:Flake8Codes"
+
+[tool.poetry.scripts]
+jeeves = "jeeves.cli:app"
