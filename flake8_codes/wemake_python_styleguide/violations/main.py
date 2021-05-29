@@ -7,6 +7,8 @@ import frontmatter
 from wemake_python_styleguide import violations
 
 from flake8_codes.models import Violation
+from flake8_codes.wemake_python_styleguide.violations.format_example_section import \
+    FormatExampleSection
 from flake8_codes.wemake_python_styleguide.violations.format_sections import \
     FormatSections
 from flake8_codes.wemake_python_styleguide.violations.format_title import \
@@ -61,6 +63,7 @@ def generate_violation_file(violation: Violation) -> None:
 
     violation = FormatTitle(violation=violation).process()
     violation = FormatSections(violation=violation).process()
+    violation = FormatExampleSection(violation=violation).process()
 
     md = frontmatter.Post(
         content=violation.description,
