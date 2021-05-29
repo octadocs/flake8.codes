@@ -16,7 +16,7 @@ class RelatedViolations(BaseModel):
         """Replace the occurrence and log it."""
         name = match_object.group(1)
         self.related_violations.append(name)
-        return "{{ macros.wps_violation('%s') }}" % name
+        return "{{ wps.violation('%s') }}" % name
 
     def process(self) -> Violation:
         """Process the violation description for links to related violations."""
