@@ -6,7 +6,8 @@ copyright: Copyright &copy; 2021 flake8.codes
 
 markdown_extensions:
   - admonition
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      guess_lang: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - mkautodoc
