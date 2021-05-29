@@ -16,7 +16,7 @@ class WPSConfig(BaseModel):
         """Process an occurrence."""
         url = f'python://{match.group(1)}'
         self.related_configuration_parameters.append(url)
-        return f"{{{{ macros.wps_config('{url}') }}}}"
+        return f"{{{{ wps.config('{url}') }}}}"
 
     def process(self) -> Violation:
         """Insert links."""
