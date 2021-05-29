@@ -9,8 +9,6 @@ from wemake_python_styleguide import violations
 from flake8_codes.models import Violation
 from flake8_codes.wemake_python_styleguide.violations.format_title import \
     FormatTitle
-from flake8_codes.wemake_python_styleguide.violations.import_macros import \
-    ImportMacros
 from flake8_codes.wemake_python_styleguide.violations.pypandoc_conversion import \
     Pypandoc
 from flake8_codes.wemake_python_styleguide.violations.related_violations import \
@@ -59,7 +57,6 @@ def generate_violation_file(violation: Violation) -> None:
     violation = WPSConstants(violation=violation).process()
     violation = RelatedViolations(violation=violation).process()
 
-    violation = ImportMacros(violation=violation).process()
     violation = FormatTitle(violation=violation).process()
 
     md = frontmatter.Post(
