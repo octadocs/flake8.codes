@@ -16,7 +16,7 @@ class WPSConstants(BaseModel):
         """Process an occurrence."""
         url = f'python://{match.group(1)}'
         self.related_constants.append(url)
-        return f"{{{{ macros.wps_constant('{url}') }}}}"
+        return f"{{{{ wps.constant('{url}') }}}}"
 
     def process(self) -> Violation:
         """Insert links."""

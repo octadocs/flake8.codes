@@ -48,6 +48,24 @@ def wps_violation(
     )
 
 
+def wps_constant(
+    name: str,
+    octiron: Octiron,
+):
+    """Render a link to a WPS constant page."""
+    constant = first(octiron.query(
+        '''SELECT * WHERE {
+            ?constant_iri
+                :about ?python_iri ;
+                :name ?name ;
+                octa:url ?url .
+        }''',
+        name=URIRef(name + '/'),
+    ))
+
+    return f"[{constant['name']}]({constant['url'] })"
+
+
 def define_env(env: MacrosPlugin) -> MacrosPlugin:
     """
     Define a few Jinja2 macros useful for flake8-codes project.
@@ -63,6 +81,10 @@ def define_env(env: MacrosPlugin) -> MacrosPlugin:
         ),
         'violation': partial(
             wps_violation,
+            octiron=env.variables.octiron,
+        ),
+        'constant': partial(
+            wps_constant,
             octiron=env.variables.octiron,
         )
     }
