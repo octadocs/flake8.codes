@@ -1,19 +1,21 @@
 import re
-from dataclasses import dataclass, make_dataclass, Field, field, asdict
-from typing import Any
+import subprocess
+from dataclasses import dataclass, make_dataclass, field
+from typing import Any, Type
 
 from dependencies import Injector
-import subprocess
 
 
 @dataclass
 class Shell:
-    def __call__(self):
-        command = self.command.format(**asdict(self)).split(' ')
-        return subprocess.run(command)
+    """Shell command."""
+
+    def __call__(self) -> None:
+        """Execute the provided shell command in a subprocess."""
+        subprocess.run(('sh', '-c', self.command))
 
 
-def shell(command: str):
+def shell(command: str) -> Type[Shell]:
     match = re.search(
         '{([^}]+)}',
         command,
@@ -43,11 +45,13 @@ class Flake8Codes(Injector):
     """Jeeves helper for the project."""
 
     project_directory = 'flake8_codes'
-    lint = shell('flakehell lint {project_directory}')
+    lint = shell(
+        'git diff origin/master | flakehell lint --diff {project_directory}',
+    )
 
 
 def main():
-    print(Flake8Codes.lint())
+    Flake8Codes.lint()
 
 
 if __name__ == '__main__':
