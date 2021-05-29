@@ -18,28 +18,51 @@
     {% endif %}
 {% endblock %}
 
+
+{% macro sidebar() %}
+    {# Draw the sidebar. #}
+    {% set related_items = caller().strip() %}
+
+    {% if related_items %}
+        <div
+            class="md-sidebar md-sidebar--secondary"
+            data-md-component="sidebar"
+            data-md-type="toc"
+        >
+            <div class="md-sidebar__scrollwrap">
+                <div class="md-sidebar__inner">
+                    {{ related_items }}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endmacro %}
+
+
 {% block site_nav %}
     {{ super() }}
 
-    {{ macros.related_items(
-        items=queries.related_violations(this=page.iri),
-        title='Related Violations',
-        item_template_path='partials/violation_link.html'
-    ) }}
+    {% call sidebar() %}
+        {{ macros.related_items(
+            items=queries.related_violations(this=page.iri),
+            title='Related Violations',
+            item_template_path='partials/violation_link.html'
+        ) }}
 
-    {{ macros.related_items(
-        items=queries.related_configuration_parameters(
-            violation=page.iri
-        ),
-        title='Related Configuration Parameters',
-        item_template_path='partials/link.html'
-    ) }}
+        {{ macros.related_items(
+            items=queries.related_configuration_parameters(
+                violation=page.iri
+            ),
+            title='Related Configuration Parameters',
+            item_template_path='partials/link.html'
+        ) }}
 
-    {{ macros.related_items(
-        items=queries.related_constants(
-            violation_page=page.iri
-        ),
-        title='Related Constants',
-        item_template_path='partials/link.html'
-    ) }}
+        {{ macros.related_items(
+            items=queries.related_constants(
+                violation_page=page.iri
+            ),
+            title='Related Constants',
+            item_template_path='partials/link.html'
+        ) }}
+    {% endcall %}
 {% endblock %}

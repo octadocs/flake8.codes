@@ -1,27 +1,17 @@
 {% macro related_items(items, title, item_template_path) %}
-{% if items %}
-    <div
-            class="md-sidebar md-sidebar--secondary"
-            data-md-component="sidebar"
-            data-md-type="toc"
-    >
-        <div class="md-sidebar__scrollwrap">
-            <div class="md-sidebar__inner">
-                <nav class="md-nav md-nav--secondary">
-                    <label class="md-nav__title" for="__toc">
-                        {{ title }}
-                    </label>
-                    <ul class="md-nav__list" data-md-component="toc"
-                        data-md-scrollfix>
-                        {% for item in items %}
-                            <li class="md-nav__item">
-                                {% include item_template_path with context %}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
-{% endif %}
+    {% if items %}
+        <nav class="md-nav md-nav--secondary related-items">
+            <label class="md-nav__title" for="__toc">
+                {{ title }}
+            </label>
+            <ul class="md-nav__list" data-md-component="toc"
+                data-md-scrollfix>
+                {% for item in items %}
+                    <li class="md-nav__item">
+                        {% include item_template_path with context %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    {% endif %}
 {% endmacro %}
