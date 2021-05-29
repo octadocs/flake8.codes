@@ -18,6 +18,11 @@ markdown_extensions:
       generic: true
   - pymdownx.superfences
 
+  # Hide Table of Contents
+  # Source: https://github.com/squidfunk/mkdocs-material/issues/478#issuecomment-578723876
+  - toc:
+      toc_depth: "1-1"
+
 plugins:
   - search
   - flake8_codes

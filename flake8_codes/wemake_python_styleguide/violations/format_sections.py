@@ -41,8 +41,6 @@ class FormatSections(BaseModel):
             flags=re.MULTILINE,
         )
 
-        # return description.replace('  - Reasoning:', '## Reasoning')
-
     def process(self) -> Violation:
         """Process the violation description for sections."""
         description = self._format_sections(self.violation.description)
