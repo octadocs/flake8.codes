@@ -19,30 +19,10 @@
 {% endblock %}
 
 
-{% macro sidebar() %}
-    {# Draw the sidebar. #}
-    {% set related_items = caller().strip() %}
-
-    {% if related_items %}
-        <div
-            class="md-sidebar md-sidebar--secondary"
-            data-md-component="sidebar"
-            data-md-type="toc"
-        >
-            <div class="md-sidebar__scrollwrap">
-                <div class="md-sidebar__inner">
-                    {{ related_items }}
-                </div>
-            </div>
-        </div>
-    {% endif %}
-{% endmacro %}
-
-
 {% block site_nav %}
     {{ super() }}
 
-    {% call sidebar() %}
+    {% call macros.sidebar() %}
         {{ macros.related_items(
             items=queries.related_violations(this=page.iri),
             title='Related Violations',

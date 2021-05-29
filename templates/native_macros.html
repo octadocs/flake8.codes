@@ -15,3 +15,23 @@
         </nav>
     {% endif %}
 {% endmacro %}
+
+
+{% macro sidebar() %}
+    {# Draw the sidebar. #}
+    {% set related_items = caller().strip() %}
+
+    {% if related_items %}
+        <div
+            class="md-sidebar md-sidebar--secondary"
+            data-md-component="sidebar"
+            data-md-type="toc"
+        >
+            <div class="md-sidebar__scrollwrap">
+                <div class="md-sidebar__inner">
+                    {{ related_items }}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endmacro %}

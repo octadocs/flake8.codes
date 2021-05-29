@@ -5,13 +5,15 @@
 {% block site_nav %}
     {{ super() }}
 
-    {{ macros.related_items(
-        items=queries.related_violations(
-            this=page.iri
-        ),
-        title='Related Violations',
-        item_template_path='partials/violation_link.html'
-    ) }}
+    {% call macros.sidebar() %}
+        {{ macros.related_items(
+            items=queries.related_violations(
+                this=page.iri
+            ),
+            title='Related Violations',
+            item_template_path='partials/violation_link.html'
+        ) }}
+    {% endcall %}
 {% endblock %}
 
 
