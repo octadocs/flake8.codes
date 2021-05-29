@@ -49,7 +49,7 @@ def wps_violation(
 
 
 def wps_constant(
-    name: str,
+    url: str,
     octiron: Octiron,
 ):
     """Render a link to a WPS constant page."""
@@ -60,7 +60,7 @@ def wps_constant(
                 :name ?name ;
                 octa:url ?url .
         }''',
-        name=URIRef(name + '/'),
+        python_iri=URIRef(url + '/'),
     ))
 
     return f"[{constant['name']}]({constant['url'] })"
