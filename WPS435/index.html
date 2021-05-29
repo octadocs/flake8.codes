@@ -5876,26 +5876,18 @@
 
     <!-- Markdown content -->
     <p>Forbid multiplying lists.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When you multiply lists - it does not create new values, it creates
-    references to the existing value. It is not what people mean in
-    99.9% of cases.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use list comprehension or loop instead.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>When you multiply lists - it does not create new values, it creates
+references to the existing value. It is not what people mean in
+99.9% of cases.</p>
+<h2 id="solution">Solution</h2>
+<p>Use list comprehension or loop instead.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Wrong:
 my_list = [1, 2, 3] * 3
 </code></pre></div>
-<ul>
-<li>See also:<br />
-<a href="https://github.com/satwikkansal/wtfPython#-explanation-8">https://github.com/satwikkansal/wtfPython#-explanation-8</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://github.com/satwikkansal/wtfPython#-explanation-8">https://github.com/satwikkansal/wtfPython#-explanation-8</a></p>
 <div class="versionadded">
 
 0.12.0

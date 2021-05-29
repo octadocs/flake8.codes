@@ -5876,22 +5876,16 @@
 
     <!-- Markdown content -->
     <p>Forbid uppercase <code>X</code>, <code>O</code>, <code>B</code>, and <code>E</code> in numbers.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Octal, hex, binary and scientific notation suffixes could be written
-    in two possible notations: lowercase and uppercase which brings
-    confusion and decreases code consistency and readability. We enforce
-    a single way to write numbers with suffixes: suffix with lowercase
-    chars.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Octal, hex, binary and scientific notation suffixes in numbers
-    should be written in lowercase.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Octal, hex, binary and scientific notation suffixes could be written
+in two possible notations: lowercase and uppercase which brings
+confusion and decreases code consistency and readability. We enforce
+a single way to write numbers with suffixes: suffix with lowercase
+chars.</p>
+<h2 id="solution">Solution</h2>
+<p>Octal, hex, binary and scientific notation suffixes in numbers
+should be written in lowercase.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 hex_number = 0xFF
 octal_number = 0o11

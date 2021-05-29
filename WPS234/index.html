@@ -5900,31 +5900,21 @@
 
     <!-- Markdown content -->
     <p>Forbid overly complex annotations.</p>
-<p>Annotation complexity is maximum annotation nesting level. Example:
+<p>Annotation complexity is maximum annotation nesting level. ## Example
 <code>List[int]</code> has complexity of 2 and <code>Tuple[List[Optional[str]], int]</code>
 has complexity of 4.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Overly complex annotations make your types unreadable. And make
-    developers afraid of types.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Create type aliases. And use them a lot!</p>
-</li>
-<li>
-<p>Configuration:<br />
-    This rule is configurable with <code>--max-annotation-complexity</code>.
-    Default:
-    <a href="/wemake-python-styleguide/0.15.2/configuration/MAX_ANN_COMPLEXITY/">MAX_ANN_COMPLEXITY</a> = <code>3</code></p>
-</li>
-<li>
-<p>See also:<br />
-<a href="https://mypy.readthedocs.io/en/stable/kinds_of_types.html#type-aliases">https://mypy.readthedocs.io/en/stable/kinds_of_types.html#type-aliases</a>
-    <a href="https://github.com/best-doctor/flake8-annotations-complexity">https://github.com/best-doctor/flake8-annotations-complexity</a></p>
-</li>
-</ul>
+<h2 id="reasoning">Reasoning</h2>
+<p>Overly complex annotations make your types unreadable. And make
+developers afraid of types.</p>
+<h2 id="solution">Solution</h2>
+<p>Create type aliases. And use them a lot!</p>
+<h2 id="configuration">Configuration</h2>
+<p>This rule is configurable with <code>--max-annotation-complexity</code>.
+Default:
+<a href="/wemake-python-styleguide/0.15.2/configuration/MAX_ANN_COMPLEXITY/">MAX_ANN_COMPLEXITY</a> = <code>3</code></p>
+<h2 id="see-also">See also</h2>
+<p><a href="https://mypy.readthedocs.io/en/stable/kinds_of_types.html#type-aliases">https://mypy.readthedocs.io/en/stable/kinds_of_types.html#type-aliases</a>
+<a href="https://github.com/best-doctor/flake8-annotations-complexity">https://github.com/best-doctor/flake8-annotations-complexity</a></p>
 <div class="versionadded">
 
 0.14.0

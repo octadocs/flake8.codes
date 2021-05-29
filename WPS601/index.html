@@ -5876,44 +5876,39 @@
 
     <!-- Markdown content -->
     <p>Forbid shadowing class level attributes with instance level attributes.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    This way you will have two attributes inside your <code>__mro__</code> chain:
-    one from instance and one from class. It might cause errors.
-    Needless to say, that this is just pointless to do so.</p>
-<p>Also, if you ever want to optimise your code with a tool like
-<span class="title-ref">`mypyc</span>_, this rule is a
-requirement.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use either class attributes or instance attributes. Use <code>ClassVar</code>
-    type on fields that are declared as class attributes.</p>
-</li>
-</ul>
+<h2 id="reasoning">Reasoning</h2>
+<p>This way you will have two attributes inside your <code>__mro__</code> chain:
+one from instance and one from class. It might cause errors.
+Needless to say, that this is just pointless to do so.</p>
+<div class="highlight"><pre><span></span><code>Also, if you ever want to optimise your code with a tool like
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;title-ref&quot;</span><span class="nt">&gt;</span>\`mypyc<span class="nt">&lt;/span&gt;</span>\_, this rule is a
+requirement.
+</code></pre></div>
+<h2 id="solution">Solution</h2>
+<p>Use either class attributes or instance attributes. Use <code>ClassVar</code>
+type on fields that are declared as class attributes.</p>
 <p>Note, that we cannot find shadowed attributes that are defined in parent
 classes. That's where <code>ClassVar</code> is required for <code>mypy</code> to check it for
 you.</p>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-from typing import ClassVar
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">ClassVar</span>
 
-class First(object):
-    field: ClassVar[int] = 1
+<span class="k">class</span> <span class="nc">First</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">field</span><span class="p">:</span> <span class="n">ClassVar</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 
-class Second(object):
-    field: int
+<span class="k">class</span> <span class="nc">Second</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span>
 
-    def __init__(self) -&gt; None:
-        self.field = 1
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field</span> <span class="o">=</span> <span class="mi">1</span>
 
-# Wrong:
-class Some(object):
-    field = 1
+<span class="c1"># Wrong:</span>
+<span class="k">class</span> <span class="nc">Some</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">field</span> <span class="o">=</span> <span class="mi">1</span>
 
-    def __init__(self) -&gt; None:
-        self.field = 1
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field</span> <span class="o">=</span> <span class="mi">1</span>
 </code></pre></div>
 <div class="versionadded">
 

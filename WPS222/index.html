@@ -5902,20 +5902,14 @@
     <p>Forbid conditions with too many logical operators.</p>
 <p>We use <a href="/wemake-python-styleguide/0.15.2/constants/MAX_CONDITIONS/">MAX_CONDITIONS</a> as a default
 value.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When reading through the complex conditions you will fail to
-    understand all the possible branches. And you will end up putting
-    debug breakpoint on this line just to figure out how it works.</p>
-</li>
-<li>
-<p>Solution:<br />
-    We can reduce the complexity of a single <code>if</code> by doing two things:
-    creating new variables or creating nested <code>if</code> statements. Both of
-    these actions will trigger other complexity checks.</p>
-</li>
-</ul>
+<h2 id="reasoning">Reasoning</h2>
+<p>When reading through the complex conditions you will fail to
+understand all the possible branches. And you will end up putting
+debug breakpoint on this line just to figure out how it works.</p>
+<h2 id="solution">Solution</h2>
+<p>We can reduce the complexity of a single <code>if</code> by doing two things:
+creating new variables or creating nested <code>if</code> statements. Both of
+these actions will trigger other complexity checks.</p>
 <p>We count <code>and</code> and <code>or</code> keywords as conditions.</p>
 <div class="versionadded">
 

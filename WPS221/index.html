@@ -5933,36 +5933,26 @@ higher than a threshold, then an error is raised.</p>
 </ol>
 <!-- end list -->
 
-<ul>
-<li>
-<p>Reasoning:<br />
-    Having a complex line indicates that you somehow managed to put too
-    much logic inside a single line. At some point in time, you will no
-    longer be able to understand what this line means and what it does.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Split a single line into several lines: by creating new variables,
-    statements or functions. Note, this might trigger new complexity
-    issues. With this technique, a single new node in a line might
-    trigger a complex refactoring process including several modules.</p>
-</li>
-<li>
-<p>Configuration:<br />
-    This rule is configurable with <code>--max-line-complexity</code>. Default:
-    <a href="/wemake-python-styleguide/0.15.2/configuration/MAX_LINE_COMPLEXITY/">MAX_LINE_COMPLEXITY</a> = <code>14</code></p>
-</li>
-</ul>
+<h2 id="reasoning">Reasoning</h2>
+<p>Having a complex line indicates that you somehow managed to put too
+much logic inside a single line. At some point in time, you will no
+longer be able to understand what this line means and what it does.</p>
+<h2 id="solution">Solution</h2>
+<p>Split a single line into several lines: by creating new variables,
+statements or functions. Note, this might trigger new complexity
+issues. With this technique, a single new node in a line might
+trigger a complex refactoring process including several modules.</p>
+<h2 id="configuration">Configuration</h2>
+<p>This rule is configurable with <code>--max-line-complexity</code>. Default:
+<a href="/wemake-python-styleguide/0.15.2/configuration/MAX_LINE_COMPLEXITY/">MAX_LINE_COMPLEXITY</a> = <code>14</code></p>
 <div class="versionadded">
 
 0.1.0
 
 </div>
 
-<ul>
-<li>See also:<br />
-<a href="https://github.com/Miserlou/JonesComplexity">https://github.com/Miserlou/JonesComplexity</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://github.com/Miserlou/JonesComplexity">https://github.com/Miserlou/JonesComplexity</a></p>
 
     <!-- Last update of source file -->
     

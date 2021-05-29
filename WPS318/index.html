@@ -5876,20 +5876,14 @@
 
     <!-- Markdown content -->
     <p>Forbid extra indentation.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    You can use extra indentation for lines of code. Python allows you
-    to do that in case you want to keep the indentation level equal for
-    this specific node, but that's insane!</p>
-</li>
-<li>
-<p>Solution:<br />
-    We should stick to 4 spaces for an indentation block. Each next
-    block level should be indented by just 4 extra spaces.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>You can use extra indentation for lines of code. Python allows you
+to do that in case you want to keep the indentation level equal for
+this specific node, but that's insane!</p>
+<h2 id="solution">Solution</h2>
+<p>We should stick to 4 spaces for an indentation block. Each next
+block level should be indented by just 4 extra spaces.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 def test():
     print(&#39;test&#39;)
@@ -5901,11 +5895,9 @@ def test():
 <p>This rule is consistent with the "Vertical Hanging Indent" option for
 <code>multi_line_output</code> setting of <code>isort</code>. To avoid conflicting rules, you
 should set <code>multi_line_output = 3</code> in the <code>isort</code> settings.</p>
-<ul>
-<li>See also:<br />
-<a href="https://github.com/timothycrosley/isort#multi-line-output-modes">https://github.com/timothycrosley/isort#multi-line-output-modes</a>
-    <a href="https://github.com/wemake-services/wemake-python-styleguide/blob/master/styles/isort.toml">https://github.com/wemake-services/wemake-python-styleguide/blob/master/styles/isort.toml</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://github.com/timothycrosley/isort#multi-line-output-modes">https://github.com/timothycrosley/isort#multi-line-output-modes</a>
+<a href="https://github.com/wemake-services/wemake-python-styleguide/blob/master/styles/isort.toml">https://github.com/wemake-services/wemake-python-styleguide/blob/master/styles/isort.toml</a></p>
 <div class="versionadded">
 
 0.6.0

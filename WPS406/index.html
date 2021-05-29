@@ -5876,19 +5876,13 @@
 
     <!-- Markdown content -->
     <p>Forbid anything other than <code>ast.Name</code> to define contexts.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When defining a <code>with</code> context managers with attributes, indexes,
-    calls, or any other nodes it does dirty things inside.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use regular <code>ast.Name</code> variables. Or tuple of <code>ast.Name</code> variables.
-    Star names are also fine.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>When defining a <code>with</code> context managers with attributes, indexes,
+calls, or any other nodes it does dirty things inside.</p>
+<h2 id="solution">Solution</h2>
+<p>Use regular <code>ast.Name</code> variables. Or tuple of <code>ast.Name</code> variables.
+Star names are also fine.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 with open(&#39;README.md&#39;) as readme:
     ...

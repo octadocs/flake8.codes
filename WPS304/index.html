@@ -5876,19 +5876,13 @@
 
     <!-- Markdown content -->
     <p>Forbid partial floats like <code>.05</code> or <code>23.</code>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Partial numbers are hard to read and they can be confused with other
-    numbers. For example, it is really easy to confuse <code>0.5</code> and <code>.05</code>
-    when reading through the source code.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use full versions with leading and trailing zeros.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Partial numbers are hard to read and they can be confused with other
+numbers. For example, it is really easy to confuse <code>0.5</code> and <code>.05</code>
+when reading through the source code.</p>
+<h2 id="solution">Solution</h2>
+<p>Use full versions with leading and trailing zeros.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 half = 0.5
 ten_float = 10.0

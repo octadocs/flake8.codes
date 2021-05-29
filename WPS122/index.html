@@ -5876,21 +5876,15 @@
 
     <!-- Markdown content -->
     <p>Forbid explicit unused variables.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    While it is ok to define unused variables when you have to, like
-    when unpacking a tuple, it is totally not ok to define explicit
-    unusued variables in cases like assignment, function return,
-    exception handling, or context managers. Why do you need this
-    explicitly unused variables?</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove all unused variables definition.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>While it is ok to define unused variables when you have to, like
+when unpacking a tuple, it is totally not ok to define explicit
+unusued variables in cases like assignment, function return,
+exception handling, or context managers. Why do you need this
+explicitly unused variables?</p>
+<h2 id="solution">Solution</h2>
+<p>Remove all unused variables definition.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 my_function()
 first, _second = some_tuple()

@@ -5878,30 +5878,24 @@
     <p>Forbids descriptors in regular functions.</p>
 <p>Forbids using <code>@staticmethod`,</code>@classmethod<code>and</code>@property`` for
 functions not in class.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Descriptors like @staticmethod, @classmethod and @property do magic
-    only as methods. We would want to warn users if the descriptors are
-    used on regular functions.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Do not use @staticmethod, @classmethod and @property on regular
-    functions or wrap the functions into a Class.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-class TestClass(object):
-    @property
-    def my_method():
-        ...
+<h2 id="reasoning">Reasoning</h2>
+<p>Descriptors like @staticmethod, @classmethod and @property do magic
+only as methods. We would want to warn users if the descriptors are
+used on regular functions.</p>
+<h2 id="solution">Solution</h2>
+<p>Do not use @staticmethod, @classmethod and @property on regular
+functions or wrap the functions into a Class.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="nl">Correct</span><span class="p">:</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="n">TestClass</span><span class="p">(</span><span class="k">object</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="nv">@property</span><span class="w"></span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">my_method</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="p">...</span><span class="w"></span>
 
-# Wrong:
-@property
-def my_function():
-    ...
+<span class="err">#</span><span class="w"> </span><span class="nl">Wrong</span><span class="p">:</span><span class="w"></span>
+<span class="nv">@property</span><span class="w"></span>
+<span class="n">def</span><span class="w"> </span><span class="n">my_function</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
 </code></pre></div>
 <div class="versionadded">
 

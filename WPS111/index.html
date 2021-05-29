@@ -5900,22 +5900,16 @@
 
     <!-- Markdown content -->
     <p>Forbid short variable or module names.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    It is hard to understand what the variable means and why it is used,
-    if its name is too short.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Think of another name. Give more context to it.</p>
-</li>
-</ul>
+<h2 id="reasoning">Reasoning</h2>
+<p>It is hard to understand what the variable means and why it is used,
+if its name is too short.</p>
+<h2 id="solution">Solution</h2>
+<p>Think of another name. Give more context to it.</p>
 <p>This rule checks: modules, variables, attributes, functions, methods,
 and classes.</p>
 <p>We do not count trailing and leading underscores when calculating
 length.</p>
-<p>Example:</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 x_coordinate = 1
 abscissa = 2
@@ -5924,11 +5918,9 @@ abscissa = 2
 x = 1
 y = 2
 </code></pre></div>
-<ul>
-<li>Configuration:<br />
-    This rule is configurable with <code>--min-name-length</code>. Default:
-    <a href="/wemake-python-styleguide/0.15.2/configuration/MIN_NAME_LENGTH/">MIN_NAME_LENGTH</a> = <code>2</code></li>
-</ul>
+<h2 id="configuration">Configuration</h2>
+<p>This rule is configurable with <code>--min-name-length</code>. Default:
+<a href="/wemake-python-styleguide/0.15.2/configuration/MIN_NAME_LENGTH/">MIN_NAME_LENGTH</a> = <code>2</code></p>
 <div class="versionadded">
 
 0.1.0

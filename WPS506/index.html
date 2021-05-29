@@ -5876,20 +5876,14 @@
 
     <!-- Markdown content -->
     <p>Forbid useless proxy <code>lambda</code> expressions.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Sometimes developers tend to overuse <code>lambda</code> expressions and they
-    wrap code that can be passed as is, without extra wrapping. The code
-    without extra <code>lambda</code> is easier to read and is more performant.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove wrapping <code>lambda</code> declaration, use just the internal
-    function.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Sometimes developers tend to overuse <code>lambda</code> expressions and they
+wrap code that can be passed as is, without extra wrapping. The code
+without extra <code>lambda</code> is easier to read and is more performant.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove wrapping <code>lambda</code> declaration, use just the internal
+function.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 numbers = map(int, [&#39;1&#39;, &#39;2&#39;])
 

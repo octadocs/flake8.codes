@@ -5876,29 +5876,23 @@
 
     <!-- Markdown content -->
     <p>Forbid implicit <code>elif</code> conditions.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Nested <code>if</code> in <code>else</code> cases are bad for readability because of the
-    nesting level.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>elif</code> on the same level.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-if some:
+<h2 id="reasoning">Reasoning</h2>
+<p>Nested <code>if</code> in <code>else</code> cases are bad for readability because of the
+nesting level.</p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>elif</code> on the same level.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="k">if</span> <span class="nv">some</span>:
     ...
-elif other:
+<span class="nv">elif</span> <span class="nv">other</span>:
     ...
 
-# Wrong:
-if some:
+# <span class="nv">Wrong</span>:
+<span class="k">if</span> <span class="nv">some</span>:
     ...
-else:
-    if other:
+<span class="k">else</span>:
+    <span class="k">if</span> <span class="nv">other</span>:
         ...
 </code></pre></div>
 <div class="versionadded">

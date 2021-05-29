@@ -5876,23 +5876,17 @@
 
     <!-- Markdown content -->
     <p>Forbid booleans as non-keyword parameters.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Passing booleans as regular positional parameters is very
-    non-descriptive. It is almost impossible to tell what this parameter
-    means and you almost always have to look up the implementation to
-    tell what is going on. The only exception from this rule is passing
-    a boolean as a non-keyword argument when it is the only passed
-    argument.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Pass booleans as keywords only. This will help you to save extra
-    context on what's going on.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Passing booleans as regular positional parameters is very
+non-descriptive. It is almost impossible to tell what this parameter
+means and you almost always have to look up the implementation to
+tell what is going on. The only exception from this rule is passing
+a boolean as a non-keyword argument when it is the only passed
+argument.</p>
+<h2 id="solution">Solution</h2>
+<p>Pass booleans as keywords only. This will help you to save extra
+context on what's going on.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 UserRepository.update(True)
 UsersRepository.add(user, cache=True)

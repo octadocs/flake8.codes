@@ -5877,19 +5877,13 @@
     <!-- Markdown content -->
     <p>Forbid comparisons between bitwise and boolean expressions.</p>
 <p>Empty comments are only allowed in between valid comments.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    This case indicates that a person confused <code>&amp;</code> with <code>and</code> and <code>|</code>
-    with <code>or</code>. This can be the case if a person is coming from another
-    language.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Change bitwise operator to boolean operators.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>This case indicates that a person confused <code>&amp;</code> with <code>and</code> and <code>|</code>
+with <code>or</code>. This can be the case if a person is coming from another
+language.</p>
+<h2 id="solution">Solution</h2>
+<p>Change bitwise operator to boolean operators.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 first | 10
 

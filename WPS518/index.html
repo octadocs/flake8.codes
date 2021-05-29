@@ -5876,30 +5876,22 @@
 
     <!-- Markdown content -->
     <p>Forbid implicit <code>enumerate()</code> calls.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Using <code>range(len(...))</code> is not pythonic. Python uses collection
-    iterators, not index-based loops.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>enumerate(...)</code> instead of <code>range(len(...))</code>.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-for index, person in enumerate(people):
-    ...
+<h2 id="reasoning">Reasoning</h2>
+<p>Using <code>range(len(...))</code> is not pythonic. Python uses collection
+iterators, not index-based loops.</p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>enumerate(...)</code> instead of <code>range(len(...))</code>.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">people</span><span class="p">):</span>
+    <span class="o">...</span>
 
-# Wrong:
-for index in range(len(people)):
-    ...
+<span class="c1"># Wrong:</span>
+<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">people</span><span class="p">)):</span>
+    <span class="o">...</span>
 </code></pre></div>
-<ul>
-<li>See also:<br />
-<a href="https://docs.python.org/3/library/functions.html#enumerate">https://docs.python.org/3/library/functions.html#enumerate</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://docs.python.org/3/library/functions.html#enumerate">https://docs.python.org/3/library/functions.html#enumerate</a></p>
 <div class="versionadded">
 
 0.12.0

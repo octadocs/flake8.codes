@@ -5900,23 +5900,16 @@
 
     <!-- Markdown content -->
     <p>Forbid logic inside <code>__init__</code> module.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    If you have logic inside the <code>__init__</code> module It means several
-    things:</p>
-<ol>
-<li>you are keeping some outdated stuff there, you need to refactor</li>
-<li>you are placing this logic in the wrong file, just create
-    another one</li>
-<li>you are doing some dark magic, and you should not do that</li>
-</ol>
-</li>
-<li>
-<p>Solution:<br />
-    Put your code in other modules.</p>
-</li>
-</ul>
+<h2 id="reasoning">Reasoning</h2>
+<p>If you have logic inside the <code>__init__</code> module It means several
+things:</p>
+<div class="highlight"><pre><span></span><code><span class="mf">1.</span>  <span class="n">you</span> <span class="n">are</span> <span class="n">keeping</span> <span class="n">some</span> <span class="n">outdated</span> <span class="n">stuff</span> <span class="n">there</span><span class="p">,</span> <span class="n">you</span> <span class="n">need</span> <span class="kr">to</span> <span class="n">refactor</span>
+<span class="mf">2.</span>  <span class="n">you</span> <span class="n">are</span> <span class="n">placing</span> <span class="n">this</span> <span class="nb">log</span><span class="n">ic</span> <span class="n">in</span> <span class="n">the</span> <span class="n">wrong</span> <span class="n">file</span><span class="p">,</span> <span class="n">just</span> <span class="n">create</span>
+    <span class="n">another</span> <span class="kr">on</span><span class="n">e</span>
+<span class="mf">3.</span>  <span class="n">you</span> <span class="n">are</span> <span class="n">doing</span> <span class="n">some</span> <span class="n">dark</span> <span class="n">magic</span><span class="p">,</span> <span class="ow">and</span> <span class="n">you</span> <span class="n">should</span> <span class="ow">not</span> <span class="n">do</span> <span class="n">that</span>
+</code></pre></div>
+<h2 id="solution">Solution</h2>
+<p>Put your code in other modules.</p>
 <p>However, we allow some contents inside the <code>__init__</code> module:</p>
 <ol>
 <li>comments, since they are dropped before AST comes in play</li>
@@ -5925,12 +5918,10 @@
 <p>It is also fine when you have different users that use your code. And
 you do not want to break everything for them. In this case, this rule
 can be configured.</p>
-<ul>
-<li>Configuration:<br />
-    This rule is configurable with <code>--i-control-code</code> and
-    <code>--i-dont-control-code</code>. Default:
-    <a href="/wemake-python-styleguide/0.15.2/configuration/I_CONTROL_CODE/">I_CONTROL_CODE</a> = <code>True</code></li>
-</ul>
+<h2 id="configuration">Configuration</h2>
+<p>This rule is configurable with <code>--i-control-code</code> and
+<code>--i-dont-control-code</code>. Default:
+<a href="/wemake-python-styleguide/0.15.2/configuration/I_CONTROL_CODE/">I_CONTROL_CODE</a> = <code>True</code></p>
 <p>When using <code>--i-dont-control-code</code> it is still recommended to only have
 imports in your <code>__init__.py</code>.</p>
 <div class="versionadded">

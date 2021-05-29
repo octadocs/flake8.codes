@@ -5876,20 +5876,14 @@
 
     <!-- Markdown content -->
     <p>Forbid <code>open()</code> without a context manager.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When you <code>open()</code> something, you need to close it. When using a
-    context manager - it is automatically done for you. When not using
-    it - you might find yourself in a situation when file is not closed
-    and is not accessible anymore.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Refactor <code>open()</code> call to use <code>with</code>.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>When you <code>open()</code> something, you need to close it. When using a
+context manager - it is automatically done for you. When not using
+it - you might find yourself in a situation when file is not closed
+and is not accessible anymore.</p>
+<h2 id="solution">Solution</h2>
+<p>Refactor <code>open()</code> call to use <code>with</code>.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 with open(filename) as file_obj:
     ...

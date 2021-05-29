@@ -5902,21 +5902,15 @@
     <p>Forbid too many <code>except</code> cases in a single <code>try</code> clause.</p>
 <p>We use <a href="/wemake-python-styleguide/0.15.2/constants/MAX_EXCEPT_CASES/">MAX_EXCEPT_CASES</a> as a
 default value.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Handling too many exceptions in a single place is a good indicator
-    of a bad design since one controlling structure will become too
-    complex. Also, you will need to test a lot of logic paths in your
-    application.</p>
-</li>
-<li>
-<p>Solution:<br />
-    We can reduce the complexity of this case by splitting it into
-    multiple <code>try</code> cases, functions or using a decorator to handle
-    different exceptions.</p>
-</li>
-</ul>
+<h2 id="reasoning">Reasoning</h2>
+<p>Handling too many exceptions in a single place is a good indicator
+of a bad design since one controlling structure will become too
+complex. Also, you will need to test a lot of logic paths in your
+application.</p>
+<h2 id="solution">Solution</h2>
+<p>We can reduce the complexity of this case by splitting it into
+multiple <code>try</code> cases, functions or using a decorator to handle
+different exceptions.</p>
 <div class="versionadded">
 
 0.7.0

@@ -5876,19 +5876,13 @@
 
     <!-- Markdown content -->
     <p>Forbid starting lines with a dot.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    We enforce strict consistency rules about how to break lines. We
-    also enforce strict rules about multi-line parameters. Starting new
-    lines with the dot means that this rule is broken.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>()</code> to break lines in a complex expression.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>We enforce strict consistency rules about how to break lines. We
+also enforce strict rules about multi-line parameters. Starting new
+lines with the dot means that this rule is broken.</p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>()</code> to break lines in a complex expression.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 some = MyModel.objects.filter(
     ...,

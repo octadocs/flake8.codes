@@ -5904,25 +5904,19 @@
 to subclass <code>object</code> and <code>type</code>, warnings, and exceptions.</p>
 <p>See <a href="/wemake-python-styleguide/0.15.2/constants/ALLOWED_BUILTIN_CLASSES/">ALLOWED_BUILTIN_CLASSES</a> for
 the whole list of whitelisted names.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    It is almost never a good idea (unless you do something sneaky) to
-    subclass primitive builtins.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use custom objects around some wrapper. Use magic methods to emulate
-    the desired behaviour.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-class Some(object): ...
-class MyValueException(ValueError): ...
+<h2 id="reasoning">Reasoning</h2>
+<p>It is almost never a good idea (unless you do something sneaky) to
+subclass primitive builtins.</p>
+<h2 id="solution">Solution</h2>
+<p>Use custom objects around some wrapper. Use magic methods to emulate
+the desired behaviour.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="k">class</span> <span class="n">Some</span>(<span class="n">object</span>): ...
+<span class="k">class</span> <span class="n">MyValueException</span>(<span class="n">ValueError</span>): ...
 
-# Wrong:
-class MyInt(int): ...
+<span class="c1"># Wrong:</span>
+<span class="k">class</span> <span class="n">MyInt</span>(<span class="n">int</span>): ...
 </code></pre></div>
 <div class="versionadded">
 

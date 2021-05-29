@@ -5876,21 +5876,15 @@
 
     <!-- Markdown content -->
     <p>Forbids comparisons with <code>float</code> and <code>complex</code>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    This is a best practice rule, as <code>float</code> and <code>complex</code> suffer from
-    representation error, leading to possibly incorrect results during
-    comparison.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use fuzzy operators. 1. <code>abs(f1 - f2) &lt;= allowed_error</code> 2.
-    <code>math.isclose(f1, f2)</code> (for <code>float</code>) 3. <code>cmath.isclose(c1, c2)</code> (for
-    <code>complex</code>) 4. Custom logic, not using operators</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>This is a best practice rule, as <code>float</code> and <code>complex</code> suffer from
+representation error, leading to possibly incorrect results during
+comparison.</p>
+<h2 id="solution">Solution</h2>
+<p>Use fuzzy operators. 1. <code>abs(f1 - f2) &lt;= allowed_error</code> 2.
+<code>math.isclose(f1, f2)</code> (for <code>float</code>) 3. <code>cmath.isclose(c1, c2)</code> (for
+<code>complex</code>) 4. Custom logic, not using operators</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 math.isclose(3.0, 0.3 / 0.1)
 cmath.isclose(3 + 4j, (0.3 + 0.4j) / 0.1)

@@ -5876,20 +5876,14 @@
 
     <!-- Markdown content -->
     <p>Forbid using float zeros: <code>0.0</code>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Float zeros can be used as variable values which may lead to typing
-    bugs when trying to perform an operation between an int number and
-    the float zero.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use int zeros (0). If a float is needed, it should be cast
-    explicitly.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Float zeros can be used as variable values which may lead to typing
+bugs when trying to perform an operation between an int number and
+the float zero.</p>
+<h2 id="solution">Solution</h2>
+<p>Use int zeros (0). If a float is needed, it should be cast
+explicitly.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 zero = 0
 

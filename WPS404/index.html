@@ -5879,18 +5879,12 @@
 <p>Anything that is not a <code>ast.Name</code>, <code>ast.Attribute</code>, <code>ast.Str</code>,
 <code>ast.NameConstant</code>, <code>ast.Tuple</code>, <code>ast.Bytes</code>, <code>ast.Num</code> or
 <code>ast.Ellipsis</code> should be moved out from defaults.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    It can be tricky. Nothing stops you from making database calls or
-    HTTP requests in such expressions. It is also not readable for us.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Move the expression out from default value.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>It can be tricky. Nothing stops you from making database calls or
+HTTP requests in such expressions. It is also not readable for us.</p>
+<h2 id="solution">Solution</h2>
+<p>Move the expression out from default value.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 SHOULD_USE_DOCTEST = &#39;PYFLAKES_DOCTEST&#39; in os.environ
 def __init__(self, with_doctest=SHOULD_USE_DOCTEST):

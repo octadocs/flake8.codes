@@ -5876,24 +5876,18 @@
 
     <!-- Markdown content -->
     <p>Forbid imports relative to the current folder.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    We should pick one style and stick to it. We have decided to use the
-    explicit one.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Refactor your imports to use the absolute path.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-from my_package.version import get_version
+<h2 id="reasoning">Reasoning</h2>
+<p>We should pick one style and stick to it. We have decided to use the
+explicit one.</p>
+<h2 id="solution">Solution</h2>
+<p>Refactor your imports to use the absolute path.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="kn">from</span> <span class="nn">my_package.version</span> <span class="kn">import</span> <span class="n">get_version</span>
 
-# Wrong:
-from .version import get_version
-from ..drivers import MySQLDriver
+<span class="c1"># Wrong:</span>
+<span class="kn">from</span> <span class="nn">.version</span> <span class="kn">import</span> <span class="n">get_version</span>
+<span class="kn">from</span> <span class="nn">..drivers</span> <span class="kn">import</span> <span class="n">MySQLDriver</span>
 </code></pre></div>
 <div class="versionadded">
 

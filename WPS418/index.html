@@ -5876,31 +5876,23 @@
 
     <!-- Markdown content -->
     <p>Forbid exceptions inherited from <code>BaseException</code>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-<code>BaseException</code> is a special case: it is not designed to be extended
-    by users. A lot of your <code>except Exception</code> cases won't work. That's
-    incorrect and dangerous.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Change the base class to <code>Exception</code>.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-class MyException(Exception):
+<h2 id="reasoning">Reasoning</h2>
+<p><code>BaseException</code> is a special case: it is not designed to be extended
+by users. A lot of your <code>except Exception</code> cases won't work. That's
+incorrect and dangerous.</p>
+<h2 id="solution">Solution</h2>
+<p>Change the base class to <code>Exception</code>.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="k">class</span> <span class="n">MyException</span>(<span class="nb">Exception</span>):
     ...
 
-# Wrong:
-class MyException(BaseException):
+<span class="c1"># Wrong:</span>
+<span class="k">class</span> <span class="n">MyException</span>(<span class="n">BaseException</span>):
     ...
 </code></pre></div>
-<ul>
-<li>See also:<br />
-<a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">https://docs.python.org/3/library/exceptions.html#exception-hierarchy</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">https://docs.python.org/3/library/exceptions.html#exception-hierarchy</a></p>
 <div class="versionadded">
 
 0.7.0

@@ -5904,26 +5904,20 @@
     <!-- Markdown content -->
     <p>Forbid importing protected modules.</p>
 <p>Related to <a href="/WPS450/"><strong>WPS450</strong> Found protected object import: _</a>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When importing protected modules we break a contract that authors of
-    this module enforce. This way we are not respecting encapsulation
-    and it may break our code at any moment.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Do not import protected modules. Respect the encapsulation.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-import public_module
-from some.public.module import FooClass
+<h2 id="reasoning">Reasoning</h2>
+<p>When importing protected modules we break a contract that authors of
+this module enforce. This way we are not respecting encapsulation
+and it may break our code at any moment.</p>
+<h2 id="solution">Solution</h2>
+<p>Do not import protected modules. Respect the encapsulation.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="kn">import</span> <span class="nn">public_module</span>
+<span class="kn">from</span> <span class="nn">some.public.module</span> <span class="kn">import</span> <span class="n">FooClass</span>
 
-# Wrong:
-import _compat
-from some._protected.module import BarClass
+<span class="c1"># Wrong:</span>
+<span class="kn">import</span> <span class="nn">_compat</span>
+<span class="kn">from</span> <span class="nn">some._protected.module</span> <span class="kn">import</span> <span class="n">BarClass</span>
 </code></pre></div>
 <div class="versionadded">
 

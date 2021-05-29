@@ -5876,28 +5876,22 @@
 
     <!-- Markdown content -->
     <p>Forbid <code>super()</code> with incorrect method or property access.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Can only use <code>super()</code> method that matches the following context.
-    <code>super().some()</code> and <code>super().some</code> in <code>Child.some()</code>, and
-    <code>super().prop</code> and <code>super().prop()</code> in <code>Child.prop</code></p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>super()</code> methods and properties with the correct context.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-class Child(Parent):
-    def some_method(self):
-        original = super().some_method()
+<h2 id="reasoning">Reasoning</h2>
+<p>Can only use <code>super()</code> method that matches the following context.
+<code>super().some()</code> and <code>super().some</code> in <code>Child.some()</code>, and
+<code>super().prop</code> and <code>super().prop()</code> in <code>Child.prop</code></p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>super()</code> methods and properties with the correct context.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="k">class</span> <span class="n">Child</span>(<span class="n">Parent</span>):
+    <span class="n">def</span> <span class="n">some_method</span>(<span class="nb">self</span>):
+        <span class="n">original</span> = <span class="n">super</span>().<span class="n">some_method</span>()
 
-# Wrong:
-class Child(Parent):
-    def some_method(self):
-        other = super().other_method()
+<span class="c1"># Wrong:</span>
+<span class="k">class</span> <span class="n">Child</span>(<span class="n">Parent</span>):
+    <span class="n">def</span> <span class="n">some_method</span>(<span class="nb">self</span>):
+        <span class="n">other</span> = <span class="n">super</span>().<span class="n">other_method</span>()
 </code></pre></div>
 <div class="versionadded">
 

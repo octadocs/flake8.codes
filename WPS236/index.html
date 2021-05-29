@@ -5900,29 +5900,21 @@
 
     <!-- Markdown content -->
     <p>Forbid using too many variables to unpack a tuple.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    The order and meaning are hard to remember.</p>
-</li>
-<li>
-<p>Solution:<br />
-    If you have more than 2 values in a tuple, consider using
-    <code>typing.NamedTuple</code> or a dataclass instead.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>The order and meaning are hard to remember.</p>
+<h2 id="solution">Solution</h2>
+<p>If you have more than 2 values in a tuple, consider using
+<code>typing.NamedTuple</code> or a dataclass instead.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 result = foo()
 
 # Wrong:
 a, b, c, d, e = foo()
 </code></pre></div>
-<ul>
-<li>Configuration:<br />
-    This rule is configurable with <code>--max-tuple-unpack-length</code>. Default:
-    <a href="/wemake-python-styleguide/0.15.2/configuration/MAX_TUPLE_UNPACK_LENGTH/">MAX_TUPLE_UNPACK_LENGTH</a> = <code>4</code></li>
-</ul>
+<h2 id="configuration">Configuration</h2>
+<p>This rule is configurable with <code>--max-tuple-unpack-length</code>. Default:
+<a href="/wemake-python-styleguide/0.15.2/configuration/MAX_TUPLE_UNPACK_LENGTH/">MAX_TUPLE_UNPACK_LENGTH</a> = <code>4</code></p>
 <div class="versionadded">
 
 0.15.0

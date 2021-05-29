@@ -5877,30 +5877,24 @@
     <!-- Markdown content -->
     <p>Forbid empty comments.</p>
 <p>Empty comments are only allowed in between valid comments.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Empty comments that do not help formatting should be excluded.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove the empty comments.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
+<h2 id="reasoning">Reasoning</h2>
+<p>Empty comments that do not help formatting should be excluded.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove the empty comments.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
 
-# First line
-#
-# Samples:
-# One
-# Two
-my_var = 1
+<span class="c1"># First line</span>
+<span class="c1">#</span>
+<span class="c1"># Samples:</span>
+<span class="c1"># One</span>
+<span class="c1"># Two</span>
+<span class="n">my_var</span> <span class="o">=</span> <span class="mi">1</span>
 
-# Wrong:
+<span class="c1"># Wrong:</span>
 
-#
-my_var = 1
+<span class="c1">#</span>
+<span class="n">my_var</span> <span class="o">=</span> <span class="mi">1</span>
 </code></pre></div>
 <div class="versionadded">
 

@@ -5876,25 +5876,19 @@
 
     <!-- Markdown content -->
     <p>Forbid duplicate items in hashes.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When you explicitly put duplicate items in <code>set</code> literals or in
-    <code>dict</code> keys it just does not make any sense since hashes cannot
-    contain duplicate items and they will be removed anyway.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove duplicate items.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-some_set = {&#39;a&#39;, variable1}
-some_set = {make_call(), make_call()}
+<h2 id="reasoning">Reasoning</h2>
+<p>When you explicitly put duplicate items in <code>set</code> literals or in
+<code>dict</code> keys it just does not make any sense since hashes cannot
+contain duplicate items and they will be removed anyway.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove duplicate items.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="n">some_set</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">variable1</span><span class="p">}</span>
+<span class="n">some_set</span> <span class="o">=</span> <span class="p">{</span><span class="n">make_call</span><span class="p">(),</span> <span class="n">make_call</span><span class="p">()}</span>
 
-# Wrong:
-some_set = {&#39;a&#39;, &#39;a&#39;, variable1, variable1}
+<span class="c1"># Wrong:</span>
+<span class="n">some_set</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">variable1</span><span class="p">,</span> <span class="n">variable1</span><span class="p">}</span>
 </code></pre></div>
 <p>Things that we consider duplicates: builtins and variables. These nodes
 are not checked because they may return different results:</p>

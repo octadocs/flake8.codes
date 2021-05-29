@@ -5876,19 +5876,13 @@
 
     <!-- Markdown content -->
     <p>Forbid <code>NotImplemented</code> exception.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-<code>NotImplemented</code> and <code>NotImplementedError</code> look similar but they
-    have different use cases. Use cases of <code>NotImplemented</code> are too
-    limited to be generally available.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>NotImplementedError</code>.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p><code>NotImplemented</code> and <code>NotImplementedError</code> look similar but they
+have different use cases. Use cases of <code>NotImplemented</code> are too
+limited to be generally available.</p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>NotImplementedError</code>.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 raise NotImplementedError(&#39;To be done&#39;)
 
@@ -5901,10 +5895,8 @@ raise NotImplemented
 
 </div>
 
-<ul>
-<li>See also:<br />
-<a href="https://stackoverflow.com/a/44575926/4842742">https://stackoverflow.com/a/44575926/4842742</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://stackoverflow.com/a/44575926/4842742">https://stackoverflow.com/a/44575926/4842742</a></p>
 
     <!-- Last update of source file -->
     

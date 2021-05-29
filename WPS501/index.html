@@ -5880,18 +5880,12 @@
 or method is decorated. Because we cannot control what is going on in
 this decorator. It might be <code>@contextmanager</code> or similar thing that
 requires this API.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    This rule will reduce complexity and improve readability.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Refactor your <code>try</code> logic. Replace the <code>try-finally</code> statement with
-    a <code>with</code> statement.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>This rule will reduce complexity and improve readability.</p>
+<h2 id="solution">Solution</h2>
+<p>Refactor your <code>try</code> logic. Replace the <code>try-finally</code> statement with
+a <code>with</code> statement.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 with open(&quot;filename&quot;) as f:
     f.write(...)

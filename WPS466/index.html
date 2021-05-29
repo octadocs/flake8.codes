@@ -5878,27 +5878,21 @@
     <p>Forbid using complex grammar for using decorators.</p>
 <p>This violation is only raised for <code>python3.9+</code>, earlier versions do not
 have this concept.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    New grammar allows to use decorators in a more liberal way. It is
-    probably not a good idea. Because decorators should be simple and
-    easy to read.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use names, attributes, and calls as decorators only. You are free to
-    pass any args to function calls, however.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-@some.decorator(args)
-def my_function(): ...
+<h2 id="reasoning">Reasoning</h2>
+<p>New grammar allows to use decorators in a more liberal way. It is
+probably not a good idea. Because decorators should be simple and
+easy to read.</p>
+<h2 id="solution">Solution</h2>
+<p>Use names, attributes, and calls as decorators only. You are free to
+pass any args to function calls, however.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="nl">Correct</span><span class="p">:</span><span class="w"></span>
+<span class="nv">@some</span><span class="p">.</span><span class="n">decorator</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="n">def</span><span class="w"> </span><span class="n">my_function</span><span class="p">()</span><span class="err">:</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
 
-# Wrong:
-@some.decorator[&#39;method&#39;] + other
-def my_function(): ...
+<span class="err">#</span><span class="w"> </span><span class="nl">Wrong</span><span class="p">:</span><span class="w"></span>
+<span class="nv">@some</span><span class="p">.</span><span class="n">decorator</span><span class="o">[</span><span class="n">&#39;method&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">other</span><span class="w"></span>
+<span class="n">def</span><span class="w"> </span><span class="n">my_function</span><span class="p">()</span><span class="err">:</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
 </code></pre></div>
 <div class="versionadded">
 

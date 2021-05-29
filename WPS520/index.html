@@ -5878,30 +5878,24 @@
     <p>Forbid comparing with explicit falsy constants.</p>
 <p>We allow to compare with falsy numbers, strings, booleans, <code>None</code>. We
 disallow complex constants like tuple, dicts, and lists.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When comparing <code>something</code> with explicit falsy constants what we
-    really mean is <code>not something</code>.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>not</code> with your variable. Fix your data types.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-if not my_check:
+<h2 id="reasoning">Reasoning</h2>
+<p>When comparing <code>something</code> with explicit falsy constants what we
+really mean is <code>not something</code>.</p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>not</code> with your variable. Fix your data types.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="k">if</span> <span class="nv">not</span> <span class="nv">my_check</span>:
     ...
 
-if some_other is None:
+<span class="k">if</span> <span class="nv">some_other</span> <span class="nv">is</span> <span class="nv">None</span>:
     ...
 
-if some_num == 0:
+<span class="k">if</span> <span class="nv">some_num</span> <span class="o">==</span> <span class="mi">0</span>:
     ...
 
-# Wrong:
-if my_check == []:
+# <span class="nv">Wrong</span>:
+<span class="k">if</span> <span class="nv">my_check</span> <span class="o">==</span> []:
     ...
 </code></pre></div>
 <div class="versionadded">

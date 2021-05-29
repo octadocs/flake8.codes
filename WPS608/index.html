@@ -5876,19 +5876,13 @@
 
     <!-- Markdown content -->
     <p>Forbid <code>super()</code> with parameters or outside of methods.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-<code>super()</code> is a very special function. It implicitly relies on the
-    context where it is used and parameters passed to it. So, we should
-    be very careful with parameters and context.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>super()</code> without arguments and only inside methods.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p><code>super()</code> is a very special function. It implicitly relies on the
+context where it is used and parameters passed to it. So, we should
+be very careful with parameters and context.</p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>super()</code> without arguments and only inside methods.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 super().__init__()
 

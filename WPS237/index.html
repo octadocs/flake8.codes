@@ -5912,26 +5912,20 @@ not:</p>
 <li>the return value of a procedure call without arguments</li>
 </ul>
 <p>Related to <a href="/WPS305/"><strong>WPS305</strong> Found f string</a>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Complex <code>f</code> strings are often difficult to understand, making the
-    code less readable. Generally we don't allow <code>f</code> strings but this
-    violation exists in case the user decides to ignore the general
-    violation.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>.format()</code> or assign complex expressions to variables before
-    formatting.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-f&#39;smth {user.get_full_name()}&#39;
+<h2 id="reasoning">Reasoning</h2>
+<p>Complex <code>f</code> strings are often difficult to understand, making the
+code less readable. Generally we don't allow <code>f</code> strings but this
+violation exists in case the user decides to ignore the general
+violation.</p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>.format()</code> or assign complex expressions to variables before
+formatting.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="nv">f</span><span class="s1">&#39;</span><span class="s">smth {user.get_full_name()}</span><span class="s1">&#39;</span>
 
-# Wrong:
-f&#39;{reverse(&quot;url-name&quot;)}?{&quot;&amp;&quot;.join(&quot;user=&quot;+uid for uid in user_ids)}&#39;
+# <span class="nv">Wrong</span>:
+<span class="nv">f</span><span class="s1">&#39;</span><span class="s">{reverse(&quot;url-name&quot;)}?{&quot;&amp;&quot;.join(&quot;user=&quot;+uid for uid in user_ids)}</span><span class="s1">&#39;</span>
 </code></pre></div>
 <div class="versionadded">
 

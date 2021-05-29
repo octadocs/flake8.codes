@@ -5876,20 +5876,14 @@
 
     <!-- Markdown content -->
     <p>Forbid protected attributes and methods.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When using protected attributes and method we break a contract that
-    authors of this class enforce. This way we are not respecting
-    encapsulation and it may break our code at any moment.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Do not use protected attributes and methods. Respect the
-    encapsulation.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>When using protected attributes and method we break a contract that
+authors of this class enforce. This way we are not respecting
+encapsulation and it may break our code at any moment.</p>
+<h2 id="solution">Solution</h2>
+<p>Do not use protected attributes and methods. Respect the
+encapsulation.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 self._protected = 1
 cls._hidden_method()

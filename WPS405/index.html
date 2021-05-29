@@ -5876,25 +5876,19 @@
 
     <!-- Markdown content -->
     <p>Forbid anything other than <code>ast.Name</code> to define loop variables.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When defining a <code>for</code> loop with attributes, indexes, calls, or any
-    other nodes it does dirty things inside.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use regular <code>ast.Name</code> variables. Or tuple of <code>ast.Name</code> variables.
-    Star names are also fine.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-for person in database.people():
+<h2 id="reasoning">Reasoning</h2>
+<p>When defining a <code>for</code> loop with attributes, indexes, calls, or any
+other nodes it does dirty things inside.</p>
+<h2 id="solution">Solution</h2>
+<p>Use regular <code>ast.Name</code> variables. Or tuple of <code>ast.Name</code> variables.
+Star names are also fine.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="k">for</span> <span class="nv">person</span> <span class="nv">in</span> <span class="nv">database</span>.<span class="nv">people</span><span class="ss">()</span>:
     ...
 
-# Wrong:
-for context[&#39;person&#39;] in database.people():
+# <span class="nv">Wrong</span>:
+<span class="k">for</span> <span class="nv">context</span>[<span class="s1">&#39;</span><span class="s">person</span><span class="s1">&#39;</span>] <span class="nv">in</span> <span class="nv">database</span>.<span class="nv">people</span><span class="ss">()</span>:
     ...
 </code></pre></div>
 <div class="versionadded">

@@ -5902,20 +5902,14 @@
     <p>Forbid magic numbers.</p>
 <p>What do we call a "magic number"? Well, it is actually any number that
 appears in your code out of nowhere. Like <code>42</code>. Or <code>0.32</code>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    It is very hard to remember what these numbers mean. Why were they
-    used? Should they ever be changed? Or are they eternal like <code>3.14</code>?</p>
-</li>
-<li>
-<p>Solution:<br />
-    Give these numbers a name! Move them to a separate variable, giving
-    more context to the reader. And by moving things into new variables
-    you will trigger other complexity checks.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>It is very hard to remember what these numbers mean. Why were they
+used? Should they ever be changed? Or are they eternal like <code>3.14</code>?</p>
+<h2 id="solution">Solution</h2>
+<p>Give these numbers a name! Move them to a separate variable, giving
+more context to the reader. And by moving things into new variables
+you will trigger other complexity checks.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 price_in_euro = 3.33  # could be changed later
 total = get_items_from_cart() * price_in_euro
@@ -5934,10 +5928,8 @@ other common numbers, that are defined in
 
 </div>
 
-<ul>
-<li>See also:<br />
-<a href="https://en.wikipedia.org/wiki/Magic_number_(programming)">https://en.wikipedia.org/wiki/Magic_number_(programming)</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://en.wikipedia.org/wiki/Magic_number_(programming)">https://en.wikipedia.org/wiki/Magic_number_(programming)</a></p>
 
     <!-- Last update of source file -->
     

@@ -5876,19 +5876,13 @@
 
     <!-- Markdown content -->
     <p>Forbid implicit negative indexes.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    There's no need in getting the length of an iterable and then having
-    a negative offset, when you can specify negative indexes in the
-    first place.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use negative indexes.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>There's no need in getting the length of an iterable and then having
+a negative offset, when you can specify negative indexes in the
+first place.</p>
+<h2 id="solution">Solution</h2>
+<p>Use negative indexes.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 some_list[-1]
 

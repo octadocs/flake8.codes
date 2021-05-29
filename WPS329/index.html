@@ -5876,20 +5876,14 @@
 
     <!-- Markdown content -->
     <p>Forbid meaningless <code>except</code> cases.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Using <code>except</code> cases that just reraise the same exception is
-    error-prone. You can increase your stacktrace, silence some
-    potential exceptions, and screw things up. It also does not make any
-    sense to do so.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove <code>except</code> case or make sure it makes sense.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Using <code>except</code> cases that just reraise the same exception is
+error-prone. You can increase your stacktrace, silence some
+potential exceptions, and screw things up. It also does not make any
+sense to do so.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove <code>except</code> case or make sure it makes sense.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 try:
     ...

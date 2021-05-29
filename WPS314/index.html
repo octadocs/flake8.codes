@@ -5876,24 +5876,18 @@
 
     <!-- Markdown content -->
     <p>Forbid using <code>if</code> statements that use invalid conditionals.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When invalid conditional arguments are used it is typically an
-    indication of a mistake, since the value of the conditional result
-    will always be the same.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove the conditional and any associated dead code.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-if value is True: ...
+<h2 id="reasoning">Reasoning</h2>
+<p>When invalid conditional arguments are used it is typically an
+indication of a mistake, since the value of the conditional result
+will always be the same.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove the conditional and any associated dead code.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="k">if</span> <span class="nv">value</span> <span class="nv">is</span> <span class="nv">True</span>: ...
 
-# Wrong:
-if True: ...
+# <span class="nv">Wrong</span>:
+<span class="k">if</span> <span class="nv">True</span>: ...
 </code></pre></div>
 <div class="versionadded">
 

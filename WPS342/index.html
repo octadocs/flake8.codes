@@ -5876,19 +5876,13 @@
 
     <!-- Markdown content -->
     <p>Forbid <code>\\</code> escape sequences inside regular strings.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    It is hard to read escape sequences inside regular strings, because
-    they use <code>\\</code> double backslash for a single character escape.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use raw strings <code>r''</code> to rewrite the escape sequence with a <code>\</code>
-    single backslash.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>It is hard to read escape sequences inside regular strings, because
+they use <code>\\</code> double backslash for a single character escape.</p>
+<h2 id="solution">Solution</h2>
+<p>Use raw strings <code>r''</code> to rewrite the escape sequence with a <code>\</code>
+single backslash.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 escaped = [r&#39;\n&#39;, &#39;\n&#39;]
 

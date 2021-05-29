@@ -5876,23 +5876,17 @@
 
     <!-- Markdown content -->
     <p>Forbid imports like <code>import os.path</code>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    There are too many ways to import something. We should pick one
-    style and stick to it. We have decided to use the readable one.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Refactor your import statement.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-from os import path
+<h2 id="reasoning">Reasoning</h2>
+<p>There are too many ways to import something. We should pick one
+style and stick to it. We have decided to use the readable one.</p>
+<h2 id="solution">Solution</h2>
+<p>Refactor your import statement.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
 
-# Wrong:
-import os.path
+<span class="c1"># Wrong:</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
 </code></pre></div>
 <div class="versionadded">
 

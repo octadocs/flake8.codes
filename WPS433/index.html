@@ -5876,28 +5876,22 @@
 
     <!-- Markdown content -->
     <p>Forbid imports nested in functions.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Usually, nested imports are used to fix the import cycle. So, nested
-    imports show that there's an issue with your design.</p>
-</li>
-<li>
-<p>Solution:<br />
-    You don't need nested imports, you need to refactor your code.
-    Introduce a new module or find another way to do what you want to
-    do. Rethink how your layered architecture should look.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-from my_module import some_function
+<h2 id="reasoning">Reasoning</h2>
+<p>Usually, nested imports are used to fix the import cycle. So, nested
+imports show that there's an issue with your design.</p>
+<h2 id="solution">Solution</h2>
+<p>You don't need nested imports, you need to refactor your code.
+Introduce a new module or find another way to do what you want to
+do. Rethink how your layered architecture should look.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="kn">from</span> <span class="nn">my_module</span> <span class="kn">import</span> <span class="n">some_function</span>
 
-def some(): ...
+<span class="k">def</span> <span class="nf">some</span><span class="p">():</span> <span class="o">...</span>
 
-# Wrong:
-def some():
-    from my_module import some_function
+<span class="c1"># Wrong:</span>
+<span class="k">def</span> <span class="nf">some</span><span class="p">():</span>
+    <span class="kn">from</span> <span class="nn">my_module</span> <span class="kn">import</span> <span class="n">some_function</span>
 </code></pre></div>
 <div class="versionadded">
 
@@ -5911,10 +5905,8 @@ def some():
 
 </div>
 
-<ul>
-<li>See also:<br />
-<a href="https://github.com/seddonym/layer_linter">https://github.com/seddonym/layer_linter</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://github.com/seddonym/layer_linter">https://github.com/seddonym/layer_linter</a></p>
 
     <!-- Last update of source file -->
     

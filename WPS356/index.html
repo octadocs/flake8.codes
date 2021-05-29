@@ -5876,17 +5876,11 @@
 
     <!-- Markdown content -->
     <p>Forbid unnecessary iterable unpacking.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    We do this for consistency.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Do not use iterable unpacking when it's not necessary.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>We do this for consistency.</p>
+<h2 id="solution">Solution</h2>
+<p>Do not use iterable unpacking when it's not necessary.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 [1, *numbers, 99]
 {*iterable, *other_iterable}

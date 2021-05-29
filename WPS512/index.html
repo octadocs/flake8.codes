@@ -5876,18 +5876,12 @@
 
     <!-- Markdown content -->
     <p>Forbid multiple <code>isinstance</code> calls with single-item tuples.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    There's no need to use tuples with single elements. You can use
-    single variables or tuples with multiple elements.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use tuples with multiple elements or a single variable.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>There's no need to use tuples with single elements. You can use
+single variables or tuples with multiple elements.</p>
+<h2 id="solution">Solution</h2>
+<p>Use tuples with multiple elements or a single variable.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 isinstance(some, (int, float))
 isinstance(some, int)

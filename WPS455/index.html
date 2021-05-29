@@ -5876,20 +5876,14 @@
 
     <!-- Markdown content -->
     <p>Forbids using non-trivial expressions as a parameter for <code>except</code>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Expressions used as an argument for <code>except</code> could be hard to read
-    and hide real list of exceptions being expected to occur in the
-    outlined code block.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use separate <code>except</code> blocks for each exception or provide a tuple
-    of exception classes.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Expressions used as an argument for <code>except</code> could be hard to read
+and hide real list of exceptions being expected to occur in the
+outlined code block.</p>
+<h2 id="solution">Solution</h2>
+<p>Use separate <code>except</code> blocks for each exception or provide a tuple
+of exception classes.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 try:
     ...

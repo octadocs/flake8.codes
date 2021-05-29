@@ -5878,19 +5878,13 @@
     <p>Frobids direct usage of multiline strings.</p>
 <p>Multiline strings are only allowed in docstrings or assignments to
 variables.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Direct usage of multiline strings is not readable. One should not
-    depend on the current indentation, e.g. in comparisons or function
-    calls.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Assign a multiline string to a variable.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Direct usage of multiline strings is not readable. One should not
+depend on the current indentation, e.g. in comparisons or function
+calls.</p>
+<h2 id="solution">Solution</h2>
+<p>Assign a multiline string to a variable.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 multiline = &quot;&quot;&quot;
     abc

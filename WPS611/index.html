@@ -5903,19 +5903,13 @@
 <p>We allow to make <code>__iter__</code> a generator. See
 <a href="/wemake-python-styleguide/0.15.2/constants/YIELD_MAGIC_METHODS_BLACKLIST/">YIELD_MAGIC_METHODS_BLACKLIST</a>
 for the whole list of blacklisted generator magic methods.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Python's datamodel is strict. You cannot make generators from random
-    magic methods. This rule enforces it.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove <code>yield</code> from a magic method or rename it to be a custom
-    method.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Python's datamodel is strict. You cannot make generators from random
+magic methods. This rule enforces it.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove <code>yield</code> from a magic method or rename it to be a custom
+method.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 </code></pre></div>
 <blockquote>
@@ -5930,10 +5924,8 @@ for the whole list of blacklisted generator magic methods.</p>
 </ul>
 <p># Wrong: class Example(object): def __init__(self): yield 10</p>
 </blockquote>
-<ul>
-<li>See also:<br />
-<a href="https://docs.python.org/3/reference/datamodel.html">https://docs.python.org/3/reference/datamodel.html</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://docs.python.org/3/reference/datamodel.html">https://docs.python.org/3/reference/datamodel.html</a></p>
 <div class="versionadded">
 
 0.3.0

@@ -5907,40 +5907,32 @@
 </ul>
 <p>We do not treat <code>ast.Call</code> as an access, since there are a lot of
 call-based APIs like Django ORM, builder patterns, etc.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Having too deep access level indicates a bad design and
-    overcomplicated data without proper API.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Split the expression into variables, functions or classes. Refactor
-    the API for your data layout.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct: access level = 4
-self.attr.inner.wrapper[1]
+<h2 id="reasoning">Reasoning</h2>
+<p>Having too deep access level indicates a bad design and
+overcomplicated data without proper API.</p>
+<h2 id="solution">Solution</h2>
+<p>Split the expression into variables, functions or classes. Refactor
+the API for your data layout.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct: access level = 4</span>
+<span class="n">self</span><span class="p">.</span><span class="n">attr</span><span class="p">.</span><span class="k">inner</span><span class="p">.</span><span class="k">wrapper</span><span class="err">[</span><span class="mi">1</span><span class="err">]</span>
 
-# Correct: access level = 1
-manager.filter().exclude().annotate().values().first()
+<span class="c1"># Correct: access level = 1</span>
+<span class="n">manager</span><span class="p">.</span><span class="k">filter</span><span class="p">().</span><span class="k">exclude</span><span class="p">().</span><span class="n">annotate</span><span class="p">().</span><span class="k">values</span><span class="p">().</span><span class="k">first</span><span class="p">()</span>
 
-# Wrong: access level = 5
-self.attr.inner.wrapper.method.call()
+<span class="c1"># Wrong: access level = 5</span>
+<span class="n">self</span><span class="p">.</span><span class="n">attr</span><span class="p">.</span><span class="k">inner</span><span class="p">.</span><span class="k">wrapper</span><span class="p">.</span><span class="n">method</span><span class="p">.</span><span class="k">call</span><span class="p">()</span>
 
-# Wrong: access level = 5
-# ``obj` has access level of 2:
-# ``.attr`, ``.call`
-# ``call()` has access level of 5:
-# ``.other`, ``[0]`, ``.field`, ``.type`, ``.boom`
-obj.attr.call().other[0].field.type.boom
+<span class="c1"># Wrong: access level = 5</span>
+<span class="c1"># ``obj` has access level of 2:</span>
+<span class="c1"># ``.attr`, ``.call`</span>
+<span class="c1"># ``call()` has access level of 5:</span>
+<span class="c1"># ``.other`, ``[0]`, ``.field`, ``.type`, ``.boom`</span>
+<span class="n">obj</span><span class="p">.</span><span class="n">attr</span><span class="p">.</span><span class="k">call</span><span class="p">().</span><span class="n">other</span><span class="err">[</span><span class="mi">0</span><span class="err">]</span><span class="p">.</span><span class="n">field</span><span class="p">.</span><span class="k">type</span><span class="p">.</span><span class="n">boom</span>
 </code></pre></div>
-<ul>
-<li>Configuration:<br />
-    This rule is configurable with <code>--max-access-level</code>. Default:
-    <a href="/wemake-python-styleguide/0.15.2/configuration/MAX_ACCESS_LEVEL/">MAX_ACCESS_LEVEL</a> = <code>4</code></li>
-</ul>
+<h2 id="configuration">Configuration</h2>
+<p>This rule is configurable with <code>--max-access-level</code>. Default:
+<a href="/wemake-python-styleguide/0.15.2/configuration/MAX_ACCESS_LEVEL/">MAX_ACCESS_LEVEL</a> = <code>4</code></p>
 <div class="versionadded">
 
 0.12.0

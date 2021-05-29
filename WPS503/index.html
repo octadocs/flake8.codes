@@ -5879,31 +5879,25 @@
 <p>We check single <code>if</code>, <code>for</code>, <code>while</code>, and <code>try</code> statements that all
 contain <code>return</code>, <code>raise</code>, <code>continue</code>, or <code>break</code> statements with this
 rule.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Using extra <code>else</code> creates a situation when the whole node could and
-    should be dropped without any changes in logic. So, we prefer to
-    have less code than more code.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove useless <code>else</code> case.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-def some_function():
-    if some_call():
-        return &#39;yeap&#39;
-    return &#39;nope&#39;
+<h2 id="reasoning">Reasoning</h2>
+<p>Using extra <code>else</code> creates a situation when the whole node could and
+should be dropped without any changes in logic. So, we prefer to
+have less code than more code.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove useless <code>else</code> case.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="nv">def</span> <span class="nv">some_function</span><span class="ss">()</span>:
+    <span class="k">if</span> <span class="nv">some_call</span><span class="ss">()</span>:
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="s">yeap</span><span class="s1">&#39;</span>
+    <span class="k">return</span> <span class="s1">&#39;</span><span class="s">nope</span><span class="s1">&#39;</span>
 
-# Wrong:
-def some_function():
-    if some_call():
-        raise ValueError(&#39;yeap&#39;)
-    else:
-        raise ValueError(&#39;nope&#39;)
+# <span class="nv">Wrong</span>:
+<span class="nv">def</span> <span class="nv">some_function</span><span class="ss">()</span>:
+    <span class="k">if</span> <span class="nv">some_call</span><span class="ss">()</span>:
+        <span class="nv">raise</span> <span class="nv">ValueError</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">yeap</span><span class="s1">&#39;</span><span class="ss">)</span>
+    <span class="k">else</span>:
+        <span class="nv">raise</span> <span class="nv">ValueError</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">nope</span><span class="s1">&#39;</span><span class="ss">)</span>
 </code></pre></div>
 <div class="versionadded">
 

@@ -5878,19 +5878,13 @@
     <p>Forbid explicit string concatanation in favour of <code>.format</code> method.</p>
 <p>However, we still allow multiline string concatanation as a way to write
 long strings that does not fit the 80-chars rule.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When formatting strings one must use <code>.format</code> and not any other
-    formatting methods like <code>%</code>, <code>+</code>, or <code>f</code>. This is done for
-    consistency reasons.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Join strings together if you can, or use <code>.format</code> method.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>When formatting strings one must use <code>.format</code> and not any other
+formatting methods like <code>%</code>, <code>+</code>, or <code>f</code>. This is done for
+consistency reasons.</p>
+<h2 id="solution">Solution</h2>
+<p>Join strings together if you can, or use <code>.format</code> method.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 x = &#39;ab: {0}&#39;.format(some_data)
 

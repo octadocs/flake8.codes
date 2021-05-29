@@ -5876,20 +5876,14 @@
 
     <!-- Markdown content -->
     <p>Forbid unused variables with multiple underscores.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    We only use <code>_</code> as a special definition for an unused variable.
-    Other variables are hard to read. It is unclear why would one use
-    it.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Rename unused variables to <code>_</code> or give it some more context with an
-    explicit name: <code>_context</code>.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>We only use <code>_</code> as a special definition for an unused variable.
+Other variables are hard to read. It is unclear why would one use
+it.</p>
+<h2 id="solution">Solution</h2>
+<p>Rename unused variables to <code>_</code> or give it some more context with an
+explicit name: <code>_context</code>.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 some_element, _next_element, _ = some_tuple()
 some_element, _, _ = some_tuple()

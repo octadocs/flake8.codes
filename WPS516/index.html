@@ -5876,24 +5876,18 @@
 
     <!-- Markdown content -->
     <p>Forbid comparing types with <code>type()</code> function.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When you compare types with <code>type()</code> function call it means that you
-    break polymorphism and disallow child classes of a node to work
-    here. That's incorrect.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>isinstance</code> to compare types.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-print(something, type(something))
+<h2 id="reasoning">Reasoning</h2>
+<p>When you compare types with <code>type()</code> function call it means that you
+break polymorphism and disallow child classes of a node to work
+here. That's incorrect.</p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>isinstance</code> to compare types.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="nv">print</span><span class="ss">(</span><span class="nv">something</span>, <span class="nv">type</span><span class="ss">(</span><span class="nv">something</span><span class="ss">))</span>
 
-# Wrong:
-if type(something) == int:
+# <span class="nv">Wrong</span>:
+<span class="k">if</span> <span class="nv">type</span><span class="ss">(</span><span class="nv">something</span><span class="ss">)</span> <span class="o">==</span> <span class="nv">int</span>:
     ...
 </code></pre></div>
 <div class="versionadded">

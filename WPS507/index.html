@@ -5877,26 +5877,20 @@
     <!-- Markdown content -->
     <p>Forbid unpythonic zero-length compare.</p>
 <p>Note, that we allow to check arbitrary length, like <code>len(arr) == 3</code>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Python's structures like dicts, lists, sets, and tuples all have
-    <code>__bool__</code> method to checks their length. So, there's no point in
-    wrapping them into <code>len(...)</code> and checking that it is bigger that
-    <code>0</code> or less then <code>1</code>, etc.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove extra <code>len()</code> call.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-if some_array or not other_array or len(third_array) == 1:
+<h2 id="reasoning">Reasoning</h2>
+<p>Python's structures like dicts, lists, sets, and tuples all have
+<code>__bool__</code> method to checks their length. So, there's no point in
+wrapping them into <code>len(...)</code> and checking that it is bigger that
+<code>0</code> or less then <code>1</code>, etc.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove extra <code>len()</code> call.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="k">if</span> <span class="nv">some_array</span> <span class="nv">or</span> <span class="nv">not</span> <span class="nv">other_array</span> <span class="nv">or</span> <span class="nv">len</span><span class="ss">(</span><span class="nv">third_array</span><span class="ss">)</span> <span class="o">==</span> <span class="mi">1</span>:
     ...
 
-# Wrong:
-if len(some_array) &gt; 0 or len(other_array) &lt; 1:
+# <span class="nv">Wrong</span>:
+<span class="k">if</span> <span class="nv">len</span><span class="ss">(</span><span class="nv">some_array</span><span class="ss">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="nv">or</span> <span class="nv">len</span><span class="ss">(</span><span class="nv">other_array</span><span class="ss">)</span> <span class="o">&lt;</span> <span class="mi">1</span>:
     ...
 </code></pre></div>
 <div class="versionadded">

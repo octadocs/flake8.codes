@@ -5900,34 +5900,26 @@
 
     <!-- Markdown content -->
     <p>Forbid nested classes.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Nested classes are really hard to manage. You cannot even create an
-    instance of this class in many cases. Testing them is also really
-    hard.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Just write flat classes, there's no need to nest them. If you are
-    nesting classes inside a function for parametrization, then you will
-    probably need to use a different design (or metaclasses).</p>
-</li>
-<li>
-<p>Configuration:<br />
-    This rule is configurable with <code>--nested-classes-whitelist</code>.
-    Default:
-    <a href="/wemake-python-styleguide/0.15.2/configuration/NESTED_CLASSES_WHITELIST/">NESTED_CLASSES_WHITELIST</a> = <code>('Meta', 'Params')</code></p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-class Some(object): ...
-class Other(object): ...
+<h2 id="reasoning">Reasoning</h2>
+<p>Nested classes are really hard to manage. You cannot even create an
+instance of this class in many cases. Testing them is also really
+hard.</p>
+<h2 id="solution">Solution</h2>
+<p>Just write flat classes, there's no need to nest them. If you are
+nesting classes inside a function for parametrization, then you will
+probably need to use a different design (or metaclasses).</p>
+<h2 id="configuration">Configuration</h2>
+<p>This rule is configurable with <code>--nested-classes-whitelist</code>.
+Default:
+<a href="/wemake-python-styleguide/0.15.2/configuration/NESTED_CLASSES_WHITELIST/">NESTED_CLASSES_WHITELIST</a> = <code>('Meta', 'Params')</code></p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="k">class</span> <span class="n">Some</span>(<span class="n">object</span>): ...
+<span class="k">class</span> <span class="n">Other</span>(<span class="n">object</span>): ...
 
-# Wrong:
-class Some(object):
-    class Inner(object):
+<span class="c1"># Wrong:</span>
+<span class="k">class</span> <span class="n">Some</span>(<span class="n">object</span>):
+    <span class="k">class</span> <span class="n">Inner</span>(<span class="n">object</span>):
         ...
 </code></pre></div>
 <div class="versionadded">

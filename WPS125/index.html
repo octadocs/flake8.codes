@@ -5900,19 +5900,13 @@
 
     <!-- Markdown content -->
     <p>Forbid variable or module names which shadow builtin names.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Your code simply breaks Python. After you create <code>list = 1</code>, you
-    cannot not call <code>builtin</code> function <code>list</code> and what can be worse than
-    that?</p>
-</li>
-<li>
-<p>Solution:<br />
-    Rename your entity to not shadow Python builtins.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Your code simply breaks Python. After you create <code>list = 1</code>, you
+cannot not call <code>builtin</code> function <code>list</code> and what can be worse than
+that?</p>
+<h2 id="solution">Solution</h2>
+<p>Rename your entity to not shadow Python builtins.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 my_list = list(some_other)
 
@@ -5922,9 +5916,9 @@ list = [1, 2, 3]
 </code></pre></div>
 <p>This can also cause problems when defining class attributes, for
 example:</p>
-<div class="highlight"><pre><span></span><code>class A:
-    min = 5
-    max = min(10, 20)  # TypeError: &#39;int&#39; object is not callable
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="n">A:</span>
+    <span class="nb">min</span> = <span class="mi">5</span>
+    <span class="nb">max</span> = <span class="nb">min</span>(<span class="mi">10</span>, <span class="mi">20</span>)  <span class="c1"># TypeError: &#39;int&#39; object is not callable</span>
 </code></pre></div>
 <p>If you feel it is still necessary to use such a class attribute,
 consider using a <span class="title-ref">`noqa</span> comment with

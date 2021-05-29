@@ -5907,21 +5907,15 @@
 is better for us to ignore a real (but hard to detect) case, then
 marking a valid one as incorrect.</p>
 <p>Internally we check for this pattern in string definitions:</p>
-<div class="highlight"><pre><span></span><code>%[(name)] [flags] [width] [.precision] [{h | l}] type
+<div class="highlight"><pre><span></span><code><span class="o">%[</span><span class="n">(name)</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">flags</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">width</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">.precision</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">{h | l}</span><span class="o">]</span><span class="w"> </span><span class="n">type</span><span class="w"></span>
 </code></pre></div>
 <p>This is a <code>C</code> format specification. Related to
 <a href="/WPS305/"><strong>WPS305</strong> Found f string</a> and solves the same problem.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    You must use a single formatting method across your project.</p>
-</li>
-<li>
-<p>Solution:<br />
-    We enforce to use string <code>.format()</code> method for this task.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>You must use a single formatting method across your project.</p>
+<h2 id="solution">Solution</h2>
+<p>We enforce to use string <code>.format()</code> method for this task.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 &#39;some string&#39;, &#39;your name: {0}&#39;, &#39;data: {data}&#39;
 
@@ -5931,13 +5925,11 @@ marking a valid one as incorrect.</p>
 <p>It might be a good idea to disable this rule and switch to
 <code>flake8-pep3101</code> in case your project has a lot of false-positives due
 to some specific string chars that uses <code>%</code> a lot.</p>
-<ul>
-<li>See also:<br />
-<a href="https://github.com/gforcada/flake8-pep3101">https://github.com/gforcada/flake8-pep3101</a>
-    <a href="https://msdn.microsoft.com/en-us/library/56e442dc.aspx">https://msdn.microsoft.com/en-us/library/56e442dc.aspx</a>
-    <a href="https://docs.python.org/3/library/stdtypes.html#old-string-formatting">https://docs.python.org/3/library/stdtypes.html#old-string-formatting</a>
-    <a href="https://pyformat.info/">https://pyformat.info/</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://github.com/gforcada/flake8-pep3101">https://github.com/gforcada/flake8-pep3101</a>
+<a href="https://msdn.microsoft.com/en-us/library/56e442dc.aspx">https://msdn.microsoft.com/en-us/library/56e442dc.aspx</a>
+<a href="https://docs.python.org/3/library/stdtypes.html#old-string-formatting">https://docs.python.org/3/library/stdtypes.html#old-string-formatting</a>
+<a href="https://pyformat.info/">https://pyformat.info/</a></p>
 <div class="versionadded">
 
 0.14.0

@@ -5876,28 +5876,20 @@
 
     <!-- Markdown content -->
     <p>Forbid multiple <code>isinstance</code> calls on the same variable.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    The best practice is to use <code>isinstance</code> with tuple as the second
-    argument, instead of multiple conditions joined with <code>or</code>.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use tuple of types as the second argument.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>The best practice is to use <code>isinstance</code> with tuple as the second
+argument, instead of multiple conditions joined with <code>or</code>.</p>
+<h2 id="solution">Solution</h2>
+<p>Use tuple of types as the second argument.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 isinstance(some, (int, float))
 
 # Wrong:
 isinstance(some, int) or isinstance(some, float)
 </code></pre></div>
-<ul>
-<li>See also:<br />
-<a href="https://docs.python.org/3/library/functions.html#isinstance">https://docs.python.org/3/library/functions.html#isinstance</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://docs.python.org/3/library/functions.html#isinstance">https://docs.python.org/3/library/functions.html#isinstance</a></p>
 <div class="versionadded">
 
 0.10.0

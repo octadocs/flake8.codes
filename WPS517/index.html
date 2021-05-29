@@ -5876,26 +5876,20 @@
 
     <!-- Markdown content -->
     <p>Forbid useless starred expressions.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Using starred expression with constants is useless. This piece of
-    code can be rewritten to be flat. Eg.: <code>print(*[1, 2, 3])</code> is
-    <code>print(1, 2, 3)</code>.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Refactor your code not to use starred expressions with <code>list</code>,
-    <code>dict</code>, <code>tuple</code>, and <code>set</code> constants. Use regular argument passing
-    instead.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-my_list = [1, 2, 3, *other_iterable]
+<h2 id="reasoning">Reasoning</h2>
+<p>Using starred expression with constants is useless. This piece of
+code can be rewritten to be flat. Eg.: <code>print(*[1, 2, 3])</code> is
+<code>print(1, 2, 3)</code>.</p>
+<h2 id="solution">Solution</h2>
+<p>Refactor your code not to use starred expressions with <code>list</code>,
+<code>dict</code>, <code>tuple</code>, and <code>set</code> constants. Use regular argument passing
+instead.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="x"># Correct:</span>
+<span class="x">my_list = [1, 2, 3, *other_iterable]</span>
 
-# Wrong:
-print(*[1, 2, 3], **{{}})
+<span class="x"># Wrong:</span>
+<span class="x">print(*[1, 2, 3], **</span><span class="cp">{{}}</span><span class="x">)</span>
 </code></pre></div>
 <div class="versionadded">
 

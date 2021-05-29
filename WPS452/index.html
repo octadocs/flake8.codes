@@ -5904,35 +5904,29 @@
     <!-- Markdown content -->
     <p>Forbid <code>break</code> and <code>continue</code> in a <code>finally</code> block.</p>
 <p>Related to <a href="/WPS419/"><strong>WPS419</strong> Found try/else/finally with multiple return paths</a>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Putting any control statements in <code>finally` is a terrible practice,
-    because</code>finally` is implicitly called and can cause damage to your
-    logic with its implicitness. It should not be allowed.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove <code>break</code> and <code>continue</code> from <code>finally</code> blocks.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-try:
+<h2 id="reasoning">Reasoning</h2>
+<p>Putting any control statements in <code>finally` is a terrible practice,
+because</code>finally` is implicitly called and can cause damage to your
+logic with its implicitness. It should not be allowed.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove <code>break</code> and <code>continue</code> from <code>finally</code> blocks.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="nv">try</span>:
     ...
-finally:
+<span class="nv">finally</span>:
     ...
 
-# Wrong:
-try:
+# <span class="nv">Wrong</span>:
+<span class="nv">try</span>:
     ...
-finally:
-    break
+<span class="nv">finally</span>:
+    <span class="k">break</span>
 
-try:
+<span class="nv">try</span>:
     ...
-finally:
-    continue
+<span class="nv">finally</span>:
+    <span class="k">continue</span>
 </code></pre></div>
 <div class="versionadded">
 

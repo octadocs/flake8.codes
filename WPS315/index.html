@@ -5876,25 +5876,19 @@
 
     <!-- Markdown content -->
     <p>Forbid extra <code>object</code> in parent classes list.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    We should allow object only when we explicitly use it as a single
-    parent class. When there is another class or there are multiple
-    parents - we should not allow it for the consistency reasons.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove extra <code>object</code> parent class from the list.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-class SomeClassName(object): ...
-class SomeClassName(FirstParentClass, SecondParentClass): ...
+<h2 id="reasoning">Reasoning</h2>
+<p>We should allow object only when we explicitly use it as a single
+parent class. When there is another class or there are multiple
+parents - we should not allow it for the consistency reasons.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove extra <code>object</code> parent class from the list.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="k">class</span> <span class="n">SomeClassName</span>(<span class="n">object</span>): ...
+<span class="k">class</span> <span class="n">SomeClassName</span>(<span class="n">FirstParentClass</span>, <span class="n">SecondParentClass</span>): ...
 
-# Wrong:
-class SomeClassName(FirstParentClass, SecondParentClass, object): ...
+<span class="c1"># Wrong:</span>
+<span class="k">class</span> <span class="n">SomeClassName</span>(<span class="n">FirstParentClass</span>, <span class="n">SecondParentClass</span>, <span class="n">object</span>): ...
 </code></pre></div>
 <div class="versionadded">
 

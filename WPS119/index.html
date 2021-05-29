@@ -5876,25 +5876,19 @@
 
     <!-- Markdown content -->
     <p>Forbid unicode names.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    This should be forbidden for sanity, readability, and writability.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Rename your entities so that they contain only ASCII symbols.</p>
-</li>
-</ul>
+<h2 id="reasoning">Reasoning</h2>
+<p>This should be forbidden for sanity, readability, and writability.</p>
+<h2 id="solution">Solution</h2>
+<p>Rename your entities so that they contain only ASCII symbols.</p>
 <p>This rule checks: modules, variables, attributes, functions, methods,
 and classes.</p>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-some_variable = &#39;Text with russian: русский язык&#39;
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="n">some_variable</span> <span class="o">=</span> <span class="s1">&#39;Text with russian: русский язык&#39;</span>
 
-# Wrong:
-переменная = 42
-some_變量 = &#39;&#39;
+<span class="c1"># Wrong:</span>
+<span class="err">переменная</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">some_變量</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 </code></pre></div>
 <div class="versionadded">
 

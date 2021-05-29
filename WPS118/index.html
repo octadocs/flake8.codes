@@ -5900,21 +5900,15 @@
 
     <!-- Markdown content -->
     <p>Forbid long variable or module names.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Too long names are unreadable. It is better to use a shorter
-    alternative. Long names also indicate that this variable is too
-    complex, maybe it may require some documentation.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Think of another name. Give less context to it.</p>
-</li>
-</ul>
+<h2 id="reasoning">Reasoning</h2>
+<p>Too long names are unreadable. It is better to use a shorter
+alternative. Long names also indicate that this variable is too
+complex, maybe it may require some documentation.</p>
+<h2 id="solution">Solution</h2>
+<p>Think of another name. Give less context to it.</p>
 <p>This rule checks: modules, variables, attributes, functions, methods,
 and classes.</p>
-<p>Example:</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 total_price = 25
 average_age = 45
@@ -5923,11 +5917,9 @@ average_age = 45
 final_price_after_fifteen_percent_sales_tax_and_gratuity = 30
 total_age_of_all_participants_in_the_survey_divided_by_twelve = 2
 </code></pre></div>
-<ul>
-<li>Configuration:<br />
-    This rule is configurable with <code>--max-name-length</code>. Default:
-    <a href="/wemake-python-styleguide/0.15.2/configuration/MAX_NAME_LENGTH/">MAX_NAME_LENGTH</a> = <code>45</code></li>
-</ul>
+<h2 id="configuration">Configuration</h2>
+<p>This rule is configurable with <code>--max-name-length</code>. Default:
+<a href="/wemake-python-styleguide/0.15.2/configuration/MAX_NAME_LENGTH/">MAX_NAME_LENGTH</a> = <code>45</code></p>
 <div class="versionadded">
 
 0.5.0

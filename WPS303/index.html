@@ -5876,22 +5876,16 @@
 
     <!-- Markdown content -->
     <p>Forbid underscores (<code>_</code>) in numbers.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    It is possible to write <code>1000</code> in three different ways: <code>1_000</code>,
-    <code>10_00</code>, and <code>100_0</code>. And it would be still the same number. Count
-    how many ways there are to write bigger numbers. Currently, it all
-    depends on the cultural habits of the author. We enforce a single
-    way to write numbers: without the underscore.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Numbers should be written as numbers: <code>1000</code>. If you have a very big
-    number with a lot of zeros, use multiplication.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>It is possible to write <code>1000</code> in three different ways: <code>1_000</code>,
+<code>10_00</code>, and <code>100_0</code>. And it would be still the same number. Count
+how many ways there are to write bigger numbers. Currently, it all
+depends on the cultural habits of the author. We enforce a single
+way to write numbers: without the underscore.</p>
+<h2 id="solution">Solution</h2>
+<p>Numbers should be written as numbers: <code>1000</code>. If you have a very big
+number with a lot of zeros, use multiplication.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 phone = 88313443
 million = 1000000

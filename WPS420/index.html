@@ -5876,29 +5876,26 @@
 
     <!-- Markdown content -->
     <p>Forbid some <code>python</code> keywords.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Using some keywords generally causes more pain than it relieves.</p>
-<p><code>del</code> keyword is not composable with other functions, you cannot
-pass it as a regular function. It is also quite error-prone due to
-<code>__del__</code> magic method complexity and that <code>del</code> is actually used to
-nullify variables and delete them from the execution scope.
-Moreover, it has a lot of substitutions. You won't miss it!</p>
-<p><code>pass</code> keyword is just useless by design. There's no use-case for
-it. Because it does literally nothing.</p>
-<p><code>global</code> and <code>nonlocal</code> promote bad-practices of having an external
-mutable state somewhere. This solution does not scale and leads to
-multiple possible mistakes in the future.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Solutions differ from keyword to keyword. <code>pass</code> should be replaced
-    with docstring or <code>contextlib.suppress</code>. <code>del</code> should be replaced
-    with specialized methods like <code>.pop()</code>. <code>global</code> and <code>nonlocal</code>
-    usages should be refactored.</p>
-</li>
-</ul>
+<h2 id="reasoning">Reasoning</h2>
+<p>Using some keywords generally causes more pain than it relieves.</p>
+<div class="highlight"><pre><span></span><code><span class="n n-Quoted">`del`</span> <span class="n">keyword</span> <span class="k">is</span> <span class="k">not</span> <span class="n">composable</span> <span class="k">with</span> <span class="n">other</span> <span class="n">functions</span><span class="p">,</span> <span class="n">you</span> <span class="n">cannot</span>
+<span class="n">pass</span> <span class="n">it</span> <span class="k">as</span> <span class="n">a</span> <span class="n">regular</span> <span class="k">function</span><span class="p">.</span> <span class="n">It</span> <span class="k">is</span> <span class="n">also</span> <span class="n">quite</span> <span class="k">error</span><span class="o">-</span><span class="n">prone</span> <span class="n">due</span> <span class="k">to</span>
+<span class="n n-Quoted">`__del__`</span> <span class="n">magic</span> <span class="n">method</span> <span class="n">complexity</span> <span class="k">and</span> <span class="n">that</span> <span class="n n-Quoted">`del`</span> <span class="k">is</span> <span class="n">actually</span> <span class="n">used</span> <span class="k">to</span>
+<span class="n">nullify</span> <span class="k">variables</span> <span class="k">and</span> <span class="k">delete</span> <span class="n">them</span> <span class="k">from</span> <span class="n">the</span> <span class="n">execution</span> <span class="n">scope</span><span class="p">.</span>
+<span class="n">Moreover</span><span class="p">,</span> <span class="n">it</span> <span class="n">has</span> <span class="n">a</span> <span class="n">lot</span> <span class="k">of</span> <span class="n">substitutions</span><span class="p">.</span> <span class="n">You</span> <span class="n">won</span><span class="s1">&#39;t miss it</span><span class="err">\</span><span class="s1">!</span>
+
+<span class="s1">`pass` keyword is just useless by design. There&#39;</span><span class="n">s</span> <span class="k">no</span> <span class="k">use</span><span class="o">-</span><span class="k">case</span> <span class="k">for</span>
+<span class="n">it</span><span class="p">.</span> <span class="n">Because</span> <span class="n">it</span> <span class="n">does</span> <span class="n">literally</span> <span class="n">nothing</span><span class="p">.</span>
+
+<span class="n n-Quoted">`global`</span> <span class="k">and</span> <span class="n n-Quoted">`nonlocal`</span> <span class="n">promote</span> <span class="n">bad</span><span class="o">-</span><span class="n">practices</span> <span class="k">of</span> <span class="k">having</span> <span class="n">an</span> <span class="n">external</span>
+<span class="n">mutable</span> <span class="n">state</span> <span class="n">somewhere</span><span class="p">.</span> <span class="n">This</span> <span class="n">solution</span> <span class="n">does</span> <span class="k">not</span> <span class="n">scale</span> <span class="k">and</span> <span class="n">leads</span> <span class="k">to</span>
+<span class="n">multiple</span> <span class="n">possible</span> <span class="n">mistakes</span> <span class="k">in</span> <span class="n">the</span> <span class="n">future</span><span class="p">.</span>
+</code></pre></div>
+<h2 id="solution">Solution</h2>
+<p>Solutions differ from keyword to keyword. <code>pass</code> should be replaced
+with docstring or <code>contextlib.suppress</code>. <code>del</code> should be replaced
+with specialized methods like <code>.pop()</code>. <code>global</code> and <code>nonlocal</code>
+usages should be refactored.</p>
 <div class="versionadded">
 
 0.1.0

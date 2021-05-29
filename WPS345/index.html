@@ -5876,21 +5876,15 @@
 
     <!-- Markdown content -->
     <p>Forbid meaningless math operations with <code>0</code> and <code>1</code>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Adding and subtracting zero does not change the value. There's no
-    need to do that. Multiplying by zero is also redundant: it can be
-    replaced with explicit <code>0</code> assign. Multiplying and dividing by <code>1</code>
-    is also meaningless. Likewise, using <code>|</code> or <code>^</code> with <code>0</code>, and using
-    the <code>%</code> operator with <code>1</code> are unnecessary.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove useless operations.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Adding and subtracting zero does not change the value. There's no
+need to do that. Multiplying by zero is also redundant: it can be
+replaced with explicit <code>0</code> assign. Multiplying and dividing by <code>1</code>
+is also meaningless. Likewise, using <code>|</code> or <code>^</code> with <code>0</code>, and using
+the <code>%</code> operator with <code>1</code> are unnecessary.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove useless operations.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 number = 1
 zero = 0

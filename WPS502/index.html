@@ -5876,26 +5876,20 @@
 
     <!-- Markdown content -->
     <p>Forbid simplifiable <code>if</code> conditions.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    These complex constructions can cause frustration among other
-    developers. They are longer, more verbose, and more complex.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Either use <code>bool()</code> to convert test values to boolean values, or
-    just leave it as it is in case your test already returns a boolean
-    value. Use can also use <code>not</code> keyword to switch boolean values.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-my_bool = bool(some_call())
-other_value = 8 if some_call() else None
+<h2 id="reasoning">Reasoning</h2>
+<p>These complex constructions can cause frustration among other
+developers. They are longer, more verbose, and more complex.</p>
+<h2 id="solution">Solution</h2>
+<p>Either use <code>bool()</code> to convert test values to boolean values, or
+just leave it as it is in case your test already returns a boolean
+value. Use can also use <code>not</code> keyword to switch boolean values.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="nv">my_bool</span> <span class="o">=</span> <span class="nv">bool</span><span class="ss">(</span><span class="nv">some_call</span><span class="ss">())</span>
+<span class="nv">other_value</span> <span class="o">=</span> <span class="mi">8</span> <span class="k">if</span> <span class="nv">some_call</span><span class="ss">()</span> <span class="k">else</span> <span class="nv">None</span>
 
-# Wrong:
-my_bool = True if some_call() else False
+# <span class="nv">Wrong</span>:
+<span class="nv">my_bool</span> <span class="o">=</span> <span class="nv">True</span> <span class="k">if</span> <span class="nv">some_call</span><span class="ss">()</span> <span class="k">else</span> <span class="nv">False</span>
 </code></pre></div>
 <p>We only check <code>if</code> nodes where <code>True</code> and <code>False</code> values are used. We
 check both <code>if</code> nodes and <code>if</code> expressions.</p>

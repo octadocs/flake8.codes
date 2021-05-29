@@ -5876,18 +5876,12 @@
 
     <!-- Markdown content -->
     <p>Forbid multiple assignment targets for context managers.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    It is hard to distinguish whether <code>as</code> should unpack into a tuple or
-    if we are just using two context managers.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use several context managers or explicit brackets.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>It is hard to distinguish whether <code>as</code> should unpack into a tuple or
+if we are just using two context managers.</p>
+<h2 id="solution">Solution</h2>
+<p>Use several context managers or explicit brackets.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 with open(&#39;&#39;) as first:
     with second:

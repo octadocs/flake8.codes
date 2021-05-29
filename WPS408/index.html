@@ -5876,25 +5876,19 @@
 
     <!-- Markdown content -->
     <p>Forbid using the same logical conditions in one expression.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Using the same name in a logical condition more than once indicates
-    that you are either making a logical mistake, or just
-    over-complicating your design.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove the duplicated condition.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-if some_value or other_value:
+<h2 id="reasoning">Reasoning</h2>
+<p>Using the same name in a logical condition more than once indicates
+that you are either making a logical mistake, or just
+over-complicating your design.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove the duplicated condition.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="k">if</span> <span class="nv">some_value</span> <span class="nv">or</span> <span class="nv">other_value</span>:
     ...
 
-# Wrong:
-if some_value or some_value:
+# <span class="nv">Wrong</span>:
+<span class="k">if</span> <span class="nv">some_value</span> <span class="nv">or</span> <span class="nv">some_value</span>:
     ...
 </code></pre></div>
 <div class="versionadded">

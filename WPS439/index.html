@@ -5876,18 +5876,12 @@
 
     <!-- Markdown content -->
     <p>Forbid Unicode escape sequences in binary strings.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Binary strings do not work with Unicode. Having Unicode escape
-    characters in there means that you have an error in your code.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use regular strings when escaping Unicode strings.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Binary strings do not work with Unicode. Having Unicode escape
+characters in there means that you have an error in your code.</p>
+<h2 id="solution">Solution</h2>
+<p>Use regular strings when escaping Unicode strings.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 escaped = &#39;\u0041&#39;  # equals to &#39;A&#39;
 

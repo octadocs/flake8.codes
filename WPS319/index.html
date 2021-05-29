@@ -5876,47 +5876,41 @@
 
     <!-- Markdown content -->
     <p>Forbid brackets in the wrong position.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    You can do bizarre things with bracket positioning in python. We
-    require all brackets to be consistent.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Place bracket on the same line, in case of a single line expression.
-    Or place the bracket on a new line in case of a multi-line
-    expression.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-print([
-    1, 2, 3,
-])
+<h2 id="reasoning">Reasoning</h2>
+<p>You can do bizarre things with bracket positioning in python. We
+require all brackets to be consistent.</p>
+<h2 id="solution">Solution</h2>
+<p>Place bracket on the same line, in case of a single line expression.
+Or place the bracket on a new line in case of a multi-line
+expression.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="cp"># Correct:</span>
+<span class="n">print</span><span class="p">([</span>
+    <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
+<span class="p">])</span>
 
-print(
-    1,
-    2,
-)
+<span class="n">print</span><span class="p">(</span>
+    <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
 
-def _annotate_brackets(
-    tokens: List[tokenize.TokenInfo],
-) -&gt; TokenLines:
-    ...
+<span class="n">def</span> <span class="n">_annotate_brackets</span><span class="p">(</span>
+    <span class="n">tokens</span><span class="o">:</span> <span class="n">List</span><span class="p">[</span><span class="n">tokenize</span><span class="p">.</span><span class="n">TokenInfo</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TokenLines</span><span class="o">:</span>
+    <span class="p">...</span>
 
-# Wrong:
-print([
-    1, 2, 3],
-)
+<span class="cp"># Wrong:</span>
+<span class="n">print</span><span class="p">([</span>
+    <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="p">)</span>
 
-print(
-    1,
-    2)
+<span class="n">print</span><span class="p">(</span>
+    <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">)</span>
 
-def _annotate_brackets(
-    tokens: List[tokenize.TokenInfo]) -&gt; TokenLines:
-    ...
+<span class="n">def</span> <span class="n">_annotate_brackets</span><span class="p">(</span>
+    <span class="n">tokens</span><span class="o">:</span> <span class="n">List</span><span class="p">[</span><span class="n">tokenize</span><span class="p">.</span><span class="n">TokenInfo</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">TokenLines</span><span class="o">:</span>
+    <span class="p">...</span>
 </code></pre></div>
 <p>We check round, square, and curly brackets.</p>
 <div class="versionadded">

@@ -5878,20 +5878,14 @@
     <p>Forbid positional only or <code>/</code> arguments.</p>
 <p>This violation is only raised for <code>python3.8+</code>, earlier versions do not
 have this concept.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    This is a very rare case. Almost exclusively used by C code and
-    stdlib. There's no point in declaring your own parameters as
-    positional only. It will break your code!</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use regular arguments. In case you are working with C, then this
-    violation can be ignored.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>This is a very rare case. Almost exclusively used by C code and
+stdlib. There's no point in declaring your own parameters as
+positional only. It will break your code!</p>
+<h2 id="solution">Solution</h2>
+<p>Use regular arguments. In case you are working with C, then this
+violation can be ignored.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 def my_function(first, second):
     ...
@@ -5900,10 +5894,8 @@ def my_function(first, second):
 def my_function(first, /, second):
     ...
 </code></pre></div>
-<ul>
-<li>See also:<br />
-<a href="https://www.python.org/dev/peps/pep-0570/">https://www.python.org/dev/peps/pep-0570/</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://www.python.org/dev/peps/pep-0570/">https://www.python.org/dev/peps/pep-0570/</a></p>
 <div class="versionadded">
 
 0.14.0

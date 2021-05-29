@@ -5877,31 +5877,23 @@
     <!-- Markdown content -->
     <p>Forbid comparing values with constants using <code>is</code> or <code>is not</code>.</p>
 <p>However, we allow to compare with <code>None</code> and booleans.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-<code>is</code> compares might not do what you want them to do. Firstly, they
-    check for the same object, not equality. Secondly, they behave
-    unexpectedly even with the simple values like <code>257</code>.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>==</code> to compare with constants.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-if my_check == [1, 2, 3]:
+<h2 id="reasoning">Reasoning</h2>
+<p><code>is</code> compares might not do what you want them to do. Firstly, they
+check for the same object, not equality. Secondly, they behave
+unexpectedly even with the simple values like <code>257</code>.</p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>==</code> to compare with constants.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="k">if</span> <span class="nv">my_check</span> <span class="o">==</span> [<span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span>]:
     ...
 
-# Wrong:
-if my_check is [1, 2, 3]:
+# <span class="nv">Wrong</span>:
+<span class="k">if</span> <span class="nv">my_check</span> <span class="nv">is</span> [<span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span>]:
     ...
 </code></pre></div>
-<ul>
-<li>See also:<br />
-<a href="https://stackoverflow.com/a/33130014/4842742">https://stackoverflow.com/a/33130014/4842742</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://stackoverflow.com/a/33130014/4842742">https://stackoverflow.com/a/33130014/4842742</a></p>
 <div class="versionadded">
 
 0.12.0

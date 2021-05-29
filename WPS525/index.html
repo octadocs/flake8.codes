@@ -5876,18 +5876,12 @@
 
     <!-- Markdown content -->
     <p>Forbid comparisons where <code>in</code> is compared with single item container.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-<code>in</code> comparison with a container which contains only one item looks
-    like overhead and unneeded complexity.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Refactor your code to use <code>==</code> instead <code>in</code>.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p><code>in</code> comparison with a container which contains only one item looks
+like overhead and unneeded complexity.</p>
+<h2 id="solution">Solution</h2>
+<p>Refactor your code to use <code>==</code> instead <code>in</code>.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 a == &#39;s&#39;
 

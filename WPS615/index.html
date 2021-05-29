@@ -5876,32 +5876,26 @@
 
     <!-- Markdown content -->
     <p>Forbids to use getters and setters in objects.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Python does not need this abstraction.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Either use <code>@property</code> or make the attribute public and change it
-    directly.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-class Example(object):
-    def __init__(self):
-        self._attribute = None
+<h2 id="reasoning">Reasoning</h2>
+<p>Python does not need this abstraction.</p>
+<h2 id="solution">Solution</h2>
+<p>Either use <code>@property</code> or make the attribute public and change it
+directly.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="k">class</span> <span class="n">Example</span>(<span class="n">object</span>):
+    <span class="n">def</span> <span class="n">__init__</span>(<span class="nb">self</span>):
+        <span class="nb">self</span>.<span class="n">_attribute</span> = <span class="n">None</span>
 
-# Wrong:
-class Example(object):
-    def __init__(self):
-        self.attribute = None
+<span class="c1"># Wrong:</span>
+<span class="k">class</span> <span class="n">Example</span>(<span class="n">object</span>):
+    <span class="n">def</span> <span class="n">__init__</span>(<span class="nb">self</span>):
+        <span class="nb">self</span>.<span class="n">attribute</span> = <span class="n">None</span>
 
-    def set_attribute(self):
+    <span class="n">def</span> <span class="n">set_attribute</span>(<span class="nb">self</span>):
         ...
 
-    def get_attribute(self, value):
+    <span class="n">def</span> <span class="n">get_attribute</span>(<span class="nb">self</span>, <span class="nb">value</span>):
         ...
 </code></pre></div>
 <div class="versionadded">

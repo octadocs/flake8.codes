@@ -5876,19 +5876,13 @@
 
     <!-- Markdown content -->
     <p>Forbid multiple equality comparisons with the same variable.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Using double+ equality compare with <code>or</code> or double+ non-equality
-    compare with <code>and</code> indicates that you have implicit <code>in</code> or <code>not in</code>
-    condition. It is just hidden from you.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Refactor compares to use <code>in</code> or <code>not in</code> clauses.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Using double+ equality compare with <code>or</code> or double+ non-equality
+compare with <code>and</code> indicates that you have implicit <code>in</code> or <code>not in</code>
+condition. It is just hidden from you.</p>
+<h2 id="solution">Solution</h2>
+<p>Refactor compares to use <code>in</code> or <code>not in</code> clauses.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 print(some in {&#39;first&#39;, &#39;second&#39;})
 print(some not in {&#39;first&#39;, &#39;second&#39;})

@@ -5900,26 +5900,20 @@
 
     <!-- Markdown content -->
     <p>Forbid <code>__future__</code> imports.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Almost all <code>__future__</code> imports are legacy <code>python2</code> compatibility
-    tools that are no longer required.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove them. Drop <code>python2</code> support.</p>
-</li>
-</ul>
+<h2 id="reasoning">Reasoning</h2>
+<p>Almost all <code>__future__</code> imports are legacy <code>python2</code> compatibility
+tools that are no longer required.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove them. Drop <code>python2</code> support.</p>
 <p>Except, there are some new ones for <code>python4</code> support. See
 <a href="/wemake-python-styleguide/0.15.2/constants/FUTURE_IMPORTS_WHITELIST/">FUTURE_IMPORTS_WHITELIST</a> for
 the full list of allowed future imports.</p>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-from __future__ import annotations
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
 
-# Wrong:
-from __future__ import print_function
+<span class="c1"># Wrong:</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
 </code></pre></div>
 <div class="versionadded">
 

@@ -5876,19 +5876,13 @@
 
     <!-- Markdown content -->
     <p>Forbid <code>float</code> keys.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-<code>float</code> is a very ugly data type. It has a lot of "precision"
-    errors. When we use <code>float</code> as keys we can hit this wall. Moreover,
-    we cannot use <code>float</code> keys with lists, by design.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use other data types: integers, decimals, or use fuzzy logic.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p><code>float</code> is a very ugly data type. It has a lot of "precision"
+errors. When we use <code>float</code> as keys we can hit this wall. Moreover,
+we cannot use <code>float</code> keys with lists, by design.</p>
+<h2 id="solution">Solution</h2>
+<p>Use other data types: integers, decimals, or use fuzzy logic.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 some = {1: &#39;a&#39;}
 some[1]

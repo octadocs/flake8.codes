@@ -5883,29 +5883,23 @@
 </ul>
 <p>We do not check variables, attributes, calls, bool and bin operators,
 etc. We forbid constants and some expressions.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Some conditions tell us that this node won't work correctly. So, we
-    need to check if we can fix that.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove the unreachable node, or change the condition item.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-assert some_variable
+<h2 id="reasoning">Reasoning</h2>
+<p>Some conditions tell us that this node won't work correctly. So, we
+need to check if we can fix that.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove the unreachable node, or change the condition item.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="nb">assert</span> <span class="n">some_variable</span>
 
-while True:
-    ...
+<span class="k">while</span> <span class="n">True</span><span class="p">:</span>
+    <span class="o">...</span>
 
-# Wrong:
-assert []
+<span class="c1"># Wrong:</span>
+<span class="nb">assert</span> <span class="p">[]</span>
 
-while False:
-    ...
+<span class="k">while</span> <span class="n">False</span><span class="p">:</span>
+    <span class="o">...</span>
 </code></pre></div>
 <div class="versionadded">
 

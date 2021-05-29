@@ -5900,33 +5900,25 @@
 
     <!-- Markdown content -->
     <p>Forbid approximate constants.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Some constants are already defined. No need to write them again, use
-    existing values. We just compare numbers as strings and raise this
-    violation when they start with the same chars.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use pre-defined constants.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-from math import pi
-random_number = 3.15
-too_short = 3.1
+<h2 id="reasoning">Reasoning</h2>
+<p>Some constants are already defined. No need to write them again, use
+existing values. We just compare numbers as strings and raise this
+violation when they start with the same chars.</p>
+<h2 id="solution">Solution</h2>
+<p>Use pre-defined constants.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+<span class="n">random_number</span> <span class="o">=</span> <span class="mf">3.15</span>
+<span class="n">too_short</span> <span class="o">=</span> <span class="mf">3.1</span>
 
-# Wrong:
-pi = 3.14
+<span class="c1"># Wrong:</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
 </code></pre></div>
 <p>See <a href="/wemake-python-styleguide/0.15.2/constants/MATH_APPROXIMATE_CONSTANTS/">MATH_APPROXIMATE_CONSTANTS</a>
 for full list of math constants that we check for.</p>
-<ul>
-<li>See also:<br />
-<a href="https://docs.python.org/3/library/math.html#constants">https://docs.python.org/3/library/math.html#constants</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://docs.python.org/3/library/math.html#constants">https://docs.python.org/3/library/math.html#constants</a></p>
 <div class="versionadded">
 
 0.13.0

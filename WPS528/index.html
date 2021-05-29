@@ -5876,27 +5876,21 @@
 
     <!-- Markdown content -->
     <p>Forbid implicit <code>.items()</code> iterator.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When iterating over collection it is easy to forget to use
-    <code>.items()</code> when you need to access both keys and values. So, when
-    you access the iterable with the key inside a <code>for</code> loop, that's a
-    sign to refactor your code.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>.items()</code> with direct keys and values when you need them.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-for some_key, some_value in collection.items():
-    print(some_key, some_value)
+<h2 id="reasoning">Reasoning</h2>
+<p>When iterating over collection it is easy to forget to use
+<code>.items()</code> when you need to access both keys and values. So, when
+you access the iterable with the key inside a <code>for</code> loop, that's a
+sign to refactor your code.</p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>.items()</code> with direct keys and values when you need them.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="nl">Correct</span><span class="p">:</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">some_key</span><span class="p">,</span><span class="w"> </span><span class="n">some_value</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">collection</span><span class="p">.</span><span class="n">items</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">print</span><span class="p">(</span><span class="n">some_key</span><span class="p">,</span><span class="w"> </span><span class="n">some_value</span><span class="p">)</span><span class="w"></span>
 
-# Wrong:
-for some_key in collection:
-    print(some_key, collection[some_key])
+<span class="err">#</span><span class="w"> </span><span class="nl">Wrong</span><span class="p">:</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">some_key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">collection</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">print</span><span class="p">(</span><span class="n">some_key</span><span class="p">,</span><span class="w"> </span><span class="n">collection</span><span class="o">[</span><span class="n">some_key</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <div class="versionadded">
 

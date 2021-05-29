@@ -5900,25 +5900,17 @@
 
     <!-- Markdown content -->
     <p>Forbid <code>__getattr__</code> and <code>__dir__</code> module magic methods.</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>It does not bring any features, only making it harder to understand
+what is going on.</p>
+<h2 id="solution">Solution</h2>
+<p>Refactor your code to use custom methods instead.</p>
+<h2 id="configuration">Configuration</h2>
+<p>This rule is configurable with <code>--i-control-code</code> and
+<code>--i-dont-control-code</code>.</p>
 <ul>
-<li>
-<p>Reasoning:<br />
-    It does not bring any features, only making it harder to understand
-    what is going on.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Refactor your code to use custom methods instead.</p>
-</li>
-<li>
-<p>Configuration:<br />
-    This rule is configurable with <code>--i-control-code</code> and
-    <code>--i-dont-control-code</code>.</p>
-</li>
-<li>
-<p>Default:<br />
-<a href="/wemake-python-styleguide/0.15.2/configuration/I_CONTROL_CODE/">I_CONTROL_CODE</a> = <code>True</code></p>
-</li>
+<li>Default:<br />
+<a href="/wemake-python-styleguide/0.15.2/configuration/I_CONTROL_CODE/">I_CONTROL_CODE</a> = <code>True</code></li>
 </ul>
 <div class="versionadded">
 

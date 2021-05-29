@@ -5878,20 +5878,14 @@
     <p>Forbid nested <code>try</code> blocks.</p>
 <p>Notice, we check all possible slots for <code>try</code> block: 1. the <code>try</code> block
 itself 2. all <code>except</code> cases 3. <code>else</code> case 4. and <code>finally</code> case</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Nesting <code>try</code> blocks indicates that something really bad happens to
-    your logic. Why does it require two separate exception handlers? It
-    is a perfect case to refactor your code.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Collapse two exception handlers together. Or create a separate
-    function that will handle this second nested case.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Nesting <code>try</code> blocks indicates that something really bad happens to
+your logic. Why does it require two separate exception handlers? It
+is a perfect case to refactor your code.</p>
+<h2 id="solution">Solution</h2>
+<p>Collapse two exception handlers together. Or create a separate
+function that will handle this second nested case.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Wrong:
 try:
     try:

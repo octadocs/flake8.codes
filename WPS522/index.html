@@ -5876,19 +5876,13 @@
 
     <!-- Markdown content -->
     <p>Forbid implicit primitives in the form of <code>lambda</code> functions.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When you use <code>lambda</code> that returns a primitive value and takes no
-    arguments, it means that you should use a primitive type instead.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Replace <code>lambda</code> with <code>int</code>, <code>float</code>, <code>list</code>, or any other
-    primitive.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>When you use <code>lambda</code> that returns a primitive value and takes no
+arguments, it means that you should use a primitive type instead.</p>
+<h2 id="solution">Solution</h2>
+<p>Replace <code>lambda</code> with <code>int</code>, <code>float</code>, <code>list</code>, or any other
+primitive.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 defaultdict(int)
 

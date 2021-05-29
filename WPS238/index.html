@@ -5900,24 +5900,16 @@
 
     <!-- Markdown content -->
     <p>Forbids too many <code>raise</code> statements in a function.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Too many <code>raise</code> statements in a function make the code untraceable
-    and overcomplicated.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Split the function into smaller functions, such that each of them
-    can raise less errors. Create more standard errors, or use
-    alternative ways to raise them.</p>
-</li>
-<li>
-<p>Configuration:<br />
-    This rule is configurable with <code>--max-raises</code>. Default:
-    <a href="/wemake-python-styleguide/0.15.2/configuration/MAX_RAISES/">MAX_RAISES</a> = <code>3</code></p>
-</li>
-</ul>
+<h2 id="reasoning">Reasoning</h2>
+<p>Too many <code>raise</code> statements in a function make the code untraceable
+and overcomplicated.</p>
+<h2 id="solution">Solution</h2>
+<p>Split the function into smaller functions, such that each of them
+can raise less errors. Create more standard errors, or use
+alternative ways to raise them.</p>
+<h2 id="configuration">Configuration</h2>
+<p>This rule is configurable with <code>--max-raises</code>. Default:
+<a href="/wemake-python-styleguide/0.15.2/configuration/MAX_RAISES/">MAX_RAISES</a> = <code>3</code></p>
 <div class="versionadded">
 
 0.15.0

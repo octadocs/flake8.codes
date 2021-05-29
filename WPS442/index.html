@@ -5879,17 +5879,11 @@
 <p>We check the function, method, and module scopes. While we do not check
 the class scope. Because class level constants are not available via
 regular name, and they are scope to <code>ClassName.var_name</code>.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Shadowing can lead you to a big pile of storage and unexpected bugs.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use different names and do not allow scoping.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Shadowing can lead you to a big pile of storage and unexpected bugs.</p>
+<h2 id="solution">Solution</h2>
+<p>Use different names and do not allow scoping.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 def test(): ...
 

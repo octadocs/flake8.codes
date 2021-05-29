@@ -5876,32 +5876,26 @@
 
     <!-- Markdown content -->
     <p>Forbids inconsistent newlines in comprehensions.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    We do this for consistency.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Either place comprehension on a single line or ensure that action,
-    for loops, and condition are all on different lines.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-list = [some(number) for number in numbers]
+<h2 id="reasoning">Reasoning</h2>
+<p>We do this for consistency.</p>
+<h2 id="solution">Solution</h2>
+<p>Either place comprehension on a single line or ensure that action,
+for loops, and condition are all on different lines.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="nv">list</span> <span class="o">=</span> [<span class="nv">some</span><span class="ss">(</span><span class="nv">number</span><span class="ss">)</span> <span class="k">for</span> <span class="nv">number</span> <span class="nv">in</span> <span class="nv">numbers</span>]
 
-list = [
-   some(number)
-   for numbers in matrix
-   for number in numbers
-   if number &gt; 0
+<span class="nv">list</span> <span class="o">=</span> [
+   <span class="nv">some</span><span class="ss">(</span><span class="nv">number</span><span class="ss">)</span>
+   <span class="k">for</span> <span class="nv">numbers</span> <span class="nv">in</span> <span class="nv">matrix</span>
+   <span class="k">for</span> <span class="nv">number</span> <span class="nv">in</span> <span class="nv">numbers</span>
+   <span class="k">if</span> <span class="nv">number</span> <span class="o">&gt;</span> <span class="mi">0</span>
 ]
 
-# Wrong:
-list = [
-    some(number) for number in numbers
-    if number &gt; 0
+# <span class="nv">Wrong</span>:
+<span class="nv">list</span> <span class="o">=</span> [
+    <span class="nv">some</span><span class="ss">(</span><span class="nv">number</span><span class="ss">)</span> <span class="k">for</span> <span class="nv">number</span> <span class="nv">in</span> <span class="nv">numbers</span>
+    <span class="k">if</span> <span class="nv">number</span> <span class="o">&gt;</span> <span class="mi">0</span>
 ]
 </code></pre></div>
 <div class="versionadded">

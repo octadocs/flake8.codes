@@ -5876,16 +5876,14 @@
 
     <!-- Markdown content -->
     <p>Forbid using the same alias as the original name in imports.</p>
-<ul>
-<li>Reasoning:<br />
-    Why would you even do this in the first place?</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-from os import path
+<h2 id="reasoning">Reasoning</h2>
+<p>Why would you even do this in the first place?</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
 
-# Wrong:
-from os import path as path
+<span class="c1"># Wrong:</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span> <span class="k">as</span> <span class="n">path</span>
 </code></pre></div>
 <p>When <code>--i-control-code` is set to</code>False<code>you can reexport things
 with</code>as<code>, because</code>mypy<code>might require it with</code>implicit_reexport =

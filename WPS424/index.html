@@ -5876,19 +5876,13 @@
 
     <!-- Markdown content -->
     <p>Forbid <code>BaseException</code> exception.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    We can silence system exit and keyboard interrupt with this
-    exception handler. It is almost the same as raw <code>except:</code> block.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Handle <code>Exception</code>, <code>KeyboardInterrupt</code>, <code>GeneratorExit</code>, and
-    <code>SystemExit</code> separately. Do not use the plain <code>except:</code> keyword.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>We can silence system exit and keyboard interrupt with this
+exception handler. It is almost the same as raw <code>except:</code> block.</p>
+<h2 id="solution">Solution</h2>
+<p>Handle <code>Exception</code>, <code>KeyboardInterrupt</code>, <code>GeneratorExit</code>, and
+<code>SystemExit</code> separately. Do not use the plain <code>except:</code> keyword.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 except Exception as ex: ...
 
@@ -5901,11 +5895,9 @@ except BaseException as ex: ...
 
 </div>
 
-<ul>
-<li>See also:<br />
-<a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">https://docs.python.org/3/library/exceptions.html#exception-hierarchy</a>
-    <a href="https://help.semmle.com/wiki/pages/viewpage.action?pageId=1608527">https://help.semmle.com/wiki/pages/viewpage.action?pageId=1608527</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">https://docs.python.org/3/library/exceptions.html#exception-hierarchy</a>
+<a href="https://help.semmle.com/wiki/pages/viewpage.action?pageId=1608527">https://help.semmle.com/wiki/pages/viewpage.action?pageId=1608527</a></p>
 
     <!-- Last update of source file -->
     

@@ -5878,28 +5878,22 @@
     <p>Forbid writing classes without base classes.</p>
 <p>Please, note that this rule has nothing to do with <code>python2</code>. We care
 only about consistency here.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    We just need to decide how to do it. We need a single and unified
-    rule about base classes. We have decided to stick to the explicit
-    base class notation. Why? Because it is consistent with other
-    use-cases. When we have a base class <code>A</code>, we write <code>class
-    MyClass(A):</code>. When we have no base class, we have an implicit
-    <code>object</code> base class. So, we still use the same syntax: <code>class
-    MyClass(object):</code>.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Add a base class.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-class Some(object): ...
+<h2 id="reasoning">Reasoning</h2>
+<p>We just need to decide how to do it. We need a single and unified
+rule about base classes. We have decided to stick to the explicit
+base class notation. Why? Because it is consistent with other
+use-cases. When we have a base class <code>A</code>, we write <code>class
+MyClass(A):</code>. When we have no base class, we have an implicit
+<code>object</code> base class. So, we still use the same syntax: <code>class
+MyClass(object):</code>.</p>
+<h2 id="solution">Solution</h2>
+<p>Add a base class.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="k">class</span> <span class="n">Some</span>(<span class="n">object</span>): ...
 
-# Wrong:
-class Some: ...
+<span class="c1"># Wrong:</span>
+<span class="k">class</span> <span class="n">Some:</span> ...
 </code></pre></div>
 <div class="versionadded">
 

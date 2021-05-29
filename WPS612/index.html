@@ -5876,29 +5876,23 @@
 
     <!-- Markdown content -->
     <p>Forbid useless overwritten methods.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Overwriting method without any changes does not have any positive
-    impact.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Do not overwrite method in case you do not want to do any changes
-    inside it.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-class Test(Base):
-    def method(self, argument):
-        super().method(argument)
-        return argument  # or None, or anything!
+<h2 id="reasoning">Reasoning</h2>
+<p>Overwriting method without any changes does not have any positive
+impact.</p>
+<h2 id="solution">Solution</h2>
+<p>Do not overwrite method in case you do not want to do any changes
+inside it.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="k">class</span> <span class="n">Test</span>(<span class="n">Base</span>):
+    <span class="n">def</span> <span class="k">method</span>(<span class="nb">self</span>, <span class="n">argument</span>):
+        <span class="n">super</span>().<span class="k">method</span>(<span class="n">argument</span>)
+        <span class="k">return</span> <span class="n">argument</span>  <span class="c1"># or None, or anything!</span>
 
-# Wrong:
-class Test(object):
-    def method(self, argument):
-        return super().method(argument)
+<span class="c1"># Wrong:</span>
+<span class="k">class</span> <span class="n">Test</span>(<span class="n">object</span>):
+    <span class="n">def</span> <span class="k">method</span>(<span class="nb">self</span>, <span class="n">argument</span>):
+        <span class="k">return</span> <span class="n">super</span>().<span class="k">method</span>(<span class="n">argument</span>)
 </code></pre></div>
 <div class="versionadded">
 

@@ -5878,21 +5878,15 @@
     <p>Forbid <code>in</code> with static containers except <code>set</code> nodes.</p>
 <p>We enforce people to use sets as a static containers. You can also use
 variables, calls, methods, etc. Dynamic values are not checked.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Using static <code>list</code>, <code>tuple</code>, or <code>dict</code> elements to check that some
-    element is inside the container is a bad practice. Because we need
-    to iterate all over the container to find the element. Sets are the
-    best suit for this task. Moreover, it makes your code consistent.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>set</code> elements or comprehensions to check that something is
-    contained in a container.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Using static <code>list</code>, <code>tuple</code>, or <code>dict</code> elements to check that some
+element is inside the container is a bad practice. Because we need
+to iterate all over the container to find the element. Sets are the
+best suit for this task. Moreover, it makes your code consistent.</p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>set</code> elements or comprehensions to check that something is
+contained in a container.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 print(needle in {&#39;one&#39;, &#39;two&#39;})
 

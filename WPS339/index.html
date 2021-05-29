@@ -5878,21 +5878,15 @@
     <p>Forbid meaningless zeros.</p>
 <p>We discourage using meaningless zeros in float, binary, octal, hex, and
 exponential numbers.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    There are \~infinite ways to write these numbers by adding
-    meaningless leading zeros to the number itself. <code>0b1</code> is the same as
-    <code>0b01</code> and <code>0b001</code>. How can a language be called consistent if you
-    can write numbers in an infinite ways? It hurts readability and
-    understanding of your code.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Remove meaningless leading zeros.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>There are \~infinite ways to write these numbers by adding
+meaningless leading zeros to the number itself. <code>0b1</code> is the same as
+<code>0b01</code> and <code>0b001</code>. How can a language be called consistent if you
+can write numbers in an infinite ways? It hurts readability and
+understanding of your code.</p>
+<h2 id="solution">Solution</h2>
+<p>Remove meaningless leading zeros.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 numbers = [1.5, 0b1, 0o2, 0x5, 10e10]
 

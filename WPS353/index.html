@@ -5878,19 +5878,13 @@
     <p>Forbid <code>yield from</code> with several nodes.</p>
 <p>We allow to <code>yield from</code> tuples, names, attributes, calls, and
 subscripts.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    We enforce consistency when yielding values from tuple instead of
-    any other types. It also might be an error when you try to <code>yield
-    from</code> something that is not iterable.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use allowed node types with <code>yield from</code>.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>We enforce consistency when yielding values from tuple instead of
+any other types. It also might be an error when you try to <code>yield
+from</code> something that is not iterable.</p>
+<h2 id="solution">Solution</h2>
+<p>Use allowed node types with <code>yield from</code>.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 yield from (1, 2, 3)
 yield from some

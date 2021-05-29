@@ -5876,20 +5876,14 @@
 
     <!-- Markdown content -->
     <p>Forbid direct magic attributes and methods.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    When using direct magic attributes or method it means that you are
-    doing something wrong. Magic methods are not suited to be directly
-    called or accessed.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use special syntax constructs that will call underlying magic
-    methods.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>When using direct magic attributes or method it means that you are
+doing something wrong. Magic methods are not suited to be directly
+called or accessed.</p>
+<h2 id="solution">Solution</h2>
+<p>Use special syntax constructs that will call underlying magic
+methods.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 super().__init__()
 

@@ -5876,66 +5876,60 @@
 
     <!-- Markdown content -->
     <p>Forbid incorrect indentation for parameters.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    It is really easy to spoil your perfect, readable code with
-    incorrect multi-line parameters indentation. Since it is really easy
-    to style them in any of 100 possible ways. We enforce a strict rule
-    about how it is possible to write these multi-line parameters.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use consistent multi-line parameters indentation.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-def my_function(arg1, arg2, arg3) -&gt; None:
-    return None
+<h2 id="reasoning">Reasoning</h2>
+<p>It is really easy to spoil your perfect, readable code with
+incorrect multi-line parameters indentation. Since it is really easy
+to style them in any of 100 possible ways. We enforce a strict rule
+about how it is possible to write these multi-line parameters.</p>
+<h2 id="solution">Solution</h2>
+<p>Use consistent multi-line parameters indentation.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="n">def</span> <span class="n">my_function</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">None</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">None</span>
 
-print(1, 2, 3, 4, 5, 6)
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 
-def my_function(
-    arg1, arg2, arg3,
-) -&gt; None:
-    return None
+<span class="n">def</span> <span class="n">my_function</span><span class="p">(</span>
+    <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">None</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">None</span>
 
-print(
-    1, 2, 3, 4, 5, 6,
-)
+<span class="nb">print</span><span class="p">(</span>
+    <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span>
+<span class="p">)</span>
 
-def my_function(
-    arg1,
-    arg2,
-    arg3,
-) -&gt; None:
-    return None
+<span class="n">def</span> <span class="n">my_function</span><span class="p">(</span>
+    <span class="n">arg1</span><span class="p">,</span>
+    <span class="n">arg2</span><span class="p">,</span>
+    <span class="n">arg3</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">None</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">None</span>
 
-print(
-    first_variable,
-    2,
-    third_value,
-    4,
-    5,
-    last_item,
-)
+<span class="nb">print</span><span class="p">(</span>
+    <span class="n">first_variable</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">,</span>
+    <span class="n">third_value</span><span class="p">,</span>
+    <span class="mi">4</span><span class="p">,</span>
+    <span class="mi">5</span><span class="p">,</span>
+    <span class="n">last_item</span><span class="p">,</span>
+<span class="p">)</span>
 
-# Special case:
+<span class="c1"># Special case:</span>
 
-print(&#39;some text&#39;, &#39;description&#39;, [
-    first_variable,
-    second_variable,
-    third_variable,
-    last_item,
-], end=&#39;&#39;)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;some text&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="p">[</span>
+    <span class="n">first_variable</span><span class="p">,</span>
+    <span class="n">second_variable</span><span class="p">,</span>
+    <span class="n">third_variable</span><span class="p">,</span>
+    <span class="n">last_item</span><span class="p">,</span>
+<span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 
-# Correct complex case:
+<span class="c1"># Correct complex case:</span>
 
-@pytest.mark.parametrize((&#39;boolean_arg&#39;, &#39;string_arg&#39;), [
-     (True, &quot;string&quot;),
-     (False, &quot;another string&quot;),
-])
+<span class="err">@</span><span class="n">pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">((</span><span class="s1">&#39;boolean_arg&#39;</span><span class="p">,</span> <span class="s1">&#39;string_arg&#39;</span><span class="p">),</span> <span class="p">[</span>
+     <span class="p">(</span><span class="n">True</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">),</span>
+     <span class="p">(</span><span class="n">False</span><span class="p">,</span> <span class="s2">&quot;another string&quot;</span><span class="p">),</span>
+<span class="p">])</span>
 </code></pre></div>
 <p>Everything else is considered a violation. This rule checks: lists,
 sets, tuples, dicts, calls, functions, methods, and classes.</p>

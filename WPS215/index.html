@@ -5900,36 +5900,28 @@
 
     <!-- Markdown content -->
     <p>Restrict the maximum number of base classes.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    It is almost never possible to navigate to the desired method of a
-    parent class when you need it with multiple mixins. It is hard to
-    understand <code>mro</code> and <code>super</code> calls. Do not overuse this technique.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Reduce the number of base classes. Use composition over inheritance.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-class SomeClassName(First, Second, Mixin): ...
+<h2 id="reasoning">Reasoning</h2>
+<p>It is almost never possible to navigate to the desired method of a
+parent class when you need it with multiple mixins. It is hard to
+understand <code>mro</code> and <code>super</code> calls. Do not overuse this technique.</p>
+<h2 id="solution">Solution</h2>
+<p>Reduce the number of base classes. Use composition over inheritance.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="k">class</span> <span class="n">SomeClassName</span>(<span class="n">First</span>, <span class="n">Second</span>, <span class="n">Mixin</span>): ...
 
-# Wrong:
-class SomeClassName(
-    FirstParentClass,
-    SecondParentClass,
-    ThirdParentClass,
-    CustomClass,
-    AddedClass,
+<span class="c1"># Wrong:</span>
+<span class="k">class</span> <span class="n">SomeClassName</span>(
+    <span class="n">FirstParentClass</span>,
+    <span class="n">SecondParentClass</span>,
+    <span class="n">ThirdParentClass</span>,
+    <span class="n">CustomClass</span>,
+    <span class="n">AddedClass</span>,
  ): ...
 </code></pre></div>
-<ul>
-<li>Configuration:<br />
-    This rule is configurable with <code>--max-base-classes</code>. Default:
-    <a href="/wemake-python-styleguide/0.15.2/configuration/MAX_BASE_CLASSES/">MAX_BASE_CLASSES</a> = <code>3</code></li>
-</ul>
+<h2 id="configuration">Configuration</h2>
+<p>This rule is configurable with <code>--max-base-classes</code>. Default:
+<a href="/wemake-python-styleguide/0.15.2/configuration/MAX_BASE_CLASSES/">MAX_BASE_CLASSES</a> = <code>3</code></p>
 <div class="versionadded">
 
 0.3.0
@@ -5942,10 +5934,8 @@ class SomeClassName(
 
 </div>
 
-<ul>
-<li>See also:<br />
-<a href="https://en.wikipedia.org/wiki/Composition_over_inheritance">https://en.wikipedia.org/wiki/Composition_over_inheritance</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://en.wikipedia.org/wiki/Composition_over_inheritance">https://en.wikipedia.org/wiki/Composition_over_inheritance</a></p>
 
     <!-- Last update of source file -->
     

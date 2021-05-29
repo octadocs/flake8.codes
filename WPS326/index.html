@@ -5876,20 +5876,14 @@
 
     <!-- Markdown content -->
     <p>Forbid implicit string concatenation.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    This is error-prone, since you can possibly miss a comma in a
-    collection of strings and get an implicit concatenation. And because
-    there are safer ways to do the same thing it is better to use them
-    instead.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>+</code> or <code>.format()</code> to join strings.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>This is error-prone, since you can possibly miss a comma in a
+collection of strings and get an implicit concatenation. And because
+there are safer ways to do the same thing it is better to use them
+instead.</p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>+</code> or <code>.format()</code> to join strings.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 text = &#39;first&#39; + &#39;second&#39;
 

@@ -5878,18 +5878,12 @@
     <p>Forbid incorrect order of <code>except</code>.</p>
 <p>Note, we only check for built-in exceptions because we cannot statically
 identify the inheritance order of custom ones.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Using incorrect order of exceptions is error-prone, since you end up
-    with some unreachable exception clauses.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use the correct order of exceptions.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Using incorrect order of exceptions is error-prone, since you end up
+with some unreachable exception clauses.</p>
+<h2 id="solution">Solution</h2>
+<p>Use the correct order of exceptions.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 try:
     ...
@@ -5906,10 +5900,8 @@ except Exception:
 except ValueError:
     ...
 </code></pre></div>
-<ul>
-<li>See also:<br />
-<a href="https://bit.ly/36MHlzw">https://bit.ly/36MHlzw</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://bit.ly/36MHlzw">https://bit.ly/36MHlzw</a></p>
 <div class="versionadded">
 
 0.13.0

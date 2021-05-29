@@ -5910,26 +5910,18 @@
 
     <!-- Markdown content -->
     <p>Forbid <code>f</code> strings.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-<code>f</code> strings implicitly rely on the context around them. Imagine that
-    you have a string that breaks when you move it two lines above.
-    That's not how a string should behave. Also, they promote a bad
-    practice: putting your logic inside the template. Moreover, they do
-    two things at once: declare a template and format it in a single
-    action.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use <code>.format()</code> with indexed params instead.</p>
-</li>
-<li>
-<p>See also:<br />
-<a href="https://github.com/xZise/flake8-string-format">https://github.com/xZise/flake8-string-format</a></p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p><code>f</code> strings implicitly rely on the context around them. Imagine that
+you have a string that breaks when you move it two lines above.
+That's not how a string should behave. Also, they promote a bad
+practice: putting your logic inside the template. Moreover, they do
+two things at once: declare a template and format it in a single
+action.</p>
+<h2 id="solution">Solution</h2>
+<p>Use <code>.format()</code> with indexed params instead.</p>
+<h2 id="see-also">See also</h2>
+<p><a href="https://github.com/xZise/flake8-string-format">https://github.com/xZise/flake8-string-format</a></p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Wrong:
 f&#39;Result is: {2 + 2}&#39;
 

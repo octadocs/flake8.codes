@@ -5905,30 +5905,22 @@ allow custom magic methods to be async.</p>
 <p>See
 <a href="/wemake-python-styleguide/0.15.2/constants/ASYNC_MAGIC_METHODS_BLACKLIST/">ASYNC_MAGIC_METHODS_BLACKLIST</a>
 for the whole list of blacklisted async magic methods.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Defining the magic methods as async which are not supposed to be
-    async would not work as expected.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Do not make this magic method async.</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code># Correct:
-class Test(object):
-    def __lt__(self, other): ...
+<h2 id="reasoning">Reasoning</h2>
+<p>Defining the magic methods as async which are not supposed to be
+async would not work as expected.</p>
+<h2 id="solution">Solution</h2>
+<p>Do not make this magic method async.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="k">class</span> <span class="n">Test</span>(<span class="n">object</span>):
+    <span class="n">def</span> <span class="n">__lt__</span>(<span class="nb">self</span>, <span class="n">other</span>): ...
 
-# Wrong:
-class Test(object):
-    async def __lt__(self, other): ...
+<span class="c1"># Wrong:</span>
+<span class="k">class</span> <span class="n">Test</span>(<span class="n">object</span>):
+    <span class="n">async</span> <span class="n">def</span> <span class="n">__lt__</span>(<span class="nb">self</span>, <span class="n">other</span>): ...
 </code></pre></div>
-<ul>
-<li>See also:<br />
-<a href="https://docs.python.org/3/reference/datamodel.html">https://docs.python.org/3/reference/datamodel.html</a></li>
-</ul>
+<h2 id="see-also">See also</h2>
+<p><a href="https://docs.python.org/3/reference/datamodel.html">https://docs.python.org/3/reference/datamodel.html</a></p>
 <div class="versionadded">
 
 0.12.0

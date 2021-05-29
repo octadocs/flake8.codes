@@ -5876,19 +5876,13 @@
 
     <!-- Markdown content -->
     <p>Forbid the same exception class in multiple <code>except</code> blocks.</p>
-<ul>
-<li>
-<p>Reasoning:<br />
-    Having the same exception name in different blocks means that
-    something is not right: since only one branch will work. Another one
-    will always be ignored. So, that is an error.</p>
-</li>
-<li>
-<p>Solution:<br />
-    Use unique exception handling rules.</p>
-</li>
-</ul>
-<p>Example:</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>Having the same exception name in different blocks means that
+something is not right: since only one branch will work. Another one
+will always be ignored. So, that is an error.</p>
+<h2 id="solution">Solution</h2>
+<p>Use unique exception handling rules.</p>
+<h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 try:
     ...
