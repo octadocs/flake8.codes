@@ -57,6 +57,10 @@ class Flake8Codes(Injector):
         'mkdocs gh-deploy',
         description='Build & deploy the site to GitHub Pages.'
     )
+    generate = shell(
+        'python run.py',
+        description='Generate automatic documentation.'
+    )
 
 
 app = Typer()
@@ -64,3 +68,4 @@ app.command(name='lint')(Flake8Codes.lint)
 app.command(name='format')(Flake8Codes.format)
 app.command(name='serve')(Flake8Codes.serve)
 app.command(name='deploy')(Flake8Codes.deploy)
+app.command(name='generate')(Flake8Codes.generate)
