@@ -28,6 +28,12 @@ class WPSConstants(BaseModel):
             description,
         )
 
+        description = re.sub(
+            r'`(wemake_python_styleguide\.constants\.[^`]+)`',
+            self._replace_wps_constant,
+            description,
+        )
+
         return Violation(
             description=description,
             related_constants=(
