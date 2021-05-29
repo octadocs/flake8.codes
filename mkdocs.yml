@@ -25,6 +25,7 @@ plugins:
   - macros:
       modules:
         - octadocs.macros
+        - flake8_codes.macros
 
 theme:
   name: material
