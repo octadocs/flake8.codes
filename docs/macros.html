@@ -15,23 +15,3 @@
 
     [{{ constant_page.name }}]({{ constant_page.url }})
 {%- endmacro -%}
-
-
-{%- macro wps_violation(internal_name) -%}
-    {%- set description = query(
-        'SELECT * WHERE {
-            ?violation
-                :internalName ?name ;
-                :code ?code ;
-                octa:title ?title ;
-                octa:url ?url .
-        }',
-        name=Literal(internal_name)
-    ).first -%}
-
-    {%- if description -%}
-        [**WPS{{ description.code }}** {{ description.title }}]({{ description.url }})
-    {%- else -%}
-        [DATA EXPUNGED]
-    {%- endif -%}
-{%- endmacro -%}
