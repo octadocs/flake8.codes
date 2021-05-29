@@ -39,7 +39,7 @@ class Flake8Codes(Injector):
     )
     mypy = shell(
         'mypy {project_directory}',
-        description='Verify type annotations',
+        description='Verify type annotations.',
     )
 
     format = shell(
@@ -49,7 +49,18 @@ class Flake8Codes(Injector):
 
     lint = flakehell
 
+    serve = shell(
+        'mkdocs serve -a localhost:8124',
+        description='Run MkDocs locally.'
+    )
+    deploy = shell(
+        'mkdocs gh-deploy',
+        description='Build & deploy the site to GitHub Pages.'
+    )
+
 
 app = Typer()
 app.command(name='lint')(Flake8Codes.lint)
 app.command(name='format')(Flake8Codes.format)
+app.command(name='serve')(Flake8Codes.serve)
+app.command(name='deploy')(Flake8Codes.deploy)
