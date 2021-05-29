@@ -48,10 +48,12 @@ class Flake8Codes(Injector):
     lint = shell(
         'git diff origin/master | flakehell lint --diff {project_directory}',
     )
+    format = shell('isort {project_directory}')
 
 
 def main():
-    Flake8Codes.lint()
+    # Flake8Codes.lint()
+    Flake8Codes.format()
 
 
 if __name__ == '__main__':

@@ -3,7 +3,7 @@ from functools import partial
 from mkdocs_macros.plugin import MacrosPlugin
 from more_itertools import first
 from octadocs.octiron import Octiron
-from rdflib import URIRef, Literal
+from rdflib import Literal, URIRef
 
 
 def wps_config(

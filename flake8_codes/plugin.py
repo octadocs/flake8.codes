@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from mkdocs.plugins import BasePlugin
-from mkdocs.structure.files import Files, File
+from mkdocs.structure.files import File, Files
 
 
 class Flake8Codes(BasePlugin):

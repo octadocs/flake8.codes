@@ -1,7 +1,7 @@
-from typing import Union, Any
+from typing import Any, Union
 
 from documented import DocumentedError
-from libcst import SimpleStatementLine, BaseCompoundStatement
+from libcst import BaseCompoundStatement, SimpleStatementLine
 from pydantic import BaseModel, stricturl
 
 BodyStatement = Union[SimpleStatementLine, BaseCompoundStatement]

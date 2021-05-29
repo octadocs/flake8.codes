@@ -5,16 +5,12 @@ from pathlib import Path
 from typing import Iterable
 
 import frontmatter
-from libcst import (
-    parse_module,
-    AnnAssign,
-)
+from libcst import AnnAssign, parse_module
 
 from flake8_codes.semanticize import semanticize
 from flake8_codes.wemake_python_styleguide.constants.models import (
-    BodyStatement,
-    WPSConstant, NotAnAssignment, GenerationFailed, NotPublicConstant,
-)
+    BodyStatement, GenerationFailed, NotAnAssignment, NotPublicConstant,
+    WPSConstant)
 
 logger = logging.getLogger(__name__)
 
