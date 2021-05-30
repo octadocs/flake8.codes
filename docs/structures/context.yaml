@@ -13,3 +13,5 @@ onProperty:
     $id: owl:onProperty
     $type: $id
 hasValue: owl:hasValue
+
+someValuesFrom: owl:someValuesFrom

@@ -1,0 +1,29 @@
+# Assign classes to wemake-python-styleguide generated pages based on their type
+INSERT {
+    ?wps_file
+        :version ?version ;
+        a ?page_class .
+} WHERE {
+    :wemake-python-styleguide octa:isParentOf ?wps_version_directory .
+    ?wps_version_directory octa:fileName ?version .
+
+    ?wps_version_directory octa:isParentOf ?wps_filetype_directory .
+    ?wps_filetype_directory octa:fileName ?file_type .
+
+    ?wps_filetype_directory octa:isParentOf+ ?wps_file .
+
+    # Skip subdirectories of violations directory
+    ?wps_file octa:title ?title .
+
+    BIND((
+        IF(
+            ?file_type = "constants",
+            :WPSConstant,
+            IF(
+                ?file_type = "configuration",
+                :WPSConfigurationParameter,
+                :WPSViolation
+            )
+        )
+    ) AS ?page_class)
+}

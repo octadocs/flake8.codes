@@ -20,13 +20,13 @@ excludes:
 
 ## Context
 
-I would like to have `WPS123` code description from the latest version of `wemake-python-styleguide` available not only as https://flake8.codes/wemake-python-styleguide/0.15.2/violations/WPS123/ but also as https://flake8.codes/WPS123/.
+I would like to have `WPS123` code description from the latest version of `wemake-python-styleguide` available not only as https://flake8.codes/wemake-python-styleguide/0.15.1/violations/WPS123/ but also as https://flake8.codes/WPS123/.
 
 I feel this would greatly improve the usability of the tool, especially if to create a custom search engine for it in your browser.
 
 ## Solutions
 
-Somehow, a file at `docs/wemake-python-styleguide/0.15.2/violations/WPS123.md` must be served as `docs/WPS123.md` in addition to its original serving.
+Somehow, a file at `docs/wemake-python-styleguide/0.15.1/violations/WPS123.md` must be served as `docs/WPS123.md` in addition to its original serving.
 
 {% set choices = query('
     SELECT ?iri ?title WHERE {

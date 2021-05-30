@@ -1,10 +1,13 @@
 # Show violations marked as related to this one.
 # Accepts: ?this - IRI of the current page.
 SELECT * WHERE {
-    ?this :related-to-violation [
-        :internalName ?name ;
-        :code ?code ;
-        octa:title ?title ;
-        octa:url ?url
-    ] .
+    ?this
+        :version ?version ;
+        :related-to-violation [
+            :internalName ?name ;
+            :code ?code ;
+            octa:title ?title ;
+            octa:url ?url ;
+            :version ?version
+        ] .
 } ORDER BY ?code
