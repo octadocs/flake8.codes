@@ -1,0 +1,10 @@
+$id: WPSVersionDirectory
+comment: The directory in filesystem which encompasses a WPS version, for example, `wemake-python-styleguide/0.14.0`.
+equivalentClass:
+  comment: Here goes OWL. By this code, we say that WPSVersionDirectory is a class of things which have docs/wemake-python-styleguide as their parent directory.
+
+  $type: Restriction
+  onProperty:
+    $id: octa:isChildOf
+  hasValue:
+    $id: local:wemake-python-styleguide

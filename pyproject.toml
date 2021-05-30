@@ -46,6 +46,7 @@ flake8 = "3.9.0"
 [tool.poetry.dev-dependencies]
 mypy = "^0.812"
 click = "<8.0.0"
+pipdeptree = "^2.0.0"
 
 
 [tool.flakehell]
