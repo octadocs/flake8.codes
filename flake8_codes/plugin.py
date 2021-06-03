@@ -11,7 +11,7 @@ class Flake8Codes(BasePlugin):
             mkdocs_file for mkdocs_file in files
             if mkdocs_file.src_path.startswith(
                 'wemake-python-styleguide/0.15.2/violations',
-            )
+            ) and not mkdocs_file.src_path.endswith('index.md')
         ]
 
         violation_file: File
