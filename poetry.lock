@@ -827,7 +827,7 @@ test = ["webob", "jmespath"]
 
 [[package]]
 name = "wemake-python-styleguide"
-version = "0.15.1"
+version = "0.15.2"
 description = "The strictest and most opinionated python linter ever"
 category = "main"
 optional = false
@@ -857,7 +857,7 @@ typing_extensions = ">=3.6,<4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.9"
-content-hash = "ee899d93734b8266c2c5fc015ea83d517261af0081d2ac523501d18acfbed1ed"
+content-hash = "3d2454e342a13c3b289392a876ccbda1999c3aa32f7a7c8ea58da35a85a18bc1"
 
 [metadata.files]
 astor = [
@@ -1355,6 +1355,6 @@ urlpath = [
     {file = "urlpath-1.1.7.tar.gz", hash = "sha256:a280a6cb1e107d9597cc1f320cf93b6b3cb7d15876434a922cdbc0314a87221f"},
 ]
 wemake-python-styleguide = [
-    {file = "wemake-python-styleguide-0.15.1.tar.gz", hash = "sha256:fe3c867e8960d4a755cbee09fcbeabd7f35b37289aaa6acce931b2ccd806300e"},
-    {file = "wemake_python_styleguide-0.15.1-py3-none-any.whl", hash = "sha256:d0fc6a62533903531cbb77a45822090a71052ce3f340fe1a11886f10bc1131f8"},
+    {file = "wemake-python-styleguide-0.15.2.tar.gz", hash = "sha256:46663b3d3ad7f726bd57635fa0333ef1051e23f5c180fe8f8749d7dae8e89a19"},
+    {file = "wemake_python_styleguide-0.15.2-py3-none-any.whl", hash = "sha256:1987f867de70e8cf0fad1fdabb2986a5a9ee0c63e773aceb2c751aa85434d2fa"},
 ]

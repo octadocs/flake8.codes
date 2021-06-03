@@ -22,7 +22,6 @@ class Violation(BaseModel):
     internal_name: str = Field(alias='internalName')
     title: str
     description: str
-    output_file: Path
 
     related_violations: Optional[List[str]] = Field(
         None,
@@ -38,6 +37,11 @@ class Violation(BaseModel):
         None,
         alias='relatedConstant',
     )
+
+    @property
+    def readable_code(self) -> str:
+        """Format violation code."""
+        return f'WPS{self.code:03}'
 
     class Config:
         allow_population_by_field_name = True

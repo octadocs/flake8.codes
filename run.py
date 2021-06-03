@@ -5,7 +5,7 @@ from wemake_python_styleguide import constants
 from flake8_codes.wemake_python_styleguide.constants.main import \
     generate_constants
 from flake8_codes.wemake_python_styleguide.violations.main import (
-    generate_wps_violations,
+    document_wps_violations,
 )
 
 from flake8_codes.wemake_python_styleguide.options import (
@@ -22,7 +22,7 @@ def main():
         constants=constants,
         destination=docs / 'constants',
     )
-    generate_wps_violations(docs / 'violations')
+    document_wps_violations(docs / 'violations')
     generate_wps_options(docs / 'configuration')
 
 
