@@ -26,3 +26,15 @@ class Pypandoc(BaseModel):
                 'description',
             }),
         )
+
+
+def pypandoc_convert(
+    text: str,
+    source_format: str = 'rst',
+    destination_format: str = 'commonmark',
+) -> str:
+    return pypandoc.convert_text(
+        source=text,
+        format=source_format,
+        to=destination_format,
+    )

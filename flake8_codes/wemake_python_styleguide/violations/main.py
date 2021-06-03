@@ -13,8 +13,12 @@ from flake8_codes.wemake_python_styleguide.violations.format_sections import \
     FormatSections
 from flake8_codes.wemake_python_styleguide.violations.format_title import \
     FormatTitle
+from flake8_codes.wemake_python_styleguide.violations.keep_till_first_div import \
+    keep_till_first_div
 from flake8_codes.wemake_python_styleguide.violations.pypandoc_conversion import \
-    Pypandoc
+    (
+    pypandoc_convert,
+)
 from flake8_codes.wemake_python_styleguide.violations.related_violations import \
     RelatedViolations
 from flake8_codes.wemake_python_styleguide.violations.unpaired_quote import \
@@ -54,7 +58,8 @@ def format_violation_document(violation: Violation) -> Violation:
 
     # Nice transformations
     violation = UnpairedQuote(violation=violation).process()
-    violation = Pypandoc(violation=violation).process()
+
+    violation.description = pypandoc_convert(violation.description)
 
     # Insert macro links
     violation = WPSConfig(violation=violation).process()
@@ -74,6 +79,9 @@ def document_violations_module_index(module, path: Path) -> None:
 
     if not description:
         return
+
+    description = pypandoc_convert(description)
+    description = keep_till_first_div(description)
 
     try:
         path.write_text(description)
