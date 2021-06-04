@@ -1,0 +1,18 @@
+INSERT {
+    ?index_file octa:title ?title .
+} WHERE {
+    ?condition
+        :directory ?directory_name ;
+        octa:title ?title .
+
+    ?version_directory octa:isChildOf <local:wemake-python-styleguide> .
+
+    ?violations_directory octa:isChildOf ?version_directory .
+    ?violations_directory octa:fileName "violations" .
+
+    ?violations_category_directory octa:isChildOf ?violations_directory .
+    ?violations_category_directory octa:fileName ?directory_name .
+
+    ?index_file octa:isChildOf ?violations_category_directory .
+    ?index_file octa:fileName "index.md" .
+}

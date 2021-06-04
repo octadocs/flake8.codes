@@ -13,7 +13,9 @@ INSERT {
     ?wps_filetype_directory octa:isParentOf+ ?wps_file .
 
     # Skip subdirectories of violations directory
-    ?wps_file octa:title ?title .
+    ?wps_file octa:fileName ?wps_file_name .
+
+    FILTER(?wps_file_name != "index.md")
 
     BIND((
         IF(
