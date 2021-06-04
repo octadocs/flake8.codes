@@ -1,0 +1,16 @@
+comment: Readable titles for the subdirectories of `violations` in wemake-python-styleguide docs.
+$included:
+  - directory: naming
+    title: WPS0xx System
+  - directory: naming
+    title: WPS1xx Naming
+  - directory: complexity
+    title: WPS2xx Complexity
+  - directory: consistency
+    title: WPS3xx Consistency
+  - directory: best_practices
+    title: WPS4xx Best Practices
+  - directory: refactoring
+    title: WPS5xx Refactoring
+  - directory: oop
+    title: WPS6xx OOP

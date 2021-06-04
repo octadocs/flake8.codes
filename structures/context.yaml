@@ -6,3 +6,12 @@ owl:intersectionOf:
 
 owl:complementOf:
   $type: $id
+
+equivalentClass: owl:equivalentClass
+Restriction: owl:Restriction
+onProperty:
+    $id: owl:onProperty
+    $type: $id
+hasValue: owl:hasValue
+
+someValuesFrom: owl:someValuesFrom

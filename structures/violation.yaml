@@ -1,5 +1,0 @@
-$id: Violation
-owl:equivalentClass:
-  $type: owl:Restriction
-  owl:onProperty: octa:template
-  owl:hasValue: violation.html

@@ -1,0 +1,5 @@
+$id: WPSConfigurationParameter
+owl:equivalentClass:
+  $type: owl:Restriction
+  owl:onProperty: octa:template
+  owl:hasValue: wemake-python-styleguide/configuration.html

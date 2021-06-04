@@ -1,0 +1,5 @@
+$id: WPSConstant
+owl:equivalentClass:
+  $type: owl:Restriction
+  owl:onProperty: octa:template
+  owl:hasValue: wemake-python-styleguide/constant.html
