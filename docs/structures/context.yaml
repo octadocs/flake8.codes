@@ -5,6 +5,9 @@ owl:complementOf:
   $type: $id
 
 equivalentClass: owl:equivalentClass
+≡: owl:equivalentClass
+
+
 Restriction: owl:Restriction
 onProperty:
     $id: owl:onProperty
