@@ -1,6 +1,6 @@
 comment: Readable titles for the subdirectories of `violations` in wemake-python-styleguide docs.
 $included:
-  - directory: naming
+  - directory: system
     title: WPS0xx System
   - directory: naming
     title: WPS1xx Naming
