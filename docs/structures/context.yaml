@@ -12,6 +12,12 @@ Restriction: owl:Restriction
 onProperty:
     $id: owl:onProperty
     $type: $id
+
 hasValue: owl:hasValue
 
-someValuesFrom: owl:someValuesFrom
+someValuesFrom:
+  $id: owl:someValuesFrom
+  $type: $id
+
+isChildOf:
+  $id: octa:isChildOf

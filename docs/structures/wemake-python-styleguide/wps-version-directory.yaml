@@ -1,0 +1,6 @@
+$id: WPSVersionDirectory
+label: Each direct subdirectory at docs/wemake-python-styleguide/
+equivalentClass:
+  $type: Restriction
+  onProperty: octa:isChildOf
+  someValuesFrom: WPSRootDirectory
