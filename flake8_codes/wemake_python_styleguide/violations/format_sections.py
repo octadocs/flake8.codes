@@ -35,7 +35,7 @@ class FormatSections(BaseModel):
     def _format_sections(self, description: str) -> str:
         """Reformat sections."""
         return re.sub(
-            ' *- (' + self._format_section_headers() + '): *\n(( {4}.+\n)+)',
+            ' *- (' + self._format_section_headers() + '): *\n(( {4}.*\n)+)',
             self._match_section,
             description,
             flags=re.MULTILINE,
