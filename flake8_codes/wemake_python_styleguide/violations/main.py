@@ -164,9 +164,23 @@ def extract_violations_from_module(module) -> Iterator[Violation]:
         )
 
 
+def document_violations_index(directory: Path) -> None:
+    """Create an `index.md` file in `violations` directory."""
+    index_path = directory / 'index.md'
+
+    document = frontmatter.Post(
+        content='Violations by category.',
+        title='Violations',
+    )
+
+    with open(index_path, 'wb+') as code_file:
+        frontmatter.dump(document, code_file)
+
+
 def document_wps_violations(directory: Path):
     """Generate docs for installed version of wemake-python-styleguide."""
     violations_module_files = Path(violations.__file__).parent
+    document_violations_index(directory)
 
     for module_path in violations_module_files.iterdir():
         document_violations_module(

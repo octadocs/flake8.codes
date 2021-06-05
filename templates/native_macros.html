@@ -35,3 +35,27 @@
         </div>
     {% endif %}
 {% endmacro %}
+
+
+{% macro breadcrumbs(navigation_item) %}
+    {# This macro is incredibly hacky. I have warned you. #}
+    {% for item in navigation_item.ancestors|reverse %}
+        {% if not loop.first %}
+        ›
+        {% endif %}
+
+        {% if item.is_page %}
+            <a href="/{{ item.url }}">{{ item.title }}</a>
+        {% elif item.is_section %}
+            {# We find index.md in the section based on the is_page flag and
+            the stem of the file name. #}
+            {% set index_page = item.children|selectattr('is_page')|selectattr('file.name', 'eq', 'index')|first %}
+
+            {% if index_page %}
+                <a href="/{{ index_page.url }}">{{ index_page.title }}</a>
+            {% else %}
+                {{ item.title }}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

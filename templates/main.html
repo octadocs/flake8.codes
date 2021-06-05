@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% import "native_macros.html" as macros with context %}
+
+{% block content %}
+    {{ macros.breadcrumbs(page) }}
+    {{ super() }}
+{% endblock %}
+
+
+{% block site_nav %}
+{% endblock %}
