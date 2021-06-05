@@ -1,0 +1,10 @@
+$id: WPSConfigurationDirectory
+label: docs/wemake-python-styleguide/*/configuration/ directory
+equivalentClass:
+  intersectionOf:
+  - $type: Restriction
+    onProperty: octa:isChildOf
+    someValuesFrom: WPSVersionDirectory
+  - $type: Restriction
+    onProperty: octa:fileName
+    hasValue: "configuration"

@@ -1,9 +1,6 @@
 owl:onProperty:
   $type: $id
 
-owl:intersectionOf:
-  $container: $list
-
 owl:complementOf:
   $type: $id
 
@@ -21,3 +18,11 @@ someValuesFrom:
 
 isChildOf:
   $id: octa:isChildOf
+
+intersectionOf:
+  $id: owl:intersectionOf
+  $container: $list
+
+∩:
+  $id: owl:intersectionOf
+  $container: $list

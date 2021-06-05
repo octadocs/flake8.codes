@@ -1,0 +1,8 @@
+$id: WPSViolationsCategoryDirectory
+label: docs/wemake-python-styleguide/*/violations/* directory
+equivalentClass:
+  ∩:
+    - $id: octa:Directory
+    - $type: Restriction
+      onProperty: octa:isChildOf
+      someValuesFrom: WPSViolationsDirectory

@@ -1,0 +1,10 @@
+$id: WPSViolationsDirectory
+label: docs/wemake-python-styleguide/*/violations/ directory
+equivalentClass:
+  intersectionOf:
+  - $type: Restriction
+    onProperty: octa:isChildOf
+    someValuesFrom: WPSVersionDirectory
+  - $type: Restriction
+    onProperty: octa:fileName
+    hasValue: "violations"
