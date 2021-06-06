@@ -1,0 +1,14 @@
+# Assign octa:title to WPS version index pages.
+INSERT {
+    GRAPH <inference://sparql> {
+        ?index_file octa:title ?title .
+    }
+} WHERE {
+    ?version_directory
+        a :WPSVersionDirectory ;
+        octa:fileName ?title .
+
+    ?index_file
+        a octa:IndexPage;
+        octa:isChildOf ?version_directory .
+}

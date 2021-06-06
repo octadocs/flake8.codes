@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+{% import "native_macros.html" as macros with context %}
+
+{% block content %}
+    {{ super() }}
+
+    <h2>Dive in</h2>
+    <ul>
+        <li><a href="./violations/">Violations</a></li>
+        <li><a href="./constants/">Constants</a> <em>(todo)</em></li>
+        <li><a href="./configuration/">Configuration parameters</a> <em>(todo)</em></li>
+    </ul>
+{% endblock %}

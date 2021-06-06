@@ -1,0 +1,10 @@
+label: docs/wemake-python-styleguide/*/index.md file
+≡:
+  - ∩:
+      - $id: octa:IndexPage
+      - $type: Restriction
+        onProperty: octa:isChildOf
+        someValuesFrom: WPSVersionDirectory
+  - $type: Restriction
+    onProperty: octa:template
+    hasValue: "wemake-python-styleguide/version.html"
