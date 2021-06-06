@@ -49,6 +49,8 @@ def document_violation(
         handler=frontmatter.YAMLHandler(),
         **violation.dict(
             exclude={'message', 'type'},
+            skip_defaults=True,
+            exclude_none=True,
         )
     )
 
