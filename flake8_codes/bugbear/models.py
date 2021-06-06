@@ -56,7 +56,12 @@ class BugbearViolation(BaseModel):
     @validator('title', always=True)
     def fill_title(cls, title, values):
         message: str = values['message']
-        title = re.split('[.]', message, maxsplit=1)[0]
+
+        title = re.split(
+            r'\. ', message,
+            maxsplit=1,
+        )[0].replace('`', '').replace('{}', '_')
+
         return title
 
     class Config:
