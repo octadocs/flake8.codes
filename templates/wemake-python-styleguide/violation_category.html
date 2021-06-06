@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+{% import "native_macros.html" as macros with context %}
+
+{# I had to copy-paste the content of `content` block to remove the <h1> hack #}
+{% block content %}
+    {{ page.meta['title'] }}
+
+    {{ super() }}
+
+    <h2>Violations</h2>
+
+    <ul style="column-count: 2">
+        {% for violation in queries.wps.violations_by_category(iri=page.iri) %}
+            <li>
+                <strong>
+                    <code>WPS{{ '%03d' % violation.code.value }}</code>
+                </strong>
+                <a href="{{ violation.url }}">{{ violation.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
