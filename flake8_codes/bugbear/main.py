@@ -49,7 +49,6 @@ def document_violation(
         handler=frontmatter.YAMLHandler(),
         **violation.dict(
             exclude={'message', 'type', 'vars'},
-            skip_defaults=True,
             exclude_none=True,
         )
     )
@@ -69,10 +68,8 @@ def document_bugbear():
 
     violations = list(bugbear_violations())
 
-    with ThreadPoolExecutor(max_workers=10) as executor:
-        for violation in violations:
-            executor.submit(
-                document_violation,
-                version_directory=version_directory,
-                violation=violation,
-            )
+    for violation in violations:
+        document_violation(
+            version_directory=version_directory,
+            violation=violation,
+        )

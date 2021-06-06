@@ -12,6 +12,8 @@
     {% if page.meta.extra %}
         <h2>Extra parameters</h2>
 
+        These are defined by `flake8-bugbear` in the code and define the behavior of the violation. That's why we decided to print them here, for your reference.
+
         <table>
         <thead>
             <tr>
@@ -22,7 +24,17 @@
         {% for key, value in page.meta.extra.items() %}
             <tr>
                 <th>{{ key }}</th>
-                <td>{{ value }}</td>
+                <td>
+                    {% if value is iterable and value is sequence and value is not string %}
+                        <ul>
+                            {% for item in value %}
+                                <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        {{ value }}
+                    {% endif %}
+                </td>
             </tr>
         {% endfor %}
         </table>

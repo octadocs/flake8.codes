@@ -2,7 +2,18 @@ import re
 from typing import Any, Tuple, Dict, Optional
 
 from boltons.iterutils import remap
-from pydantic import BaseModel, Extra, Field, validator
+from pydantic import BaseModel, Extra, Field, validator, root_validator
+
+
+def validate_extra_item(path, key, value) -> Tuple[str, Any]:
+    """Validate an item of `extra` dictionary."""
+    if isinstance(value, set):
+        return key, list(sorted(value))
+
+    if isinstance(value, type):
+        return key, value.__name__
+
+    return key, value
 
 
 class BugbearViolation(BaseModel):
@@ -15,6 +26,7 @@ class BugbearViolation(BaseModel):
     message: str
 
     extra: Optional[Dict[str, Any]] = None
+    title: Optional[str] = None
 
     @validator('message')
     def validate(cls, message: str) -> str:
@@ -36,13 +48,16 @@ class BugbearViolation(BaseModel):
         if isinstance(extra, dict):
             return remap(
                 extra,
-                lambda path, key, value: (
-                    key,
-                    list(sorted(value)) if isinstance(value, set) else value,
-                ),
+                validate_extra_item,
             )
 
         return extra
+
+    @validator('title', always=True)
+    def fill_title(cls, title, values):
+        message: str = values['message']
+        title = re.split('[.]', message, maxsplit=1)[0]
+        return title
 
     class Config:
         """Forbid extra arguments, - mostly for debugging sake."""
