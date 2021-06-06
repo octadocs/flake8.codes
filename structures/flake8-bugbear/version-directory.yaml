@@ -1,0 +1,5 @@
+$id: BugbearVersionDirectory
+≡:
+  $type: Restriction
+  onProperty: octa:isChildOf
+  someValuesFrom: BugbearRootDirectory

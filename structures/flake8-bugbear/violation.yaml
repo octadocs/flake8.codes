@@ -1,0 +1,5 @@
+$id: BugbearViolation
+≡:
+  $type: Restriction
+  onProperty: octa:template
+  hasValue: "flake8-bugbear/violation.html"

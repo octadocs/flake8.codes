@@ -29,3 +29,7 @@ intersectionOf:
 ∩:
   $id: owl:intersectionOf
   $container: $list
+
+∁:
+  $id: owl:complementOf
+  $type: $id

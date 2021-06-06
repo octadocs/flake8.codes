@@ -1,0 +1,10 @@
+label: docs/wemake-python-styleguide/*/violations/*/index.md file
+≡:
+  - ∩:
+      - $id: octa:IndexPage
+      - $type: Restriction
+        onProperty: octa:isChildOf
+        someValuesFrom: WPSViolationsDirectory
+  - $type: Restriction
+    onProperty: octa:template
+    hasValue: "wemake-python-styleguide/violations_directory.html"

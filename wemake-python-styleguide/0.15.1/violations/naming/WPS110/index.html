@@ -182,6 +182,29 @@
         
   
   
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../flake8-bugbear/20.11.1/" class="md-tabs__link">
+        Flake8 bugbear
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
     
   
 
@@ -242,11 +265,11 @@
                 data-md-scrollfix>
                 
                     <li class="md-nav__item">
-                        <a href="/wemake-python-styleguide/0.15.1/configuration/ALLOWED_DOMAIN_NAMES/" class="md-nav__link">ALLOWED_DOMAIN_NAMES</a>
+                        <a href="/wemake-python-styleguide/0.15.1/configuration/FORBIDDEN_DOMAIN_NAMES/" class="md-nav__link">FORBIDDEN_DOMAIN_NAMES</a>
                     </li>
                 
                     <li class="md-nav__item">
-                        <a href="/wemake-python-styleguide/0.15.1/configuration/FORBIDDEN_DOMAIN_NAMES/" class="md-nav__link">FORBIDDEN_DOMAIN_NAMES</a>
+                        <a href="/wemake-python-styleguide/0.15.1/configuration/ALLOWED_DOMAIN_NAMES/" class="md-nav__link">ALLOWED_DOMAIN_NAMES</a>
                     </li>
                 
             </ul>
@@ -344,7 +367,7 @@ use could be improved.</p>
 <p>Try to use a more specific name instead. If you really want to use
 any of the names from the list, add a prefix or suffix to it. It
 will serve you well.</p>
-<p>See <a href="/wemake-python-styleguide/0.15.2/constants/VARIABLE_NAMES_BLACKLIST/">VARIABLE_NAMES_BLACKLIST</a>
+<p>See <a href="/wemake-python-styleguide/0.15.1/constants/VARIABLE_NAMES_BLACKLIST/">VARIABLE_NAMES_BLACKLIST</a>
 for the base list of blacklisted variable names.</p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
@@ -355,13 +378,13 @@ item = None
 </code></pre></div>
 <h2 id="configuration">Configuration</h2>
 <p>This rule is configurable with <code>--allowed-domain-names</code>. Default:
-<a href="/wemake-python-styleguide/0.15.1/configuration/ALLOWED_DOMAIN_NAMES/">ALLOWED_DOMAIN_NAMES</a> = <code>()</code></p>
+<a href="/wemake-python-styleguide/0.15.2/configuration/ALLOWED_DOMAIN_NAMES/">ALLOWED_DOMAIN_NAMES</a> = <code>()</code></p>
 <div class="highlight"><pre><span></span><code><span class="ow">And</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="err">`</span><span class="o">--</span><span class="n">forbidden</span><span class="o">-</span><span class="k">domain</span><span class="o">-</span><span class="k">names</span><span class="err">`</span><span class="p">.</span><span class="w"> </span><span class="k">Default</span><span class="err">:</span><span class="w"></span>
 <span class="o">[</span><span class="n">FORBIDDEN_DOMAIN_NAMES</span><span class="o">]</span><span class="p">(</span><span class="o">/</span><span class="n">wemake</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">styleguide</span><span class="o">/</span><span class="mf">0.15.1</span><span class="o">/</span><span class="n">configuration</span><span class="o">/</span><span class="n">FORBIDDEN_DOMAIN_NAMES</span><span class="o">/</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">`</span><span class="p">()</span><span class="err">`</span><span class="w"></span>
 
 <span class="n">The</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="n">listed</span><span class="w"> </span><span class="n">above</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="k">variable</span><span class="w"> </span><span class="k">names</span><span class="err">&#39;</span><span class="w"></span>
 <span class="n">blacklist</span><span class="w"> </span><span class="n">starting</span><span class="w"> </span><span class="k">from</span><span class="w"></span>
-<span class="o">[</span><span class="n">VARIABLE_NAMES_BLACKLIST</span><span class="o">]</span><span class="p">(</span><span class="o">/</span><span class="n">wemake</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">styleguide</span><span class="o">/</span><span class="mf">0.15.2</span><span class="o">/</span><span class="n">constants</span><span class="o">/</span><span class="n">VARIABLE_NAMES_BLACKLIST</span><span class="o">/</span><span class="p">).</span><span class="w"></span>
+<span class="o">[</span><span class="n">VARIABLE_NAMES_BLACKLIST</span><span class="o">]</span><span class="p">(</span><span class="o">/</span><span class="n">wemake</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">styleguide</span><span class="o">/</span><span class="mf">0.15.1</span><span class="o">/</span><span class="n">constants</span><span class="o">/</span><span class="n">VARIABLE_NAMES_BLACKLIST</span><span class="o">/</span><span class="p">).</span><span class="w"></span>
 </code></pre></div>
 <div class="versionadded">
 
