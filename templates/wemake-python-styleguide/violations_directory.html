@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{% import "native_macros.html" as macros with context %}
+
+{% block content %}
+    {{ page.meta['title'] }}
+
+    {{ super() }}
+
+    <h2>Categories</h2>
+
+    <ul>
+        {% for category in queries.wps.violation_categories(iri=page.iri) %}
+            <li>
+                <a href="{{ category.url }}">{{ category.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
