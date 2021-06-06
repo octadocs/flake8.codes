@@ -1,9 +1,14 @@
 INSERT {
     GRAPH <inference> {
-        ?index_page a :BugbearVersionIndexPage .
+        ?index_page
+            a :BugbearVersionIndexPage ;
+            octa:title ?version .
     }
 } WHERE {
-    ?version_directory a :BugbearVersionDirectory .
+    ?version_directory
+        a :BugbearVersionDirectory ;
+        octa:fileName ?version .
+
     ?index_page
         octa:isChildOf ?version_directory ;
         a octa:IndexPage .

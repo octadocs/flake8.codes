@@ -12,7 +12,7 @@
     {% if page.meta.extra %}
         <h2>Extra parameters</h2>
 
-        These are defined by `flake8-bugbear` in the code and define the behavior of the violation. That's why we decided to print them here, for your reference.
+        These are defined by <code>flake8-bugbear</code> in the code and define the behavior of the violation. That's why we decided to print them here, for your reference.
 
         <table>
         <thead>
@@ -51,10 +51,16 @@
 {% endblock %}
 
 
-{% block _archived_site_nav %}
+{% block site_nav %}
     {{ super() }}
 
     {% call macros.sidebar() %}
+        {{ macros.related_items(
+            items=queries.similar_to(this=page.iri),
+            title='Similar To',
+            item_template_path='partials/violation_link.html'
+        ) }}
+
         {{ macros.related_items(
             items=queries.related_violations(this=page.iri),
             title='Related Violations',

@@ -1,0 +1,14 @@
+# Expects: ?this
+SELECT ?code ?title ?url (MAX(?version) as ?latest) WHERE {
+    ?this :code ?this_code .
+
+    ?similarity
+        :code ?this_code ;
+        :similarTo ?code .
+
+    ?that
+        :code ?code ;
+        :version ?version ;
+        octa:title ?title ;
+        octa:url ?url .
+} GROUP BY ?code
