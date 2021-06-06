@@ -1,3 +1,4 @@
+import re
 from typing import Any, Tuple, Dict, Optional
 
 from boltons.iterutils import remap
@@ -8,12 +9,21 @@ class BugbearViolation(BaseModel):
     """Violation defined by flake8-bugbear."""
 
     type: Any
-    vars: tuple
+    vars: Optional[tuple] = None
 
     code: str
     message: str
 
     extra: Optional[Dict[str, Any]] = None
+
+    @validator('message')
+    def validate(cls, message: str) -> str:
+        """Remove the code name from the message."""
+        return re.sub(
+            r'^(B\d+ )',
+            '',
+            message,
+        )
 
     @validator('extra')
     def validate_extra(cls, extra):
@@ -28,7 +38,7 @@ class BugbearViolation(BaseModel):
                 extra,
                 lambda path, key, value: (
                     key,
-                    list(value) if isinstance(value, set) else value,
+                    list(sorted(value)) if isinstance(value, set) else value,
                 ),
             )
 
