@@ -1,0 +1,10 @@
+INSERT {
+    GRAPH <inference> {
+        ?index_page a :BugbearVersionIndexPage .
+    }
+} WHERE {
+    ?version_directory a :BugbearVersionDirectory .
+    ?index_page
+        octa:isChildOf ?version_directory ;
+        a octa:IndexPage .
+}
