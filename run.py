@@ -2,6 +2,7 @@ from pathlib import Path
 
 from wemake_python_styleguide import constants
 
+from flake8_codes.bugbear.main import document_bugbear
 from flake8_codes.wemake_python_styleguide.constants.main import \
     generate_constants
 from flake8_codes.wemake_python_styleguide.versions import document_wps_version
@@ -16,7 +17,7 @@ from flake8_codes.wemake_python_styleguide.options import (
 from wemake_python_styleguide.version import pkg_version
 
 
-def main():
+def document_wemake_python_styleguide():
     docs = Path(__file__).parent / 'docs/wemake-python-styleguide' / pkg_version
 
     document_wps_version(docs)
@@ -26,6 +27,11 @@ def main():
     )
     document_wps_violations(docs / 'violations')
     generate_wps_options(docs / 'configuration')
+
+
+def main() -> None:
+    document_bugbear()
+    document_wemake_python_styleguide()
 
 
 if __name__ == '__main__':
