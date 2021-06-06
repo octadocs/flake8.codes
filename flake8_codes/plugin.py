@@ -9,9 +9,13 @@ class Flake8Codes(BasePlugin):
         """Publish the violation pages of every flake8 plugin in the root."""
         wps_violations = [
             mkdocs_file for mkdocs_file in files
-            if mkdocs_file.src_path.startswith(
-                'wemake-python-styleguide/0.15.2/violations',
-            ) and not mkdocs_file.src_path.endswith('index.md')
+            if not mkdocs_file.src_path.endswith('index.md') and (
+                mkdocs_file.src_path.startswith(
+                    'wemake-python-styleguide/0.15.2/violations',
+                ) or mkdocs_file.src_path.startswith(
+                    'flake8-bugbear/20.11.1',
+                )
+            )
         ]
 
         violation_file: File
