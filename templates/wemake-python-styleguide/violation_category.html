@@ -13,7 +13,7 @@
         {% for violation in queries.wps.violations_by_category(iri=page.iri) %}
             <li>
                 <strong>
-                    <code>WPS{{ '%03d' % violation.code.value }}</code>
+                    <code>{{ violation.code.value }}</code>
                 </strong>
                 <a href="{{ violation.url }}">{{ violation.title }}</a>
             </li>

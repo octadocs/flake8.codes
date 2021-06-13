@@ -95,7 +95,7 @@ def write_violations_to_disk(
     directory: Path,
 ) -> None:
     for violation in violations:
-        violation_path = directory / f'{violation.readable_code}.md'
+        violation_path = directory / f'{violation.code}.md'
         document = frontmatter.Post(
             content=violation.description,
             handler=frontmatter.YAMLHandler(),
@@ -155,9 +155,8 @@ def extract_violations_from_module(module) -> Iterator[Violation]:
         if not hasattr(violation_class, 'code'):
             continue
 
-        code = violation_class.code
         yield Violation(
-            code=code,
+            code=f'WPS{violation_class.code:03}',
             internal_name=violation_class_name,
             title=violation_class.error_template,
             description=violation_class.__doc__,

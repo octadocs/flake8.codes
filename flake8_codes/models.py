@@ -18,7 +18,7 @@ class WPSConfigurationParameter(BaseModel):
 class Violation(BaseModel):
     """Violation description."""
 
-    code: int
+    code: str
     internal_name: str = Field(alias='internalName')
     title: str
     description: str
@@ -37,11 +37,6 @@ class Violation(BaseModel):
         None,
         alias='relatedConstant',
     )
-
-    @property
-    def readable_code(self) -> str:
-        """Format violation code."""
-        return f'WPS{self.code:03}'
 
     class Config:
         allow_population_by_field_name = True
