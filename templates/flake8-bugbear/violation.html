@@ -56,7 +56,7 @@
 
     {% call macros.sidebar() %}
         {{ macros.related_items(
-            items=queries.similar_to(this=page.iri),
+            items=queries.similar_to(this_page=page.iri),
             title='Similar To',
             item_template_path='partials/violation_link.html'
         ) }}

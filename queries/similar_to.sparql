@@ -1,14 +1,16 @@
-# Expects: ?this
+# Expects: ?this_page
 SELECT ?code ?title ?url (MAX(?version) as ?latest) WHERE {
-    ?this :code ?this_code .
+    ?this_page :code ?this_code_label .
 
-    ?similarity
-        :code ?this_code ;
-        :similarTo ?code .
+    ?this_code
+        rdfs:label ?this_code_label ;
+        :similarTo ?that_code .
 
-    ?that
-        :code ?code ;
-        :version ?version ;
+    ?that_code
+        rdfs:label ?code ;
+        octa:subjectOf ?that_page .
+
+    ?that_page
         octa:title ?title ;
         octa:url ?url .
 } GROUP BY ?code

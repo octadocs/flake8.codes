@@ -25,6 +25,13 @@
 
     {% call macros.sidebar() %}
         {{ macros.related_items(
+            items=queries.similar_to(this_page=page.iri),
+            title='Similar To',
+            item_template_path='partials/violation_link.html'
+        ) }}
+
+
+        {{ macros.related_items(
             items=queries.related_violations(this=page.iri),
             title='Related Violations',
             item_template_path='partials/violation_link.html'

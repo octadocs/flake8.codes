@@ -1,0 +1,16 @@
+# Create IRIs for flake8 codes, like local:WPS404.
+INSERT {
+    ?iri
+        a :Code ;
+        rdfs:label ?code ;
+        octa:subjectOf ?page .
+} WHERE {
+    ?page
+        :code ?code ;
+        a octa:Page .
+
+    BIND(
+        IRI(CONCAT("local:", ?code))
+        AS ?iri
+    )
+}
