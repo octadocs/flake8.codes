@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.5">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bde7dde4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -40,6 +40,8 @@
     
     
       
+
+
     
     
   </head>
@@ -59,6 +61,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#correct" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -217,18 +224,11 @@
   
   
   
-    
-
-  
-  
-  
     <li class="md-tabs__item">
-      <a href="../wemake-python-styleguide/0.15.1/configuration/ALLOWED_DOMAIN_NAMES/" class="md-tabs__link md-tabs__link--active">
+      <a href="../wemake-python-styleguide/0.15.2/" class="md-tabs__link md-tabs__link--active">
         Wemake python styleguide
       </a>
     </li>
-  
-
   
 
   
@@ -249,6 +249,33 @@
     
     
 
+    
+        <div
+            class="md-sidebar md-sidebar--secondary"
+            data-md-component="sidebar"
+            data-md-type="toc"
+        >
+            <div class="md-sidebar__scrollwrap">
+                <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--secondary related-items">
+            <label class="md-nav__title" for="__toc">
+                Similar To
+            </label>
+            <ul class="md-nav__list" data-md-component="toc"
+                data-md-scrollfix>
+                
+                    <li class="md-nav__item">
+                        <a href=""
+   class="md-nav__link">
+    <strong></strong> 
+</a>
+                    </li>
+                
+            </ul>
+        </nav>
+                </div>
+            </div>
+        </div>
     
 
 
@@ -323,22 +350,15 @@ start to use variables that once were marked as unused. But, you
 have not renamed them for some reason. And now you have a lot of
 confusion: the variable is marked as unused, but you are using it.
 Why? What's going on?</p>
-<h2 id="solution">Solution</h2>
-<p>Rename your variable to be a regular variable without a leading
-underscore. This way it is declared to be used.</p>
-<blockquote>
+<p>Solution: Rename your variable to be a regular variable without a
+leading underscore. This way it is declared to be used.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
-<span class="nv">def</span> <span class="nv">function</span><span class="ss">()</span>:
-    <span class="nv">first</span> <span class="o">=</span> <span class="mi">15</span>
-    <span class="k">return</span> <span class="nv">first</span> <span class="o">+</span> <span class="mi">10</span>
-
-# <span class="nv">Wrong</span>:
-<span class="nv">def</span> <span class="nv">function</span><span class="ss">()</span>:
-    <span class="nv">_first</span> <span class="o">=</span> <span class="mi">15</span>
-    <span class="k">return</span> <span class="nv">_first</span> <span class="o">+</span> <span class="mi">10</span>
-</code></pre></div>
-</blockquote>
+<h1 id="correct">Correct:</h1>
+<ul>
+<li>def function():<br />
+first = 15 return first + 10</li>
+</ul>
+<p># Wrong: def function(): _first = 15 return _first + 10</p>
 <p>This rule checks: functions, methods, and <code>lambda</code> functions.</p>
 <div class="versionadded">
 
@@ -379,7 +399,8 @@ underscore. This way it is declared to be used.</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../WPS120/" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="../WPS120/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found regular name with trailing underscore: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -394,7 +415,8 @@ underscore. This way it is declared to be used.</p>
         </a>
       
       
-        <a href="../WPS122/" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="../WPS122/" class="md-footer__link md-footer__link--next" aria-label="Next: Found all unused variables definition: _" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -433,10 +455,10 @@ underscore. This way it is declared to be used.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.a1609d9a.min.js"></script>
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
       
     
   </body>
