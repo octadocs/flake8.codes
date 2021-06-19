@@ -37,7 +37,6 @@ theme:
   name: material
   custom_dir: templates
   features:
-    - navigation.tabs
     - header.autohide
     - navigation.sections
     - navigation.indexes
