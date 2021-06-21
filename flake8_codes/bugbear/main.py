@@ -7,15 +7,7 @@ import bugbear
 import frontmatter
 
 from flake8_codes.bugbear.models import BugbearViolation
-
-
-def document_version_index(version_directory: Path):
-    """Write `index.md` file in version directory."""
-    try:
-        (version_directory / 'index.md').write_text('')
-    except FileNotFoundError:
-        version_directory.mkdir(parents=True, exist_ok=True)
-        (version_directory / 'index.md').write_text('')
+from flake8_codes.stubs import create_empty_index_md_in_directory
 
 
 def bugbear_violation_objects() -> Iterable[Tuple[str, functools.partial]]:
@@ -64,7 +56,7 @@ def document_bugbear():
 
     version_directory = Path(__file__).parent.parent.parent / 'docs/flake8-bugbear' / version
 
-    document_version_index(version_directory)
+    create_empty_index_md_in_directory(version_directory)
 
     violations = list(bugbear_violations())
 

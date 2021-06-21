@@ -1,26 +1,31 @@
 from pathlib import Path
 
 from wemake_python_styleguide import constants
+from wemake_python_styleguide.version import pkg_version
 
 from flake8_codes.bugbear.main import document_bugbear
+from flake8_codes.stubs import create_empty_index_md_in_directory
 from flake8_codes.wemake_python_styleguide.constants.main import \
     generate_constants
-from flake8_codes.wemake_python_styleguide.versions import document_wps_version
+from flake8_codes.wemake_python_styleguide.options import (
+    generate_wps_options,
+)
 from flake8_codes.wemake_python_styleguide.violations.main import (
     document_wps_violations,
 )
 
-from flake8_codes.wemake_python_styleguide.options import (
-    generate_wps_options,
-)
 
-from wemake_python_styleguide.version import pkg_version
+def document_wps(path: Path) -> None:
+    (path / 'index.md').write_text('')
 
 
 def document_wemake_python_styleguide():
-    docs = Path(__file__).parent / 'docs/wemake-python-styleguide' / pkg_version
+    wps = Path(__file__).parent / 'docs/wemake-python-styleguide'
+    create_empty_index_md_in_directory(wps)
 
-    document_wps_version(docs)
+    docs = wps / pkg_version
+    create_empty_index_md_in_directory(docs)
+
     generate_constants(
         constants=constants,
         destination=docs / 'constants',
