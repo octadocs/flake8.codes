@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.5">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bde7dde4.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ef6f36e2.min.css">
         
       
     
@@ -40,8 +40,6 @@
     
     
       
-
-
     
     
   </head>
@@ -157,9 +155,6 @@
             <article class="md-content__inner md-typeset">
               
     
-
-    
-    
     
     
         
@@ -169,7 +164,7 @@
             
 
             
-                Wemake python styleguide
+                <a href="/wemake-python-styleguide/">Index</a>
             
         
     
@@ -182,7 +177,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.2/">0.15.2</a>
+                <a href="/wemake-python-styleguide/0.15.2/">Index</a>
             
         
     
@@ -228,485 +223,7 @@ debugging software or reviewing it.</p>
 <p>How do we find inspiration for new rules? We find some ugly code during
 code reviews and audits, then we forbid the use of code like it forever.</p>
                 
-                  
-                
               
-
-
-    <h2>Violations</h2>
-
-    <ul style="column-count: 2">
-        
-            <li>
-                <strong>
-                    <code>WPS400</code>
-                </strong>
-                <a href="/WPS400/">Found wrong magic comment: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS401</code>
-                </strong>
-                <a href="/WPS401/">Found wrong doc comment</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS402</code>
-                </strong>
-                <a href="/WPS402/">Found noqa comments overuse: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS403</code>
-                </strong>
-                <a href="/WPS403/">Found noqa comments overuse: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS404</code>
-                </strong>
-                <a href="/WPS404/">Found complex default value</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS405</code>
-                </strong>
-                <a href="/WPS405/">Found wrong for loop variable definition</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS406</code>
-                </strong>
-                <a href="/WPS406/">Found wrong context manager variable definition</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS407</code>
-                </strong>
-                <a href="/WPS407/">Found mutable module constant</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS408</code>
-                </strong>
-                <a href="/WPS408/">Found duplicate logical condition</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS409</code>
-                </strong>
-                <a href="/WPS409/">Found heterogeneous compare</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS410</code>
-                </strong>
-                <a href="/WPS410/">Found wrong metadata variable: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS411</code>
-                </strong>
-                <a href="/WPS411/">Found empty module</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS412</code>
-                </strong>
-                <a href="/WPS412/">Found __init__.py module with logic</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS413</code>
-                </strong>
-                <a href="/WPS413/">Found bad magic module function: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS414</code>
-                </strong>
-                <a href="/WPS414/">Found incorrect unpacking target</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS415</code>
-                </strong>
-                <a href="/WPS415/">Found duplicate exception: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS416</code>
-                </strong>
-                <a href="/WPS416/">Found yield inside comprehension</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS417</code>
-                </strong>
-                <a href="/WPS417/">Found non-unique item in hash: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS418</code>
-                </strong>
-                <a href="/WPS418/">Found exception inherited from BaseException</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS419</code>
-                </strong>
-                <a href="/WPS419/">Found try/else/finally with multiple return paths</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS420</code>
-                </strong>
-                <a href="/WPS420/">Found wrong keyword: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS421</code>
-                </strong>
-                <a href="/WPS421/">Found wrong function call: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS422</code>
-                </strong>
-                <a href="/WPS422/">Found future import: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS423</code>
-                </strong>
-                <a href="/WPS423/">Found raise NotImplemented</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS424</code>
-                </strong>
-                <a href="/WPS424/">Found except BaseException</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS425</code>
-                </strong>
-                <a href="/WPS425/">Found boolean non-keyword argument: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS426</code>
-                </strong>
-                <a href="/WPS426/">Found lambda in loop's body</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS427</code>
-                </strong>
-                <a href="/WPS427/">Found unreachable code</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS428</code>
-                </strong>
-                <a href="/WPS428/">Found statement that has no effect</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS429</code>
-                </strong>
-                <a href="/WPS429/">Found multiple assign targets</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS430</code>
-                </strong>
-                <a href="/WPS430/">Found nested function: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS431</code>
-                </strong>
-                <a href="/WPS431/">Found nested class: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS432</code>
-                </strong>
-                <a href="/WPS432/">Found magic number: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS433</code>
-                </strong>
-                <a href="/WPS433/">Found nested import</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS434</code>
-                </strong>
-                <a href="/WPS434/">Found reassigning variable to itself: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS435</code>
-                </strong>
-                <a href="/WPS435/">Found list multiply</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS436</code>
-                </strong>
-                <a href="/WPS436/">Found protected module import: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS437</code>
-                </strong>
-                <a href="/WPS437/">Found protected attribute usage: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS438</code>
-                </strong>
-                <a href="/WPS438/">Found StopIteration raising inside generator</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS439</code>
-                </strong>
-                <a href="/WPS439/">Found unicode escape in a binary string: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS440</code>
-                </strong>
-                <a href="/WPS440/">Found block variables overlap: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS441</code>
-                </strong>
-                <a href="/WPS441/">Found control variable used after block: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS442</code>
-                </strong>
-                <a href="/WPS442/">Found outer scope names shadowing: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS443</code>
-                </strong>
-                <a href="/WPS443/">Found unhashable item</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS444</code>
-                </strong>
-                <a href="/WPS444/">Found incorrect keyword condition</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS445</code>
-                </strong>
-                <a href="/WPS445/">Found incorrectly named keyword in the starred dict</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS446</code>
-                </strong>
-                <a href="/WPS446/">Found approximate constant: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS447</code>
-                </strong>
-                <a href="/WPS447/">Found alphabet as strings: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS448</code>
-                </strong>
-                <a href="/WPS448/">Found incorrect exception order</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS449</code>
-                </strong>
-                <a href="/WPS449/">Found float used as a key</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS450</code>
-                </strong>
-                <a href="/WPS450/">Found protected object import: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS451</code>
-                </strong>
-                <a href="/WPS451/">Found positional-only argument</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS452</code>
-                </strong>
-                <a href="/WPS452/">Found break or continue in finally block</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS453</code>
-                </strong>
-                <a href="/WPS453/">Found executable mismatch: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS454</code>
-                </strong>
-                <a href="/WPS454/">Found wrong raise exception type: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS455</code>
-                </strong>
-                <a href="/WPS455/">Found non-trivial expression as an argument for "except"</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS456</code>
-                </strong>
-                <a href="/WPS456/">Found "NaN" as argument to float()</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS457</code>
-                </strong>
-                <a href="/WPS457/">Found an infinite while loop</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS458</code>
-                </strong>
-                <a href="/WPS458/">Found imports collision: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS459</code>
-                </strong>
-                <a href="/WPS459/">Found comparison with float or complex number</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS460</code>
-                </strong>
-                <a href="/WPS460/">Found single element destructuring</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS461</code>
-                </strong>
-                <a href="/WPS461/">Forbidden inline ignore: _</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS462</code>
-                </strong>
-                <a href="/WPS462/">Wrong multiline string usage</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS463</code>
-                </strong>
-                <a href="/WPS463/">Found a getter without a return value</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS464</code>
-                </strong>
-                <a href="/WPS464/">Found empty comment</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS465</code>
-                </strong>
-                <a href="/WPS465/">Found likely bitwise and boolean operation mixup</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>WPS466</code>
-                </strong>
-                <a href="/WPS466/">Found new-styled decorator</a>
-            </li>
-        
-    </ul>
 
               
                 
@@ -724,8 +241,7 @@ code reviews and audits, then we forbid the use of code like it forever.</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        
-        <a href="../../../../WPS360/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found an unnecessary use of a raw string: _" rel="prev">
+        <a href="../../../../WPS362/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -734,20 +250,19 @@ code reviews and audits, then we forbid the use of code like it forever.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found an unnecessary use of a raw string: _
+              Found assignment to a subscript slice
             </div>
           </div>
         </a>
       
       
-        
-        <a href="../../../../WPS402/" class="md-footer__link md-footer__link--next" aria-label="Next: Found noqa comments overuse: _" rel="next">
+        <a href="../../../../WPS400/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found noqa comments overuse: _
+              Found wrong magic comment: _
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -780,10 +295,10 @@ code reviews and audits, then we forbid the use of code like it forever.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.a1609d9a.min.js"></script>
       
     
   </body>

@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.5">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.bde7dde4.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
         
       
     
@@ -40,8 +40,6 @@
     
     
       
-
-
     
     
   </head>
@@ -61,11 +59,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#correct" class="md-skip">
-          Skip to content
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -157,42 +150,6 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-    
-
-
-    
-    
-    
-
-    
-        <div
-            class="md-sidebar md-sidebar--secondary"
-            data-md-component="sidebar"
-            data-md-type="toc"
-        >
-            <div class="md-sidebar__scrollwrap">
-                <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--secondary related-items">
-            <label class="md-nav__title" for="__toc">
-                Similar To
-            </label>
-            <ul class="md-nav__list" data-md-component="toc"
-                data-md-scrollfix>
-                
-                    <li class="md-nav__item">
-                        <a href=""
-   class="md-nav__link">
-    <strong></strong> 
-</a>
-                    </li>
-                
-            </ul>
-        </nav>
-                </div>
-            </div>
-        </div>
-    
-
 
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -207,7 +164,7 @@
             
 
             
-                Wemake python styleguide
+                <a href="/wemake-python-styleguide/">Index</a>
             
         
     
@@ -220,7 +177,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.2/">0.15.2</a>
+                <a href="/wemake-python-styleguide/0.15.2/">Index</a>
             
         
     
@@ -251,10 +208,16 @@
         
     
 
-    <h1><strong><code>WPS121</code></strong> Found usage of a variable marked as unused: _</h1>
-
-    <!-- Markdown content -->
-    <p>Forbid using variables that are marked as unused.</p>
+    
+                
+                  <a href="https://github.com/octadocs/flake8-codes/website/edit/master/flake8-codes/docs/wemake-python-styleguide/0.15.2/violations/naming/WPS121.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Found usage of a variable marked as unused: _</h1>
+                
+                <p>Forbid using variables that are marked as unused.</p>
 <p>We discourage using variables that start with <code>_</code> only inside functions
 and methods as local variables.</p>
 <p>However, we allow to use <code>_</code> because tools like <code>ipython</code>, <code>babel</code>, and
@@ -265,15 +228,22 @@ start to use variables that once were marked as unused. But, you
 have not renamed them for some reason. And now you have a lot of
 confusion: the variable is marked as unused, but you are using it.
 Why? What's going on?</p>
-<p>Solution: Rename your variable to be a regular variable without a
-leading underscore. This way it is declared to be used.</p>
+<h2 id="solution">Solution</h2>
+<p>Rename your variable to be a regular variable without a leading
+underscore. This way it is declared to be used.</p>
+<blockquote>
 <h2 id="example">Example</h2>
-<h1 id="correct">Correct:</h1>
-<ul>
-<li>def function():<br />
-first = 15 return first + 10</li>
-</ul>
-<p># Wrong: def function(): _first = 15 return _first + 10</p>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="nv">def</span> <span class="nv">function</span><span class="ss">()</span>:
+    <span class="nv">first</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="k">return</span> <span class="nv">first</span> <span class="o">+</span> <span class="mi">10</span>
+
+# <span class="nv">Wrong</span>:
+<span class="nv">def</span> <span class="nv">function</span><span class="ss">()</span>:
+    <span class="nv">_first</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="k">return</span> <span class="nv">_first</span> <span class="o">+</span> <span class="mi">10</span>
+</code></pre></div>
+</blockquote>
 <p>This rule checks: functions, methods, and <code>lambda</code> functions.</p>
 <div class="versionadded">
 
@@ -292,11 +262,10 @@ first = 15 return first + 10</li>
 0.14.0
 
 </div>
-
-    <!-- Last update of source file -->
-    
-      
-    
+                
+                  
+                
+              
 
               
                 
@@ -314,8 +283,7 @@ first = 15 return first + 10</li>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        
-        <a href="../WPS116/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found consecutive underscores name: _" rel="prev">
+        <a href="../WPS120/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -324,20 +292,19 @@ first = 15 return first + 10</li>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found consecutive underscores name: _
+              Found regular name with trailing underscore: _
             </div>
           </div>
         </a>
       
       
-        
-        <a href="../WPS122/" class="md-footer__link md-footer__link--next" aria-label="Next: Found all unused variables definition: _" rel="next">
+        <a href="../wemake-python-styleguide/0.15.2/violations/complexity/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found all unused variables definition: _
+              WPS2xx Complexity
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -370,10 +337,10 @@ first = 15 return first + 10</li>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.a1609d9a.min.js"></script>
       
     
   </body>
