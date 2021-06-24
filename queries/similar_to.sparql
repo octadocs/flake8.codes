@@ -1,16 +1,12 @@
 # Expects: ?this_page
-SELECT ?code ?title ?url (MAX(?version) as ?latest) WHERE {
-    ?this_page :code ?this_code_label .
+SELECT ?code ?title ?url WHERE {
+    ?this_page :violation ?this_violation .
 
-    ?this_code
-        rdfs:label ?this_code_label ;
-        :similarTo ?that_code .
-
-    ?that_code
-        rdfs:label ?code ;
-        octa:subjectOf ?that_page .
+    ?this_violation :similarTo ?that_violation .
 
     ?that_page
+        :violation ?that_violation ;
+        :code ?code ;
         octa:title ?title ;
         octa:url ?url .
-} GROUP BY ?code
+}

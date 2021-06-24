@@ -1,2 +1,4 @@
 similarTo:
   $type: $id
+  $id: local:similarTo
+code: https://flake8.codes/
