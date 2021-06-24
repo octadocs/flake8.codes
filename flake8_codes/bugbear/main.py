@@ -54,7 +54,10 @@ def document_bugbear():
     """Generate a bunch of documentation files for flake8-bugbear."""
     version = bugbear.__version__
 
-    version_directory = Path(__file__).parent.parent.parent / 'docs/flake8-bugbear' / version
+    bugbear_directory = Path(__file__).parent.parent.parent / 'docs/flake8-bugbear'
+    create_empty_index_md_in_directory(bugbear_directory)
+
+    version_directory = bugbear_directory / version
 
     create_empty_index_md_in_directory(version_directory)
 

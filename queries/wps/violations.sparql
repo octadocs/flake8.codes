@@ -1,0 +1,9 @@
+SELECT * WHERE {
+    ?iri octa:isChildOf ?plugin_version .
+
+    ?page
+        :version ?plugin_version ;
+        :code ?code ;
+        octa:title ?title ;
+        octa:url ?url .
+}

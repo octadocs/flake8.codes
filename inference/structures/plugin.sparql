@@ -1,0 +1,11 @@
+INSERT {
+    ?index_page octa:title ?plugin_name .
+} WHERE {
+    ?plugin
+        a :Flake8Plugin ;
+        rdfs:label ?plugin_name .
+
+    ?index_page
+        octa:isChildOf ?plugin ;
+        a octa:IndexPage .
+}

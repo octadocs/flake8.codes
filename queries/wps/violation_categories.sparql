@@ -1,11 +1,11 @@
 # Given the IRI of violations directory, print categories in order.
 # Expects: ?iri
 SELECT * WHERE {
-    ?iri octa:isChildOf ?violations_directory .
+    ?iri octa:isChildOf ?wps_version .
 
     ?category
         a :WPSViolationsCategoryDirectory ;
-        octa:isChildOf ?violations_directory ;
+        octa:isChildOf+ ?wps_version ;
         octa:isParentOf ?index_page .
 
     ?index_page

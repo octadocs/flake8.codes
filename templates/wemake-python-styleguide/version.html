@@ -4,9 +4,18 @@
 {% block content %}
     {{ super() }}
 
-    <h2>Dive in</h2>
+    <h2>Violations</h2>
+
     <ul>
-        <li><a href="./violations/">Violations</a></li>
+        {% for category in queries.wps.violation_categories(iri=page.iri) %}
+            <li>
+                <a href="{{ category.url }}">{{ category.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>See Also</h2>
+    <ul>
         <li><a href="./constants/">Constants</a> <em>(todo)</em></li>
         <li><a href="./configuration/">Configuration parameters</a> <em>(todo)</em></li>
     </ul>
