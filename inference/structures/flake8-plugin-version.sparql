@@ -1,0 +1,15 @@
+INSERT {
+    GRAPH <local:inference/sparql> {
+        ?plugin_version_directory
+            a :Flake8PluginVersion ;
+            rdfs:label ?version_number ;
+            :plugin ?plugin .
+    }
+} WHERE {
+    ?plugin a :Flake8Plugin .
+
+    ?plugin_version_directory
+        a octa:Directory ;
+        octa:isChildOf ?plugin ;
+        octa:fileName ?version_number .
+}

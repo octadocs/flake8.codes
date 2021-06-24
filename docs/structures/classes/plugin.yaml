@@ -1,0 +1,12 @@
+$id: Flake8Plugin
+label: Plugin for flake8 static analyser
+
+$included:
+  - $id: wemake-python-styleguide
+    $type: Flake8Plugin
+    code-prefix: WPS
+    label: wemake-python-styleguide
+  - $id: flake8-bugbear
+    $type: Flake8Plugin
+    code-prefix: B
+    label: bugbear
