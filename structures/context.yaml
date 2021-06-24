@@ -33,3 +33,16 @@ intersectionOf:
 ∁:
   $id: owl:complementOf
   $type: $id
+
+
+⊂:
+  $id: rdfs:subClassOf
+  $type: $id
+
+range:
+  $id: rdfs:range
+  $type: $id
+
+domain:
+  $id: rdfs:domain
+  $type: $id

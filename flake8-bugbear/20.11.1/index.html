@@ -167,7 +167,7 @@
             
 
             
-                Flake8 bugbear
+                <a href="/flake8-bugbear/">bugbear</a>
             
         
     
@@ -207,86 +207,9 @@
         
             <li>
                 <strong>
-                    <code>B001</code>
-                </strong>
-                <a href="/B001/">Do not use _, it also catches unexpected events like memory errors, interrupts, system exit, and so on</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>B002</code>
-                </strong>
-                <a href="/B002/">Python does not support the unary prefix increment</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>B003</code>
-                </strong>
-                <a href="/B003/">Assigning to os.environ doesn't clear the environment</a>
-            </li>
-        
-            <li>
-                <strong>
                     <code>B004</code>
                 </strong>
                 <a href="/B004/">Using hasattr(x, '__call__') to test if x is callable is unreliable</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>B005</code>
-                </strong>
-                <a href="/B005/">Using .strip() with multi-character strings is misleading the reader</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>B006</code>
-                </strong>
-                <a href="/B006/">Do not use mutable data structures for argument defaults</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>B007</code>
-                </strong>
-                <a href="/B007/">Loop control variable {!r} not used within the loop body</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>B008</code>
-                </strong>
-                <a href="/B008/">Do not perform function calls in argument defaults</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>B009</code>
-                </strong>
-                <a href="/B009/">Do not call getattr with a constant attribute value, it is not any safer than normal property access.</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>B010</code>
-                </strong>
-                <a href="/B010/">Do not call setattr with a constant attribute value, it is not any safer than normal property access.</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>B011</code>
-                </strong>
-                <a href="/B011/">Do not call assert False since python -O removes these calls</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>B012</code>
-                </strong>
-                <a href="/B012/">return/continue/break inside finally blocks cause exceptions to be silenced</a>
             </li>
         
             <li>
@@ -305,16 +228,30 @@
         
             <li>
                 <strong>
-                    <code>B015</code>
+                    <code>B002</code>
                 </strong>
-                <a href="/B015/">Pointless comparison</a>
+                <a href="/B002/">Python does not support the unary prefix increment</a>
             </li>
         
             <li>
                 <strong>
-                    <code>B016</code>
+                    <code>B012</code>
                 </strong>
-                <a href="/B016/">Cannot raise a literal</a>
+                <a href="/B012/">return/continue/break inside finally blocks cause exceptions to be silenced</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>B005</code>
+                </strong>
+                <a href="/B005/">Using .strip() with multi-character strings is misleading the reader</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>B015</code>
+                </strong>
+                <a href="/B015/">Pointless comparison</a>
             </li>
         
             <li>
@@ -326,9 +263,16 @@
         
             <li>
                 <strong>
-                    <code>B302</code>
+                    <code>B010</code>
                 </strong>
-                <a href="/B302/">Python 3 does not include .view* methods on dictionaries</a>
+                <a href="/B010/">Do not call setattr with a constant attribute value, it is not any safer than normal property access.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>B016</code>
+                </strong>
+                <a href="/B016/">Cannot raise a literal</a>
             </li>
         
             <li>
@@ -340,30 +284,16 @@
         
             <li>
                 <strong>
+                    <code>B007</code>
+                </strong>
+                <a href="/B007/">Loop control variable {!r} not used within the loop body</a>
+            </li>
+        
+            <li>
+                <strong>
                     <code>B304</code>
                 </strong>
                 <a href="/B304/">sys.maxint is not a thing on Python 3</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>B305</code>
-                </strong>
-                <a href="/B305/">.next() is not a thing on Python 3</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>B306</code>
-                </strong>
-                <a href="/B306/">BaseException.message has been deprecated as of Python 2.6 and is removed in Python 3</a>
-            </li>
-        
-            <li>
-                <strong>
-                    <code>B901</code>
-                </strong>
-                <a href="/B901/">Using yield together with return x</a>
             </li>
         
             <li>
@@ -375,6 +305,13 @@
         
             <li>
                 <strong>
+                    <code>B305</code>
+                </strong>
+                <a href="/B305/">.next() is not a thing on Python 3</a>
+            </li>
+        
+            <li>
+                <strong>
                     <code>B903</code>
                 </strong>
                 <a href="/B903/">Data class should either be immutable or use __slots__ to save memory</a>
@@ -382,9 +319,72 @@
         
             <li>
                 <strong>
+                    <code>B003</code>
+                </strong>
+                <a href="/B003/">Assigning to os.environ doesn't clear the environment</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>B008</code>
+                </strong>
+                <a href="/B008/">Do not perform function calls in argument defaults</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>B006</code>
+                </strong>
+                <a href="/B006/">Do not use mutable data structures for argument defaults</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>B306</code>
+                </strong>
+                <a href="/B306/">BaseException.message has been deprecated as of Python 2.6 and is removed in Python 3</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>B011</code>
+                </strong>
+                <a href="/B011/">Do not call assert False since python -O removes these calls</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>B001</code>
+                </strong>
+                <a href="/B001/">Do not use _, it also catches unexpected events like memory errors, interrupts, system exit, and so on</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>B901</code>
+                </strong>
+                <a href="/B901/">Using yield together with return x</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>B009</code>
+                </strong>
+                <a href="/B009/">Do not call getattr with a constant attribute value, it is not any safer than normal property access.</a>
+            </li>
+        
+            <li>
+                <strong>
                     <code>B950</code>
                 </strong>
                 <a href="/B950/">line too long (_ > _ characters)</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>B302</code>
+                </strong>
+                <a href="/B302/">Python 3 does not include .view* methods on dictionaries</a>
             </li>
         
     </ul>
@@ -400,46 +400,41 @@
         
       </main>
       
-        
+    <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Footer -->
 <footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../../decisions/serve-violations-from-root-directory/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Serve violations from root of the website" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Serve violations from root of the website
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../B003/" class="md-footer__link md-footer__link--next" aria-label="Next: Assigning to os.environ doesn&#39;t clear the environment" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Assigning to os.environ doesn't clear the environment
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
+
+  <!-- Further information -->
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
@@ -447,16 +442,21 @@
           </div>
         
         Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+        <a
+          href="https://squidfunk.github.io/mkdocs-material/"
+          target="_blank" rel="noopener"
+        >
           Material for MkDocs
         </a>
         
       </div>
+
+      <!-- Social links -->
       
     </div>
   </div>
 </footer>
-      
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>

@@ -1,5 +1,5 @@
 $id: WPSViolation
-owl:equivalentClass:
+≡:
   $type: owl:Restriction
-  owl:onProperty: octa:template
-  owl:hasValue: wemake-python-styleguide/violation.html
+  onProperty: octa:template
+  hasValue: wemake-python-styleguide/violation.html

@@ -1,0 +1,5 @@
+$id: code-prefix
+$type: rdf:Property
+domain: Flake8Plugin
+range: xsd:string
+label: Prefix for the violation codes used by Flake8 plugin.
