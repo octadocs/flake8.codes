@@ -8,5 +8,8 @@ SELECT ?code ?title ?url WHERE {
         :violation ?that_violation ;
         :code ?code ;
         octa:title ?title ;
-        octa:url ?url .
+        octa:url ?url ;
+        :version [
+            a :LatestVersion
+        ] .
 }
