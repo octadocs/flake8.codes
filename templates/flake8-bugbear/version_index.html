@@ -8,7 +8,7 @@
     <h2>Violations</h2>
 
     <ul style="column-count: 2">
-        {% for violation in queries.flake8_bugbear.violations(iri=page.iri) %}
+        {% for violation in queries.violations(iri=page.iri) %}
             <li>
                 <strong>
                     <code>{{ violation.code.value }}</code>

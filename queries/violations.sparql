@@ -1,0 +1,11 @@
+# Given the IRI of category, print all violations in order.
+# Expects: ?iri
+SELECT * WHERE {
+    ?iri octa:isChildOf ?plugin_version .
+
+    ?page
+        :version ?plugin_version ;
+        octa:title ?title ;
+        octa:url ?url ;
+        :code ?code .
+}

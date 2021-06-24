@@ -4,6 +4,8 @@ INSERT {
             a :Violation ;
             :code ?code ;
             :plugin ?plugin .
+
+        ?violation_file :version ?plugin_version .
     }
 } WHERE {
     ?violation_file
