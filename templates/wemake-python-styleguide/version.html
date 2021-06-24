@@ -13,10 +13,9 @@
             </li>
         {% endfor %}
     </ul>
+{% endblock %}
 
-    <h2>See Also</h2>
-    <ul>
-        <li><a href="./constants/">Constants</a> <em>(todo)</em></li>
-        <li><a href="./configuration/">Configuration parameters</a> <em>(todo)</em></li>
-    </ul>
+
+{% block footer %}
+    {% include "partials/footer-without-links.html" %}
 {% endblock %}
