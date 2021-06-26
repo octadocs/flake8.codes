@@ -1,0 +1,790 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>WPS4xx Best Practices - flake8.codes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/flake8-codes.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="flake8.codes" class="md-header__button md-logo" aria-label="flake8.codes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            flake8.codes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              WPS4xx Best Practices
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/octadocs/flake8-codes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flake8-codes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+    
+
+    
+    
+    
+    
+        
+
+        
+            
+            
+
+            
+                <a href="/wemake-python-styleguide/">wemake-python-styleguide</a>
+            
+        
+    
+        
+        ›
+        
+
+        
+            
+            
+
+            
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+            
+        
+    
+        
+        ›
+        
+
+        
+            
+            
+
+            
+                Violations
+            
+        
+    
+        
+        ›
+        
+
+        
+            
+            
+
+            
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
+            
+        
+    
+
+    
+                
+                  <a href="https://github.com/octadocs/flake8-codes/website/edit/master/flake8-codes/docs/wemake-python-styleguide/0.15.3/violations/best_practices/index.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>WPS4xx Best Practices</h1>
+                
+                <p>These checks ensure that you follow the best practices.</p>
+<p>The source for these best practices is countless hours we have spent
+debugging software or reviewing it.</p>
+<p>How do we find inspiration for new rules? We find some ugly code during
+code reviews and audits, then we forbid the use of code like it forever.</p>
+                
+                  
+                
+              
+
+
+    <h2>Violations</h2>
+
+    <ul style="column-count: 2">
+        
+            <li>
+                <strong>
+                    <code>WPS400</code>
+                </strong>
+                <a href="/WPS400/">Found wrong magic comment: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS401</code>
+                </strong>
+                <a href="/WPS401/">Found wrong doc comment</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS402</code>
+                </strong>
+                <a href="/WPS402/">Found noqa comments overuse: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS403</code>
+                </strong>
+                <a href="/WPS403/">Found noqa comments overuse: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS404</code>
+                </strong>
+                <a href="/WPS404/">Found complex default value</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS405</code>
+                </strong>
+                <a href="/WPS405/">Found wrong for loop variable definition</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS406</code>
+                </strong>
+                <a href="/WPS406/">Found wrong context manager variable definition</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS407</code>
+                </strong>
+                <a href="/WPS407/">Found mutable module constant</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS408</code>
+                </strong>
+                <a href="/WPS408/">Found duplicate logical condition</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS409</code>
+                </strong>
+                <a href="/WPS409/">Found heterogeneous compare</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS410</code>
+                </strong>
+                <a href="/WPS410/">Found wrong metadata variable: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS411</code>
+                </strong>
+                <a href="/WPS411/">Found empty module</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS412</code>
+                </strong>
+                <a href="/WPS412/">Found __init__.py module with logic</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS413</code>
+                </strong>
+                <a href="/WPS413/">Found bad magic module function: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS414</code>
+                </strong>
+                <a href="/WPS414/">Found incorrect unpacking target</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS415</code>
+                </strong>
+                <a href="/WPS415/">Found duplicate exception: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS416</code>
+                </strong>
+                <a href="/WPS416/">Found yield inside comprehension</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS417</code>
+                </strong>
+                <a href="/WPS417/">Found non-unique item in hash: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS418</code>
+                </strong>
+                <a href="/WPS418/">Found exception inherited from BaseException</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS419</code>
+                </strong>
+                <a href="/WPS419/">Found try/else/finally with multiple return paths</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS420</code>
+                </strong>
+                <a href="/WPS420/">Found wrong keyword: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS421</code>
+                </strong>
+                <a href="/WPS421/">Found wrong function call: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS422</code>
+                </strong>
+                <a href="/WPS422/">Found future import: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS423</code>
+                </strong>
+                <a href="/WPS423/">Found raise NotImplemented</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS424</code>
+                </strong>
+                <a href="/WPS424/">Found except BaseException</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS425</code>
+                </strong>
+                <a href="/WPS425/">Found boolean non-keyword argument: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS426</code>
+                </strong>
+                <a href="/WPS426/">Found lambda in loop's body</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS427</code>
+                </strong>
+                <a href="/WPS427/">Found unreachable code</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS428</code>
+                </strong>
+                <a href="/WPS428/">Found statement that has no effect</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS429</code>
+                </strong>
+                <a href="/WPS429/">Found multiple assign targets</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS430</code>
+                </strong>
+                <a href="/WPS430/">Found nested function: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS431</code>
+                </strong>
+                <a href="/WPS431/">Found nested class: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS432</code>
+                </strong>
+                <a href="/WPS432/">Found magic number: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS433</code>
+                </strong>
+                <a href="/WPS433/">Found nested import</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS434</code>
+                </strong>
+                <a href="/WPS434/">Found reassigning variable to itself: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS435</code>
+                </strong>
+                <a href="/WPS435/">Found list multiply</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS436</code>
+                </strong>
+                <a href="/WPS436/">Found protected module import: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS437</code>
+                </strong>
+                <a href="/WPS437/">Found protected attribute usage: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS438</code>
+                </strong>
+                <a href="/WPS438/">Found StopIteration raising inside generator</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS439</code>
+                </strong>
+                <a href="/WPS439/">Found unicode escape in a binary string: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS440</code>
+                </strong>
+                <a href="/WPS440/">Found block variables overlap: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS441</code>
+                </strong>
+                <a href="/WPS441/">Found control variable used after block: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS442</code>
+                </strong>
+                <a href="/WPS442/">Found outer scope names shadowing: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS443</code>
+                </strong>
+                <a href="/WPS443/">Found unhashable item</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS444</code>
+                </strong>
+                <a href="/WPS444/">Found incorrect keyword condition</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS445</code>
+                </strong>
+                <a href="/WPS445/">Found incorrectly named keyword in the starred dict</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS446</code>
+                </strong>
+                <a href="/WPS446/">Found approximate constant: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS447</code>
+                </strong>
+                <a href="/WPS447/">Found alphabet as strings: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS448</code>
+                </strong>
+                <a href="/WPS448/">Found incorrect exception order</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS449</code>
+                </strong>
+                <a href="/WPS449/">Found float used as a key</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS450</code>
+                </strong>
+                <a href="/WPS450/">Found protected object import: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS451</code>
+                </strong>
+                <a href="/WPS451/">Found positional-only argument</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS452</code>
+                </strong>
+                <a href="/WPS452/">Found break or continue in finally block</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS453</code>
+                </strong>
+                <a href="/WPS453/">Found executable mismatch: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS454</code>
+                </strong>
+                <a href="/WPS454/">Found wrong raise exception type: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS455</code>
+                </strong>
+                <a href="/WPS455/">Found non-trivial expression as an argument for "except"</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS456</code>
+                </strong>
+                <a href="/WPS456/">Found "NaN" as argument to float()</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS457</code>
+                </strong>
+                <a href="/WPS457/">Found an infinite while loop</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS458</code>
+                </strong>
+                <a href="/WPS458/">Found imports collision: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS459</code>
+                </strong>
+                <a href="/WPS459/">Found comparison with float or complex number</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS460</code>
+                </strong>
+                <a href="/WPS460/">Found single element destructuring</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS461</code>
+                </strong>
+                <a href="/WPS461/">Forbidden inline ignore: _</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS462</code>
+                </strong>
+                <a href="/WPS462/">Wrong multiline string usage</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS463</code>
+                </strong>
+                <a href="/WPS463/">Found a getter without a return value</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS464</code>
+                </strong>
+                <a href="/WPS464/">Found empty comment</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS465</code>
+                </strong>
+                <a href="/WPS465/">Found likely bitwise and boolean operation mixup</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>WPS466</code>
+                </strong>
+                <a href="/WPS466/">Found new-styled decorator</a>
+            </li>
+        
+    </ul>
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../../../WPS362/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found assignment to a subscript slice" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Found assignment to a subscript slice
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../../../WPS405/" class="md-footer__link md-footer__link--next" aria-label="Next: Found wrong for loop variable definition" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Found wrong for loop variable definition
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 flake8.codes
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+    
+  </body>
+</html>
