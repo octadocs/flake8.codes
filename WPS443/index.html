@@ -10,11 +10,11 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
     
     
       
-        <title>Found unhashable item - flake8.codes</title>
+        <title>Found unreachable code - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found unhashable item
+              Found unreachable code
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
             
         
     
@@ -214,29 +214,43 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS443</code></strong> Found unhashable item</h1>
+    <h1><strong><code>WPS443</code></strong> Found unreachable code</h1>
 
     <!-- Markdown content -->
-    <p>Forbid explicit unhashable types of asset items and dict keys.</p>
+    <p>Forbids to have unreachable code.</p>
+<p>What is unreachable code? It is some lines of code that cannot be
+executed by python's interpreter.</p>
+<p>This is probably caused by <code>return</code> or <code>raise</code> statements. However, we
+can not cover 100% of truly unreachable code by this rule. This happens
+due to the dynamic nature of python. For example, detecting that <code>1 /
+some_value</code> would sometimes raise an exception is too complicated and is
+out of the scope of this rule.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>This will resolve in <code>TypeError</code> in runtime.</p>
+<p>Having dead code in your project is an indicator that you do not
+care about your code base at all. It dramatically reduces code
+quality and readability. It also demotivates team members.</p>
 <h2 id="solution">Solution</h2>
-<p>Use hashable types to define set items and dict keys.</p>
+<p>Delete any unreachable code you have. Or refactor it, if this
+happens by your mistake.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code># Correct:
-my_dict = {1: {}, (1, 2): [], (2, 3): {1, 2}}
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="nv">def</span> <span class="nv">some_function</span><span class="ss">()</span>:
+    <span class="nv">print</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">This line is reachable, all good</span><span class="s1">&#39;</span><span class="ss">)</span>
+    <span class="k">return</span> <span class="mi">5</span>
 
-# Wrong:
-my_dict = {[1, 2]: [], {2, 3}: {1, 2}}
+# <span class="nv">Wrong</span>:
+<span class="nv">def</span> <span class="nv">some_function</span><span class="ss">()</span>:
+    <span class="k">return</span> <span class="mi">5</span>
+    <span class="nv">print</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">This line is unreachable</span><span class="s1">&#39;</span><span class="ss">)</span>
 </code></pre></div>
 <div class="versionadded">
 
-0.12.0
+0.5.0
 
 </div>
 
@@ -262,7 +276,7 @@ my_dict = {[1, 2]: [], {2, 3}: {1, 2}}
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS441/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found control variable used after block: _" rel="prev">
+        <a href="../WPS441/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found protected attribute usage: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -271,20 +285,20 @@ my_dict = {[1, 2]: [], {2, 3}: {1, 2}}
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found control variable used after block: _
+              Found protected attribute usage: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS444/" class="md-footer__link md-footer__link--next" aria-label="Next: Found incorrect keyword condition" rel="next">
+        <a href="../WPS445/" class="md-footer__link md-footer__link--next" aria-label="Next: Found multiple assign targets" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found incorrect keyword condition
+              Found multiple assign targets
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -317,10 +331,10 @@ my_dict = {[1, 2]: [], {2, 3}: {1, 2}}
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

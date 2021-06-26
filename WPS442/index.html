@@ -10,11 +10,11 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
     
     
       
-        <title>Found outer scope names shadowing: _ - flake8.codes</title>
+        <title>Found lambda in loop's body - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found outer scope names shadowing: _
+              Found lambda in loop's body
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
             
         
     
@@ -214,40 +214,39 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS442</code></strong> Found outer scope names shadowing: _</h1>
+    <h1><strong><code>WPS442</code></strong> Found lambda in loop's body</h1>
 
     <!-- Markdown content -->
-    <p>Forbid shadowing variables from outer scopes.</p>
-<p>We check the function, method, and module scopes. While we do not check
-the class scope. Because class level constants are not available via
-regular name, and they are scope to <code>ClassName.var_name</code>.</p>
+    <p>Forbids to use <code>lambda</code> inside loops.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>Shadowing can lead you to a big pile of storage and unexpected bugs.</p>
+<p>It is error-prone to use <code>lambda</code> inside <code>for</code> and <code>while</code> loops due
+to the famous late-binding.</p>
 <h2 id="solution">Solution</h2>
-<p>Use different names and do not allow scoping.</p>
+<p>Use regular functions, factory functions, or <code>partial</code> functions.
+Save yourself from possible confusion.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code># Correct:
-def test(): ...
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="k">for</span> <span class="nv">index</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">10</span><span class="ss">)</span>:
+    <span class="nv">some</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">partial_function</span><span class="ss">(</span><span class="nv">index</span><span class="ss">))</span>
 
-def other():
-    test1 = 1
-
-# Wrong:
-def test(): ...
-
-def other():
-    test = 1  # shadows ``test()` function
+# <span class="nv">Wrong</span>:
+<span class="k">for</span> <span class="nv">index</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">10</span><span class="ss">)</span>:
+    <span class="nv">some</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">lambda</span> <span class="nv">index</span><span class="o">=</span><span class="nv">index</span>: <span class="nv">index</span> <span class="o">*</span> <span class="mi">10</span><span class="ss">))</span>
+    <span class="nv">other</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">lambda</span>: <span class="nv">index</span> <span class="o">*</span> <span class="mi">10</span><span class="ss">))</span>
 </code></pre></div>
 <div class="versionadded">
 
-0.12.0
+0.5.0
 
 </div>
+
+<h2 id="see-also">See also</h2>
+<p><a href="https://docs.python-guide.org/writing/gotchas/#late-binding-closures">https://docs.python-guide.org/writing/gotchas/#late-binding-closures</a></p>
 
     <!-- Last update of source file -->
     
@@ -271,7 +270,7 @@ def other():
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS436/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found protected module import: _" rel="prev">
+        <a href="../WPS440/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found protected module import" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -280,20 +279,20 @@ def other():
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found protected module import: _
+              Found protected module import
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS446/" class="md-footer__link md-footer__link--next" aria-label="Next: Found approximate constant: _" rel="next">
+        <a href="../WPS444/" class="md-footer__link md-footer__link--next" aria-label="Next: Found statement that has no effect" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found approximate constant: _
+              Found statement that has no effect
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -326,10 +325,10 @@ def other():
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

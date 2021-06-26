@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
     
     
       
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
             
         
     
@@ -214,7 +214,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/violations/consistency/">WPS3xx Consistency</a>
+                <a href="/wemake-python-styleguide/0.9.1/violations/consistency/">WPS3xx Consistency</a>
             
         
     
@@ -222,14 +222,14 @@
     <h1><strong><code>WPS318</code></strong> Found extra indentation</h1>
 
     <!-- Markdown content -->
-    <p>Forbid extra indentation.</p>
+    <p>Forbids to use extra indentation.</p>
 <h2 id="reasoning">Reasoning</h2>
 <p>You can use extra indentation for lines of code. Python allows you
-to do that in case you want to keep the indentation level equal for
-this specific node, but that's insane!</p>
+to do that in case you will keep the indentation level equal for
+this specific node. But, that's insane!</p>
 <h2 id="solution">Solution</h2>
 <p>We should stick to 4 spaces for an indentation block. Each next
-block level should be indented by just 4 extra spaces.</p>
+block should be indented by just 4 extra spaces.</p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 def test():
@@ -239,12 +239,6 @@ def test():
 def test():
             print(&#39;test&#39;)
 </code></pre></div>
-<p>This rule is consistent with the "Vertical Hanging Indent" option for
-<code>multi_line_output</code> setting of <code>isort</code>. To avoid conflicting rules, you
-should set <code>multi_line_output = 3</code> in the <code>isort</code> settings.</p>
-<h2 id="see-also">See also</h2>
-<p><a href="https://github.com/timothycrosley/isort#multi-line-output-modes">https://github.com/timothycrosley/isort#multi-line-output-modes</a>
-<a href="https://github.com/wemake-services/wemake-python-styleguide/blob/master/styles/isort.toml">https://github.com/wemake-services/wemake-python-styleguide/blob/master/styles/isort.toml</a></p>
 <div class="versionadded">
 
 0.6.0
@@ -289,13 +283,13 @@ should set <code>multi_line_output = 3</code> in the <code>isort</code> settings
       
       
         
-        <a href="../WPS320/" class="md-footer__link md-footer__link--next" aria-label="Next: Found multi-line function type annotation" rel="next">
+        <a href="../WPS319/" class="md-footer__link md-footer__link--next" aria-label="Next: Found bracket in wrong position" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found multi-line function type annotation
+              Found bracket in wrong position
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -328,10 +322,10 @@ should set <code>multi_line_output = 3</code> in the <code>isort</code> settings
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

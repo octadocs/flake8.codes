@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
     
     
       
@@ -175,7 +175,7 @@
                 data-md-scrollfix>
                 
                     <li class="md-nav__item">
-                        <a href="/wemake-python-styleguide/0.15.3/constants/MAGIC_NUMBERS_WHITELIST/" class="md-nav__link">MAGIC_NUMBERS_WHITELIST</a>
+                        <a href="/wemake-python-styleguide/0.9.1/constants/MAGIC_NUMBERS_WHITELIST/" class="md-nav__link">MAGIC_NUMBERS_WHITELIST</a>
                     </li>
                 
             </ul>
@@ -212,7 +212,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
             
         
     
@@ -238,7 +238,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
@@ -246,12 +246,13 @@
     <h1><strong><code>WPS432</code></strong> Found magic number: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbid magic numbers.</p>
-<p>What do we call a "magic number"? Well, it is actually any number that
+    <p>Forbids to use magic numbers in your code.</p>
+<p>What we call a "magic number"? Well, it is actually any number that
 appears in your code out of nowhere. Like <code>42</code>. Or <code>0.32</code>.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>It is very hard to remember what these numbers mean. Why were they
-used? Should they ever be changed? Or are they eternal like <code>3.14</code>?</p>
+<p>It is very hard to remember what these numbers actually mean. Why
+were they used? Should they ever be changed? Or are they eternal
+like <code>3.14</code>?</p>
 <h2 id="solution">Solution</h2>
 <p>Give these numbers a name! Move them to a separate variable, giving
 more context to the reader. And by moving things into new variables
@@ -264,11 +265,11 @@ total = get_items_from_cart() * price_in_euro
 # Wrong:
 total = get_items_from_cart() * 3.33
 </code></pre></div>
-<p>What are the numbers that we exclude from this check? Any numbers that
-are assigned to a variable, array, dictionary, or keyword arguments
-inside a function. <code>int</code> numbers that are in range <code>[-10, 10]</code> and some
-other common numbers, that are defined in
-<a href="/wemake-python-styleguide/0.15.2/constants/MAGIC_NUMBERS_WHITELIST/">MAGIC_NUMBERS_WHITELIST</a></p>
+<p>What are numbers that we exclude from this check? Any numbers that are
+assigned to a variable, array, dictionary, or keyword arguments inside a
+function. <code>int</code> numbers that are in range <code>[-10, 10]</code> and some other
+common numbers, that are defined in
+<a href="/wemake-python-styleguide/0.12.0/constants/MAGIC_NUMBERS_WHITELIST/">MAGIC_NUMBERS_WHITELIST</a></p>
 <div class="versionadded">
 
 0.1.0
@@ -300,7 +301,7 @@ other common numbers, that are defined in
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS431/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found nested class: _" rel="prev">
+        <a href="../WPS425/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found boolean non-keyword argument: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -309,20 +310,20 @@ other common numbers, that are defined in
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found nested class: _
+              Found boolean non-keyword argument: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS433/" class="md-footer__link md-footer__link--next" aria-label="Next: Found nested import" rel="next">
+        <a href="../WPS436/" class="md-footer__link md-footer__link--next" aria-label="Next: Found else in a loop without break" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found nested import
+              Found else in a loop without break
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -355,10 +356,10 @@ other common numbers, that are defined in
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

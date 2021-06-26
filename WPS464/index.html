@@ -10,11 +10,11 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
     
     
       
-        <title>Found empty comment - flake8.codes</title>
+        <title>Found nested try block - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found empty comment
+              Found nested try block
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
             
         
     
@@ -214,38 +214,45 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS464</code></strong> Found empty comment</h1>
+    <h1><strong><code>WPS464</code></strong> Found nested try block</h1>
 
     <!-- Markdown content -->
-    <p>Forbid empty comments.</p>
-<p>Empty comments are only allowed in between valid comments.</p>
+    <p>Forbids to use nested <code>try</code> blocks.</p>
+<p>Notice, we check all possible slots for <code>try</code> block: 1. the <code>try</code> block
+itself 2. all <code>except</code> cases 3. <code>else</code> case 4. and <code>finally</code> case</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>Empty comments that do not help formatting should be excluded.</p>
+<p>Nesting <code>try</code> blocks indicates that something really bad happens to
+your logic. Why does it require two separate exception handlers? It
+is a perfect case to refactor your code.</p>
 <h2 id="solution">Solution</h2>
-<p>Remove the empty comments.</p>
+<p>Collapse two exception handlers together. Or create a separate
+function that will handle this second nested case.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<div class="highlight"><pre><span></span><code># Wrong:
+try:
+    try:
+        ...
+    except SomeException:
+        ...
+except SomeOtherException:
+    ...
 
-<span class="c1"># First line</span>
-<span class="c1">#</span>
-<span class="c1"># Samples:</span>
-<span class="c1"># One</span>
-<span class="c1"># Two</span>
-<span class="n">my_var</span> <span class="o">=</span> <span class="mi">1</span>
-
-<span class="c1"># Wrong:</span>
-
-<span class="c1">#</span>
-<span class="n">my_var</span> <span class="o">=</span> <span class="mi">1</span>
+try:
+    ...
+except SomeOtherException:
+    try:
+        ...
+    except SomeException:
+        ...
 </code></pre></div>
 <div class="versionadded">
 
-0.15.0
+0.8.0
 
 </div>
 
@@ -271,7 +278,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS463/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found a getter without a return value" rel="prev">
+        <a href="../WPS462/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found direct magic attribute usage: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -280,20 +287,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found a getter without a return value
+              Found direct magic attribute usage: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS465/" class="md-footer__link md-footer__link--next" aria-label="Next: Found likely bitwise and boolean operation mixup" rel="next">
+        <a href="../WPS465/" class="md-footer__link md-footer__link--next" aria-label="Next: Found multiline conditions" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found likely bitwise and boolean operation mixup
+              Found multiline conditions
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -326,10 +333,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

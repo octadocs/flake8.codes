@@ -10,11 +10,11 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
     
     
       
-        <title>Found incorrect exception order - flake8.codes</title>
+        <title>Found yield inside comprehension - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found incorrect exception order
+              Found yield inside comprehension
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
             
         
     
@@ -214,44 +214,34 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS448</code></strong> Found incorrect exception order</h1>
+    <h1><strong><code>WPS448</code></strong> Found yield inside comprehension</h1>
 
     <!-- Markdown content -->
-    <p>Forbid incorrect order of <code>except</code>.</p>
-<p>Note, we only check for built-in exceptions because we cannot statically
-identify the inheritance order of custom ones.</p>
+    <p>Forbids to have <code>yield</code> keyword inside comprehensions.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>Using incorrect order of exceptions is error-prone, since you end up
-with some unreachable exception clauses.</p>
+<p>Having the <code>yield</code> keyword inside comprehensions is error-prone. You
+can shoot yourself in a foot by an inaccurate usage of this feature.</p>
 <h2 id="solution">Solution</h2>
-<p>Use the correct order of exceptions.</p>
+<p>Use regular <code>for</code> loops with <code>yield</code> keywords. Or create a separate
+generator function.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code># Correct:
-try:
-    ...
-except ValueError:
-    ...
-except Exception:
-    ...
+<div class="highlight"><pre><span></span><code># <span class="nv">Wrong</span>:
+<span class="o">&gt;&gt;&gt;</span> <span class="nv">list</span><span class="ss">((</span><span class="nv">yield</span> <span class="nv">letter</span><span class="ss">)</span> <span class="k">for</span> <span class="nv">letter</span> <span class="nv">in</span> <span class="s1">&#39;</span><span class="s">ab</span><span class="s1">&#39;</span><span class="ss">)</span>
+[<span class="s1">&#39;</span><span class="s">a</span><span class="s1">&#39;</span>, <span class="nv">None</span>, <span class="s1">&#39;</span><span class="s">b</span><span class="s1">&#39;</span>, <span class="nv">None</span>]
 
-# Wrong:
-try:
-    ...
-except Exception:
-    ...
-except ValueError:
-    ...
+<span class="o">&gt;&gt;&gt;</span> <span class="nv">list</span><span class="ss">(</span>[<span class="ss">(</span><span class="nv">yield</span> <span class="nv">letter</span><span class="ss">)</span> <span class="k">for</span> <span class="nv">letter</span> <span class="nv">in</span> <span class="s1">&#39;</span><span class="s">ab</span><span class="s1">&#39;</span>]<span class="ss">)</span>
+[<span class="s1">&#39;</span><span class="s">a</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">b</span><span class="s1">&#39;</span>]
 </code></pre></div>
 <h2 id="see-also">See also</h2>
-<p><a href="https://bit.ly/36MHlzw">https://bit.ly/36MHlzw</a></p>
+<p><a href="https://github.com/satwikkansal/wtfPython#-yielding-none">https://github.com/satwikkansal/wtfPython#-yielding-none</a></p>
 <div class="versionadded">
 
-0.13.0
+0.7.0
 
 </div>
 
@@ -277,7 +267,7 @@ except ValueError:
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS445/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found incorrectly named keyword in the starred dict" rel="prev">
+        <a href="../WPS447/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found duplicate exception: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -286,20 +276,20 @@ except ValueError:
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found incorrectly named keyword in the starred dict
+              Found duplicate exception: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS451/" class="md-footer__link md-footer__link--next" aria-label="Next: Found positional-only argument" rel="next">
+        <a href="../WPS449/" class="md-footer__link md-footer__link--next" aria-label="Next: Found non-unique item in set literal: _" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found positional-only argument
+              Found non-unique item in set literal: _
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -332,10 +322,10 @@ except ValueError:
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

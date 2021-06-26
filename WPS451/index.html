@@ -10,11 +10,11 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
     
     
       
-        <title>Found positional-only argument - flake8.codes</title>
+        <title>Found simplifiable if condition - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found positional-only argument
+              Found simplifiable if condition
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
             
         
     
@@ -214,38 +214,35 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS451</code></strong> Found positional-only argument</h1>
+    <h1><strong><code>WPS451</code></strong> Found simplifiable if condition</h1>
 
     <!-- Markdown content -->
-    <p>Forbid positional only or <code>/</code> arguments.</p>
-<p>This violation is only raised for <code>python3.8+</code>, earlier versions do not
-have this concept.</p>
+    <p>Forbids to have simplifiable <code>if</code> conditions.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>This is a very rare case. Almost exclusively used by C code and
-stdlib. There's no point in declaring your own parameters as
-positional only. It will break your code!</p>
+<p>This complex construction can cause frustration among other
+developers. It is longer, more verbose, and more complex.</p>
 <h2 id="solution">Solution</h2>
-<p>Use regular arguments. In case you are working with C, then this
-violation can be ignored.</p>
+<p>Use <code>bool()</code> to convert test values to boolean values. Or just leave
+it as it is in case when your test already returns a boolean value.
+Use can also use <code>not</code> keyword to switch boolean values.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code># Correct:
-def my_function(first, second):
-    ...
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="nv">my_bool</span> <span class="o">=</span> <span class="nv">bool</span><span class="ss">(</span><span class="nv">some_call</span><span class="ss">())</span>
+<span class="nv">other_value</span> <span class="o">=</span> <span class="mi">8</span> <span class="k">if</span> <span class="nv">some_call</span><span class="ss">()</span> <span class="k">else</span> <span class="nv">None</span>
 
-# Wrong:
-def my_function(first, /, second):
-    ...
+# <span class="nv">Wrong</span>:
+<span class="nv">my_bool</span> <span class="o">=</span> <span class="nv">True</span> <span class="k">if</span> <span class="nv">some_call</span><span class="ss">()</span> <span class="k">else</span> <span class="nv">False</span>
 </code></pre></div>
-<h2 id="see-also">See also</h2>
-<p><a href="https://www.python.org/dev/peps/pep-0570/">https://www.python.org/dev/peps/pep-0570/</a></p>
+<p>We only check <code>if</code> nodes where <code>True</code> and <code>False</code> values are used. We
+check both <code>if</code> nodes and <code>if</code> expressions.</p>
 <div class="versionadded">
 
-0.14.0
+0.7.0
 
 </div>
 
@@ -271,7 +268,7 @@ def my_function(first, /, second):
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS448/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found incorrect exception order" rel="prev">
+        <a href="../WPS449/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found non-unique item in set literal: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -280,20 +277,20 @@ def my_function(first, /, second):
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found incorrect exception order
+              Found non-unique item in set literal: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS452/" class="md-footer__link md-footer__link--next" aria-label="Next: Found break or continue in finally block" rel="next">
+        <a href="../WPS452/" class="md-footer__link md-footer__link--next" aria-label="Next: Found incorrect node inside class body" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found break or continue in finally block
+              Found incorrect node inside class body
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -326,10 +323,10 @@ def my_function(first, /, second):
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

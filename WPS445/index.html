@@ -10,11 +10,11 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
     
     
       
-        <title>Found incorrectly named keyword in the starred dict - flake8.codes</title>
+        <title>Found multiple assign targets - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found incorrectly named keyword in the starred dict
+              Found multiple assign targets
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
             
         
     
@@ -214,30 +214,32 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS445</code></strong> Found incorrectly named keyword in the starred dict</h1>
+    <h1><strong><code>WPS445</code></strong> Found multiple assign targets</h1>
 
     <!-- Markdown content -->
-    <p>Forbid incorrectly named keywords in starred dicts.</p>
+    <p>Forbids to have multiple assignments on the same line.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>Using the incorrect keywords in a starred dict. Eg.:
-<code>print(**{'@': 1})</code>.</p>
+<p>Multiple assignments on the same line might not do what you think
+they do. They can also grown pretty long. And you will not notice
+the rising complexity of your code.</p>
 <h2 id="solution">Solution</h2>
-<p>Don't use incorrect identifiers as keywords.</p>
+<p>Use separate lines for each assignment.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
-<span class="nv">print</span><span class="ss">(</span><span class="o">**</span>{<span class="s1">&#39;</span><span class="s">end</span><span class="s1">&#39;</span>: <span class="s1">&#39;</span><span class="s">|</span><span class="s1">&#39;</span>}<span class="ss">)</span>
+<div class="highlight"><pre><span></span><code># Correct:
+a = 1
+b = 1
 
-# <span class="nv">Wrong</span>:
-<span class="nv">print</span><span class="ss">(</span><span class="o">**</span>{<span class="s1">&#39;</span><span class="s">3end</span><span class="s1">&#39;</span>: <span class="s1">&#39;</span><span class="s">|</span><span class="s1">&#39;</span>}<span class="ss">)</span>
+# Wrong:
+a = b = 1
 </code></pre></div>
 <div class="versionadded">
 
-0.13.0
+0.6.0
 
 </div>
 
@@ -263,7 +265,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS444/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found incorrect keyword condition" rel="prev">
+        <a href="../WPS443/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found unreachable code" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -272,20 +274,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found incorrect keyword condition
+              Found unreachable code
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS448/" class="md-footer__link md-footer__link--next" aria-label="Next: Found incorrect exception order" rel="next">
+        <a href="../WPS450/" class="md-footer__link md-footer__link--next" aria-label="Next: Found exception inherited from BaseException" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found incorrect exception order
+              Found exception inherited from BaseException
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -318,10 +320,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

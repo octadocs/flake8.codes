@@ -10,11 +10,11 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
     
     
       
-        <title>Found % string formatting - flake8.codes</title>
+        <title>Found missing empty line between coding magic comment and code - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found % string formatting
+              Found missing empty line between coding magic comment and code
             
           </span>
         </div>
@@ -160,40 +160,6 @@
     
 
     
-        <div
-            class="md-sidebar md-sidebar--secondary"
-            data-md-component="sidebar"
-            data-md-type="toc"
-        >
-            <div class="md-sidebar__scrollwrap">
-                <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--secondary related-items">
-            <label class="md-nav__title" for="__toc">
-                Related Violations
-            </label>
-            <ul class="md-nav__list" data-md-component="toc"
-                data-md-scrollfix>
-                
-                    <li class="md-nav__item">
-                        <a href="/WPS305/"
-   class="md-nav__link">
-    <strong>WPS305</strong> Found f string
-</a>
-                    </li>
-                
-                    <li class="md-nav__item">
-                        <a href="/WPS305/"
-   class="md-nav__link">
-    <strong>WPS305</strong> Found f string
-</a>
-                    </li>
-                
-            </ul>
-        </nav>
-                </div>
-            </div>
-        </div>
-    
 
 
           <div class="md-content" data-md-component="content">
@@ -222,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
             
         
     
@@ -248,45 +214,43 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/violations/consistency/">WPS3xx Consistency</a>
+                <a href="/wemake-python-styleguide/0.9.1/violations/consistency/">WPS3xx Consistency</a>
             
         
     
 
-    <h1><strong><code>WPS323</code></strong> Found % string formatting</h1>
+    <h1><strong><code>WPS323</code></strong> Found missing empty line between coding magic comment and code</h1>
 
     <!-- Markdown content -->
-    <p>Forbid <code>%</code> formatting on strings.</p>
-<p>We check for string formatting. We try not to issue false positives. It
-is better for us to ignore a real (but hard to detect) case, then
-marking a valid one as incorrect.</p>
-<p>Internally we check for this pattern in string definitions:</p>
-<div class="highlight"><pre><span></span><code><span class="o">%[</span><span class="n">(name)</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">flags</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">width</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">.precision</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">{h | l}</span><span class="o">]</span><span class="w"> </span><span class="n">type</span><span class="w"></span>
-</code></pre></div>
-<p>This is a <code>C</code> format specification. Related to
-<a href="/wemake-python-styleguide/0.15.2/violations/consistency/WPS305/"><strong>WPSWPS305</strong> Found f string</a> and solves the same problem.</p>
+    <p>Enforces to have an extra empty line after the <code>coding</code> comment.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>You must use a single formatting method across your project.</p>
+<p>Since we use <code>flake8-coding
+&lt;https://github.com/tk0miya/flake8-coding&gt;`_ as a part of our linter
+we care about extra space after this coding comment. This is done
+for pure consistency. Why should we even care about this magic
+coding comment? For several reasons. First, explicit encoding is
+always better that an implicit one, different countries still use
+some non utf-8 encodings as a default. But, people might override it
+with other encodings in a comment. Do you know how much pain it can
+cause to you? We still know that</code>python3<code>uses</code>utf-8<code>inside. Second,
+some tools break because of this incorrect encoding comment.
+Including,</code>django<code>,</code>flake8<code>, and</code>tokenize`` core module. It is
+very hard to notice these things when they happen.</p>
 <h2 id="solution">Solution</h2>
-<p>We enforce to use string <code>.format()</code> method for this task.</p>
+<p>Add an empty line between <code>coding</code> magic comment and your code.</p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
-&#39;some string&#39;, &#39;your name: {0}&#39;, &#39;data: {data}&#39;
+# coding: utf-8
+
+SOME_VAR = 1
 
 # Wrong:
-&#39;my name is: %s&#39;, &#39;data: %(data)d&#39;
+# coding: utf-8
+SOME_VAR = 1
 </code></pre></div>
-<p>It might be a good idea to disable this rule and switch to
-<code>flake8-pep3101</code> in case your project has a lot of false-positives due
-to some specific string chars that uses <code>%</code> a lot.</p>
-<h2 id="see-also">See also</h2>
-<p><a href="https://github.com/gforcada/flake8-pep3101">https://github.com/gforcada/flake8-pep3101</a>
-<a href="https://msdn.microsoft.com/en-us/library/56e442dc.aspx">https://msdn.microsoft.com/en-us/library/56e442dc.aspx</a>
-<a href="https://docs.python.org/3/library/stdtypes.html#old-string-formatting">https://docs.python.org/3/library/stdtypes.html#old-string-formatting</a>
-<a href="https://pyformat.info/">https://pyformat.info/</a></p>
 <div class="versionadded">
 
-0.14.0
+0.7.0
 
 </div>
 
@@ -328,13 +292,13 @@ to some specific string chars that uses <code>%</code> a lot.</p>
       
       
         
-        <a href="../WPS325/" class="md-footer__link md-footer__link--next" aria-label="Next: Found inconsistent yield statement" rel="next">
+        <a href="../WPS324/" class="md-footer__link md-footer__link--next" aria-label="Next: Found inconsistent return statement" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found inconsistent yield statement
+              Found inconsistent return statement
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -367,10 +331,10 @@ to some specific string chars that uses <code>%</code> a lot.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
     
     
       
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
             
         
     
@@ -214,7 +214,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
@@ -222,7 +222,7 @@
     <h1><strong><code>WPS424</code></strong> Found except BaseException</h1>
 
     <!-- Markdown content -->
-    <p>Forbid <code>BaseException</code> exception.</p>
+    <p>Forbids to use <code>BaseException</code> exception.</p>
 <h2 id="reasoning">Reasoning</h2>
 <p>We can silence system exit and keyboard interrupt with this
 exception handler. It is almost the same as raw <code>except:</code> block.</p>
@@ -242,9 +242,11 @@ except BaseException as ex: ...
 
 </div>
 
-<h2 id="see-also">See also</h2>
-<p><a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">https://docs.python.org/3/library/exceptions.html#exception-hierarchy</a>
-<a href="https://help.semmle.com/wiki/pages/viewpage.action?pageId=1608527">https://help.semmle.com/wiki/pages/viewpage.action?pageId=1608527</a></p>
+<ul>
+<li>See Also:<br />
+<a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">https://docs.python.org/3/library/exceptions.html#exception-hierarchy</a>
+    <a href="https://help.semmle.com/wiki/pages/viewpage.action?pageId=1608527">https://help.semmle.com/wiki/pages/viewpage.action?pageId=1608527</a></li>
+</ul>
 
     <!-- Last update of source file -->
     
@@ -268,7 +270,7 @@ except BaseException as ex: ...
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS421/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found wrong function call: _" rel="prev">
+        <a href="../WPS422/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found future import: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -277,7 +279,7 @@ except BaseException as ex: ...
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found wrong function call: _
+              Found future import: _
             </div>
           </div>
         </a>
@@ -323,10 +325,10 @@ except BaseException as ex: ...
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

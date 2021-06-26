@@ -10,11 +10,11 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
     
     
       
-        <title>Found break or continue in finally block - flake8.codes</title>
+        <title>Found incorrect node inside class body - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found break or continue in finally block
+              Found incorrect node inside class body
             
           </span>
         </div>
@@ -160,40 +160,6 @@
     
 
     
-        <div
-            class="md-sidebar md-sidebar--secondary"
-            data-md-component="sidebar"
-            data-md-type="toc"
-        >
-            <div class="md-sidebar__scrollwrap">
-                <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--secondary related-items">
-            <label class="md-nav__title" for="__toc">
-                Related Violations
-            </label>
-            <ul class="md-nav__list" data-md-component="toc"
-                data-md-scrollfix>
-                
-                    <li class="md-nav__item">
-                        <a href="/WPS419/"
-   class="md-nav__link">
-    <strong>WPS419</strong> Found try/else/finally with multiple return paths
-</a>
-                    </li>
-                
-                    <li class="md-nav__item">
-                        <a href="/WPS419/"
-   class="md-nav__link">
-    <strong>WPS419</strong> Found try/else/finally with multiple return paths
-</a>
-                    </li>
-                
-            </ul>
-        </nav>
-                </div>
-            </div>
-        </div>
-    
 
 
           <div class="md-content" data-md-component="content">
@@ -222,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
             
         
     
@@ -248,43 +214,36 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS452</code></strong> Found break or continue in finally block</h1>
+    <h1><strong><code>WPS452</code></strong> Found incorrect node inside class body</h1>
 
     <!-- Markdown content -->
-    <p>Forbid <code>break</code> and <code>continue</code> in a <code>finally</code> block.</p>
-<p>Related to <a href="/WPS419/"><strong>WPSWPS419</strong> Found try/else/finally with multiple return paths</a>.</p>
+    <p>Forbids to use incorrect nodes inside <code>class</code> definitions.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>Putting any control statements in <code>finally` is a terrible practice,
-because</code>finally` is implicitly called and can cause damage to your
-logic with its implicitness. It should not be allowed.</p>
+<p>Python allows us to have conditions, context managers, and even
+infinite loops inside <code>class</code> definitions. On the other hand, only
+methods, attributes, and docstrings make sense. So, we discourage
+using anything except these nodes in class bodies.</p>
 <h2 id="solution">Solution</h2>
-<p>Remove <code>break</code> and <code>continue</code> from <code>finally</code> blocks.</p>
+<p>If you have complex logic inside your class definition, most likely
+that you do something wrong. There are different options to refactor
+this mess. You can try metaclasses, decorators, builders, and other
+patterns.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
-<span class="nv">try</span>:
-    ...
-<span class="nv">finally</span>:
-    ...
-
-# <span class="nv">Wrong</span>:
-<span class="nv">try</span>:
-    ...
-<span class="nv">finally</span>:
-    <span class="k">break</span>
-
-<span class="nv">try</span>:
-    ...
-<span class="nv">finally</span>:
-    <span class="k">continue</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong:</span>
+<span class="k">class</span> <span class="n">Test</span>(<span class="n">object</span>):
+    <span class="k">for</span> <span class="n">_</span> <span class="nb">in</span> <span class="nb">range</span>(<span class="mi">10</span>):
+        <span class="nb">print</span>(<span class="s">&#39;What?!&#39;</span>)
 </code></pre></div>
+<p>We also allow some nested classes, check out <code>NestedClassViolation</code> for
+more information.</p>
 <div class="versionadded">
 
-0.14.0
+0.7.0
 
 </div>
 
@@ -310,7 +269,7 @@ logic with its implicitness. It should not be allowed.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS451/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found positional-only argument" rel="prev">
+        <a href="../WPS451/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found simplifiable if condition" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -319,20 +278,20 @@ logic with its implicitness. It should not be allowed.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found positional-only argument
+              Found simplifiable if condition
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS456/" class="md-footer__link md-footer__link--next" aria-label="Next: Found &#34;NaN&#34; as argument to float()" rel="next">
+        <a href="../WPS453/" class="md-footer__link md-footer__link--next" aria-label="Next: Found method without arguments: _" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found "NaN" as argument to float()
+              Found method without arguments: _
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -365,10 +324,10 @@ logic with its implicitness. It should not be allowed.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

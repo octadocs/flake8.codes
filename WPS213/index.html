@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
     
     
       
@@ -169,41 +169,13 @@
                 <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--secondary related-items">
             <label class="md-nav__title" for="__toc">
-                Related Violations
-            </label>
-            <ul class="md-nav__list" data-md-component="toc"
-                data-md-scrollfix>
-                
-                    <li class="md-nav__item">
-                        <a href="/WPS204/"
-   class="md-nav__link">
-    <strong>WPS204</strong> Found overused expression: _
-</a>
-                    </li>
-                
-                    <li class="md-nav__item">
-                        <a href="/WPS204/"
-   class="md-nav__link">
-    <strong>WPS204</strong> Found overused expression: _
-</a>
-                    </li>
-                
-            </ul>
-        </nav>
-    
-
-
-        
-    
-        <nav class="md-nav md-nav--secondary related-items">
-            <label class="md-nav__title" for="__toc">
                 Related Configuration Parameters
             </label>
             <ul class="md-nav__list" data-md-component="toc"
                 data-md-scrollfix>
                 
                     <li class="md-nav__item">
-                        <a href="/wemake-python-styleguide/0.15.3/configuration/MAX_EXPRESSIONS/" class="md-nav__link">MAX_EXPRESSIONS</a>
+                        <a href="/wemake-python-styleguide/0.9.1/configuration/MAX_EXPRESSIONS/" class="md-nav__link">MAX_EXPRESSIONS</a>
                     </li>
                 
             </ul>
@@ -240,7 +212,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
             
         
     
@@ -266,7 +238,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/violations/complexity/">WPS2xx Complexity</a>
+                <a href="/wemake-python-styleguide/0.9.1/violations/complexity/">WPS2xx Complexity</a>
             
         
     
@@ -274,28 +246,20 @@
     <h1><strong><code>WPS213</code></strong> Found too many expressions: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbid putting too many expressions in a single function.</p>
-<p>This rule is quite similar to "max lines" in a function, but is much
-nicer because we don't count lines, we count real code entities. This
-way adding just several extra empty lines for readability will never
-trigger this violation.</p>
-<p>Related to <a href="/wemake-python-styleguide/0.15.2/violations/complexity/WPS204/"><strong>WPSWPS204</strong> Found overused expression: _</a>.</p>
+    <p>Forbids putting too many expressions in a unit of code.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>When there are too many expressions it means that this function does
-too many things at once. It has too much logic.</p>
+<p>When there are too many expressions it means that this specific
+function does too many things at once. It has too much logic.</p>
 <h2 id="solution">Solution</h2>
 <p>Split function into several functions, refactor your API.</p>
 <h2 id="configuration">Configuration</h2>
 <p>This rule is configurable with <code>--max-expressions</code>. Default:
-<a href="/wemake-python-styleguide/0.15.3/configuration/MAX_EXPRESSIONS/">MAX_EXPRESSIONS</a> = <code>9</code></p>
+<a href="/wemake-python-styleguide/0.12.4/configuration/MAX_EXPRESSIONS/">MAX_EXPRESSIONS</a> = <code>9</code></p>
 <div class="versionadded">
 
 0.1.0
 
 </div>
-
-<h2 id="see-also">See also</h2>
-<p><a href="https://en.wikipedia.org/wiki/Expression_(computer_science)">https://en.wikipedia.org/wiki/Expression_(computer_science)</a></p>
 
     <!-- Last update of source file -->
     
@@ -319,7 +283,7 @@ too many things at once. It has too much logic.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS212/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found too many return statements: _" rel="prev">
+        <a href="../WPS201/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found module with too many imports: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -328,20 +292,20 @@ too many things at once. It has too much logic.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found too many return statements: _
+              Found module with too many imports: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS214/" class="md-footer__link md-footer__link--next" aria-label="Next: Found too many methods: _" rel="next">
+        <a href="../WPS216/" class="md-footer__link md-footer__link--next" aria-label="Next: Too many decorators: _" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found too many methods: _
+              Too many decorators: _
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -374,10 +338,10 @@ too many things at once. It has too much logic.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

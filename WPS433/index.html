@@ -10,11 +10,11 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
     
     
       
-        <title>Found nested import - flake8.codes</title>
+        <title>Found using @staticmethod - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found nested import
+              Found using @staticmethod
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
+                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
             
         
     
@@ -214,46 +214,25 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS433</code></strong> Found nested import</h1>
+    <h1><strong><code>WPS433</code></strong> Found using @staticmethod</h1>
 
     <!-- Markdown content -->
-    <p>Forbid imports nested in functions.</p>
+    <p>Forbids to use <code>@staticmethod</code> decorator.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>Usually, nested imports are used to fix the import cycle. So, nested
-imports show that there's an issue with your design.</p>
+<p>Static methods are not required to be inside the class. Because they
+even do not have access to the current instance.</p>
 <h2 id="solution">Solution</h2>
-<p>You don't need nested imports, you need to refactor your code.
-Introduce a new module or find another way to do what you want to
-do. Rethink how your layered architecture should look.</p>
-<h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
-<span class="kn">from</span> <span class="nn">my_module</span> <span class="kn">import</span> <span class="n">some_function</span>
-
-<span class="k">def</span> <span class="nf">some</span><span class="p">():</span> <span class="o">...</span>
-
-<span class="c1"># Wrong:</span>
-<span class="k">def</span> <span class="nf">some</span><span class="p">():</span>
-    <span class="kn">from</span> <span class="nn">my_module</span> <span class="kn">import</span> <span class="n">some_function</span>
-</code></pre></div>
+<p>Use instance methods, <code>@classmethod</code>, or functions instead.</p>
 <div class="versionadded">
 
 0.1.0
 
 </div>
-
-<div class="versionchanged">
-
-0.11.0
-
-</div>
-
-<h2 id="see-also">See also</h2>
-<p><a href="https://github.com/seddonym/layer_linter">https://github.com/seddonym/layer_linter</a></p>
 
     <!-- Last update of source file -->
     
@@ -277,7 +256,7 @@ do. Rethink how your layered architecture should look.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS432/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found magic number: _" rel="prev">
+        <a href="../WPS431/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found nested class: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -286,20 +265,20 @@ do. Rethink how your layered architecture should look.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found magic number: _
+              Found nested class: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS434/" class="md-footer__link md-footer__link--next" aria-label="Next: Found reassigning variable to itself: _" rel="next">
+        <a href="../WPS434/" class="md-footer__link md-footer__link--next" aria-label="Next: Found using restricted magic method: _" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found reassigning variable to itself: _
+              Found using restricted magic method: _
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -332,10 +311,10 @@ do. Rethink how your layered architecture should look.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>
