@@ -74,6 +74,14 @@ python-versions = ">=3.6,<4.0"
 typing_extensions = ">=3.7,<4.0"
 
 [[package]]
+name = "cliar"
+version = "1.3.4"
+description = "Create CLIs with classes and type hints."
+category = "main"
+optional = false
+python-versions = ">=3.6,<4.0"
+
+[[package]]
 name = "click"
 version = "7.1.2"
 description = "Composable command line interface toolkit"
@@ -488,7 +496,7 @@ tornado = ">=5.0"
 
 [[package]]
 name = "mkdocs-material"
-version = "7.1.8"
+version = "7.1.9"
 description = "A Material Design theme for MkDocs"
 category = "main"
 optional = false
@@ -586,6 +594,17 @@ python-versions = "*"
 flake8-polyfill = ">=1.0.2,<2"
 
 [[package]]
+name = "pip-versions"
+version = "0.1.0"
+description = "Show pip version information from pypi"
+category = "main"
+optional = false
+python-versions = ">=3.7,<4.0"
+
+[package.dependencies]
+cliar = ">=1.3.4,<2.0.0"
+
+[[package]]
 name = "pipdeptree"
 version = "2.0.0"
 description = "Command line utility to show dependency tree of packages"
@@ -634,6 +653,17 @@ snowballstemmer = "*"
 toml = ["toml"]
 
 [[package]]
+name = "pydotplus"
+version = "2.0.2"
+description = "Python interface to Graphviz's Dot language"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+pyparsing = ">=2.0.1"
+
+[[package]]
 name = "pyflakes"
 version = "2.3.1"
 description = "passive checker of Python programs"
@@ -667,6 +697,14 @@ description = "Thin wrapper for pandoc."
 category = "main"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "pyparsing"
+version = "2.4.7"
+description = "Python parsing module"
+category = "main"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "pytkdocs"
@@ -834,7 +872,7 @@ typing-extensions = ">=3.7.4"
 
 [[package]]
 name = "urllib3"
-version = "1.26.5"
+version = "1.26.6"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 category = "main"
 optional = false
@@ -892,7 +930,7 @@ typing_extensions = ">=3.6,<4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.9"
-content-hash = "fa4929192c6bd3c7622d6be22ed5ce5d46cb45f07ac6b59d28082d0be0073de9"
+content-hash = "be0280e694c2ad562cdc24b8e71328a5d4157b76cbb2e620f34edffa4202a159"
 
 [metadata.files]
 astor = [
@@ -922,6 +960,10 @@ chardet = [
 classes = [
     {file = "classes-0.2.0-py3-none-any.whl", hash = "sha256:39fcc9378a83ecb038e98f6efa3a91dfd018be13365387af30037120e12bf94b"},
     {file = "classes-0.2.0.tar.gz", hash = "sha256:a94278976870aa8d248a65b53f079e91a4ba1244e489aabd10f6027d2b1ffdd2"},
+]
+cliar = [
+    {file = "cliar-1.3.4-py3-none-any.whl", hash = "sha256:f9e1f5d8ccdc1eaf214f9d8e7952866a3d4c9a8f886ed2d689da146812137b94"},
+    {file = "cliar-1.3.4.tar.gz", hash = "sha256:868438af50dd2e3675a98f99ea71dde3e958fc9c44498d3ce0209363b551976d"},
 ]
 click = [
     {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
@@ -1094,8 +1136,8 @@ mkdocs = [
     {file = "mkdocs-1.1.2.tar.gz", hash = "sha256:f0b61e5402b99d7789efa032c7a74c90a20220a9c81749da06dbfbcbd52ffb39"},
 ]
 mkdocs-material = [
-    {file = "mkdocs-material-7.1.8.tar.gz", hash = "sha256:e555c66ece5eab7023c4733270dc7627280e707e5082dab278d6a7a4881d2435"},
-    {file = "mkdocs_material-7.1.8-py2.py3-none-any.whl", hash = "sha256:08eaf9f77c6d026706397bae2c50d202cfe3a81ef984027b671b4acd365dfc5b"},
+    {file = "mkdocs-material-7.1.9.tar.gz", hash = "sha256:5a2fd487f769f382a7c979e869e4eab1372af58d7dec44c4365dd97ef5268cb5"},
+    {file = "mkdocs_material-7.1.9-py2.py3-none-any.whl", hash = "sha256:92c8a2bd3bd44d5948eefc46ba138e2d3285cac658900112b6bf5722c7d067a5"},
 ]
 mkdocs-material-extensions = [
     {file = "mkdocs-material-extensions-1.0.1.tar.gz", hash = "sha256:6947fb7f5e4291e3c61405bad3539d81e0b3cd62ae0d66ced018128af509c68f"},
@@ -1145,6 +1187,10 @@ pep8-naming = [
     {file = "pep8-naming-0.11.1.tar.gz", hash = "sha256:a1dd47dd243adfe8a83616e27cf03164960b507530f155db94e10b36a6cd6724"},
     {file = "pep8_naming-0.11.1-py2.py3-none-any.whl", hash = "sha256:f43bfe3eea7e0d73e8b5d07d6407ab47f2476ccaeff6937c84275cd30b016738"},
 ]
+pip-versions = [
+    {file = "pip-versions-0.1.0.tar.gz", hash = "sha256:49883b10b8fe302ad13821935c12ffeb56518f1e20abf992f0c1f57dcea5f974"},
+    {file = "pip_versions-0.1.0-py3-none-any.whl", hash = "sha256:9404eb8a9dc91562023d31ef3bcda1a8d0a14525038b27305e59e5427c417d07"},
+]
 pipdeptree = [
     {file = "pipdeptree-2.0.0-py2-none-any.whl", hash = "sha256:6899ba160bc7db98f0124d1aa6a680aa578adbac8558177ae66dd81bf69369de"},
     {file = "pipdeptree-2.0.0-py3-none-any.whl", hash = "sha256:0e4cbe3871287013162dbc0df8ae96fa748d4862160c932cbcbfd73260ff322a"},
@@ -1182,6 +1228,9 @@ pydocstyle = [
     {file = "pydocstyle-6.1.1-py3-none-any.whl", hash = "sha256:6987826d6775056839940041beef5c08cc7e3d71d63149b48e36727f70144dc4"},
     {file = "pydocstyle-6.1.1.tar.gz", hash = "sha256:1d41b7c459ba0ee6c345f2eb9ae827cab14a7533a88c5c6f7e94923f72df92dc"},
 ]
+pydotplus = [
+    {file = "pydotplus-2.0.2.tar.gz", hash = "sha256:91e85e9ee9b85d2391ead7d635e3d9c7f5f44fd60a60e59b13e2403fa66505c4"},
+]
 pyflakes = [
     {file = "pyflakes-2.3.1-py2.py3-none-any.whl", hash = "sha256:7893783d01b8a89811dd72d7dfd4d84ff098e5eed95cfa8905b22bbffe52efc3"},
     {file = "pyflakes-2.3.1.tar.gz", hash = "sha256:f5bc8ecabc05bb9d291eb5203d6810b49040f6ff446a756326104746cc00c1db"},
@@ -1196,6 +1245,10 @@ pymdown-extensions = [
 ]
 pypandoc = [
     {file = "pypandoc-1.5.tar.gz", hash = "sha256:14a49977ab1fbc9b14ef3087dcb101f336851837fca55ca79cf33846cc4976ff"},
+]
+pyparsing = [
+    {file = "pyparsing-2.4.7-py2.py3-none-any.whl", hash = "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"},
+    {file = "pyparsing-2.4.7.tar.gz", hash = "sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"},
 ]
 pytkdocs = [
     {file = "pytkdocs-0.11.1-py3-none-any.whl", hash = "sha256:89ca4926d0acc266235beb24cb0b0591aa6bf7adedfae54bf9421d529d782c8d"},
@@ -1396,8 +1449,8 @@ typing-inspect = [
     {file = "typing_inspect-0.7.1.tar.gz", hash = "sha256:047d4097d9b17f46531bf6f014356111a1b6fb821a24fe7ac909853ca2a782aa"},
 ]
 urllib3 = [
-    {file = "urllib3-1.26.5-py2.py3-none-any.whl", hash = "sha256:753a0374df26658f99d826cfe40394a686d05985786d946fbe4165b5148f5a7c"},
-    {file = "urllib3-1.26.5.tar.gz", hash = "sha256:a7acd0977125325f516bda9735fa7142b909a8d01e8b2e4c8108d0984e6e0098"},
+    {file = "urllib3-1.26.6-py2.py3-none-any.whl", hash = "sha256:39fb8672126159acb139a7718dd10806104dec1e2f0f6c88aab05d17df10c8d4"},
+    {file = "urllib3-1.26.6.tar.gz", hash = "sha256:f57b4c16c62fa2760b7e3d97c35b255512fb6b59a259730f36ba32ce9f8e342f"},
 ]
 urlpath = [
     {file = "urlpath-1.1.7.tar.gz", hash = "sha256:a280a6cb1e107d9597cc1f320cf93b6b3cb7d15876434a922cdbc0314a87221f"},

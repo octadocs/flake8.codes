@@ -1,0 +1,34 @@
+{% extends "main.html" %}
+{% import "native_macros.html" as macros with context %}
+
+{# I had to copy-paste the content of `content` block to remove the <h1> hack #}
+{% block content %}
+    {{ super() }}
+
+    <table>
+        <thead>
+
+        </thead>
+            <tr>
+                <th>Version</th>
+                <th>Violations Count</th>
+            </tr>
+        <tbody>
+            {% for row in queries.plugin_versions(index_page=page.iri) %}
+                <tr>
+                    <td>
+                        <a href="{{ row.url }}">
+                            {{ row.version_number }}
+                        </a>
+                    </td>
+                    <td>{{ row.violations_count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+
+{% block footer %}
+    {% include "partials/footer-without-links.html" %}
+{% endblock %}

@@ -5,8 +5,9 @@ from wemake_python_styleguide.version import pkg_version
 
 from flake8_codes.bugbear.main import document_bugbear
 from flake8_codes.stubs import create_empty_index_md_in_directory
-from flake8_codes.wemake_python_styleguide.constants.main import \
+from flake8_codes.wemake_python_styleguide.constants.main import (
     generate_constants
+)
 from flake8_codes.wemake_python_styleguide.options import (
     generate_wps_options,
 )

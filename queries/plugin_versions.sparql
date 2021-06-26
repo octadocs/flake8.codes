@@ -1,0 +1,19 @@
+# Expects: ?index_page
+SELECT ?version_number ?url (COUNT(?page) AS ?violations_count) WHERE {
+    ?index_page
+        a octa:IndexPage ;
+        octa:isChildOf ?plugin .
+
+    ?version
+        :plugin ?plugin ;
+        rdfs:label ?version_number .
+
+    ?version_index_page
+        a octa:IndexPage ;
+        octa:isChildOf ?version ;
+        octa:url ?url .
+
+    ?page :version ?version .
+}
+GROUP BY ?plugin ?version ?url
+ORDER BY DESC(?version_number)

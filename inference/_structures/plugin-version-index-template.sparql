@@ -1,0 +1,11 @@
+INSERT {
+    GRAPH <local:inference/_structures/plugin-version-index-template.sparql> {
+        ?index_page octa:template "plugin_index.html"
+    }
+} WHERE {
+    ?index_page
+        a octa:IndexPage ;
+        octa:isChildOf [
+            a :Flake8Plugin
+        ] .
+}
