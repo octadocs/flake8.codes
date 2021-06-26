@@ -1,0 +1,16 @@
+SELECT * WHERE {
+    ?plugin
+        a :Flake8Plugin ;
+        :code-prefix ?prefix ;
+        rdfs:label ?title .
+
+    ?version
+        a :LatestVersion ;
+        rdfs:label ?version_number ;
+        :plugin ?plugin .
+
+    ?index_page
+        a octa:IndexPage ;
+        octa:isChildOf ?version ;
+        octa:url ?url .
+} ORDER BY ?prefix

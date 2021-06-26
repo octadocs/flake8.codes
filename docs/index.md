@@ -12,6 +12,7 @@ Easily find the code that annoys you the most.
 #plugins .admonition {
     float: left;
     margin-right: 1em;
+    min-width: 200px;
 }
 
 #plugins p {
@@ -24,26 +25,18 @@ Easily find the code that annoys you the most.
 }
 </style>
 
+{% set plugins = queries.index() %}
+
 <div id="plugins">
-    <div class="admonition">
-        <p class="title">
-            <a href="/wemake-python-styleguide/0.15.2/">
-                WPS
-            </a>
-        </p>
-        <p>wemake-python-styleguide</p>
-        <p>0.15.2</p>
-    </div>
-
-    <div class="admonition">
-        <p class="title">
-            <a href="/flake8-bugbear/20.11.1/">
-                B
-            </a>
-        </p>
-        <p>flake8-bugbear</p>
-        <p>20.11.1</p>
-    </div>
-
-
+    {% for item in plugins %}
+        <div class="admonition">
+            <p class="title">
+                <a href="{{ item.url }}">
+                    {{ item.prefix }}
+                </a>
+            </p>
+            <p>{{ item.title }}</p>
+            <p>{{ item.version_number }}</p>
+        </div>
+    {% endfor %}
 </div>

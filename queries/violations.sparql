@@ -8,4 +8,4 @@ SELECT * WHERE {
         octa:title ?title ;
         octa:url ?url ;
         :code ?code .
-}
+} ORDER BY ?code
