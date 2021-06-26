@@ -1,9 +1,0 @@
-INSERT {
-    ?version a :LatestVersion .
-} WHERE {
-    SELECT ?version (MAX(?number) AS ?latest) WHERE {
-        ?version a :Flake8PluginVersion .
-        ?version :plugin ?plugin .
-        ?version rdfs:label ?number .
-    } GROUP BY ?plugin
-}

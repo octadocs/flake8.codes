@@ -26,12 +26,12 @@ markdown_extensions:
 
 plugins:
   - search
-  - flake8_codes
   - octadocs
   - macros:
       modules:
         - octadocs.macros
         - flake8_codes.macros
+  - flake8_codes
 
 theme:
   name: material

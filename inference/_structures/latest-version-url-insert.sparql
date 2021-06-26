@@ -1,0 +1,11 @@
+INSERT {
+    GRAPH <local:inference/_structures/latest-version-url-insert.sparql> {
+        ?page octa:url ?url .
+    }
+} WHERE {
+    ?page
+        :version / a :LatestVersion ;
+        :code ?code .
+
+    BIND(CONCAT("/", ?code, "/") AS ?url)
+}

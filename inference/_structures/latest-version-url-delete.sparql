@@ -1,0 +1,7 @@
+DELETE {
+    ?page octa:url ?url .
+} WHERE {
+    ?page
+        :version / a :LatestVersion ;
+        octa:url ?url .
+}

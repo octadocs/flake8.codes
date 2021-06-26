@@ -1,5 +1,5 @@
 INSERT {
-    GRAPH <local:inference/sparql> {
+    GRAPH <local:inference/_structures/flake8-plugin-version.sparql> {
         ?plugin_version_directory
             a :Flake8PluginVersion ;
             rdfs:label ?version_number ;

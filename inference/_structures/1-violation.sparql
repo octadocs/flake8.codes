@@ -5,12 +5,12 @@ INSERT {
             :code ?code ;
             :plugin ?plugin .
 
-        ?violation_file
+        ?page
             :version ?plugin_version ;
             :violation ?violation_iri .
     }
 } WHERE {
-    ?violation_file
+    ?page
         a octa:Page ;
         :code ?code ;
         octa:isChildOf+ ?plugin_version .

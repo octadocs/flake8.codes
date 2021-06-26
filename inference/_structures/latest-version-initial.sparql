@@ -1,0 +1,7 @@
+INSERT {
+    ?latest_version a :LatestVersion .
+} WHERE {
+    SELECT (IRI(MAX(?version)) AS ?latest_version) WHERE {
+        ?version :plugin ?plugin .
+    } GROUP BY ?plugin
+}
