@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,7 +214,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
@@ -222,21 +222,24 @@
     <h1><strong><code>WPS425</code></strong> Found boolean non-keyword argument: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to pass booleans as non-keyword parameters.</p>
+    <p>Forbid booleans as non-keyword parameters.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>Passing boolean as regular positional parameters is very
-non-descriptive. It is almost impossible to tell, what does this
-parameter means. And you almost always have to look up the
-implementation to tell what is going on.</p>
+<p>Passing booleans as regular positional parameters is very
+non-descriptive. It is almost impossible to tell what this parameter
+means and you almost always have to look up the implementation to
+tell what is going on. The only exception from this rule is passing
+a boolean as a non-keyword argument when it is the only passed
+argument.</p>
 <h2 id="solution">Solution</h2>
 <p>Pass booleans as keywords only. This will help you to save extra
 context on what's going on.</p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
-UsersRepository.update(cache=True)
+UserRepository.update(True)
+UsersRepository.add(user, cache=True)
 
 # Wrong:
-UsersRepository.update(True)
+UsersRepository.add(user, True)
 </code></pre></div>
 <div class="versionadded">
 
@@ -282,13 +285,13 @@ UsersRepository.update(True)
       
       
         
-        <a href="../WPS432/" class="md-footer__link md-footer__link--next" aria-label="Next: Found magic number: _" rel="next">
+        <a href="../WPS427/" class="md-footer__link md-footer__link--next" aria-label="Next: Found unreachable code" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found magic number: _
+              Found unreachable code
             </div>
           </div>
           <div class="md-footer__button md-icon">

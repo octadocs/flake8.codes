@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,7 +214,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/consistency/">WPS3xx Consistency</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/consistency/">WPS3xx Consistency</a>
             
         
     
@@ -222,7 +222,7 @@
     <h1><strong><code>WPS317</code></strong> Found incorrect multi-line parameters</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to use incorrect parameters indentation.</p>
+    <p>Forbid incorrect indentation for parameters.</p>
 <h2 id="reasoning">Reasoning</h2>
 <p>It is really easy to spoil your perfect, readable code with
 incorrect multi-line parameters indentation. Since it is really easy
@@ -270,6 +270,13 @@ about how it is possible to write these multi-line parameters.</p>
     <span class="n">third_variable</span><span class="p">,</span>
     <span class="n">last_item</span><span class="p">,</span>
 <span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="c1"># Correct complex case:</span>
+
+<span class="err">@</span><span class="n">pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">((</span><span class="s1">&#39;boolean_arg&#39;</span><span class="p">,</span> <span class="s1">&#39;string_arg&#39;</span><span class="p">),</span> <span class="p">[</span>
+     <span class="p">(</span><span class="n">True</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">),</span>
+     <span class="p">(</span><span class="n">False</span><span class="p">,</span> <span class="s2">&quot;another string&quot;</span><span class="p">),</span>
+<span class="p">])</span>
 </code></pre></div>
 <p>Everything else is considered a violation. This rule checks: lists,
 sets, tuples, dicts, calls, functions, methods, and classes.</p>

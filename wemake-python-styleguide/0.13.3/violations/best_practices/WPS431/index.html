@@ -258,7 +258,7 @@ probably need to use different design (or metaclasses).</p>
 <h2 id="configuration">Configuration</h2>
 <p>This rule is configurable with <code>--nested-classes-whitelist</code>.
 Default:
-<a href="/wemake-python-styleguide/0.15.3/configuration/NESTED_CLASSES_WHITELIST/">NESTED_CLASSES_WHITELIST</a> = <code>('Meta', 'Params')</code></p>
+<a href="/wemake-python-styleguide/0.13.2/configuration/NESTED_CLASSES_WHITELIST/">NESTED_CLASSES_WHITELIST</a> = <code>frozenset({'Meta', 'Params'})</code></p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
 <span class="k">class</span> <span class="n">Some</span>(<span class="n">object</span>): ...
@@ -303,7 +303,7 @@ Default:
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS430/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found nested function: _" rel="prev">
+        <a href="../WPS428/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found statement that has no effect" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -312,7 +312,7 @@ Default:
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found nested function: _
+              Found statement that has no effect
             </div>
           </div>
         </a>

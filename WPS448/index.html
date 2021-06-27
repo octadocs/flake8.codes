@@ -14,7 +14,7 @@
     
     
       
-        <title>Found yield inside comprehension - flake8.codes</title>
+        <title>Found incorrect exception order - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found yield inside comprehension
+              Found incorrect exception order
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,34 +214,44 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS448</code></strong> Found yield inside comprehension</h1>
+    <h1><strong><code>WPS448</code></strong> Found incorrect exception order</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have <code>yield</code> keyword inside comprehensions.</p>
+    <p>Forbid incorrect order of <code>except</code>.</p>
+<p>Note, we only check for built-in exceptions because we cannot statically
+identify the inheritance order of custom ones.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>Having the <code>yield</code> keyword inside comprehensions is error-prone. You
-can shoot yourself in a foot by an inaccurate usage of this feature.</p>
+<p>Using incorrect order of exceptions is error-prone, since you end up
+with some unreachable exception clauses.</p>
 <h2 id="solution">Solution</h2>
-<p>Use regular <code>for</code> loops with <code>yield</code> keywords. Or create a separate
-generator function.</p>
+<p>Use the correct order of exceptions.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code># <span class="nv">Wrong</span>:
-<span class="o">&gt;&gt;&gt;</span> <span class="nv">list</span><span class="ss">((</span><span class="nv">yield</span> <span class="nv">letter</span><span class="ss">)</span> <span class="k">for</span> <span class="nv">letter</span> <span class="nv">in</span> <span class="s1">&#39;</span><span class="s">ab</span><span class="s1">&#39;</span><span class="ss">)</span>
-[<span class="s1">&#39;</span><span class="s">a</span><span class="s1">&#39;</span>, <span class="nv">None</span>, <span class="s1">&#39;</span><span class="s">b</span><span class="s1">&#39;</span>, <span class="nv">None</span>]
+<div class="highlight"><pre><span></span><code># Correct:
+try:
+    ...
+except ValueError:
+    ...
+except Exception:
+    ...
 
-<span class="o">&gt;&gt;&gt;</span> <span class="nv">list</span><span class="ss">(</span>[<span class="ss">(</span><span class="nv">yield</span> <span class="nv">letter</span><span class="ss">)</span> <span class="k">for</span> <span class="nv">letter</span> <span class="nv">in</span> <span class="s1">&#39;</span><span class="s">ab</span><span class="s1">&#39;</span>]<span class="ss">)</span>
-[<span class="s1">&#39;</span><span class="s">a</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">b</span><span class="s1">&#39;</span>]
+# Wrong:
+try:
+    ...
+except Exception:
+    ...
+except ValueError:
+    ...
 </code></pre></div>
 <h2 id="see-also">See also</h2>
-<p><a href="https://github.com/satwikkansal/wtfPython#-yielding-none">https://github.com/satwikkansal/wtfPython#-yielding-none</a></p>
+<p><a href="https://bit.ly/36MHlzw">https://bit.ly/36MHlzw</a></p>
 <div class="versionadded">
 
-0.7.0
+0.13.0
 
 </div>
 
@@ -267,7 +277,7 @@ generator function.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS447/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found duplicate exception: _" rel="prev">
+        <a href="../WPS441/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found control variable used after block: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -276,20 +286,20 @@ generator function.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found duplicate exception: _
+              Found control variable used after block: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS449/" class="md-footer__link md-footer__link--next" aria-label="Next: Found non-unique item in set literal: _" rel="next">
+        <a href="../WPS449/" class="md-footer__link md-footer__link--next" aria-label="Next: Found float used as a key" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found non-unique item in set literal: _
+              Found float used as a key
             </div>
           </div>
           <div class="md-footer__button md-icon">

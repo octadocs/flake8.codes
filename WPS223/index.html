@@ -160,6 +160,30 @@
     
 
     
+        <div
+            class="md-sidebar md-sidebar--secondary"
+            data-md-component="sidebar"
+            data-md-type="toc"
+        >
+            <div class="md-sidebar__scrollwrap">
+                <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--secondary related-items">
+            <label class="md-nav__title" for="__toc">
+                Related Constants
+            </label>
+            <ul class="md-nav__list" data-md-component="toc"
+                data-md-scrollfix>
+                
+                    <li class="md-nav__item">
+                        <a href="/wemake-python-styleguide/0.15.3/constants/MAX_ELIFS/" class="md-nav__link">MAX_ELIFS</a>
+                    </li>
+                
+            </ul>
+        </nav>
+                </div>
+            </div>
+        </div>
+    
 
 
           <div class="md-content" data-md-component="content">
@@ -188,7 +212,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,7 +238,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/complexity/">WPS2xx Complexity</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/complexity/">WPS2xx Complexity</a>
             
         
     
@@ -222,15 +246,17 @@
     <h1><strong><code>WPS223</code></strong> Found too many elif branches: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to use many <code>elif</code> branches.</p>
+    <p>Forbid too many <code>elif</code> branches.</p>
+<p>We use <a href="/wemake-python-styleguide/0.14.0/constants/MAX_ELIFS/">MAX_ELIFS</a> as a default
+value.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>This rule is specifically important because of many <code>elif</code> branches
-indicate a complex flow in your design: you are reimplementing
+<p>This rule is specifically important because many <code>elif</code> branches
+indicates a complex flow in your design: you are reimplementing
 <code>switch</code> in python.</p>
 <h2 id="solution">Solution</h2>
 <p>There are different design patterns to use instead. For example, you
-can use some interface that just call a specific method without
-<code>if</code>. Or separate your <code>if</code> into multiple functions.</p>
+can use an interface that just calls a specific method without <code>if</code>.
+Another option is to separate your <code>if</code> into multiple functions.</p>
 <div class="versionadded">
 
 0.1.0

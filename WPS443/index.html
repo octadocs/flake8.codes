@@ -14,7 +14,7 @@
     
     
       
-        <title>Found unreachable code - flake8.codes</title>
+        <title>Found unhashable item - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found unreachable code
+              Found unhashable item
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,43 +214,29 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS443</code></strong> Found unreachable code</h1>
+    <h1><strong><code>WPS443</code></strong> Found unhashable item</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have unreachable code.</p>
-<p>What is unreachable code? It is some lines of code that cannot be
-executed by python's interpreter.</p>
-<p>This is probably caused by <code>return</code> or <code>raise</code> statements. However, we
-can not cover 100% of truly unreachable code by this rule. This happens
-due to the dynamic nature of python. For example, detecting that <code>1 /
-some_value</code> would sometimes raise an exception is too complicated and is
-out of the scope of this rule.</p>
+    <p>Forbid explicit unhashable types of asset items and dict keys.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>Having dead code in your project is an indicator that you do not
-care about your code base at all. It dramatically reduces code
-quality and readability. It also demotivates team members.</p>
+<p>This will resolve in <code>TypeError</code> in runtime.</p>
 <h2 id="solution">Solution</h2>
-<p>Delete any unreachable code you have. Or refactor it, if this
-happens by your mistake.</p>
+<p>Use hashable types to define set items and dict keys.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
-<span class="nv">def</span> <span class="nv">some_function</span><span class="ss">()</span>:
-    <span class="nv">print</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">This line is reachable, all good</span><span class="s1">&#39;</span><span class="ss">)</span>
-    <span class="k">return</span> <span class="mi">5</span>
+<div class="highlight"><pre><span></span><code># Correct:
+my_dict = {1: {}, (1, 2): [], (2, 3): {1, 2}}
 
-# <span class="nv">Wrong</span>:
-<span class="nv">def</span> <span class="nv">some_function</span><span class="ss">()</span>:
-    <span class="k">return</span> <span class="mi">5</span>
-    <span class="nv">print</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">This line is unreachable</span><span class="s1">&#39;</span><span class="ss">)</span>
+# Wrong:
+my_dict = {[1, 2]: [], {2, 3}: {1, 2}}
 </code></pre></div>
 <div class="versionadded">
 
-0.5.0
+0.12.0
 
 </div>
 
@@ -276,7 +262,7 @@ happens by your mistake.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS441/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found protected attribute usage: _" rel="prev">
+        <a href="../WPS442/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found outer scope names shadowing: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -285,20 +271,20 @@ happens by your mistake.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found protected attribute usage: _
+              Found outer scope names shadowing: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS445/" class="md-footer__link md-footer__link--next" aria-label="Next: Found multiple assign targets" rel="next">
+        <a href="../WPS444/" class="md-footer__link md-footer__link--next" aria-label="Next: Found incorrect keyword condition" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found multiple assign targets
+              Found incorrect keyword condition
             </div>
           </div>
           <div class="md-footer__button md-icon">

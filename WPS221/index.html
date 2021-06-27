@@ -203,7 +203,7 @@
                 data-md-scrollfix>
                 
                     <li class="md-nav__item">
-                        <a href="/wemake-python-styleguide/0.9.1/configuration/MAX_LINE_COMPLEXITY/" class="md-nav__link">MAX_LINE_COMPLEXITY</a>
+                        <a href="/wemake-python-styleguide/0.15.3/configuration/MAX_LINE_COMPLEXITY/" class="md-nav__link">MAX_LINE_COMPLEXITY</a>
                     </li>
                 
             </ul>
@@ -240,7 +240,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -266,7 +266,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/complexity/">WPS2xx Complexity</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/complexity/">WPS2xx Complexity</a>
             
         
     
@@ -274,11 +274,11 @@
     <h1><strong><code>WPS221</code></strong> Found line with high Jones Complexity: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have complex lines.</p>
-<p>We are using Jones Complexity algorithm to count complexity. What is
-Jones Complexity? It is a simple yet powerful method to count the number
-of <code>ast</code> nodes per line. If the complexity of a single line is higher
-than a threshold, then an error is raised.</p>
+    <p>Forbid complex lines.</p>
+<p>We are using the Jones Complexity algorithm to count complexity. What is
+the Jones Complexity? It is a simple yet powerful method to count the
+number of <code>ast</code> nodes per line. If the complexity of a single line is
+higher than a threshold, then an error is raised.</p>
 <p>What nodes do we count? All except the following:</p>
 <ol>
 <li>modules</li>
@@ -298,7 +298,7 @@ issues. With this technique, a single new node in a line might
 trigger a complex refactoring process including several modules.</p>
 <h2 id="configuration">Configuration</h2>
 <p>This rule is configurable with <code>--max-line-complexity</code>. Default:
-<a href="/wemake-python-styleguide/0.13.0/configuration/MAX_LINE_COMPLEXITY/">MAX_LINE_COMPLEXITY</a> = <code>14</code></p>
+<a href="/wemake-python-styleguide/0.12.2/configuration/MAX_LINE_COMPLEXITY/">MAX_LINE_COMPLEXITY</a> = <code>14</code></p>
 <div class="versionadded">
 
 0.1.0

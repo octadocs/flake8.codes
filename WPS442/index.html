@@ -14,7 +14,7 @@
     
     
       
-        <title>Found lambda in loop's body - flake8.codes</title>
+        <title>Found outer scope names shadowing: _ - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found lambda in loop's body
+              Found outer scope names shadowing: _
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,39 +214,40 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS442</code></strong> Found lambda in loop's body</h1>
+    <h1><strong><code>WPS442</code></strong> Found outer scope names shadowing: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to use <code>lambda</code> inside loops.</p>
+    <p>Forbid shadowing variables from outer scopes.</p>
+<p>We check the function, method, and module scopes. While we do not check
+the class scope. Because class level constants are not available via
+regular name, and they are scope to <code>ClassName.var_name</code>.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>It is error-prone to use <code>lambda</code> inside <code>for</code> and <code>while</code> loops due
-to the famous late-binding.</p>
+<p>Shadowing can lead you to a big pile of storage and unexpected bugs.</p>
 <h2 id="solution">Solution</h2>
-<p>Use regular functions, factory functions, or <code>partial</code> functions.
-Save yourself from possible confusion.</p>
+<p>Use different names and do not allow scoping.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
-<span class="k">for</span> <span class="nv">index</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">10</span><span class="ss">)</span>:
-    <span class="nv">some</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">partial_function</span><span class="ss">(</span><span class="nv">index</span><span class="ss">))</span>
+<div class="highlight"><pre><span></span><code># Correct:
+def test(): ...
 
-# <span class="nv">Wrong</span>:
-<span class="k">for</span> <span class="nv">index</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">10</span><span class="ss">)</span>:
-    <span class="nv">some</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">lambda</span> <span class="nv">index</span><span class="o">=</span><span class="nv">index</span>: <span class="nv">index</span> <span class="o">*</span> <span class="mi">10</span><span class="ss">))</span>
-    <span class="nv">other</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">lambda</span>: <span class="nv">index</span> <span class="o">*</span> <span class="mi">10</span><span class="ss">))</span>
+def other():
+    test1 = 1
+
+# Wrong:
+def test(): ...
+
+def other():
+    test = 1  # shadows ``test()` function
 </code></pre></div>
 <div class="versionadded">
 
-0.5.0
+0.12.0
 
 </div>
-
-<h2 id="see-also">See also</h2>
-<p><a href="https://docs.python-guide.org/writing/gotchas/#late-binding-closures">https://docs.python-guide.org/writing/gotchas/#late-binding-closures</a></p>
 
     <!-- Last update of source file -->
     
@@ -270,7 +271,7 @@ Save yourself from possible confusion.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS440/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found protected module import" rel="prev">
+        <a href="../WPS440/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found block variables overlap: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -279,20 +280,20 @@ Save yourself from possible confusion.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found protected module import
+              Found block variables overlap: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS444/" class="md-footer__link md-footer__link--next" aria-label="Next: Found statement that has no effect" rel="next">
+        <a href="../WPS443/" class="md-footer__link md-footer__link--next" aria-label="Next: Found unhashable item" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found statement that has no effect
+              Found unhashable item
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -175,7 +175,7 @@
                 data-md-scrollfix>
                 
                     <li class="md-nav__item">
-                        <a href="/wemake-python-styleguide/0.9.1/constants/MAGIC_NUMBERS_WHITELIST/" class="md-nav__link">MAGIC_NUMBERS_WHITELIST</a>
+                        <a href="/wemake-python-styleguide/0.15.3/constants/MAGIC_NUMBERS_WHITELIST/" class="md-nav__link">MAGIC_NUMBERS_WHITELIST</a>
                     </li>
                 
             </ul>
@@ -212,7 +212,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -238,7 +238,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
@@ -246,13 +246,12 @@
     <h1><strong><code>WPS432</code></strong> Found magic number: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to use magic numbers in your code.</p>
-<p>What we call a "magic number"? Well, it is actually any number that
+    <p>Forbid magic numbers.</p>
+<p>What do we call a "magic number"? Well, it is actually any number that
 appears in your code out of nowhere. Like <code>42</code>. Or <code>0.32</code>.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>It is very hard to remember what these numbers actually mean. Why
-were they used? Should they ever be changed? Or are they eternal
-like <code>3.14</code>?</p>
+<p>It is very hard to remember what these numbers mean. Why were they
+used? Should they ever be changed? Or are they eternal like <code>3.14</code>?</p>
 <h2 id="solution">Solution</h2>
 <p>Give these numbers a name! Move them to a separate variable, giving
 more context to the reader. And by moving things into new variables
@@ -265,11 +264,11 @@ total = get_items_from_cart() * price_in_euro
 # Wrong:
 total = get_items_from_cart() * 3.33
 </code></pre></div>
-<p>What are numbers that we exclude from this check? Any numbers that are
-assigned to a variable, array, dictionary, or keyword arguments inside a
-function. <code>int</code> numbers that are in range <code>[-10, 10]</code> and some other
-common numbers, that are defined in
-<a href="/wemake-python-styleguide/0.12.0/constants/MAGIC_NUMBERS_WHITELIST/">MAGIC_NUMBERS_WHITELIST</a></p>
+<p>What are the numbers that we exclude from this check? Any numbers that
+are assigned to a variable, array, dictionary, or keyword arguments
+inside a function. <code>int</code> numbers that are in range <code>[-10, 10]</code> and some
+other common numbers, that are defined in
+<a href="/wemake-python-styleguide/0.5.0/constants/MAGIC_NUMBERS_WHITELIST/">MAGIC_NUMBERS_WHITELIST</a></p>
 <div class="versionadded">
 
 0.1.0
@@ -301,7 +300,7 @@ common numbers, that are defined in
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS425/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found boolean non-keyword argument: _" rel="prev">
+        <a href="../WPS430/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found nested function: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -310,20 +309,20 @@ common numbers, that are defined in
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found boolean non-keyword argument: _
+              Found nested function: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS436/" class="md-footer__link md-footer__link--next" aria-label="Next: Found else in a loop without break" rel="next">
+        <a href="../WPS433/" class="md-footer__link md-footer__link--next" aria-label="Next: Found nested import" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found else in a loop without break
+              Found nested import
             </div>
           </div>
           <div class="md-footer__button md-icon">

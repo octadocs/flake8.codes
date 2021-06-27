@@ -14,7 +14,7 @@
     
     
       
-        <title>Found multiline conditions - flake8.codes</title>
+        <title>Found likely bitwise and boolean operation mixup - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found multiline conditions
+              Found likely bitwise and boolean operation mixup
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,38 +214,32 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS465</code></strong> Found multiline conditions</h1>
+    <h1><strong><code>WPS465</code></strong> Found likely bitwise and boolean operation mixup</h1>
 
     <!-- Markdown content -->
-    <p>Forbid multiline conditions.</p>
+    <p>Forbid comparisons between bitwise and boolean expressions.</p>
+<p>Empty comments are only allowed in between valid comments.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>This way of writing conditions hides the inner complexity this line
-has. And it decreases readability of the code.</p>
+<p>This case indicates that a person confused <code>&amp;</code> with <code>and</code> and <code>|</code>
+with <code>or</code>. This can be the case if a person is coming from another
+language.</p>
 <h2 id="solution">Solution</h2>
-<p>Divide multiline conditions to some <code>if</code> condition. Or use
-variables.</p>
+<p>Change bitwise operator to boolean operators.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
-<span class="k">if</span> <span class="nv">isinstance</span><span class="ss">(</span><span class="nv">node</span>.<span class="nv">test</span>, <span class="nv">ast</span>.<span class="nv">UnaryOp</span><span class="ss">)</span>:
-    <span class="k">if</span> <span class="nv">isinstance</span><span class="ss">(</span><span class="nv">node</span>.<span class="nv">test</span>.<span class="nv">op</span>, <span class="nv">ast</span>.<span class="nv">Not</span><span class="ss">)</span>:
-        ...
+<div class="highlight"><pre><span></span><code># Correct:
+first | 10
 
-
-# <span class="nv">Wrong</span>:
-<span class="k">if</span> <span class="nv">isinstance</span><span class="ss">(</span><span class="nv">node</span>.<span class="nv">test</span>, <span class="nv">ast</span>.<span class="nv">UnaryOp</span><span class="ss">)</span> <span class="nv">and</span> <span class="nv">isinstance</span><span class="ss">(</span>
-    <span class="nv">node</span>.<span class="nv">test</span>.<span class="nv">op</span>,
-    <span class="nv">ast</span>.<span class="nv">Not</span>,
-<span class="ss">)</span>:
-...
+# Wrong:
+result = ((first &gt; 0) &amp; False)
 </code></pre></div>
 <div class="versionadded">
 
-0.9.0
+0.15.0
 
 </div>
 
@@ -271,7 +265,7 @@ variables.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS464/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found nested try block" rel="prev">
+        <a href="../WPS463/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found a getter without a return value" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -280,11 +274,26 @@ variables.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found nested try block
+              Found a getter without a return value
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../WPS466/" class="md-footer__link md-footer__link--next" aria-label="Next: Found new-styled decorator" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Found new-styled decorator
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

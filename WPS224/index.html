@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,7 +214,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/complexity/">WPS2xx Complexity</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/complexity/">WPS2xx Complexity</a>
             
         
     
@@ -222,14 +222,14 @@
     <h1><strong><code>WPS224</code></strong> Found a comprehension with too many for statements</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have too many <code>for</code> statement within a comprehension.</p>
+    <p>Forbid too many <code>for</code> statements within a comprehension.</p>
 <h2 id="reasoning">Reasoning</h2>
 <p>When reading through the complex comprehension you will fail to
 understand it.</p>
 <h2 id="solution">Solution</h2>
-<p>We can reduce the complexity of comprehension by reducing the amount
-of <code>for</code> statements. Refactor your code to use several <code>for</code> loops,
-comprehensions, or different functions.</p>
+<p>We can reduce the complexity of the comprehension by reducing the
+amount of <code>for</code> statements. Refactor your code to use several <code>for</code>
+loops, comprehensions, or different functions.</p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code><span class="p">#</span> <span class="nl">Wrong:</span>
 <span class="n">ast_nodes</span> <span class="o">=</span> <span class="p">[</span>
@@ -283,13 +283,13 @@ comprehensions, or different functions.</p>
       
       
         
-        <a href="../WPS225/" class="md-footer__link md-footer__link--next" aria-label="Next: Found too many except cases" rel="next">
+        <a href="../WPS225/" class="md-footer__link md-footer__link--next" aria-label="Next: Found too many except cases: _" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found too many except cases
+              Found too many except cases: _
             </div>
           </div>
           <div class="md-footer__button md-icon">

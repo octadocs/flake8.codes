@@ -14,7 +14,7 @@
     
     
       
-        <title>Found exception inherited from BaseException - flake8.codes</title>
+        <title>Found protected object import: _ - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found exception inherited from BaseException
+              Found protected object import: _
             
           </span>
         </div>
@@ -160,6 +160,40 @@
     
 
     
+        <div
+            class="md-sidebar md-sidebar--secondary"
+            data-md-component="sidebar"
+            data-md-type="toc"
+        >
+            <div class="md-sidebar__scrollwrap">
+                <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--secondary related-items">
+            <label class="md-nav__title" for="__toc">
+                Related Violations
+            </label>
+            <ul class="md-nav__list" data-md-component="toc"
+                data-md-scrollfix>
+                
+                    <li class="md-nav__item">
+                        <a href="/WPS436/"
+   class="md-nav__link">
+    <strong>WPS436</strong> Found protected module import: _
+</a>
+                    </li>
+                
+                    <li class="md-nav__item">
+                        <a href="/WPS436/"
+   class="md-nav__link">
+    <strong>WPS436</strong> Found protected module import: _
+</a>
+                    </li>
+                
+            </ul>
+        </nav>
+                </div>
+            </div>
+        </div>
+    
 
 
           <div class="md-content" data-md-component="content">
@@ -188,7 +222,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,35 +248,34 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS450</code></strong> Found exception inherited from BaseException</h1>
+    <h1><strong><code>WPS450</code></strong> Found protected object import: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have duplicate items in <code>set</code> literals.</p>
+    <p>Forbid importing protected objects from modules.</p>
+<p>Related to <a href="/wemake-python-styleguide/0.14.1/violations/best_practices/WPS436/"><strong>WPSWPS436</strong> Found protected module import: _</a>.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p><code>BaseException</code> is a special case: it is not designed to be extended
-by users. A lot of your <code>except Exception</code> cases won't work. That's
-incorrect and dangerous.</p>
+<p>When importing a protected modules' members, we break the contract
+which the authors of this module enforce. By disrespecting
+encapsulation, we may break the code at any moment.</p>
 <h2 id="solution">Solution</h2>
-<p>Change the base class to <code>Exception</code>.</p>
+<p>Do not import protected objects from modules. Respect the
+encapsulation.</p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
-<span class="k">class</span> <span class="n">MyException</span>(<span class="nb">Exception</span>):
-    ...
+<span class="kn">from</span> <span class="nn">some.public.module</span> <span class="kn">import</span> <span class="n">FooClass</span>
 
 <span class="c1"># Wrong:</span>
-<span class="k">class</span> <span class="n">MyException</span>(<span class="n">BaseException</span>):
-    ...
+<span class="kn">from</span> <span class="nn">some.module</span> <span class="kn">import</span> <span class="n">_protected</span>
+<span class="kn">from</span> <span class="nn">some.module</span> <span class="kn">import</span> <span class="n">_protected</span> <span class="k">as</span> <span class="n">not_protected</span>
 </code></pre></div>
-<h2 id="see-also">See also</h2>
-<p><a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">https://docs.python.org/3/library/exceptions.html#exception-hierarchy</a></p>
 <div class="versionadded">
 
-0.7.0
+0.14.0
 
 </div>
 
@@ -268,7 +301,7 @@ incorrect and dangerous.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS445/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found multiple assign targets" rel="prev">
+        <a href="../WPS447/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found alphabet as strings: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -277,20 +310,20 @@ incorrect and dangerous.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found multiple assign targets
+              Found alphabet as strings: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS458/" class="md-footer__link md-footer__link--next" aria-label="Next: Found try/else/finally with multiple return paths" rel="next">
+        <a href="../WPS451/" class="md-footer__link md-footer__link--next" aria-label="Next: Found positional-only argument" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found try/else/finally with multiple return paths
+              Found positional-only argument
             </div>
           </div>
           <div class="md-footer__button md-icon">

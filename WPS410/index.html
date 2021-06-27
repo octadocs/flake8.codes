@@ -175,7 +175,7 @@
                 data-md-scrollfix>
                 
                     <li class="md-nav__item">
-                        <a href="/wemake-python-styleguide/0.9.1/constants/MODULE_METADATA_VARIABLES_BLACKLIST/" class="md-nav__link">MODULE_METADATA_VARIABLES_BLACKLIST</a>
+                        <a href="/wemake-python-styleguide/0.15.3/constants/MODULE_METADATA_VARIABLES_BLACKLIST/" class="md-nav__link">MODULE_METADATA_VARIABLES_BLACKLIST</a>
                     </li>
                 
             </ul>
@@ -212,7 +212,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -238,7 +238,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
@@ -246,16 +246,17 @@
     <h1><strong><code>WPS410</code></strong> Found wrong metadata variable: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have some module level variables.</p>
+    <p>Forbid some module-level variables.</p>
 <h2 id="reasoning">Reasoning</h2>
 <p>We discourage using module variables like <code>__author__</code>, because code
 should not contain any metadata.</p>
 <h2 id="solution">Solution</h2>
 <p>Place all the metadata in <code>setup.py</code>, <code>setup.cfg</code>, or
 <code>pyproject.toml</code>. Use proper docstrings and packaging classifiers.
-Use <code>pkg_resources</code> if you need to import this data into your app.</p>
+Use <code>importlib.metadata</code> (or <code>importlib_metadata</code> on python \&lt; 3.8)
+if you need to import this data into your app.</p>
 <p>See
-<a href="/wemake-python-styleguide/0.15.3/constants/MODULE_METADATA_VARIABLES_BLACKLIST/">MODULE_METADATA_VARIABLES_BLACKLIST</a>
+<a href="/wemake-python-styleguide/0.11.1/constants/MODULE_METADATA_VARIABLES_BLACKLIST/">MODULE_METADATA_VARIABLES_BLACKLIST</a>
 for full list of bad names.</p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Wrong:
@@ -290,7 +291,7 @@ __version__ = 0.1.2
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS401/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found wrong doc comment" rel="prev">
+        <a href="../WPS409/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found heterogeneous compare" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -299,7 +300,7 @@ __version__ = 0.1.2
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found wrong doc comment
+              Found heterogeneous compare
             </div>
           </div>
         </a>

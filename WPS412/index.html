@@ -175,7 +175,7 @@
                 data-md-scrollfix>
                 
                     <li class="md-nav__item">
-                        <a href="/wemake-python-styleguide/0.9.1/configuration/I_CONTROL_CODE/" class="md-nav__link">I_CONTROL_CODE</a>
+                        <a href="/wemake-python-styleguide/0.15.3/configuration/I_CONTROL_CODE/" class="md-nav__link">I_CONTROL_CODE</a>
                     </li>
                 
             </ul>
@@ -212,7 +212,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -238,7 +238,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
@@ -246,29 +246,32 @@
     <h1><strong><code>WPS412</code></strong> Found __init__.py module with logic</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have logic inside <code>__init__</code> module.</p>
+    <p>Forbid logic inside <code>__init__</code> module.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>If you have logic inside the <code>__init__</code> module it means several
+<p>If you have logic inside the <code>__init__</code> module It means several
 things:</p>
 <ol>
 <li>you are keeping some outdated stuff there, you need to refactor</li>
-<li>you are placing this logic into the wrong file, just create
+<li>you are placing this logic in the wrong file, just create
 another one</li>
 <li>you are doing some dark magic, and you should not do that</li>
 </ol>
 <h2 id="solution">Solution</h2>
 <p>Put your code in other modules.</p>
-<p>However, we allow to have some contents inside the <code>__init__</code> module:</p>
+<p>However, we allow some contents inside the <code>__init__</code> module:</p>
 <ol>
 <li>comments, since they are dropped before AST comes in play</li>
-<li>docs string, because sometimes it is required to state something</li>
+<li>docstrings are used sometimes when required to state something</li>
 </ol>
 <p>It is also fine when you have different users that use your code. And
-you do not want to break everything for them. In this case this rule can
-be configured.</p>
+you do not want to break everything for them. In this case, this rule
+can be configured.</p>
 <h2 id="configuration">Configuration</h2>
-<p>This rule is configurable with <code>--i-control-code</code>. Default:
-<a href="/wemake-python-styleguide/0.14.1/configuration/I_CONTROL_CODE/">I_CONTROL_CODE</a> = <code>True</code></p>
+<p>This rule is configurable with <code>--i-control-code</code> and
+<code>--i-dont-control-code</code>. Default:
+<a href="/wemake-python-styleguide/0.13.0/configuration/I_CONTROL_CODE/">I_CONTROL_CODE</a> = <code>True</code></p>
+<p>When using <code>--i-dont-control-code</code> it is still recommended to only have
+imports in your <code>__init__.py</code>.</p>
 <div class="versionadded">
 
 0.1.0
@@ -313,13 +316,13 @@ be configured.</p>
       
       
         
-        <a href="../WPS413/" class="md-footer__link md-footer__link--next" aria-label="Next: Found bad magic module function: _" rel="next">
+        <a href="../WPS414/" class="md-footer__link md-footer__link--next" aria-label="Next: Found incorrect unpacking target" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found bad magic module function: _
+              Found incorrect unpacking target
             </div>
           </div>
           <div class="md-footer__button md-icon">

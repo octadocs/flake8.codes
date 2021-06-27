@@ -14,7 +14,7 @@
     
     
       
-        <title>Found local variable that are only used in return statements - flake8.codes</title>
+        <title>Found variables that are only used for return: _ - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found local variable that are only used in return statements
+              Found variables that are only used for return: _
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,24 +214,35 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/consistency/">WPS3xx Consistency</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/consistency/">WPS3xx Consistency</a>
             
         
     
 
-    <h1><strong><code>WPS331</code></strong> Found local variable that are only used in return statements</h1>
+    <h1><strong><code>WPS331</code></strong> Found variables that are only used for return: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbid local variable that are only used in <code>return</code> statements.</p>
+    <p>Forbid local variables that are only used in <code>return</code> statements.</p>
+<p>We also allow cases when a variable is assigned, then there are some
+other statements without direct variable access and the variable is
+returned. We reserve this use-case to be able to do some extra work
+before the function returns.</p>
+<p>We also allow the return of partial, sorted, or modified tuple items
+that are defined just above.</p>
 <h2 id="reasoning">Reasoning</h2>
 <p>This is done for consistency and more readable source code.</p>
 <h2 id="solution">Solution</h2>
-<p>Forbid to use local variables that are only used in
-<span class="title-ref">`return</span> statements</p>
+<p>Return the expression itself, instead of creating a temporary
+variable.</p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
 <span class="nv">def</span> <span class="nv">some_function</span><span class="ss">()</span>:
     <span class="k">return</span> <span class="mi">1</span>
+
+<span class="nv">def</span> <span class="nv">other_function</span><span class="ss">()</span>:
+    <span class="nv">some_value</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="nv">do_something</span><span class="ss">(</span><span class="nv">some_value</span><span class="ss">)</span>
+    <span class="k">return</span> <span class="nv">some_value</span>
 
 # <span class="nv">Wrong</span>:
 <span class="nv">def</span> <span class="nv">some_function</span><span class="ss">()</span>:
@@ -241,6 +252,12 @@
 <div class="versionadded">
 
 0.9.0
+
+</div>
+
+<div class="versionchanged">
+
+0.14.0
 
 </div>
 
@@ -266,7 +283,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS330/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found unnecessary operator: _" rel="prev">
+        <a href="../WPS329/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found useless except case" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -275,20 +292,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found unnecessary operator: _
+              Found useless except case
             </div>
           </div>
         </a>
       
       
         
-        <a href="../wemake-python-styleguide/0.9.1/violations/best_practices/" class="md-footer__link md-footer__link--next" aria-label="Next: WPS4xx Best Practices" rel="next">
+        <a href="../WPS332/" class="md-footer__link md-footer__link--next" aria-label="Next: Found walrus operator" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              WPS4xx Best Practices
+              Found walrus operator
             </div>
           </div>
           <div class="md-footer__button md-icon">

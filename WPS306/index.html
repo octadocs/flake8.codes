@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,7 +214,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/consistency/">WPS3xx Consistency</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/consistency/">WPS3xx Consistency</a>
             
         
     
@@ -222,11 +222,17 @@
     <h1><strong><code>WPS306</code></strong> Found class without a base class: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to write classes without base classes.</p>
+    <p>Forbid writing classes without base classes.</p>
+<p>Please, note that this rule has nothing to do with <code>python2</code>. We care
+only about consistency here.</p>
 <h2 id="reasoning">Reasoning</h2>
 <p>We just need to decide how to do it. We need a single and unified
 rule about base classes. We have decided to stick to the explicit
-base class notation.</p>
+base class notation. Why? Because it is consistent with other
+use-cases. When we have a base class <code>A</code>, we write <code>class
+MyClass(A):</code>. When we have no base class, we have an implicit
+<code>object</code> base class. So, we still use the same syntax: <code>class
+MyClass(object):</code>.</p>
 <h2 id="solution">Solution</h2>
 <p>Add a base class.</p>
 <h2 id="example">Example</h2>
@@ -264,7 +270,7 @@ base class notation.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../wemake-python-styleguide/0.9.1/violations/consistency/" class="md-footer__link md-footer__link--prev" aria-label="Previous: WPS3xx Consistency" rel="prev">
+        <a href="../WPS304/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found partial float: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -273,20 +279,20 @@ base class notation.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              WPS3xx Consistency
+              Found partial float: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS307/" class="md-footer__link md-footer__link--next" aria-label="Next: Found list comprehension with multiple ifs" rel="next">
+        <a href="../WPS309/" class="md-footer__link md-footer__link--next" aria-label="Next: Found reversed compare order" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found list comprehension with multiple ifs
+              Found reversed compare order
             </div>
           </div>
           <div class="md-footer__button md-icon">

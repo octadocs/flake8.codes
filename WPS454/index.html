@@ -14,7 +14,7 @@
     
     
       
-        <title>Found incorrect base class - flake8.codes</title>
+        <title>Found wrong raise exception type: _ - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found incorrect base class
+              Found wrong raise exception type: _
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,38 +214,37 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS454</code></strong> Found incorrect base class</h1>
+    <h1><strong><code>WPS454</code></strong> Found wrong raise exception type: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have anything else than a class as a base class.</p>
+    <p>Forbid raising <code>Exception</code> or <code>BaseException</code>.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>In Python you can specify anything in the base classes slot. In
-runtime this expression will be evaluated and executed. We need to
-prevent dirty hacks in this field.</p>
+<p><code>Exception</code> and <code>BaseException</code> are inconvenient to catch. And when
+you catch them you can accidentally suppress other exceptions.</p>
 <h2 id="solution">Solution</h2>
-<p>Use only attributes, names, and types to be your base classes.</p>
+<p>Use a user-defined exception, subclassed from <code>Exception</code>.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="nl">Correct</span><span class="p">:</span><span class="w"></span>
-<span class="k">class</span><span class="w"> </span><span class="n">Test</span><span class="p">(</span><span class="k">module</span><span class="p">.</span><span class="n">ObjectName</span><span class="p">,</span><span class="w"> </span><span class="n">MixinName</span><span class="p">,</span><span class="w"> </span><span class="n">keyword</span><span class="o">=</span><span class="k">True</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
-<span class="k">class</span><span class="w"> </span><span class="n">GenericClass</span><span class="p">(</span><span class="n">Generic</span><span class="o">[</span><span class="n">ValueType</span><span class="o">]</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code># Correct:
+raise UserNotFoundError
+raise UserNotFoundError(&quot;cannot find user with the given id&quot;)
 
-<span class="err">#</span><span class="w"> </span><span class="nl">Wrong</span><span class="p">:</span><span class="w"></span>
-<span class="k">class</span><span class="w"> </span><span class="n">Test</span><span class="p">((</span><span class="nl">lambda</span><span class="p">:</span><span class="w"> </span><span class="k">object</span><span class="p">)())</span><span class="err">:</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
+# Wrong:
+raise Exception
+raise Exception(&quot;user not found&quot;)
+raise BaseException
+raise BaseException(&quot;user not found&quot;)
 </code></pre></div>
+<h2 id="see-also">See also</h2>
+<p><a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">https://docs.python.org/3/library/exceptions.html#exception-hierarchy</a>
+<a href="https://docs.python.org/3/tutorial/errors.html#user-defined-exceptions">https://docs.python.org/3/tutorial/errors.html#user-defined-exceptions</a></p>
 <div class="versionadded">
 
-0.7.0
-
-</div>
-
-<div class="versionchanged">
-
-0.7.1
+0.15.0
 
 </div>
 
@@ -271,7 +270,7 @@ prevent dirty hacks in this field.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS453/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found method without arguments: _" rel="prev">
+        <a href="../WPS453/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found executable mismatch: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -280,20 +279,20 @@ prevent dirty hacks in this field.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found method without arguments: _
+              Found executable mismatch: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS455/" class="md-footer__link md-footer__link--next" aria-label="Next: Found incorrect __slots__ syntax" rel="next">
+        <a href="../WPS455/" class="md-footer__link md-footer__link--next" aria-label="Next: Found non-trivial expression as an argument for &#34;except&#34;" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found incorrect __slots__ syntax
+              Found non-trivial expression as an argument for "except"
             </div>
           </div>
           <div class="md-footer__button md-icon">

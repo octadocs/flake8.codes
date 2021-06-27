@@ -14,7 +14,7 @@
     
     
       
-        <title>Found comparison between same variable - flake8.codes</title>
+        <title>Found comparison of a variable to itself - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found comparison between same variable
+              Found comparison of a variable to itself
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,31 +214,30 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/consistency/">WPS3xx Consistency</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/consistency/">WPS3xx Consistency</a>
             
         
     
 
-    <h1><strong><code>WPS312</code></strong> Found comparison between same variable</h1>
+    <h1><strong><code>WPS312</code></strong> Found comparison of a variable to itself</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have comparisons between the same variable.</p>
+    <p>Forbid comparisons of a variable to itself.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>When the same variables are compared it is typically an indication
-of a mistake, since the Boolean value of the comparison will always
+<p>When a variable is compared to itself, it is typically an indication
+of a mistake since the Boolean value of the comparison will always
 be the same.</p>
 <h2 id="solution">Solution</h2>
-<p>Remove the same variable comparison and any associated dead code.</p>
+<p>Remove the comparison and any associated dead code.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code># <span class="nv">Wrong</span>:
-<span class="nv">a</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight"><pre><span></span><code># <span class="nv">Correct</span>:
+<span class="nv">do_something</span><span class="ss">()</span>
+
+# <span class="nv">Wrong</span>:
 <span class="k">if</span> <span class="nv">a</span> <span class="o">&lt;</span> <span class="nv">a</span>:
     <span class="nv">do_something</span><span class="ss">()</span>
 <span class="k">else</span>:
     <span class="nv">do_something_else</span><span class="ss">()</span>
-
-# <span class="nv">Correct</span>:
-<span class="nv">do_something</span><span class="ss">()</span>
 </code></pre></div>
 <div class="versionadded">
 
@@ -268,7 +267,7 @@ be the same.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS310/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found bad number suffix: _" rel="prev">
+        <a href="../WPS311/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found multiple in compares" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -277,20 +276,20 @@ be the same.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found bad number suffix: _
+              Found multiple in compares
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS314/" class="md-footer__link md-footer__link--next" aria-label="Next: Conditional always evaluates to same result" rel="next">
+        <a href="../WPS315/" class="md-footer__link md-footer__link--next" aria-label="Next: Found extra object in parent classes list" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Conditional always evaluates to same result
+              Found extra object in parent classes list
             </div>
           </div>
           <div class="md-footer__button md-icon">

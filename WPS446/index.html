@@ -14,7 +14,7 @@
     
     
       
-        <title>Found incorrect unpacking target - flake8.codes</title>
+        <title>Found approximate constant: _ - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found incorrect unpacking target
+              Found approximate constant: _
             
           </span>
         </div>
@@ -160,6 +160,30 @@
     
 
     
+        <div
+            class="md-sidebar md-sidebar--secondary"
+            data-md-component="sidebar"
+            data-md-type="toc"
+        >
+            <div class="md-sidebar__scrollwrap">
+                <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--secondary related-items">
+            <label class="md-nav__title" for="__toc">
+                Related Constants
+            </label>
+            <ul class="md-nav__list" data-md-component="toc"
+                data-md-scrollfix>
+                
+                    <li class="md-nav__item">
+                        <a href="/wemake-python-styleguide/0.15.3/constants/MATH_APPROXIMATE_CONSTANTS/" class="md-nav__link">MATH_APPROXIMATE_CONSTANTS</a>
+                    </li>
+                
+            </ul>
+        </nav>
+                </div>
+            </div>
+        </div>
+    
 
 
           <div class="md-content" data-md-component="content">
@@ -188,7 +212,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,31 +238,37 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS446</code></strong> Found incorrect unpacking target</h1>
+    <h1><strong><code>WPS446</code></strong> Found approximate constant: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have tuple unpacking with side-effects.</p>
+    <p>Forbid approximate constants.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>Having unpacking with side-effects is very dirty. You might get in
-serious and very hard-to-debug troubles because of this technique.
-So, do not use it.</p>
+<p>Some constants are already defined. No need to write them again, use
+existing values. We just compare numbers as strings and raise this
+violation when they start with the same chars.</p>
 <h2 id="solution">Solution</h2>
-<p>Use unpacking with only variables, not any other entities.</p>
+<p>Use pre-defined constants.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code># Correct:
-first, second = some()
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+<span class="n">random_number</span> <span class="o">=</span> <span class="mf">3.15</span>
+<span class="n">too_short</span> <span class="o">=</span> <span class="mf">3.1</span>
 
-# Wrong:
-first, some_dict[&#39;alias&#39;] = some()
+<span class="c1"># Wrong:</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
 </code></pre></div>
+<p>See <a href="/wemake-python-styleguide/0.13.0/constants/MATH_APPROXIMATE_CONSTANTS/">MATH_APPROXIMATE_CONSTANTS</a>
+for full list of math constants that we check for.</p>
+<h2 id="see-also">See also</h2>
+<p><a href="https://docs.python.org/3/library/math.html#constants">https://docs.python.org/3/library/math.html#constants</a></p>
 <div class="versionadded">
 
-0.6.0
+0.13.0
 
 </div>
 
@@ -264,7 +294,7 @@ first, some_dict[&#39;alias&#39;] = some()
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS444/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found statement that has no effect" rel="prev">
+        <a href="../WPS445/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found incorrectly named keyword in the starred dict" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -273,20 +303,20 @@ first, some_dict[&#39;alias&#39;] = some()
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found statement that has no effect
+              Found incorrectly named keyword in the starred dict
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS447/" class="md-footer__link md-footer__link--next" aria-label="Next: Found duplicate exception: _" rel="next">
+        <a href="../WPS447/" class="md-footer__link md-footer__link--next" aria-label="Next: Found alphabet as strings: _" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found duplicate exception: _
+              Found alphabet as strings: _
             </div>
           </div>
           <div class="md-footer__button md-icon">

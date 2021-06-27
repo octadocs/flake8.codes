@@ -160,6 +160,54 @@
     
 
     
+        <div
+            class="md-sidebar md-sidebar--secondary"
+            data-md-component="sidebar"
+            data-md-type="toc"
+        >
+            <div class="md-sidebar__scrollwrap">
+                <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--secondary related-items">
+            <label class="md-nav__title" for="__toc">
+                Related Violations
+            </label>
+            <ul class="md-nav__list" data-md-component="toc"
+                data-md-scrollfix>
+                
+                    <li class="md-nav__item">
+                        <a href="/WPS237/"
+   class="md-nav__link">
+    <strong>WPS237</strong> Found a too complex f string
+</a>
+                    </li>
+                
+                    <li class="md-nav__item">
+                        <a href="/WPS237/"
+   class="md-nav__link">
+    <strong>WPS237</strong> Found a too complex f string
+</a>
+                    </li>
+                
+                    <li class="md-nav__item">
+                        <a href="/WPS323/"
+   class="md-nav__link">
+    <strong>WPS323</strong> Found % string formatting
+</a>
+                    </li>
+                
+                    <li class="md-nav__item">
+                        <a href="/WPS323/"
+   class="md-nav__link">
+    <strong>WPS323</strong> Found % string formatting
+</a>
+                    </li>
+                
+            </ul>
+        </nav>
+                </div>
+            </div>
+        </div>
+    
 
 
           <div class="md-content" data-md-component="content">
@@ -188,7 +236,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,7 +262,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/consistency/">WPS3xx Consistency</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/consistency/">WPS3xx Consistency</a>
             
         
     
@@ -222,12 +270,14 @@
     <h1><strong><code>WPS305</code></strong> Found f string</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to use <code>f</code> strings.</p>
+    <p>Forbid <code>f</code> strings.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p><code>f</code> strings loses context too often and they are hard to lint.
-Imagine that you have a string that breaks when you move it two
-lines above. That's not how a string should behave. Also, they
-promote a bad practice: putting your logic inside the template.</p>
+<p><code>f</code> strings implicitly rely on the context around them. Imagine that
+you have a string that breaks when you move it two lines above.
+That's not how a string should behave. Also, they promote a bad
+practice: putting your logic inside the template. Moreover, they do
+two things at once: declare a template and format it in a single
+action.</p>
 <h2 id="solution">Solution</h2>
 <p>Use <code>.format()</code> with indexed params instead.</p>
 <h2 id="see-also">See also</h2>
@@ -268,7 +318,7 @@ f&#39;Result is: {2 + 2}&#39;
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS304/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found partial float: _" rel="prev">
+        <a href="../WPS302/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found unicode string prefix: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -277,20 +327,20 @@ f&#39;Result is: {2 + 2}&#39;
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found partial float: _
+              Found unicode string prefix: _
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS309/" class="md-footer__link md-footer__link--next" aria-label="Next: Found reversed comparison order" rel="next">
+        <a href="../WPS307/" class="md-footer__link md-footer__link--next" aria-label="Next: Found list comprehension with multiple ifs" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found reversed comparison order
+              Found list comprehension with multiple ifs
             </div>
           </div>
           <div class="md-footer__button md-icon">

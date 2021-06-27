@@ -14,7 +14,7 @@
     
     
       
-        <title>Found nested import - flake8.codes</title>
+        <title>Found list multiply - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found nested import
+              Found list multiply
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,40 +214,32 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS435</code></strong> Found nested import</h1>
+    <h1><strong><code>WPS435</code></strong> Found list multiply</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have nested imports in functions.</p>
+    <p>Forbid multiplying lists.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>Usually, nested imports are used to fix the import cycle. So, nested
-imports show that there's an issue with your design.</p>
+<p>When you multiply lists - it does not create new values, it creates
+references to the existing value. It is not what people mean in
+99.9% of cases.</p>
 <h2 id="solution">Solution</h2>
-<p>You don't need nested imports, you need to refactor your code.
-Introduce a new module or find another way to do what you want to
-do. Rethink how your layered architecture should look like.</p>
+<p>Use list comprehension or loop instead.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
-<span class="kn">from</span> <span class="nn">my_module</span> <span class="kn">import</span> <span class="n">some_function</span>
-
-<span class="k">def</span> <span class="nf">some</span><span class="p">():</span> <span class="o">...</span>
-
-<span class="c1"># Wrong:</span>
-<span class="k">def</span> <span class="nf">some</span><span class="p">():</span>
-    <span class="kn">from</span> <span class="nn">my_module</span> <span class="kn">import</span> <span class="n">some_function</span>
+<div class="highlight"><pre><span></span><code># Wrong:
+my_list = [1, 2, 3] * 3
 </code></pre></div>
+<h2 id="see-also">See also</h2>
+<p><a href="https://github.com/satwikkansal/wtfPython#-explanation-8">https://github.com/satwikkansal/wtfPython#-explanation-8</a></p>
 <div class="versionadded">
 
-0.1.0
+0.12.0
 
 </div>
-
-<h2 id="see-also">See also</h2>
-<p><a href="https://github.com/seddonym/layer_linter">https://github.com/seddonym/layer_linter</a></p>
 
     <!-- Last update of source file -->
     
@@ -271,7 +263,7 @@ do. Rethink how your layered architecture should look like.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS434/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found using restricted magic method: _" rel="prev">
+        <a href="../WPS433/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found nested import" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -280,20 +272,20 @@ do. Rethink how your layered architecture should look like.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found using restricted magic method: _
+              Found nested import
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS439/" class="md-footer__link md-footer__link--next" aria-label="Next: Found yield inside __init__ method" rel="next">
+        <a href="../WPS437/" class="md-footer__link md-footer__link--next" aria-label="Next: Found protected attribute usage: _" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found yield inside __init__ method
+              Found protected attribute usage: _
             </div>
           </div>
           <div class="md-footer__button md-icon">

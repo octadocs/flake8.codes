@@ -175,7 +175,7 @@
                 data-md-scrollfix>
                 
                     <li class="md-nav__item">
-                        <a href="/wemake-python-styleguide/0.9.1/configuration/MIN_NAME_LENGTH/" class="md-nav__link">MIN_NAME_LENGTH</a>
+                        <a href="/wemake-python-styleguide/0.15.3/configuration/MIN_NAME_LENGTH/" class="md-nav__link">MIN_NAME_LENGTH</a>
                     </li>
                 
             </ul>
@@ -212,7 +212,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -238,7 +238,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/naming/">WPS1xx Naming</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/naming/">WPS1xx Naming</a>
             
         
     
@@ -246,7 +246,7 @@
     <h1><strong><code>WPS111</code></strong> Found too short name: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have too short variable or module names.</p>
+    <p>Forbid short variable or module names.</p>
 <h2 id="reasoning">Reasoning</h2>
 <p>It is hard to understand what the variable means and why it is used,
 if its name is too short.</p>
@@ -254,6 +254,8 @@ if its name is too short.</p>
 <p>Think of another name. Give more context to it.</p>
 <p>This rule checks: modules, variables, attributes, functions, methods,
 and classes.</p>
+<p>We do not count trailing and leading underscores when calculating
+length.</p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code># Correct:
 x_coordinate = 1
@@ -265,7 +267,7 @@ y = 2
 </code></pre></div>
 <h2 id="configuration">Configuration</h2>
 <p>This rule is configurable with <code>--min-name-length</code>. Default:
-<a href="/wemake-python-styleguide/0.9.0/configuration/MIN_NAME_LENGTH/">MIN_NAME_LENGTH</a> = <code>2</code></p>
+<a href="/wemake-python-styleguide/0.7.0/configuration/MIN_NAME_LENGTH/">MIN_NAME_LENGTH</a> = <code>2</code></p>
 <div class="versionadded">
 
 0.1.0
@@ -275,6 +277,12 @@ y = 2
 <div class="versionchanged">
 
 0.4.0
+
+</div>
+
+<div class="versionchanged">
+
+0.12.0
 
 </div>
 
@@ -300,7 +308,7 @@ y = 2
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS110/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found wrong variable name: _" rel="prev">
+        <a href="../WPS102/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found incorrect module name pattern" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -309,20 +317,20 @@ y = 2
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found wrong variable name: _
+              Found incorrect module name pattern
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS112/" class="md-footer__link md-footer__link--next" aria-label="Next: Found private name pattern: _" rel="next">
+        <a href="../WPS113/" class="md-footer__link md-footer__link--next" aria-label="Next: Found same alias import: _" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found private name pattern: _
+              Found same alias import: _
             </div>
           </div>
           <div class="md-footer__button md-icon">

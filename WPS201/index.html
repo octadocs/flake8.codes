@@ -175,7 +175,7 @@
                 data-md-scrollfix>
                 
                     <li class="md-nav__item">
-                        <a href="/wemake-python-styleguide/0.9.1/configuration/MAX_IMPORTS/" class="md-nav__link">MAX_IMPORTS</a>
+                        <a href="/wemake-python-styleguide/0.15.3/configuration/MAX_IMPORTS/" class="md-nav__link">MAX_IMPORTS</a>
                     </li>
                 
             </ul>
@@ -212,7 +212,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -238,7 +238,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/complexity/">WPS2xx Complexity</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/complexity/">WPS2xx Complexity</a>
             
         
     
@@ -246,27 +246,27 @@
     <h1><strong><code>WPS201</code></strong> Found module with too many imports: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have modules with too many imports.</p>
+    <p>Forbid modules with too many imports.</p>
 <p>Namespaces are one honking great idea -- let's do more of those!</p>
 <h2 id="reasoning">Reasoning</h2>
 <p>Having too many imports without prefixes is quite expensive. You
-have to memorize all the source locations of the imports. And
+have to memorize all the source locations of the imports and
 sometimes it is hard to remember what kind of functions and classes
 are already injected into your context.</p>
 <p>It is also a questionable design if a single module has a lot of
-imports. Why a single module has so many dependencies? So, it
-becomes too coupled.</p>
+imports. Why would a single module have so many dependencies? So,
+the module becomes too coupled.</p>
 <h2 id="solution">Solution</h2>
 <p>Refactor the imports to import a common namespace. Something like
 <code>from package import module</code> and then use it like
 <code>module.function()</code>.</p>
 <p>Or refactor your code and split the complex module into several
-ones.</p>
-<p>We do not make any differences between <code>import</code> and <code>from ... import
+modules.</p>
+<p>We do not make any distinction between <code>import</code> and <code>from ... import
 ...</code>.</p>
 <h2 id="configuration">Configuration</h2>
 <p>This rule is configurable with <code>--max-imports</code>. Default:
-<a href="/wemake-python-styleguide/0.12.3/configuration/MAX_IMPORTS/">MAX_IMPORTS</a> = <code>12</code></p>
+<a href="/wemake-python-styleguide/0.8.0/configuration/MAX_IMPORTS/">MAX_IMPORTS</a> = <code>12</code></p>
 <div class="versionadded">
 
 0.1.0
@@ -311,13 +311,13 @@ ones.</p>
       
       
         
-        <a href="../WPS213/" class="md-footer__link md-footer__link--next" aria-label="Next: Found too many expressions: _" rel="next">
+        <a href="../WPS202/" class="md-footer__link md-footer__link--next" aria-label="Next: Found too many module members: _" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found too many expressions: _
+              Found too many module members: _
             </div>
           </div>
           <div class="md-footer__button md-icon">

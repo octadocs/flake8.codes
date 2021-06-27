@@ -14,7 +14,7 @@
     
     
       
-        <title>Found method without arguments: _ - flake8.codes</title>
+        <title>Found executable mismatch: _ - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Found method without arguments: _
+              Found executable mismatch: _
             
           </span>
         </div>
@@ -188,7 +188,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -214,35 +214,43 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/best_practices/">WPS4xx Best Practices</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/best_practices/">WPS4xx Best Practices</a>
             
         
     
 
-    <h1><strong><code>WPS453</code></strong> Found method without arguments: _</h1>
+    <h1><strong><code>WPS453</code></strong> Found executable mismatch: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have methods without any arguments.</p>
+    <p>Forbid executing a file with shebang incorrectly set.</p>
+<ul>
+<li>
+<p>A violation is raised in these cases :</p>
+<ul>
+<li>Shebang is present but the file is not executable.</li>
+<li>The file is executable but no shebang is present.</li>
+<li>Shebang is present but does not contain "python".</li>
+<li>Whitespace is present before the shebang.</li>
+<li>Presence of blank lines or commented lines before the shebang.</li>
+</ul>
+</li>
+</ul>
 <h2 id="reasoning">Reasoning</h2>
-<p>Methods without arguments are allowed to be defined, but almost
-impossible to use. Furthermore, they don't have an access to <code>self</code>,
-so can not access the inner state of the object. It might be an
-intentional design or just a typo.</p>
+<p>Setting the shebang incorrectly causes an executable mismatch.</p>
 <h2 id="solution">Solution</h2>
-<p>Move any methods with arguments to raw functions. Or just add an
-argument if it is actually required.</p>
+<p>Ensure that the shebang is present on the first line, and contains
+"python", and there is no leading whitespace.</p>
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
-<span class="k">class</span> <span class="n">Test</span>(<span class="n">object</span>):
-    <span class="n">def</span> <span class="k">method</span>(<span class="nb">self</span>): ...
+<div class="highlight"><pre><span></span><code># Correct:
+#!/usr/bin/env python
 
-<span class="c1"># Wrong:</span>
-<span class="k">class</span> <span class="n">Test</span>(<span class="n">object</span>):
-    <span class="n">def</span> <span class="k">method</span>(): ...
+# Wrong:
+#!/usr/bin/env
+    #!/usr/bin/env python
 </code></pre></div>
 <div class="versionadded">
 
-0.7.0
+0.14.0
 
 </div>
 
@@ -268,7 +276,7 @@ argument if it is actually required.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS452/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found incorrect node inside class body" rel="prev">
+        <a href="../WPS452/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found break or continue in finally block" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -277,20 +285,20 @@ argument if it is actually required.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found incorrect node inside class body
+              Found break or continue in finally block
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WPS454/" class="md-footer__link md-footer__link--next" aria-label="Next: Found incorrect base class" rel="next">
+        <a href="../WPS454/" class="md-footer__link md-footer__link--next" aria-label="Next: Found wrong raise exception type: _" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Found incorrect base class
+              Found wrong raise exception type: _
             </div>
           </div>
           <div class="md-footer__button md-icon">

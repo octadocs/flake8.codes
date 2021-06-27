@@ -175,7 +175,7 @@
                 data-md-scrollfix>
                 
                     <li class="md-nav__item">
-                        <a href="/wemake-python-styleguide/0.9.1/configuration/MAX_METHODS/" class="md-nav__link">MAX_METHODS</a>
+                        <a href="/wemake-python-styleguide/0.15.3/configuration/MAX_METHODS/" class="md-nav__link">MAX_METHODS</a>
                     </li>
                 
             </ul>
@@ -212,7 +212,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/">0.9.1</a>
+                <a href="/wemake-python-styleguide/0.15.3/">0.15.3</a>
             
         
     
@@ -238,7 +238,7 @@
             
 
             
-                <a href="/wemake-python-styleguide/0.9.1/violations/complexity/">WPS2xx Complexity</a>
+                <a href="/wemake-python-styleguide/0.15.3/violations/complexity/">WPS2xx Complexity</a>
             
         
     
@@ -246,23 +246,23 @@
     <h1><strong><code>WPS214</code></strong> Found too many methods: _</h1>
 
     <!-- Markdown content -->
-    <p>Forbids to have many methods in a single class.</p>
+    <p>Forbid too many methods in a single class.</p>
 <h2 id="reasoning">Reasoning</h2>
-<p>Having too many methods might lead to the "God object". This kind of
-objects can handle everything. So, in the end, your code becomes too
-hard to maintain and test.</p>
+<p>Having too many methods might lead to the "God object" anti-pattern.
+This kind of object can handle everything. So, in the end, your code
+becomes too hard to maintain and test.</p>
 <h2 id="solution">Solution</h2>
 <p>What to do if you have too many methods in a single class? Split
-this class into several classes. Then use composition or inheritance
-to refactor your code. This will protect you from "God object"
+this class into several classes, then use composition or inheritance
+to refactor your code. This will protect you from the "God object"
 anti-pattern.</p>
-<p>We do not make any difference between instance and class methods. We
+<p>We do not make any distinctions between instance and class methods. We
 also do not care about functions and classes being public or not. We
 also do not count inherited methods from parents. This rule does not
 count the attributes of a class.</p>
 <h2 id="configuration">Configuration</h2>
 <p>This rule is configurable with <code>--max-methods</code>. Default:
-<a href="/wemake-python-styleguide/0.13.1/configuration/MAX_METHODS/">MAX_METHODS</a> = <code>7</code></p>
+<a href="/wemake-python-styleguide/0.14.0/configuration/MAX_METHODS/">MAX_METHODS</a> = <code>7</code></p>
 <div class="versionadded">
 
 0.1.0
@@ -294,7 +294,7 @@ count the attributes of a class.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../WPS212/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found too many return statements: _" rel="prev">
+        <a href="../WPS211/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Found too many arguments: _" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -303,7 +303,7 @@ count the attributes of a class.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Found too many return statements: _
+              Found too many arguments: _
             </div>
           </div>
         </a>
