@@ -1,5 +1,5 @@
 # Expects: ?index_page
-SELECT ?version_number ?url (COUNT(?page) AS ?violations_count) WHERE {
+SELECT ?major ?minor ?patch ?version_number ?url (COUNT(?page) AS ?violations_count) WHERE {
     ?index_page
         a octa:IndexPage ;
         octa:isChildOf ?plugin .
@@ -11,9 +11,13 @@ SELECT ?version_number ?url (COUNT(?page) AS ?violations_count) WHERE {
     ?version_index_page
         a octa:IndexPage ;
         octa:isChildOf ?version ;
-        octa:url ?url .
+        octa:url ?url ;
+
+        :major_version ?major ;
+        :minor_version ?minor ;
+        :patch_version ?patch .
 
     ?page :version ?version .
 }
 GROUP BY ?plugin ?version ?url
-ORDER BY DESC(?version_number)
+ORDER BY DESC(?major) DESC(?minor) DESC(?patch)

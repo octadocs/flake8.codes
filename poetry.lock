@@ -930,7 +930,7 @@ typing_extensions = ">=3.6,<4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.9"
-content-hash = "be0280e694c2ad562cdc24b8e71328a5d4157b76cbb2e620f34edffa4202a159"
+content-hash = "ee75406b9e37d458b755510fd9af4aae6094c0f76c98498accd1f07b31127dcc"
 
 [metadata.files]
 astor = [

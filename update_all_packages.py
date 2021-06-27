@@ -38,5 +38,5 @@ def generate_every_version(package_name: str):
         print('Installed.')
 
 
-generate_every_version('wemake-python-styleguide')
+# generate_every_version('wemake-python-styleguide')
 generate_every_version('flake8-bugbear')

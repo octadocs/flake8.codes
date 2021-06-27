@@ -3,7 +3,6 @@ from typing import Optional
 
 import frontmatter
 import libcst
-from wemake_python_styleguide.options import defaults
 
 from flake8_codes.models import WPSConfigurationParameter
 
@@ -18,6 +17,7 @@ def format_reasoning(comment: Optional[libcst.Comment]) -> Optional[str]:
 
 def generate_wps_options(docs: Path) -> None:
     """Generate configuration defaults for current version of WPS."""
+    from wemake_python_styleguide.options import defaults
     docs.mkdir(parents=True, exist_ok=True)
 
     with open(defaults.__file__, 'r') as f:

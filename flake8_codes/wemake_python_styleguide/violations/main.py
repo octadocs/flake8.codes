@@ -4,7 +4,6 @@ from pathlib import Path
 from typing import Iterator
 
 import frontmatter
-from wemake_python_styleguide import violations
 
 from flake8_codes.models import Violation
 from flake8_codes.wemake_python_styleguide.violations.format_example_section import \
@@ -165,6 +164,7 @@ def extract_violations_from_module(module) -> Iterator[Violation]:
 
 def document_wps_violations(directory: Path):
     """Generate docs for installed version of wemake-python-styleguide."""
+    from wemake_python_styleguide import violations
     violations_module_files = Path(violations.__file__).parent
 
     for module_path in violations_module_files.iterdir():

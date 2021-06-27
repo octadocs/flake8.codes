@@ -7,7 +7,10 @@ import bugbear
 import frontmatter
 
 from flake8_codes.bugbear.models import BugbearViolation
-from flake8_codes.stubs import create_empty_index_md_in_directory
+from flake8_codes.stubs import (
+    create_empty_index_md_in_directory,
+    create_version_index_md,
+)
 
 
 def bugbear_violation_objects() -> Iterable[Tuple[str, functools.partial]]:
@@ -54,12 +57,13 @@ def document_bugbear():
     """Generate a bunch of documentation files for flake8-bugbear."""
     version = bugbear.__version__
 
-    bugbear_directory = Path(__file__).parent.parent.parent / 'docs/flake8-bugbear'
+    bugbear_directory = (
+        Path(__file__).parent.parent.parent / 'docs/flake8-bugbear'
+    )
     create_empty_index_md_in_directory(bugbear_directory)
 
     version_directory = bugbear_directory / version
-
-    create_empty_index_md_in_directory(version_directory)
+    create_version_index_md(docs=version_directory, package_version=version)
 
     violations = list(bugbear_violations())
 

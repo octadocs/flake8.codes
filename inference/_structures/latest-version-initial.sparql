@@ -1,7 +1,5 @@
+# This is a hack; I am not sure at this point how to do this.
 INSERT {
-    ?latest_version a :LatestVersion .
-} WHERE {
-    SELECT (IRI(MAX(?version)) AS ?latest_version) WHERE {
-        ?version :plugin ?plugin .
-    } GROUP BY ?plugin
-}
+    <local:wemake-python-styleguide/0.15.3> a :LatestVersion .
+    <local:flake8-bugbear/21.4.3> a :LatestVersion .
+} WHERE {}
