@@ -44,7 +44,7 @@ def wps_violation(
     ))
 
     return (
-        f"[**WPS{violation['code']}** {violation['title']}]({violation['url']})"
+        f"[**{violation['code']}** {violation['title']}]({violation['url']})"
     )
 
 
