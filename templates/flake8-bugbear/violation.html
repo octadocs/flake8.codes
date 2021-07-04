@@ -68,19 +68,11 @@
         ) }}
 
         {{ macros.related_items(
-            items=queries.related_configuration_parameters(
-                violation=page.iri
+            items=queries.versions(
+                this=page.iri
             ),
-            title='Related Configuration Parameters',
-            item_template_path='partials/link.html'
-        ) }}
-
-        {{ macros.related_items(
-            items=queries.related_constants(
-                violation_page=page.iri
-            ),
-            title='Related Constants',
-            item_template_path='partials/link.html'
+            title='Versions',
+            item_template_path='partials/version-link.html'
         ) }}
     {% endcall %}
 {% endblock %}

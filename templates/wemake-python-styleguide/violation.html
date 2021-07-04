@@ -53,6 +53,12 @@
             item_template_path='partials/link.html'
         ) }}
 
-
+        {{ macros.related_items(
+            items=queries.versions(
+                this=page.iri
+            ),
+            title='Versions',
+            item_template_path='partials/version-link.html'
+        ) }}
     {% endcall %}
 {% endblock %}

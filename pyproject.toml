@@ -44,7 +44,6 @@ more-itertools = "^8.8.0"
 pip-versions = "^0.1.0"
 mkdocs = "<1.2"
 pydotplus = "^2.0.2"
-flake8-bugbear = "21.4.3"
 wemake-python-styleguide = "^0.15.3"
 
 

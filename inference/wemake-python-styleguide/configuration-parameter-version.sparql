@@ -1,0 +1,14 @@
+INSERT {
+    GRAPH <local:inference/wemake-python-styleguide/configuration-parameter-version.sparql> {
+        ?page :version ?version .
+    }
+} WHERE {
+    ?config_or_constants_directory
+        octa:isParentOf ?page ;
+        octa:fileName ?config_or_constants_directory_name ;
+        octa:isChildOf ?version .
+
+    FILTER(
+        ?config_or_constants_directory_name IN ("configuration", "constants")
+    )
+}

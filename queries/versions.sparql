@@ -1,0 +1,23 @@
+# Show all versions of current page.
+# Accepts: ?this - IRI of the current page.
+SELECT * WHERE {
+    ?this octa:fileName ?file_name .
+
+    ?page
+        octa:fileName ?file_name ;
+        :version ?version ;
+        octa:url ?url .
+
+    ?version
+        rdfs:label ?name ;
+        octa:isParentOf ?index .
+
+    ?index
+        a octa:IndexPage ;
+        :major_version ?major ;
+        :minor_version ?minor ;
+        :patch_version ?patch .
+
+    BIND((?this = ?page) AS ?active)
+}
+ORDER BY DESC(?major) DESC(?minor) DESC(?patch)

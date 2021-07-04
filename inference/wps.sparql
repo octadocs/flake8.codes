@@ -1,8 +1,6 @@
 # Assign classes to wemake-python-styleguide generated pages based on their type
 INSERT {
-    ?wps_file
-        :version ?version ;
-        a ?page_class .
+    ?wps_file a ?page_class .
 } WHERE {
     :wemake-python-styleguide octa:isParentOf ?wps_version_directory .
     ?wps_version_directory octa:fileName ?version .

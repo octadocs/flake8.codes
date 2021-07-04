@@ -17,7 +17,7 @@ def document_wemake_python_styleguide():
     from wemake_python_styleguide.version import pkg_version
     from wemake_python_styleguide import constants
 
-    wps = Path(__file__).parent / 'docs/wemake-python-styleguide'
+    wps = Path(__file__).parent.parent.parent / 'docs/wemake-python-styleguide'
     create_empty_index_md_in_directory(wps)
 
     docs = wps / pkg_version
