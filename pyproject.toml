@@ -42,15 +42,17 @@ flake8 = "3.9.0"
 pytkdocs = "^0.11.1"
 more-itertools = "^8.8.0"
 pip-versions = "^0.1.0"
-mkdocs = "<1.2"
+mkdocs = "^1.2.1"
 pydotplus = "^2.0.2"
 wemake-python-styleguide = "^0.15.3"
+octadocs = "^0.0.40"
 
 
 [tool.poetry.dev-dependencies]
 mypy = "^0.812"
 click = "<8.0.0"
 pipdeptree = "^2.0.0"
+ipython = "^7.25.0"
 
 
 [tool.flakehell]

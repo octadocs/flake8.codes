@@ -132,3 +132,6 @@ dmypy.json
 .idea/
 
 /octadocs.nt
+
+/profile_dump
+
