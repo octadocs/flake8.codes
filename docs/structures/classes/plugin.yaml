@@ -10,3 +10,7 @@ $included:
     $type: Flake8Plugin
     code-prefix: B
     label: bugbear
+  - $id: flake8-bandit
+    $type: Flake8Plugin
+    code-prefix: S
+    label: bandit

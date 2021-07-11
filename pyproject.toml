@@ -46,6 +46,7 @@ mkdocs = "^1.2.1"
 pydotplus = "^2.0.2"
 wemake-python-styleguide = "^0.15.3"
 octadocs = "^0.0.40"
+returns = "^0.16.0"
 
 
 [tool.poetry.dev-dependencies]

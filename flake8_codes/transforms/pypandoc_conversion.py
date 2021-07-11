@@ -5,24 +5,22 @@ from flake8_codes.models import Violation
 
 
 class Pypandoc(BaseModel):
-    """Convert ReST text to Markdown."""
-
-    violation: Violation
+    """Convert ReST text in a Violation to Markdown."""
 
     source_format: str = 'rst'
     destination_format: str = 'commonmark'
 
-    def process(self) -> Violation:
+    def __call__(self, violation: Violation) -> Violation:
         """Replace with pypandoc."""
-        description = pypandoc.convert_text(
-            source=self.violation.description,
-            format=self.source_format,
-            to=self.destination_format,
+        description = pypandoc_convert(
+            text=violation.description,
+            source_format=self.source_format,
+            destination_format=self.destination_format,
         )
 
         return Violation(
             description=description,
-            **self.violation.dict(exclude={
+            **violation.dict(exclude={
                 'description',
             }),
         )

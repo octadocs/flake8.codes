@@ -19,9 +19,9 @@ class Violation(BaseModel):
     """Violation description."""
 
     code: str
-    internal_name: str = Field(alias='internalName')
     title: str
     description: str
+    internal_name: str = Field(alias='internalName', default='')
 
     related_violations: Optional[List[str]] = Field(
         None,
@@ -37,6 +37,8 @@ class Violation(BaseModel):
         None,
         alias='relatedConstant',
     )
+
+    related: Optional[List[str]] = None
 
     class Config:
         allow_population_by_field_name = True

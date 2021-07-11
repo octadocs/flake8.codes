@@ -1,0 +1,9 @@
+≡:
+  - $type: Restriction
+    onProperty: octa:template
+    hasValue: "version_index.html"
+  - ∩:
+      - octa:IndexPage
+      - $type: Restriction
+        onProperty: octa:isChildOf
+        someValuesFrom: ViolationsDirectory

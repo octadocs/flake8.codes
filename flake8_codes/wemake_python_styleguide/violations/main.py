@@ -14,7 +14,7 @@ from flake8_codes.wemake_python_styleguide.violations.format_title import \
     FormatTitle
 from flake8_codes.wemake_python_styleguide.violations.keep_till_first_div import \
     keep_till_first_div
-from flake8_codes.wemake_python_styleguide.violations.pypandoc_conversion import \
+from flake8_codes.transforms.pypandoc_conversion import \
     (
     pypandoc_convert,
 )
