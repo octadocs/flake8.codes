@@ -1,5 +1,5 @@
 INSERT {
-    GRAPH <inference> {
+    GRAPH <local:inference/adr_decisions.sparql> {
         ?choice a :Decision .
     }
 } WHERE {

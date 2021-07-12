@@ -1,5 +1,5 @@
 INSERT {
-    GRAPH <inference> {
+    GRAPH <local:inference/related-violation-name.sparql> {
         ?something :related-to-violation ?violation .
     }
 } WHERE {

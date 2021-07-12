@@ -1,5 +1,5 @@
 INSERT {
-    GRAPH <inference> {
+    GRAPH <local:inference/flake8-bugbear/bugbear-version-index.sparql> {
         ?index_page
             a :BugbearVersionIndexPage ;
             octa:title ?version .

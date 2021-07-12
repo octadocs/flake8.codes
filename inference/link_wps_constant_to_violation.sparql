@@ -1,5 +1,5 @@
 INSERT {
-    GRAPH <inference> {
+    GRAPH <local:inference/link_wps_constant_to_violation.sparql> {
         ?constant_page :related-to-violation ?violation_page .
     }
 } WHERE {

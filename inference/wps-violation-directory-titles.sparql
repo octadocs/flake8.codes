@@ -1,5 +1,7 @@
 INSERT {
-    ?index_file octa:title ?title .
+    GRAPH <local:inference/wps-violation-directory-titles.sparql> {
+        ?index_file octa:title ?title .
+    }
 } WHERE {
     ?condition
         :directory ?directory_name ;

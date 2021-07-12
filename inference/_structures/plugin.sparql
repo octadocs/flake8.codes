@@ -1,5 +1,7 @@
 INSERT {
-    ?index_page octa:title ?plugin_name .
+    GRAPH <local:inference/_structures/plugin.sparql> {
+        ?index_page octa:title ?plugin_name .
+    }
 } WHERE {
     ?plugin
         a :Flake8Plugin ;

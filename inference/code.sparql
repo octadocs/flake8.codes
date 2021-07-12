@@ -1,9 +1,11 @@
 # Create IRIs for flake8 codes, like local:WPS404.
 INSERT {
-    ?iri
-        a :Code ;
-        rdfs:label ?code ;
-        octa:subjectOf ?page .
+    GRAPH <local:inference/code.sparql> {
+        ?iri
+            a :Code ;
+            rdfs:label ?code ;
+            octa:subjectOf ?page .
+    }
 } WHERE {
     ?page
         :code ?code ;

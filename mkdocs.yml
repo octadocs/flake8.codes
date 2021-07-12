@@ -42,3 +42,4 @@ theme:
     - navigation.indexes
 extra_css:
   - stylesheets/flake8-codes.css
+use_directory_urls: true

@@ -1,6 +1,8 @@
 # This is a hack; I am not sure at this point how to do this.
 INSERT {
-    <local:wemake-python-styleguide/0.15.3> a :LatestVersion .
-    <local:flake8-bugbear/21.4.3> a :LatestVersion .
-    <local:flake8-bandit/1.7.0> a :LatestVersion .
+    GRAPH <local:inference/_structures/latest-version-initial.sparql> {
+        <local:wemake-python-styleguide/0.15.3> a :LatestVersion .
+        <local:flake8-bugbear/21.4.3> a :LatestVersion .
+        <local:flake8-bandit/1.7.0> a :LatestVersion .
+    }
 } WHERE {}
