@@ -109,7 +109,6 @@ def graph(instance: ConjunctiveGraph) -> str:
     return f'<img src="data:image/png;base64,{encoded_png}" />'
 
 
-
 def define_env(env: MacrosPlugin) -> MacrosPlugin:
     """
     Define a few Jinja2 macros useful for flake8-codes project.

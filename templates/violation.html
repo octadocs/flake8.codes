@@ -61,10 +61,27 @@
             item_template_path='partials/violation_link.html'
         ) }}
 
+
         {{ macros.related_items(
             items=queries.related_violations(this=page.iri),
             title='Related Violations',
             item_template_path='partials/violation_link.html'
+        ) }}
+
+        {{ macros.related_items(
+            items=queries.related_configuration_parameters(
+                violation=page.iri
+            ),
+            title='Related Configuration Parameters',
+            item_template_path='partials/link.html'
+        ) }}
+
+        {{ macros.related_items(
+            items=queries.related_constants(
+                violation_page=page.iri
+            ),
+            title='Related Constants',
+            item_template_path='partials/link.html'
         ) }}
 
         {{ macros.related_items(

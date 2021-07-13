@@ -1,7 +1,0 @@
-INSERT {
-    GRAPH <inference/flake8-bugbear/violation-template.sparql> {
-        ?violation_page octa:template "flake8-bugbear/violation.html" .
-    }
-} WHERE {
-    ?violation_page :version / :plugin :flake8-bugbear .
-}
