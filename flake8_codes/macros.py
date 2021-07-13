@@ -4,7 +4,7 @@ from mkdocs.structure.pages import Page
 from mkdocs_macros.plugin import MacrosPlugin
 from more_itertools import first
 from octadocs.octiron import Octiron
-from rdflib import Literal, URIRef
+from rdflib import Literal, URIRef, Graph
 
 
 def wps_violation(
@@ -56,6 +56,33 @@ def wps_constant(
     return f"[{constant['name']}]({constant['url'] })"
 
 
+def foundational_classes(octiron: Octiron) -> Graph:
+    """Select the foundational classes of the website."""
+    return octiron.query('''
+        CONSTRUCT {
+            ?s ?p ?o .
+            
+            ?s rdfs:label ?s_label .
+            ?o rdfs:label ?o_label .
+        } WHERE {
+            ?p
+                rdfs:domain ?s ;
+                rdfs:range ?o .
+            
+            OPTIONAL {
+                ?s rdfs:label ?s_label .
+            }
+            
+            OPTIONAL {
+                ?o rdfs:label ?o_label .
+            }
+
+            FILTER(?s IN (<local:Violation>, <local:ViolationPage>, <local:Flake8Plugin>, <local:Flake8PluginVersion>))
+            FILTER(?o IN (<local:Violation>, <local:ViolationPage>, <local:Flake8Plugin>, <local:Flake8PluginVersion>))
+        }
+    ''')
+
+
 def define_env(env: MacrosPlugin) -> MacrosPlugin:
     """
     Define a few Jinja2 macros useful for flake8-codes project.
@@ -64,14 +91,21 @@ def define_env(env: MacrosPlugin) -> MacrosPlugin:
     See [mkdocs-macros-plugin](https://mkdocs-macros-plugin.readthedocs.io/) for
     more information.
     """
+    octiron = env.variables.octiron
+
+    env.macro(
+        partial(foundational_classes, octiron=octiron),
+        name='foundational_classes',
+    )
+
     env.variables['wps'] = {
         'violation': partial(
             wps_violation,
-            octiron=env.variables.octiron,
+            octiron=octiron,
         ),
         'constant': partial(
             wps_constant,
-            octiron=env.variables.octiron,
+            octiron=octiron,
         )
     }
 

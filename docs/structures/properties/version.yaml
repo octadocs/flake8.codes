@@ -1,2 +1,3 @@
 $id: version
+domain: ViolationPage
 range: Flake8PluginVersion
