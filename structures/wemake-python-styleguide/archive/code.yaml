@@ -1,6 +1,5 @@
 $id: code
 label: Number of the violation.
-rdfs:domain:
-  $id: Violation
+domain: Violation
 rdfs:subPropertyOf:
   $id: octa:position

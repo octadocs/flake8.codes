@@ -1,0 +1,5 @@
+$id: plugin
+domain:
+  - Flake8PluginVersion
+  - Violation
+range: Flake8Plugin

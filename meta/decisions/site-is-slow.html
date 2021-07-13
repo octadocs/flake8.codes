@@ -14,7 +14,7 @@
     
     
       
-        <title>SPARQL is not enough for inference queries - flake8.codes</title>
+        <title>flake8.codes is slow to build - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SPARQL is not enough for inference queries
+              flake8.codes is slow to build
             
           </span>
         </div>
@@ -166,7 +166,7 @@
             
 
             
-                Decisions
+                <a href="/meta/index.html">Meta</a>
             
         
     
@@ -179,22 +179,22 @@
             
 
             
-                Inference queries order
+                Decisions
             
         
     
 
     
                 
-                  <a href="https://github.com/octadocs/flake8-codes/website/edit/master/flake8-codes/docs/decisions/inference-queries-order/sparql-is-not-enough.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/octadocs/flake8-codes/website/edit/master/flake8-codes/docs/meta/decisions/site-is-slow.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>SPARQL is not enough for inference queries</h1>
+                  <h1>flake8.codes is slow to build</h1>
                 
-                <p>Inference is not always easy to do with raw SPARQL. I am currently struggling to express a very simple transformation of data in SPARQL — it either doesn't work at all or has to be a very complex query with a few nesting levels. This is not what we'd want to see.</p>
-<p>To the contrary, if I could run a SPARQL query, preprocess results in Python and then do another SPARQL query, this would have been simple, readable and easy to debug.</p>
+                <p><code>mkdocs build</code> or <code>mkdocs serve</code> command takes more than 15 minutes to complete building the site. This happens when we generate all available versions for <code>wemake-python-styleguide</code> and <code>flake8-bugbear</code> packages. That means the <code>docs</code> directory has almost 6900 Markdown files.</p>
+<p>The MkDocs build process itself (if to turn off <code>octadocs</code> and <code>mkdocs-macros</code> plugins) takes about 5 minutes. Obviously, the remaining 10 minutes are occupied by Octadocs to load the graph and execute queries, and by Jinja2 to render macros in pages.</p>
                 
                   
                 
@@ -217,7 +217,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="inference-queries-order-matters.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Inference queries order matters" rel="prev">
+        <a href="serve-violations-from-root-directory.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Serve violations from root of the website" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -226,20 +226,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Inference queries order matters
+              Serve violations from root of the website
             </div>
           </div>
         </a>
       
       
         
-        <a href="frontmatter.html" class="md-footer__link md-footer__link--next" aria-label="Next: Use YAML front matter section for SPARQL files" rel="next">
+        <a href="../classes.html" class="md-footer__link md-footer__link--next" aria-label="Next: Foundational Classes" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Use YAML front matter section for SPARQL files
+              Foundational Classes
             </div>
           </div>
           <div class="md-footer__button md-icon">

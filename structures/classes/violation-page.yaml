@@ -1,0 +1,8 @@
+$id: ViolationPage
+label: Individual Violation page
+⊂:
+  - octa:Page
+  - $type: Restriction
+    label: Every instance of ViolationPage class is a Markdown file. We define an HTML template for it here.
+    onProperty: octa:template
+    hasValue: "violation.html"

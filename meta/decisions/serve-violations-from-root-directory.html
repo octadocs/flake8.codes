@@ -14,7 +14,7 @@
     
     
       
-        <title>Create a Python hook to run before site is going to build - flake8.codes</title>
+        <title>Serve violations from root of the website - flake8.codes</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create a Python hook to run before site is going to build
+              Serve violations from root of the website
             
           </span>
         </div>
@@ -166,7 +166,7 @@
             
 
             
-                Decisions
+                <a href="/meta/index.html">Meta</a>
             
         
     
@@ -179,22 +179,84 @@
             
 
             
-                Inference queries order
+                Decisions
             
         
     
 
     
                 
-                  <a href="https://github.com/octadocs/flake8-codes/website/edit/master/flake8-codes/docs/decisions/inference-queries-order/hook.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/octadocs/flake8-codes/website/edit/master/flake8-codes/docs/meta/decisions/serve-violations-from-root-directory.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Create a Python hook to run before site is going to build</h1>
+                  <h1>Serve violations from root of the website</h1>
                 
-                <p>This should be another hook in <code>mkdocs-macros-plugin</code>.</p>
-<p>In a pluglet, we will create a <code>def on_before_build()</code> function which will then be able to run arbitrary Python code, including calls to SPARQL.</p>
+                <h2 id="context">Context</h2>
+<p>I would like to have <code>WPS123</code> code description from the latest version of <code>wemake-python-styleguide</code> available not only as https://flake8.codes/wemake-python-styleguide/0.15.1/violations/WPS123/ but also as https://flake8.codes/WPS123/.</p>
+<p>I feel this would greatly improve the usability of the tool, especially if to create a custom search engine for it in your browser.</p>
+<h2 id="solutions">Solutions</h2>
+<p>Somehow, a file at <code>docs/wemake-python-styleguide/0.15.1/violations/WPS123.md</code> must be served as <code>docs/WPS123.md</code> in addition to its original serving.</p>
+<table>
+    <thead>
+        <tr>
+            <th>Choice</th>
+            <th>Evaluation</th>
+    </thead>
+    <tbody>
+
+            <tr>
+                <td>Copy the original file to the root directory</td>
+                <td>
+
+
+
+                        Having such a mess of Markdown files in the <code>docs</code> directory would not be a good idea. A lot of duplication, wasted disk space, and ugly diffs. Does not fit any kind of aesthetic standard.
+
+
+
+
+
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>Use <code>mkdocs-macros</code> to hook into MkDocs <code>on_files</code> event</td>
+                <td>
+
+
+
+                        The <code>on_files</code> hook is not supported.
+
+                            <a href="https://mkdocs-macros-plugin.readthedocs.io/en/latest/macros/#list-of-hook-functions-within-a-module">↪</a>
+
+
+
+
+
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>Create an ad-hoc <code>MkDocs</code> plugin to hook into <code>on_files</code> event</td>
+                <td>
+
+
+
+
+
+
+
+                        <strong>This is the decision. ✅</strong>
+
+                </td>
+            </tr>
+
+    </tbody>
+</table>
                 
                   
                 
@@ -217,7 +279,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: flake8 error codes" rel="prev">
+        <a href="inference-queries-order/hook-resolves-slowness.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hook resolves slowness" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -226,20 +288,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              flake8 error codes
+              Hook resolves slowness
             </div>
           </div>
         </a>
       
       
         
-        <a href="inference-queries-order-matters.html" class="md-footer__link md-footer__link--next" aria-label="Next: Inference queries order matters" rel="next">
+        <a href="site-is-slow.html" class="md-footer__link md-footer__link--next" aria-label="Next: flake8.codes is slow to build" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Inference queries order matters
+              flake8.codes is slow to build
             </div>
           </div>
           <div class="md-footer__button md-icon">
