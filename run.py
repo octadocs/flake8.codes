@@ -12,8 +12,8 @@ def main() -> None:
     docs_dir = root / 'docs'
 
     document_flake8_bandit(docs_dir=docs_dir)
-    document_bugbear()
-    document_wemake_python_styleguide()
+    # document_bugbear()
+    # document_wemake_python_styleguide()
 
 
 if __name__ == '__main__':

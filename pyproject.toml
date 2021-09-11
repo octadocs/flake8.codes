@@ -46,6 +46,10 @@ mkdocs = "^1.2.1"
 pydotplus = "^2.0.2"
 wemake-python-styleguide = "^0.15.3"
 returns = "^0.16.0"
+lambdas = "^0.1.0"
+mkdocstrings = "^0.15.2"
+rdflib = "5.0.0"
+flake8-bandit = "^2.1.2"
 
 
 [tool.poetry.dev-dependencies]
@@ -53,6 +57,7 @@ mypy = "^0.812"
 click = "<8.0.0"
 pipdeptree = "^2.0.0"
 ipython = "^7.25.0"
+bandit = "^1.7.0"
 
 
 [tool.flakehell]

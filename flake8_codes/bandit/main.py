@@ -1,13 +1,11 @@
+import itertools
 import json
 from pathlib import Path
 from typing import Iterator
 
-import docutils.core
 import pbr.version
-
-from pytkdocs.cli import process_config
-from returns.pipeline import flow
-
+from bandit.blacklists.calls import gen_blacklist as gen_calls_blacklist
+from bandit.blacklists.imports import gen_blacklist as gen_imports_blacklist
 from flake8_codes.models import Violation
 from flake8_codes.stubs import (
     create_empty_index_md_in_directory,
@@ -18,6 +16,8 @@ from flake8_codes.transforms.pypandoc_conversion import Pypandoc
 from flake8_codes.transforms.replace import Replace
 from flake8_codes.wemake_python_styleguide.violations.main import \
     write_violations_to_disk
+from pytkdocs.cli import process_config
+from returns.pipeline import flow
 
 
 def violations_docstrings() -> Iterator[str]:
@@ -46,6 +46,17 @@ def violations_docstrings() -> Iterator[str]:
         for violation in violations:
             if docstring := violation['docstring'] or module['docstring']:
                 yield docstring
+
+
+def blacklist_item_to_violation(blacklist) -> Violation:
+    """Parse flake8-bandit blacklist object into violations stream."""
+    return Violation(
+        code=blacklist['id'].replace('B', 'S'),
+        title=blacklist['message'],
+        description='\n'.join(
+            f' * `{qualname}`' for qualname in blacklist['qualnames']
+        ),
+    )
 
 
 def docstring_to_violation(docstring: str) -> Violation:
@@ -90,7 +101,11 @@ def document_flake8_bandit(docs_dir: Path) -> None:
     create_empty_index_md_in_directory(package_dir)
 
     docstrings = violations_docstrings()
-    violations = map(docstring_to_violation, docstrings)
+    violations = itertools.chain(
+        map(docstring_to_violation, docstrings),
+        map(blacklist_item_to_violation, gen_calls_blacklist()['Call']),
+        map(blacklist_item_to_violation, gen_imports_blacklist()['Call']),
+    )
 
     version = bandit_version()
     version_dir = package_dir / version
