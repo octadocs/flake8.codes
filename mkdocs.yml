@@ -10,7 +10,6 @@ markdown_extensions:
       guess_lang: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - mkautodoc
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
@@ -26,6 +25,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - mkdocstrings
   - octadocs
   - macros:
       modules:
@@ -42,4 +42,3 @@ theme:
     - navigation.indexes
 extra_css:
   - stylesheets/flake8-codes.css
-use_directory_urls: true

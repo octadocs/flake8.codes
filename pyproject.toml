@@ -46,6 +46,9 @@ mkdocs = "^1.2.1"
 pydotplus = "^2.0.2"
 wemake-python-styleguide = "^0.15.3"
 returns = "^0.16.0"
+lambdas = "^0.1.0"
+mkdocstrings = "^0.15.2"
+rdflib = "5.0.0"
 
 
 [tool.poetry.dev-dependencies]
