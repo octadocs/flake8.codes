@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../../stylesheets/flake8-codes.css">
     
     
@@ -284,9 +286,261 @@
         
             <li>
                 <strong>
+                    <code>S301</code>
+                </strong>
+                <a href="/S301/">Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S302</code>
+                </strong>
+                <a href="/S302/">Deserialization with the marshal module is possibly dangerous.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S303</code>
+                </strong>
+                <a href="/S303/">Use of insecure MD2, MD4, MD5, or SHA1 hash function.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S304</code>
+                </strong>
+                <a href="/S304/">Use of insecure cipher {name}. Replace with a known secure cipher such as AES.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S305</code>
+                </strong>
+                <a href="/S305/">Use of insecure cipher mode {name}.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S306</code>
+                </strong>
+                <a href="/S306/">Use of insecure and deprecated function (mktemp).</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S307</code>
+                </strong>
+                <a href="/S307/">Use of possibly insecure function - consider using safer ast.literal_eval.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S308</code>
+                </strong>
+                <a href="/S308/">Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S309</code>
+                </strong>
+                <a href="/S309/">Use of HTTPSConnection on older versions of Python prior to 2.7.9 and 3.4.3 do not provide security, see https://wiki.openstack.org/wiki/OSSN/OSSN-0033</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S310</code>
+                </strong>
+                <a href="/S310/">Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S311</code>
+                </strong>
+                <a href="/S311/">Standard pseudo-random generators are not suitable for security/cryptographic purposes.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S312</code>
+                </strong>
+                <a href="/S312/">Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S313</code>
+                </strong>
+                <a href="/S313/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S314</code>
+                </strong>
+                <a href="/S314/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S315</code>
+                </strong>
+                <a href="/S315/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S316</code>
+                </strong>
+                <a href="/S316/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S317</code>
+                </strong>
+                <a href="/S317/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S318</code>
+                </strong>
+                <a href="/S318/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S319</code>
+                </strong>
+                <a href="/S319/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S320</code>
+                </strong>
+                <a href="/S320/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S321</code>
+                </strong>
+                <a href="/S321/">FTP-related functions are being called. FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S323</code>
+                </strong>
+                <a href="/S323/">By default, Python will create a secure, verified ssl context for use in such classes as HTTPSConnection. However, it still allows using an insecure context via the _create_unverified_context that reverts to the previous behavior that does not validate certificates or perform hostname checks.</a>
+            </li>
+        
+            <li>
+                <strong>
                     <code>S324</code>
                 </strong>
                 <a href="/S324/">Test use of insecure md4, md5, or sha1 hash functions in hashlib.new()</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S325</code>
+                </strong>
+                <a href="/S325/">Use of os.tempnam() and os.tmpnam() is vulnerable to symlink attacks. Consider using tmpfile() instead.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S401</code>
+                </strong>
+                <a href="/S401/">A telnet-related module is being imported.  Telnet is considered insecure. Use SSH or some other encrypted protocol.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S402</code>
+                </strong>
+                <a href="/S402/">A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S403</code>
+                </strong>
+                <a href="/S403/">Consider possible security implications associated with {name} module.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S404</code>
+                </strong>
+                <a href="/S404/">Consider possible security implications associated with {name} module.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S405</code>
+                </strong>
+                <a href="/S405/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S406</code>
+                </strong>
+                <a href="/S406/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S407</code>
+                </strong>
+                <a href="/S407/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S408</code>
+                </strong>
+                <a href="/S408/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S409</code>
+                </strong>
+                <a href="/S409/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S410</code>
+                </strong>
+                <a href="/S410/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S411</code>
+                </strong>
+                <a href="/S411/">Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Use defused.xmlrpc.monkey_patch() function to monkey-patch xmlrpclib and mitigate XML vulnerabilities.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S412</code>
+                </strong>
+                <a href="/S412/">Consider possible security implications associated with {name} module.</a>
+            </li>
+        
+            <li>
+                <strong>
+                    <code>S413</code>
+                </strong>
+                <a href="/S413/">The pyCrypto library and its module {name} are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library.</a>
             </li>
         
             <li>
