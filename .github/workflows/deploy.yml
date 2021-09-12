@@ -31,6 +31,7 @@ jobs:
         source "$HOME/.poetry/env"
         poetry config virtualenvs.in-project true
         poetry install
+        sudo apt-get install graphviz
 
     - name: Run checks
       run: |
