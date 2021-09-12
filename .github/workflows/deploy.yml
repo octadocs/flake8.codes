@@ -43,4 +43,7 @@ jobs:
       run: git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
 
     - name: Publish to GitHub Pages
-      run: poetry run mkdocs gh-deploy
+      run: |
+        source "$HOME/.poetry/env"
+        export PATH="$(pwd)/.venv/bin:$PATH"
+        poetry run mkdocs gh-deploy
