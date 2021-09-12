@@ -38,6 +38,7 @@ jobs:
         export PATH="$(pwd)/.venv/bin:$PATH"
         make test
 
+    # https://github.com/mkdocs/mkdocs/discussions/2369
     - name: Configure Git
       run: git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
 
