@@ -30,7 +30,7 @@ class Flake8Codes(BasePlugin):
                 ?page octa:title ?version_directory_name .
             } WHERE {
                 ?page
-                    a :VersionIndexPage ;
+                    a :ViolationListPage ;
                     octa:isChildOf / octa:fileName ?version_directory_name .
             }
             ''',
