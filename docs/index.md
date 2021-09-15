@@ -4,39 +4,4 @@ title: flake8 error codes
 
 Easily find the code that annoys you the most.
 
-<style>
-#plugins::after {
-    clear:both;
-}
-
-#plugins .admonition {
-    float: left;
-    margin-right: 1em;
-    min-width: 200px;
-}
-
-#plugins p {
-    text-align: center;
-}
-
-#plugins .title {
-    font-size: 3em;
-    font-weight: bold;
-}
-</style>
-
-{% set plugins = queries.index() %}
-
-<div id="plugins">
-    {% for item in plugins %}
-        <div class="admonition">
-            <p class="title">
-                <a href="{{ item.url }}">
-                    {{ item.prefix }}
-                </a>
-            </p>
-            <p>{{ item.title }}</p>
-            <p>{{ item.version_number }}</p>
-        </div>
-    {% endfor %}
-</div>
+{{ render(LOCAL.LatestVersion) }}

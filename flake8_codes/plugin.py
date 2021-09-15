@@ -8,14 +8,42 @@ from mkdocs.plugins import BasePlugin
 from mkdocs.structure.files import File, Files
 from mkdocs.structure.nav import Navigation
 from octadocs.octiron import Octiron
+from octadocs.storage import DiskCacheStorage
 
 
 class Flake8Codes(BasePlugin):
-    # def on_files(
-    #     self,
-    #     files: Files,
-    #     config,
-    # ):
+    """Customizations for flake8.codes website."""
+
+    def octiron(self, config) -> Octiron:
+        """Return Octiron instance."""
+        return config['extra']['octiron']
+
+    def assign_title_to_each_version_index_page(self, octiron):
+        """
+        Assign octa:title based on version name.
+
+        This cannot be done by OWL inference, so we do it by a custom query.
+        """
+        octiron.graph.update(
+            '''
+            INSERT {
+                ?page octa:title ?version_directory_name .
+            } WHERE {
+                ?page
+                    a :VersionIndexPage ;
+                    octa:isChildOf / octa:fileName ?version_directory_name .
+            }
+            ''',
+        )
+
+    def on_files(self, files: Files, config):
+        """Automatic hooks."""
+        octiron = self.octiron(config)
+        self.assign_title_to_each_version_index_page(octiron)
+
+        # Save the graph content to disk after octa:title was saved
+        DiskCacheStorage(octiron=octiron).save()
+
     def on_nav(
         self,
         nav: Navigation,

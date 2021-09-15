@@ -37,7 +37,6 @@ pydantic = "^1.8.1"
 pypandoc = "^1.5"
 libcst = "^0.3.18"
 urlpath = "^1.1.7"
-classes = "^0.2.0"
 flake8 = "3.9.0"
 pytkdocs = "^0.11.1"
 more-itertools = "^8.8.0"
@@ -50,7 +49,7 @@ lambdas = "^0.1.0"
 mkdocstrings = "^0.15.2"
 rdflib = "5.0.0"
 flake8-bandit = "^2.1.2"
-octadocs = "^0.1.0"
+octadocs = "^0.1.1"
 
 
 [tool.poetry.dev-dependencies]
