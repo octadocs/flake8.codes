@@ -24,7 +24,6 @@ class Flake8Codes(BasePlugin):
 
         This cannot be done by OWL inference, so we do it by a custom query.
         """
-
         octiron.graph.update(
             '''
             INSERT {
