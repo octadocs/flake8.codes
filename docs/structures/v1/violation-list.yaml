@@ -5,6 +5,10 @@ $id: ViolationListPage
   - onProperty: iolanta:facet
     hasValue:
       template: violation_list.html
+  - onProperty: iolanta:facet
+    hasValue:
+      $id: python://flake8_codes.facets.violation_list.violation_list
+      iolanta:supports: iolanta:html
   - ∩:
       - octa:IndexPage
       - onProperty: octa:isChildOf
