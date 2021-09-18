@@ -1,6 +1,6 @@
 from typing import Iterable
 
-from dominate.tags import h2, ul, li, strong, code, a, html_tag
+from dominate.tags import ul, li, strong, code, a, html_tag
 from octadocs.octiron import Octiron
 from rdflib.term import Node
 

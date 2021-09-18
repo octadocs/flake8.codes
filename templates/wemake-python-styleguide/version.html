@@ -6,13 +6,7 @@
 
     <h2>Violations</h2>
 
-    <ul>
-        {% for category in queries.wps.violation_categories(iri=page.iri) %}
-            <li>
-                <a href="{{ category.url }}">{{ category.title }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+    {{ render(page.iri) }}
 {% endblock %}
 
 

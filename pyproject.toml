@@ -49,6 +49,7 @@ lambdas = "^0.1.0"
 mkdocstrings = "^0.15.2"
 rdflib = "5.0.0"
 flake8-bandit = "^2.1.2"
+prodict = "^0.8.18"
 
 
 [tool.poetry.dev-dependencies]

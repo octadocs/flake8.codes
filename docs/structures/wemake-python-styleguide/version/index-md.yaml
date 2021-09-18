@@ -5,6 +5,10 @@ label: docs/wemake-python-styleguide/*/index.md file
       - $type: Restriction
         onProperty: octa:isChildOf
         someValuesFrom: WPSVersionDirectory
-  - $type: Restriction
-    onProperty: octa:template
-    hasValue: "wemake-python-styleguide/version.html"
+  - onProperty: iolanta:facet
+    hasValue:
+      octa:template: "wemake-python-styleguide/version.html"
+  - onProperty: iolanta:facet
+    hasValue:
+      $id: python://flake8_codes.facets.directory_list.directory_list
+      iolanta:supports: iolanta:html
