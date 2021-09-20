@@ -2,9 +2,7 @@ $id: WPSViolationsDirectory
 label: docs/wemake-python-styleguide/*/violations/ directory
 ≡:
   ∩:
-    - $type: Restriction
-      onProperty: octa:isChildOf
+    - onProperty: octa:isChildOf
       someValuesFrom: WPSVersionDirectory
-    - $type: Restriction
-      onProperty: octa:fileName
+    - onProperty: octa:fileName
       hasValue: "violations"

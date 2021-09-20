@@ -12,9 +12,9 @@ def directory_list(octiron: Octiron, iri: Node) -> Union[html_tag, str]:
     links = map(Prodict, octiron.query(
         '''
         SELECT * WHERE {
-            ?index_page octa:isChildOf ?version_directory .
+            ?index_page octa:isChildOf ?directory .
             
-            ?version_directory octa:isParentOf+ ?link .
+            ?directory octa:isParentOf / octa:isParentOf ?link .
         
             ?link
                 a octa:IndexPage ;

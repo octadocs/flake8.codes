@@ -28,10 +28,13 @@ class Flake8Codes(BasePlugin):
             '''
             INSERT {
                 ?page octa:title ?version_directory_name .
-            } WHERE {
+            } WHERE {                
                 ?page
                     a :ViolationListPage ;
-                    octa:isChildOf / octa:fileName ?version_directory_name .
+                    octa:isChildOf / octa:fileName ?version_directory_name ;
+                    
+                    # This one is to not create titles for WPS version pages.
+                    :major_version ?major_version .
             }
             ''',
         )
