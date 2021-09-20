@@ -27,7 +27,7 @@ def violation_list(octiron: Octiron, iri: Node) -> html_tag:
                 octa:title ?title ;
                 octa:url ?url ;
                 :code ?code .
-        } # ORDER BY ?code
+        } ORDER BY ?code
         ''',
         index_page=iri,
     )

@@ -14,7 +14,10 @@ def directory_list(octiron: Octiron, iri: Node) -> Union[html_tag, str]:
         SELECT * WHERE {
             ?index_page octa:isChildOf ?directory .
             
-            ?directory octa:isParentOf / octa:isParentOf ?link .
+            ?directory
+                octa:isParentOf /
+                octa:isParentOf /
+                octa:isParentOf ?link .
         
             ?link
                 a octa:IndexPage ;
