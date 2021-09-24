@@ -1,5 +1,4 @@
 $id: ViolationsDirectory
 ≡:
-  $type: Restriction
   onProperty: octa:isParentOf
-  someValuesFrom: Violation
+  someValuesFrom: ViolationPage

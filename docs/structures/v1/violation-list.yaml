@@ -1,0 +1,15 @@
+# ViolationListPage is a class of pages that includes docs/*/index.md pages.
+# It is determined based on existence of major_version property.
+$id: ViolationListPage
+≡:
+  - onProperty: iolanta:facet
+    hasValue:
+      template: violation_list.html
+  - onProperty: iolanta:facet
+    hasValue:
+      $id: python://flake8_codes.facets.violation_list.violation_list
+      iolanta:supports: iolanta:html
+  - ∩:
+      - octa:IndexPage
+      - onProperty: octa:isChildOf
+        someValuesFrom: ViolationsDirectory

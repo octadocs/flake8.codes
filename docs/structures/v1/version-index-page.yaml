@@ -1,7 +1,0 @@
-# VersionIndexPage is a class of pages that includes docs/*/index.md pages.
-# It is determined based on existence of major_version property.
-$id: VersionIndexPage
-≡:
-  onProperty: iolanta:facet
-  hasValue:
-    template: version_index.html

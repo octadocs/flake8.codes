@@ -1,7 +1,7 @@
 INSERT {
     GRAPH <local:inference/flake8-bugbear/bugbear-version-index.sparql> {
         ?index_page
-            a :BugbearVersionIndexPage ;
+            a :BugbearViolationListPage ;
             octa:title ?version .
     }
 } WHERE {
