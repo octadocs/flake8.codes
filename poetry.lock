@@ -427,7 +427,7 @@ python-versions = "*"
 python-dateutil = ">=2.8.1"
 
 [package.extras]
-dev = ["twine", "markdown", "flake8"]
+dev = ["twine", "markdown", "flake8", "wheel"]
 
 [[package]]
 name = "gitdb"
@@ -807,7 +807,7 @@ python-versions = "*"
 
 [[package]]
 name = "octadocs"
-version = "0.1.5"
+version = "0.1.6"
 description = "MkDocs wiki made smart"
 category = "main"
 optional = false
@@ -1146,7 +1146,7 @@ tests = ["html5lib", "networkx", "nose", "doctest-ignore-unicode"]
 
 [[package]]
 name = "rdflib-jsonld"
-version = "0.6.2"
+version = "0.6.1"
 description = "rdflib extension adding JSON-LD parser and serializer"
 category = "main"
 optional = false
@@ -1433,7 +1433,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.9"
-content-hash = "c366784c6416c5741d3b338373a2fe10f3795f6c70837f56979cadb22d518c2f"
+content-hash = "2583faba5adb74015bc30fd1b423bb0aa1fca3d1cbd28e89230c979f4fc9c83d"
 
 [metadata.files]
 appnope = [
@@ -1595,6 +1595,7 @@ frozendict = [
 ]
 ghp-import = [
     {file = "ghp-import-2.0.1.tar.gz", hash = "sha256:753de2eace6e0f7d4edfb3cce5e3c3b98cd52aadb80163303d1d036bda7b4483"},
+    {file = "ghp_import-2.0.1-py3-none-any.whl", hash = "sha256:8241a8e9f8dd3c1fafe9696e6e081b57a208ef907e9939c44e7415e407ab40ea"},
 ]
 gitdb = [
     {file = "gitdb-4.0.7-py3-none-any.whl", hash = "sha256:6c4cc71933456991da20917998acbe6cf4fb41eeaab7d6d67fbc05ecd4c865b0"},
@@ -1830,8 +1831,8 @@ mypy-extensions = [
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
 ]
 octadocs = [
-    {file = "octadocs-0.1.5-py3-none-any.whl", hash = "sha256:794dfc446cea9f83213d1b55881bf661523e4fa5cf884b5f3d0080a32c1f41f9"},
-    {file = "octadocs-0.1.5.tar.gz", hash = "sha256:a12380e91ccf6e2b88154bc216cf66146aaec39659deba02eb838245a09a9a7b"},
+    {file = "octadocs-0.1.6-py3-none-any.whl", hash = "sha256:53be7d5afe132dd77eec542b6dc01bdffb8c3e4dfc78474a8df2212e0538e143"},
+    {file = "octadocs-0.1.6.tar.gz", hash = "sha256:7fbe64bed72260d05d4187b2485e9bb16e2efc625715cef090b9469a4f1475d6"},
 ]
 owlrl = [
     {file = "owlrl-5.2.3-py3-none-any.whl", hash = "sha256:0514239bfbf72fa67f3e5813a40bcc5bd88fd16093d9f76b45a0d4c84ee1c5e2"},
@@ -1991,8 +1992,8 @@ rdflib = [
     {file = "rdflib-5.0.0.tar.gz", hash = "sha256:78149dd49d385efec3b3adfbd61c87afaf1281c30d3fcaf1b323b34f603fb155"},
 ]
 rdflib-jsonld = [
-    {file = "rdflib-jsonld-0.6.2.tar.gz", hash = "sha256:107cd3019d41354c31687e64af5e3fd3c3e3fa5052ce635f5ce595fd31853a63"},
-    {file = "rdflib_jsonld-0.6.2-py2.py3-none-any.whl", hash = "sha256:011afe67672353ca9978ab9a4bee964dff91f14042f2d8a28c22a573779d2f8b"},
+    {file = "rdflib-jsonld-0.6.1.tar.gz", hash = "sha256:eda5a42a2e09f80d4da78e32b5c684bccdf275368f1541e6b7bcddfb1382a0e0"},
+    {file = "rdflib_jsonld-0.6.1-py2.py3-none-any.whl", hash = "sha256:bcf84317e947a661bae0a3f2aee1eced697075fc4ac4db6065a3340ea0f10fc2"},
 ]
 requests = [
     {file = "requests-2.25.1-py2.py3-none-any.whl", hash = "sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"},
@@ -2010,6 +2011,7 @@ rich = [
     {file = "rich-10.10.0.tar.gz", hash = "sha256:bacf58b25fea6b920446fe4e7abdc6c7664c4530c4098e7a1bc79b16b8551dfa"},
 ]
 singledispatchmethod = [
+    {file = "singledispatchmethod-1.0-py2.py3-none-any.whl", hash = "sha256:ed4a794e701cbe415f0df32b71dbdb96d3a415701795bcfb5ee694f8c12418db"},
     {file = "singledispatchmethod-1.0.tar.gz", hash = "sha256:183a7fbeab53b9c9d182f8b8f9c2d7e109a7d40afaa30261d81dd8de68cd73bf"},
 ]
 six = [
