@@ -1,5 +1,7 @@
 import json
+import logging
 import operator
+import os
 from pathlib import Path
 from typing import Iterable, cast, List
 
@@ -11,6 +13,9 @@ from octadocs.octiron import Octiron
 from octadocs.storage import DiskCacheStorage
 
 
+CI = os.getenv('CI')
+
+
 class Flake8Codes(BasePlugin):
     """Customizations for flake8.codes website."""
 
@@ -18,7 +23,7 @@ class Flake8Codes(BasePlugin):
         """Return Octiron instance."""
         return config['extra']['octiron']
 
-    def assign_title_to_each_version_index_page(self, octiron):
+    def assign_title_to_each_version_index_page(self, octiron: Octiron):
         """
         Assign octa:title based on version name.
 
@@ -28,7 +33,7 @@ class Flake8Codes(BasePlugin):
             '''
             INSERT {
                 ?page octa:title ?version_directory_name .
-            } WHERE {                
+            } WHERE {
                 ?page
                     a :ViolationListPage ;
                     octa:isChildOf / octa:fileName ?version_directory_name ;
@@ -39,13 +44,56 @@ class Flake8Codes(BasePlugin):
             ''',
         )
 
+    def moderate_files(self, files: Files, octiron: Octiron):
+        """
+        Exclude some files when building site locally.
+
+        This helps reduce the site building time for the sake of local dev.
+        """
+        logging.warning(
+            'A few files have been stripped from the site because local dev env'
+            ' has been detected. Beware of 404 errors!',
+        )
+        directories = [
+            row['version_directory'].toPython().replace('local:', '')
+            for row in
+            octiron.query(
+                '''
+                SELECT * WHERE {
+                    ?version_directory a :Flake8PluginVersion .
+                    
+                    FILTER NOT EXISTS {
+                        ?version_directory a :LatestVersion .
+                    }
+                }
+                ''',
+            )
+        ]
+
+        return Files([
+            mkdocs_file for mkdocs_file in files
+            if not any(
+                mkdocs_file.src_path.startswith(directory)
+                for directory in directories
+            )
+        ])
+
     def on_files(self, files: Files, config):
         """Automatic hooks."""
         octiron = self.octiron(config)
+
         self.assign_title_to_each_version_index_page(octiron)
 
         # Save the graph content to disk after octa:title was saved
         DiskCacheStorage(octiron=octiron).save()
+
+        if CI is None:
+            return self.moderate_files(
+                files=files,
+                octiron=octiron,
+            )
+
+        return files
 
     def on_nav(
         self,
