@@ -1,0 +1,4 @@
+$id: LatestVersion
+facet:
+  $id: python://flake8_codes.facets.home_page.latest_version_list
+  iolanta:supports: iolanta:html
